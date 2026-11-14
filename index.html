@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>일본 숙소 추천 10곳 · 도쿄 오사카 요코하마 후쿠오카 삿포로</title>
+<meta name="description" content="도쿄·오사카·요코하마·후쿠오카·삿포로에서 직접 확인한 일본 숙소 10곳. 역 도보 거리, 온천·대욕장 유무와 운영시간을 정리하고 아고다·트립닷컴 가격을 바로 확인할 수 있게 모았습니다.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="일본 숙소 추천 10곳 · 도쿄 오사카 요코하마 후쿠오카 삿포로">
+<meta property="og:description" content="역 도보 거리와 온천·대욕장 정보를 확인한 일본 숙소 10곳. 아고다·트립닷컴 가격 확인 링크 포함.">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%A8%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#111111;
+    --card:#1C1C1E;
+    --card2:#242426;
+    --line:#2E2E31;
+    --text:#F2F2F4;
+    --sub:#A1A1A8;
+    --yellow:#F5C518;
+    --agoda:#E53935;
+    --trip:#1E88E5;
+    --green:#2E7D32;
+    --amber:#A15C00;
+    --purple:#5E35B1;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic","Noto Sans KR",Roboto,sans-serif;
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+    padding-bottom:calc(28px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 14px}
+
+  /* ---------- header ---------- */
+  header.top{padding:18px 0 10px}
+  .brand{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--sub);letter-spacing:.08em;text-transform:uppercase}
+  .brand b{color:var(--yellow);letter-spacing:0}
+  h1{font-size:24px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.02em}
+  h1 span{color:var(--yellow)}
+  .lead{margin:0;color:var(--sub);font-size:13.5px}
+
+  /* ---------- sticky search + filters ---------- */
+  .searchbar{
+    position:sticky;top:0;z-index:20;
+    background:#111111;
+    padding:8px 14px 10px;
+    margin:0 -14px;
+    box-shadow:0 8px 14px -10px rgba(0,0,0,.9);
+  }
+  .filters{padding:2px 0 4px}
+  .search{position:relative}
+  .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.55}
+  #q{
+    width:100%;padding:15px 44px 15px 42px;
+    background:#1A1A1C;border:1px solid var(--line);border-radius:16px;
+    color:var(--text);font-size:15px;font-family:inherit;
+    outline:none;appearance:none;
+  }
+  #q::placeholder{color:#7C7C84}
+  #q:focus{border-color:#4A4A50;background:#1F1F22}
+  #clear{
+    position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    width:30px;height:30px;border:0;border-radius:50%;
+    background:#333338;color:#CFCFD6;font-size:16px;line-height:1;
+    display:none;cursor:pointer;
+  }
+  #clear.show{display:block}
+
+  .chips{
+    display:flex;gap:8px;overflow-x:auto;padding:10px 0 0;
+    scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;
+    padding:9px 15px;border-radius:999px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#D6D6DC;font-size:13.5px;font-family:inherit;white-space:nowrap;
+    cursor:pointer;transition:background .15s,border-color .15s,color .15s;
+  }
+  .chip[aria-pressed="true"]{
+    background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:700;
+  }
+  .chip:active{transform:scale(.98)}
+
+  .status{
+    display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+    padding:12px 0 2px;color:var(--sub);font-size:12.5px;
+  }
+  .status b{color:var(--text);font-weight:600}
+
+  /* ---------- cards ---------- */
+  .list{display:grid;gap:12px;padding-top:8px}
+  .card{
+    display:grid;grid-template-columns:104px 1fr;gap:12px;
+    background:var(--card);border:1px solid #26262A;
+    border-radius:18px;padding:12px;
+  }
+  .thumb{
+    position:relative;border-radius:13px;overflow:hidden;
+    background:linear-gradient(160deg,#2A2A30,#17171A);
+    min-height:104px;display:flex;align-items:center;justify-content:center;
+  }
+  .thumb .emoji{font-size:34px;opacity:.92;filter:saturate(1.05)}
+  .thumb.tokyo{background:linear-gradient(160deg,#20304A,#141B28)}
+  .thumb.osaka{background:linear-gradient(160deg,#4A2A1E,#2A1811)}
+  .thumb.yokohama{background:linear-gradient(160deg,#173A3E,#101F22)}
+  .thumb.fukuoka{background:linear-gradient(160deg,#3F1F2C,#241218)}
+  .thumb.sapporo{background:linear-gradient(160deg,#1F3242,#121A21)}
+  .num{
+    position:absolute;top:6px;left:6px;
+    min-width:26px;height:26px;padding:0 6px;border-radius:8px;
+    background:var(--yellow);color:#141414;
+    font-weight:800;font-size:14px;line-height:26px;text-align:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.35);
+  }
+  .tier{
+    position:absolute;bottom:6px;left:6px;
+    padding:3px 8px;border-radius:7px;
+    font-size:10.5px;font-weight:700;color:#fff;letter-spacing:.01em;
+  }
+  .tier.low{background:var(--green)}
+  .tier.mid{background:var(--amber)}
+  .tier.high{background:var(--purple)}
+
+  .body{min-width:0}
+  .name{margin:0;font-size:16px;line-height:1.32;letter-spacing:-.01em}
+  .name small{display:block;font-size:11.5px;color:var(--sub);font-weight:400;margin-top:2px}
+  .loc{margin:4px 0 0;font-size:12.5px;color:var(--yellow);font-weight:600}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 0}
+  .tag{
+    font-size:11px;color:#C9C9D0;background:#26262A;border:1px solid #303036;
+    padding:3px 7px;border-radius:7px;white-space:nowrap;
+  }
+  .desc{margin:8px 0 0;font-size:12.5px;color:#B9B9C2;line-height:1.55}
+  .actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;grid-column:1 / -1}
+  .btn{
+    display:block;text-align:center;text-decoration:none;
+    padding:12px 6px;border-radius:12px;
+    font-size:13.5px;font-weight:700;color:#fff;
+    border:0;cursor:pointer;
+  }
+  .btn.agoda{background:var(--agoda)}
+  .btn.trip{background:var(--trip)}
+  .btn:active{filter:brightness(.92)}
+
+  .empty{
+    display:none;text-align:center;padding:44px 16px;color:var(--sub);
+    border:1px dashed #303036;border-radius:18px;background:#171719;
+  }
+  .empty b{display:block;color:var(--text);font-size:15px;margin-bottom:6px}
+  .empty.show{display:block}
+
+  /* ---------- tip + footer ---------- */
+  .tip{
+    margin-top:16px;padding:14px 15px;border-radius:16px;
+    background:#181A1B;border:1px solid #2A2E30;
+  }
+  .tip h2{margin:0 0 6px;font-size:14px}
+  .tip p{margin:0;font-size:12.5px;color:#AEAEB6;line-height:1.6}
+  .tip .facts{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+  .tip .facts span{font-size:11px;color:#C9C9D0;background:#232326;padding:3px 7px;border-radius:7px}
+
+  footer{margin-top:22px;padding-top:16px;border-top:1px solid #232326;color:#8F8F97;font-size:11.5px;line-height:1.7}
+  footer p{margin:0 0 8px}
+  footer .notice{color:#C9C9D0}
+  footer strong{color:#E6E6EA}
+
+  @media (min-width:620px){
+    h1{font-size:28px}
+    .list{grid-template-columns:1fr 1fr}
+    .card{grid-template-columns:96px 1fr}
+    .card .desc{font-size:12px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand"><b>PICK</b> JAPAN STAY</div>
+    <h1>일본 숙소 추천 <span>10곳</span></h1>
+    <p class="lead">도쿄·오사카·요코하마·후쿠오카·삿포로 · 역 도보 거리와 온천·대욕장 정보를 공식 안내로 확인했어요.</p>
+  </header>
+
+  <div class="searchbar">
+    <div class="search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#BFBFC6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="text" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="번호 또는 도시·동네·숙소명" aria-label="숙소 검색">
+      <button id="clear" type="button" aria-label="검색어 지우기">✕</button>
+    </div>
+  </div>
+
+  <div class="filters">
+
+    <div class="chips" id="cityChips" role="group" aria-label="도시 필터">
+      <button class="chip" data-city="all" aria-pressed="true">전체 도시</button>
+      <button class="chip" data-city="tokyo" aria-pressed="false">🇯🇵 도쿄</button>
+      <button class="chip" data-city="osaka" aria-pressed="false">🇯🇵 오사카</button>
+      <button class="chip" data-city="yokohama" aria-pressed="false">🇯🇵 요코하마</button>
+      <button class="chip" data-city="fukuoka" aria-pressed="false">🇯🇵 후쿠오카</button>
+      <button class="chip" data-city="sapporo" aria-pressed="false">🇯🇵 삿포로</button>
+    </div>
+
+    <div class="chips" id="tierChips" role="group" aria-label="가격대 필터">
+      <button class="chip" data-tier="all" aria-pressed="true">💰 전체 가격</button>
+      <button class="chip" data-tier="low" aria-pressed="false">가성비</button>
+      <button class="chip" data-tier="mid" aria-pressed="false">중간급</button>
+      <button class="chip" data-tier="high" aria-pressed="false">고급</button>
+    </div>
+
+    <div class="chips" id="whoChips" role="group" aria-label="동행 필터">
+      <button class="chip" data-who="all" aria-pressed="true">🧭 모든 여행</button>
+      <button class="chip" data-who="solo" aria-pressed="false">👤 혼자</button>
+      <button class="chip" data-who="duo" aria-pressed="false">👫 커플·친구</button>
+      <button class="chip" data-who="family" aria-pressed="false">👨‍👩‍👧 가족</button>
+    </div>
+  </div>
+
+  <div class="status" aria-live="polite">
+    <span><b id="count">10</b>곳</span>
+    <span>가격대는 2인 1박 기준 대략 구분</span>
+  </div>
+
+  <main class="list" id="list">
+
+    <!-- 1 -->
+    <article class="card" data-num="1" data-city="tokyo" data-tier="high" data-who="duo family"
+      data-search="미쓰이 가든 호텔 도요스 프리에르 미쓰이가든 mitsui garden hotel toyosu premier 도쿄 동경 도요스 도쿄만 유라쿠초선 대욕장 노천탕 고층 전망 신토요스 팀랩">
+      <div class="thumb tokyo"><span class="num">1</span><span class="emoji">🗼</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">미쓰이 가든 호텔 도요스 프리에르<small>Mitsui Garden Hotel Toyosu Premier</small></h2>
+        <p class="loc">도쿄 · 도요스</p>
+        <div class="tags">
+          <span class="tag">🚉 도요스역 직결</span>
+          <span class="tag">♨️ 36층 대욕장·노천탕</span>
+          <span class="tag">🌃 도쿄만 뷰</span>
+          <span class="tag">🛏 225실</span>
+        </div>
+        <p class="desc">지하철 도요스역과 지하로 바로 이어지는 33층 이상 고층 호텔. 36층 대욕장은 노천탕에서 도쿄만 야경을 보며 들어갈 수 있고 숙박객은 무료예요(15:00~25:00 / 06:00~09:00). 긴자까지 10분 안쪽.</p>
+      </div>
+      <div class="actions">
+        <a class="btn agoda" href="https://www.agoda.com/ko-kr/mitsui-garden-hotel-toyosu-premier/hotel/tokyo-jp.html" data-agoda="https://www.agoda.com/ko-kr/mitsui-garden-hotel-toyosu-premier/hotel/tokyo-jp.html" target="_blank" rel="noopener sponsored nofollow">아고다 가격확인</a>
+        <a class="btn trip" href="https://kr.trip.com/hotels/tokyo-hotel-detail-52320512/mitsui-garden-hotel-toyosu-bayside-cross-tokyo/" data-trip="https://kr.trip.com/hotels/tokyo-hotel-detail-52320512/mitsui-garden-hotel-toyosu-bayside-cross-tokyo/" target="_blank" rel="noopener sponsored nofollow">트립닷컴 가격확인</a>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="card" data-num="2" data-city="tokyo" data-tier="mid" data-who="solo duo family"
+      data-search="OMO5 도쿄 오츠카 호시노 리조트 오모 오츠카 야마노테선 야구라 룸 도덴 아라카와선 이케부쿠로 신주쿠">
+      <div class="thumb tokyo"><span class="num">2</span><span class="emoji">🚋</span><span class="tier mid">중간급</span></div>
+      <div class="body">
+        <h2 class="name">OMO5 도쿄 오츠카 by 호시노 리조트<small>OMO5 Tokyo Otsuka by Hoshino Resorts</small></h2>
+        <p class="loc">도쿄 · 오츠카</p>
+        <div class="tags">
+          <span class="tag">🚶 오츠카역 도보 1분</span>
+          <span class="tag">🏯 야구라 룸</span>
+          <span class="tag">🚋 도덴 거리</span>
+          <span class="tag">🛏 125실</span>
+        </div>
+        <p class="desc">JR 야마노테선 오츠카역 북쪽 출구에서 도보 1분. 다다미 바닥 계단을 올라가 쓰는 '야구라 침대'가 시그니처인 19㎡ 객실(최대 3인)로, 신주쿠까지 5정거장이에요. 대욕장은 없고 객실 욕실을 씁니다.</p>
+      </div>
+      <div class="actions">
+        <a class="btn agoda" href="https://www.agoda.com/ko-kr/omo5-tokyo-otsuka-by-hoshino-resorts_3/hotel/tokyo-jp.html" data-agoda="https://www.agoda.com/ko-kr/omo5-tokyo-otsuka-by-hoshino-resorts_3/hotel/tokyo-jp.html" target="_blank" rel="noopener sponsored nofollow">아고다 가격확인</a>
+        <a class="btn trip" href="https://kr.trip.com/hotels/tokyo-hotel-detail-14120975/hoshino-resorts-omo5-tokyo-otsuka/" data-trip="https://kr.trip.com/hotels/tokyo-hotel-detail-14120975/hoshino-resorts-omo5-tokyo-otsuka/" target="_blank" rel="noopener sponsored nofollow">트립닷컴 가격확인</a>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="card" data-num="3" data-city="osaka" data-tier="mid" data-who="duo family"
+      data-search="OMO7 오사카 호시노 리조트 오모 신이마미야 난카이 간사이공항 신세카이 츠텐카쿠 유야 목욕탕 USJ 셔틀">
+      <div class="thumb osaka"><span class="num">3</span><span class="emoji">🏯</span><span class="tier mid">중간급</span></div>
+      <div class="body">
+        <h2 class="name">OMO7 오사카 by 호시노 리조트<small>OMO7 Osaka by Hoshino Resorts</small></h2>
+        <p class="loc">오사카 · 신이마미야</p>
+        <div class="tags">
+          <span class="tag">🚉 신이마미야역 앞</span>
+          <span class="tag">🛁 목욕탕 '유야'</span>
+          <span class="tag">🎢 USJ 무료 셔틀</span>
+          <span class="tag">🛏 436실</span>
+        </div>
+        <p class="desc">JR·난카이 신이마미야역 출구 바로 앞이라 간사이공항에서 직결. 이도바타 스위트는 59㎡·최대 6인까지 넓어요. 정원 '미야그린'의 목욕탕 유야는 1박 1,000엔(투숙객 전용, 06:00~10:00 / 15:00~24:00)이고 온천은 아닙니다.</p>
+      </div>
+      <div class="actions">
+        <a class="btn agoda" href="https://www.agoda.com/ko-kr/omo7-osaka-by-hoshino-resorts/hotel/osaka-jp.html" data-agoda="https://www.agoda.com/ko-kr/omo7-osaka-by-hoshino-resorts/hotel/osaka-jp.html" target="_blank" rel="noopener sponsored nofollow">아고다 가격확인</a>
+        <a class="btn trip" href="https://kr.trip.com/hotels/osaka-hotel-detail-84903681/7-da-ban-by-xing-ye-ji-tuan/" data-trip="https://kr.trip.com/hotels/osaka-hotel-detail-84903681/7-da-ban-by-xing-ye-ji-tuan/" target="_blank" rel="noopener sponsored nofollow">트립닷컴 가격확인</a>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="card" data-num="4" data-city="osaka" data-tier="low" data-who="solo duo"
+      data-search="온야도 노노 난바 도미인 천연온천 하나카제노유 닛폰바시 난바 도톤보리 구로몬 다다미 료칸">
+      <div class="thumb osaka"><span class="num">4</span><span class="emoji">♨️</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">온야도 노노 난바<small>Onyado Nono Namba Natural Hot Spring</small></h2>
+        <p class="loc">오사카 · 닛폰바시</p>
+        <div class="tags">
+          <span class="tag">🚶 닛폰바시역 도보 1분</span>
+          <span class="tag">♨️ 천연온천</span>
+          <span class="tag">🦶 전관 다다미</span>
+          <span class="tag">🛏 166실</span>
+        </div>
+        <p class="desc">현관에서 신발을 벗고 다다미로 다니는 료칸 스타일 호텔. 2층 대욕장 '하나카제노유'는 라돈 천연온천으로 15:00부터 다음 날 10:00까지 열려 있고(사우나 01:00~05:00 휴), 도톤보리·구로몬시장이 도보권이에요.</p>
+      </div>
+      <div class="actions">
+        <a class="btn agoda" href="https://www.agoda.com/ko-kr/onyado-nono-namba-natural-hot-spring/hotel/osaka-jp.html" data-agoda="https://www.agoda.com/ko-kr/onyado-nono-namba-natural-hot-spring/hotel/osaka-jp.html" target="_blank" rel="noopener sponsored nofollow">아고다 가격확인</a>
+        <a class="btn trip" href="https://kr.trip.com/hotels/osaka-hotel-detail-5782369/onyado-nono-namba-natural-hot-spring/" data-trip="https://kr.trip.com/hotels/osaka-hotel-detail-5782369/onyado-nono-namba-natural-hot-spring/" target="_blank" rel="noopener sponsored nofollow">트립닷컴 가격확인</a>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="card" data-num="5" data-city="yokohama" data-tier="mid" data-who="solo duo"
+      data-search="케이큐 EX 호텔 미나토미라이 요코하마 신타카시마 노천탕 후지산 전망 요코하마역 만요클럽">
+      <div class="thumb yokohama"><span class="num">5</span><span class="emoji">🎡</span><span class="tier mid">중간급</span></div>
+      <div class="body">
+        <h2 class="name">케이큐 EX 호텔 미나토미라이 요코하마<small>Keikyu EX Hotel Minatomirai Yokohama</small></h2>
+        <p class="loc">요코하마 · 미나토미라이</p>
+        <div class="tags">
+          <span class="tag">🚶 신타카시마역 도보 1분</span>
+          <span class="tag">♨️ 26층 노천탕</span>
+          <span class="tag">🗻 후지산 조망</span>
+          <span class="tag">🛏 150실</span>
+        </div>
+        <p class="desc">미나토미라이선 신타카시마역 4번 출구에서 도보 1분, 요코하마역 동쪽 출구에서도 8분. 26층 대욕장은 남녀 모두 노천탕이 있고 맑은 날 후지산이 보여요(숙박객 무료, 15:00~25:00 / 05:00~09:00).</p>
+      </div>
+      <div class="actions">
+        <a class="btn agoda" href="https://www.agoda.com/ko-kr/keikyu-ex-hotel-minatomirai-yokohama/hotel/yokohama-jp.html" data-agoda="https://www.agoda.com/ko-kr/keikyu-ex-hotel-minatomirai-yokohama/hotel/yokohama-jp.html" target="_blank" rel="noopener sponsored nofollow">아고다 가격확인</a>
+        <a class="btn trip" href="https://kr.trip.com/hotels/yokohama-hotel-detail-118852832/keikyu-ex-hotel-minatomirai-yokohama/" data-trip="https://kr.trip.com/hotels/yokohama-hotel-detail-118852832/keikyu-ex-hotel-minatomirai-yokohama/" target="_blank" rel="noopener sponsored nofollow">트립닷컴 가격확인</a>
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="card" data-num="6" data-city="yokohama" data-tier="mid" data-who="solo duo family"
+      data-search="신요코하마 프린스 호텔 프린스호텔 신칸센 신요코하마역 39층 전망 후지산 요코하마 아레나">
+      <div class="thumb yokohama"><span class="num">6</span><span class="emoji">🏙️</span><span class="tier mid">중간급</span></div>
+      <div class="body">
+        <h2 class="name">신요코하마 프린스 호텔<small>Shin Yokohama Prince Hotel</small></h2>
+        <p class="loc">요코하마 · 신요코하마</p>
+        <div class="tags">
+          <span class="tag">🚄 신요코하마역 도보 2분</span>
+          <span class="tag">🏙 39층 전망</span>
+          <span class="tag">🗻 후지산 뷰</span>
+          <span class="tag">🛏 875실</span>
+        </div>
+        <p class="desc">도카이도 신칸센·JR 요코하마선·지하철 블루라인이 모이는 신요코하마역에서 도보 2분. 지상 150m 39층 호텔이라 객실에서 미나토미라이와 후지산이 보이고, 4인까지 묵는 트윈룸도 있어요. 시나가와에서 신칸센으로 11분.</p>
+      </div>
+      <div class="actions">
+        <a class="btn agoda" href="https://www.agoda.com/ko-kr/shin-yokohama-prince-hotel/hotel/yokohama-jp.html" data-agoda="https://www.agoda.com/ko-kr/shin-yokohama-prince-hotel/hotel/yokohama-jp.html" target="_blank" rel="noopener sponsored nofollow">아고다 가격확인</a>
+        <a class="btn trip" href="https://kr.trip.com/hotels/yokohama-hotel-detail-993483/shin-yokohama-prince-hotel/" data-trip="https://kr.trip.com/hotels/yokohama-hotel-detail-993483/shin-yokohama-prince-hotel/" target="_blank" rel="noopener sponsored nofollow">트립닷컴 가격확인</a>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="card" data-num="7" data-city="fukuoka" data-tier="high" data-who="duo family"
+      data-search="미야코 호텔 하카타 하카타역 직결 스파 루시다 천연온천 옥상 스파 루프탑 풀">
+      <div class="thumb fukuoka"><span class="num">7</span><span class="emoji">🍜</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">미야코 호텔 하카타<small>Miyako Hotel Hakata</small></h2>
+        <p class="loc">후쿠오카 · 하카타</p>
+        <div class="tags">
+          <span class="tag">🚉 하카타역 직결</span>
+          <span class="tag">♨️ 옥상 천연온천</span>
+          <span class="tag">🏊 야외 온천 스파</span>
+          <span class="tag">🛏 208실</span>
+        </div>
+        <p class="desc">JR 하카타역과 직결(동쪽 7번 출구 도보 1분), 공항에서 15분. 13층 스파 '루시다'에 천연온천 내탕과 8m 폭포가 있는 옥상 야외 온천 스파가 있어요. 내탕 06:30~12:00 / 14:00~24:00, 야외 스파는 19시 이후 만 18세 이상.</p>
+      </div>
+      <div class="actions">
+        <a class="btn agoda" href="https://www.agoda.com/ko-kr/miyako-hotel-hakata/hotel/fukuoka-jp.html" data-agoda="https://www.agoda.com/ko-kr/miyako-hotel-hakata/hotel/fukuoka-jp.html" target="_blank" rel="noopener sponsored nofollow">아고다 가격확인</a>
+        <a class="btn trip" href="https://kr.trip.com/hotels/fukuoka-hotel-detail-705197/miyako-hotel-hakata/" data-trip="https://kr.trip.com/hotels/fukuoka-hotel-detail-705197/miyako-hotel-hakata/" target="_blank" rel="noopener sponsored nofollow">트립닷컴 가격확인</a>
+      </div>
+    </article>
+
+    <!-- 8 -->
+    <article class="card" data-num="8" data-city="fukuoka" data-tier="low" data-who="solo duo"
+      data-search="니시테츠 호텔 크룸 하카타 니시테츠 크룸 천연온천 대욕장 사우나 하카타구치 버스터미널 캐널시티">
+      <div class="thumb fukuoka"><span class="num">8</span><span class="emoji">♨️</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">니시테츠 호텔 크룸 하카타<small>Nishitetsu Hotel Croom Hakata</small></h2>
+        <p class="loc">후쿠오카 · 하카타</p>
+        <div class="tags">
+          <span class="tag">🚶 하카타역 도보 4분</span>
+          <span class="tag">♨️ 천연온천 대욕장</span>
+          <span class="tag">🧖 사우나</span>
+          <span class="tag">🛏 503실</span>
+        </div>
+        <p class="desc">하카타역 하카타구치에서 도보 4분, 하카타 버스터미널 바로 앞. 지하 대욕장은 천연온천수에 사우나까지 갖춰 하루 종일 걸은 뒤 몸을 풀기 좋아요. 객실은 14.6㎡ 싱글·더블부터 20.7㎡ 트윈까지 실속형.</p>
+      </div>
+      <div class="actions">
+        <a class="btn agoda" href="https://www.agoda.com/ko-kr/nishitetsu-hotel-croom-hakata/hotel/fukuoka-jp.html" data-agoda="https://www.agoda.com/ko-kr/nishitetsu-hotel-croom-hakata/hotel/fukuoka-jp.html" target="_blank" rel="noopener sponsored nofollow">아고다 가격확인</a>
+        <a class="btn trip" href="https://kr.trip.com/hotels/fukuoka-hotel-detail-705327/nishitetsu-hotel-croom-hakata/" data-trip="https://kr.trip.com/hotels/fukuoka-hotel-detail-705327/nishitetsu-hotel-croom-hakata/" target="_blank" rel="noopener sponsored nofollow">트립닷컴 가격확인</a>
+      </div>
+    </article>
+
+    <!-- 9 -->
+    <article class="card" data-num="9" data-city="sapporo" data-tier="mid" data-who="solo duo"
+      data-search="온센 료칸 유엔 삿포로 유엔 료칸 카루루스 온천 노보리베츠 오도리 삿포로역 노천탕 다다미">
+      <div class="thumb sapporo"><span class="num">9</span><span class="emoji">❄️</span><span class="tier mid">중간급</span></div>
+      <div class="body">
+        <h2 class="name">온센 료칸 유엔 삿포로<small>Onsen Ryokan Yuen Sapporo</small></h2>
+        <p class="loc">삿포로 · 오도리</p>
+        <div class="tags">
+          <span class="tag">🚶 오도리역 도보 8분</span>
+          <span class="tag">♨️ 카루루스 온천</span>
+          <span class="tag">🛖 료칸 스타일</span>
+          <span class="tag">🛏 182실</span>
+        </div>
+        <p class="desc">삿포로 도심에서 노보리베츠 카루루스 온천수를 노천탕에 받아 쓰는 료칸형 호텔. 대욕장은 15:00~25:00 / 06:00~10:00이고, 다다미와 목재를 살린 객실이 조용해요. 2020년 문을 열었습니다.</p>
+      </div>
+      <div class="actions">
+        <a class="btn agoda" href="https://www.agoda.com/ko-kr/onsen-ryokan-yuen-sapporo/hotel/sapporo-jp.html" data-agoda="https://www.agoda.com/ko-kr/onsen-ryokan-yuen-sapporo/hotel/sapporo-jp.html" target="_blank" rel="noopener sponsored nofollow">아고다 가격확인</a>
+        <a class="btn trip" href="https://kr.trip.com/hotels/sapporo-hotel-detail-57831126/onsen-ryokan-yuen-sapporo/" data-trip="https://kr.trip.com/hotels/sapporo-hotel-detail-57831126/onsen-ryokan-yuen-sapporo/" target="_blank" rel="noopener sponsored nofollow">트립닷컴 가격확인</a>
+      </div>
+    </article>
+
+    <!-- 10 -->
+    <article class="card" data-num="10" data-city="sapporo" data-tier="low" data-who="solo duo"
+      data-search="도미 인 프리미엄 삿포로 도미인 이시카리노유 다누키코지 오도리 대욕장 야식 라멘 사우나">
+      <div class="thumb sapporo"><span class="num">10</span><span class="emoji">🛁</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">도미 인 프리미엄 삿포로<small>Dormy Inn Premium Sapporo Hot Spring</small></h2>
+        <p class="loc">삿포로 · 다누키코지</p>
+        <div class="tags">
+          <span class="tag">🚶 오도리역 도보 3분</span>
+          <span class="tag">♨️ 2층 대욕장</span>
+          <span class="tag">🍜 무료 야식 라멘</span>
+          <span class="tag">💳 실속형</span>
+        </div>
+        <p class="desc">다누키코지 6초메 상점가 안, 지하철 오도리역(다누키코지 4초메 출구) 도보 3분. 2층 대욕장 '이시카리노유'는 온천은 아니지만 반노천탕·탄산천·사우나를 갖췄고, 밤에는 무료 야식 라멘과 아이스크림이 나와요.</p>
+      </div>
+      <div class="actions">
+        <a class="btn agoda" href="https://www.agoda.com/ko-kr/dormy-inn-premium-sapporo-hot-spring/hotel/sapporo-jp.html" data-agoda="https://www.agoda.com/ko-kr/dormy-inn-premium-sapporo-hot-spring/hotel/sapporo-jp.html" target="_blank" rel="noopener sponsored nofollow">아고다 가격확인</a>
+        <a class="btn trip" href="https://kr.trip.com/hotels/sapporo-hotel-detail-1061749/dormy-inn-premium-sapporo-hot-spring/" data-trip="https://kr.trip.com/hotels/sapporo-hotel-detail-1061749/dormy-inn-premium-sapporo-hot-spring/" target="_blank" rel="noopener sponsored nofollow">트립닷컴 가격확인</a>
+      </div>
+    </article>
+
+  </main>
+
+  <div class="empty" id="empty">
+    <b>조건에 맞는 숙소가 없어요</b>
+    다른 도시나 가격대를 골라보세요.
+  </div>
+
+  <section class="tip">
+    <h2>🛁 요코하마에서 온천 한 번 더 — 미나토미라이 만요클럽</h2>
+    <p>숙소는 아니고 24시간 당일 온천 시설이에요. 아타미·유가와라 온천수를 매일 실어와 쓰고, 옥상 족욕 정원에서 관람차와 미나토미라이 야경을 봅니다. 5번·6번 숙소와 함께 묶기 좋아요.</p>
+    <div class="facts">
+      <span>📍 신코 2-7-1</span>
+      <span>🚶 미나토미라이역 도보 약 5분</span>
+      <span>💴 입관 3,500엔 + 입욕세 100엔</span>
+      <span>🕛 24시간</span>
+    </div>
+  </section>
+
+  <footer>
+    <p class="notice"><strong>제휴 마케팅 활동의 일환으로 예약 시 일정액의 수수료를 제공받을 수 있습니다.</strong></p>
+    <p>가격대(가성비·중간급·고급)는 2인 1박 기준의 대략적인 상대 구분이며, 날짜·성수기·환율·객실 타입에 따라 실제 요금은 달라집니다. 정확한 금액은 각 버튼에서 확인해 주세요.</p>
+    <p>역 도보 거리, 온천·대욕장 유무와 운영시간, 객실 수는 2026년 11월 14일 기준 각 숙소 공식 홈페이지와 예약 사이트 안내로 확인한 내용입니다. 운영시간·요금·이용 규정은 예고 없이 바뀔 수 있으니 예약 전에 공식 사이트에서 다시 확인하세요.</p>
+    <p>사진은 각 숙소의 실제 모습이 아니라 도시를 나타내는 이미지입니다.</p>
+  </footer>
+
+</div>
+
+<script>
+/* =========================================================
+   제휴 설정 — 여기 값만 채우면 모든 버튼에 자동 반영됩니다.
+   1) 트립닷컴 파트너: https://kr.trip.com/partners/tools/index
+      → Account > Manage My Sites 의 AID / SID 숫자
+   2) 아고다 파트너: 아고다 어필리에이트 cid 숫자
+   값이 비어 있으면 제휴 파라미터 없이 일반 링크로 열립니다.
+   ========================================================= */
+var AFFILIATE_CONFIG = {
+  trip:  { aid: "", sid: "" },   // 예: aid: "1234567", sid: "12345678"
+  agoda: { cid: "" }             // 예: cid: "1234567"
+};
+
+function withTripAffiliate(url){
+  var aid = AFFILIATE_CONFIG.trip.aid;
+  if(!aid){ return url; }
+  var sep = url.indexOf("?") === -1 ? "?" : "&";
+  var out = url + sep + "allianceid=" + encodeURIComponent(aid);
+  if(AFFILIATE_CONFIG.trip.sid){
+    out += "&sid=" + encodeURIComponent(AFFILIATE_CONFIG.trip.sid);
+  }
+  return out;
+}
+
+function withAgodaAffiliate(url){
+  var cid = AFFILIATE_CONFIG.agoda.cid;
+  if(!cid){ return url; }
+  var sep = url.indexOf("?") === -1 ? "?" : "&";
+  return url + sep + "cid=" + encodeURIComponent(cid);
+}
+
+(function applyAffiliate(){
+  var agodaLinks = document.querySelectorAll("a[data-agoda]");
+  for(var i = 0; i < agodaLinks.length; i++){
+    agodaLinks[i].href = withAgodaAffiliate(agodaLinks[i].getAttribute("data-agoda"));
+  }
+  var tripLinks = document.querySelectorAll("a[data-trip]");
+  for(var j = 0; j < tripLinks.length; j++){
+    tripLinks[j].href = withTripAffiliate(tripLinks[j].getAttribute("data-trip"));
+  }
+})();
+
+/* =========================================================
+   검색 + 필터
+   ========================================================= */
+(function(){
+  var q = document.getElementById("q");
+  var clearBtn = document.getElementById("clear");
+  var countEl = document.getElementById("count");
+  var emptyEl = document.getElementById("empty");
+  var cards = Array.prototype.slice.call(document.querySelectorAll("#list .card"));
+
+  var state = { city: "all", tier: "all", who: "all", text: "" };
+
+  function bindGroup(containerId, key){
+    var group = document.getElementById(containerId);
+    if(!group){ return; }
+    group.addEventListener("click", function(e){
+      var btn = e.target.closest ? e.target.closest(".chip") : null;
+      if(!btn || !group.contains(btn)){ return; }
+      var chips = group.querySelectorAll(".chip");
+      for(var i = 0; i < chips.length; i++){
+        chips[i].setAttribute("aria-pressed", chips[i] === btn ? "true" : "false");
+      }
+      state[key] = btn.getAttribute("data-" + key);
+      apply();
+    });
+  }
+
+  function normalize(s){
+    return (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  function matches(card){
+    if(state.city !== "all" && card.getAttribute("data-city") !== state.city){ return false; }
+    if(state.tier !== "all" && card.getAttribute("data-tier") !== state.tier){ return false; }
+    if(state.who !== "all"){
+      var who = " " + card.getAttribute("data-who") + " ";
+      if(who.indexOf(" " + state.who + " ") === -1){ return false; }
+    }
+    var t = state.text;
+    if(!t){ return true; }
+    var haystack = normalize(card.getAttribute("data-search") + " " + card.textContent);
+    var num = card.getAttribute("data-num");
+    if(/^[0-9]+$/.test(t)){
+      return num === t;
+    }
+    var words = t.split(" ");
+    for(var i = 0; i < words.length; i++){
+      if(words[i] && haystack.indexOf(words[i]) === -1){ return false; }
+    }
+    return true;
+  }
+
+  function apply(){
+    var shown = 0;
+    for(var i = 0; i < cards.length; i++){
+      var ok = matches(cards[i]);
+      cards[i].style.display = ok ? "" : "none";
+      if(ok){ shown++; }
+    }
+    countEl.textContent = String(shown);
+    emptyEl.className = shown === 0 ? "empty show" : "empty";
+  }
+
+  var timer = null;
+  q.addEventListener("input", function(){
+    state.text = normalize(q.value);
+    clearBtn.className = q.value ? "show" : "";
+    if(timer){ clearTimeout(timer); }
+    timer = setTimeout(apply, 90);
+  });
+  q.addEventListener("keydown", function(e){
+    if(e.key === "Enter"){ e.preventDefault(); q.blur(); }
+  });
+  clearBtn.addEventListener("click", function(){
+    q.value = "";
+    state.text = "";
+    clearBtn.className = "";
+    q.focus();
+    apply();
+  });
+
+  bindGroup("cityChips", "city");
+  bindGroup("tierChips", "tier");
+  bindGroup("whoChips", "who");
+
+  apply();
+})();
+</script>
+</body>
+</html>
