@@ -480,7 +480,7 @@
    값이 비어 있으면 제휴 파라미터 없이 일반 링크로 열립니다.
    ========================================================= */
 var AFFILIATE_CONFIG = {
-  trip:  { aid: "", sid: "" },   // 예: aid: "1234567", sid: "12345678"
+  trip:  { aid: "11254538", sid: "335287562" },   // 트립닷컴 파트너 AID / SID (2026-11-15 반영)
   agoda: { cid: "" }             // 예: cid: "1234567"
 };
 
@@ -488,9 +488,10 @@ function withTripAffiliate(url){
   var aid = AFFILIATE_CONFIG.trip.aid;
   if(!aid){ return url; }
   var sep = url.indexOf("?") === -1 ? "?" : "&";
-  var out = url + sep + "allianceid=" + encodeURIComponent(aid);
+  // 트립닷컴 파트너가 발급하는 링크와 같은 표기: ?Allianceid=AID&SID=SID
+  var out = url + sep + "Allianceid=" + encodeURIComponent(aid);
   if(AFFILIATE_CONFIG.trip.sid){
-    out += "&sid=" + encodeURIComponent(AFFILIATE_CONFIG.trip.sid);
+    out += "&SID=" + encodeURIComponent(AFFILIATE_CONFIG.trip.sid);
   }
   return out;
 }
