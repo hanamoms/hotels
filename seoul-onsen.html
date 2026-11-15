@@ -265,7 +265,7 @@
 
   <div class="status" aria-live="polite">
     <span><b id="count">5</b>곳</span>
-    <span class="basis">입장권·이용권 가격 · 2026-11-16 확인</span>
+    <span class="basis" id="basis">입장권·이용권 가격 · 2026-11-16 확인</span>
   </div>
 
   <main class="list" id="list">
@@ -437,6 +437,7 @@
   var clearBtn = document.getElementById("clear");
   var countEl = document.getElementById("count");
   var emptyEl = document.getElementById("empty");
+  var basisEl = document.getElementById("basis");
   var cards = Array.prototype.slice.call(document.querySelectorAll("#list .card"));
 
   var state = { cat: "all", text: "" };
@@ -460,12 +461,23 @@
     return (s || "").toLowerCase().replace(/\s+/g, " ").trim();
   }
 
+  var BASIS = {
+    all: "입장권·이용권 가격 · 2026-11-16 확인",
+    pool: "바데풀·유수풀·키즈풀이 있는 곳",
+    healing: "노천탕·찜질로 쉬는 곳",
+    day: "5곳 모두 당일권으로 다녀올 수 있어요",
+    stay: "숙박까지 되는 곳"
+  };
+
   function matches(card){
     if(state.cat !== "all"){
       var cat = " " + card.getAttribute("data-cat") + " ";
       if(cat.indexOf(" " + state.cat + " ") === -1){ return false; }
     }
     if(state.text){
+      if(/^[0-9]+$/.test(state.text)){
+        return card.getAttribute("data-num") === state.text;
+      }
       var hay = normalize(card.getAttribute("data-search") + " " +
         card.querySelector(".name").textContent + " " +
         card.querySelector(".loc").textContent);
@@ -485,6 +497,7 @@
       if(ok){ shown++; }
     }
     countEl.textContent = shown;
+    if(basisEl){ basisEl.textContent = BASIS[state.cat] || BASIS.all; }
     emptyEl.classList.toggle("show", shown === 0);
     clearBtn.classList.toggle("show", !!state.text);
   }
