@@ -53,6 +53,17 @@
   }
   .xlink:active{transform:scale(.99)}
 
+  /* ---------- page switch tabs ---------- */
+  .tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0 4px}
+  .tab{
+    display:flex;align-items:center;justify-content:center;gap:4px;
+    text-decoration:none;padding:11px 4px;border-radius:13px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#C9C9D0;font-size:12.5px;font-weight:600;text-align:center;line-height:1.25;
+  }
+  .tab.on{background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:800}
+  .tab:active{transform:scale(.99)}
+
   /* ---------- sticky search + filters ---------- */
   .searchbar{
     position:sticky;top:0;z-index:20;
@@ -241,8 +252,13 @@
     <div class="brand"><b>PICK</b> JAPAN STAY</div>
     <h1>일본 숙소 추천 <span>10곳</span></h1>
     <p class="lead">도쿄·오사카·요코하마·후쿠오카·삿포로 · 역 도보 거리와 온천·대욕장 정보를 공식 안내로 확인했어요.</p>
-    <a class="xlink" href="essentials.html">🧳 짐 쌀 때 필요한 필수템 8선 보기 →</a>
   </header>
+
+  <nav class="tabs" aria-label="페이지 이동">
+    <a class="tab on" href="index.html" aria-current="page">🏨 일본 숙소</a>
+    <a class="tab" href="sapporo.html">♨️ 삿포로 대욕장</a>
+    <a class="tab" href="essentials.html">🧳 필수템 8선</a>
+  </nav>
 
   <div class="searchbar">
     <div class="search">

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>삿포로 대욕장 호텔 10곳 · 온천·사우나 있는 숙소만</title>
+<meta name="description" content="삿포로에서 대욕장이 있는 호텔만 10곳 골랐습니다. 삿포로역·오도리·스스키노·나카지마공원별로 역 도보 거리, 천연온천 여부, 사우나, 1박 가격(2026-12-01 2인 기준)과 평점을 정리했어요.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="삿포로 대욕장 호텔 10곳 · 온천·사우나 있는 숙소만">
+<meta property="og:description" content="삿포로역·오도리·스스키노·나카지마공원에서 대욕장이 확인된 호텔 10곳. 역 도보 거리와 온천·사우나 유무, 1박 가격까지.">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A8%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#111111;
+    --card:#1C1C1E;
+    --card2:#242426;
+    --line:#2E2E31;
+    --text:#F2F2F4;
+    --sub:#A1A1A8;
+    --yellow:#F5C518;
+    --trip:#1E88E5;
+    --green:#2E7D32;
+    --amber:#A15C00;
+    --purple:#5E35B1;
+    --onsen:#C2185B;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic","Noto Sans KR",Roboto,sans-serif;
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+    padding-bottom:calc(28px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 14px}
+
+  /* ---------- header ---------- */
+  header.top{padding:18px 0 10px}
+  .brand{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--sub);letter-spacing:.08em;text-transform:uppercase}
+  .brand b{color:var(--yellow);letter-spacing:0}
+  h1{font-size:24px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.02em}
+  h1 span{color:var(--yellow)}
+  .lead{margin:0;color:var(--sub);font-size:13.5px}
+
+  /* ---------- page switch tabs ---------- */
+  .tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0 4px}
+  .tab{
+    display:flex;align-items:center;justify-content:center;gap:4px;
+    text-decoration:none;padding:11px 4px;border-radius:13px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#C9C9D0;font-size:12.5px;font-weight:600;text-align:center;line-height:1.25;
+  }
+  .tab.on{background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:800}
+  .tab:active{transform:scale(.99)}
+
+  /* ---------- sticky search + filters ---------- */
+  .searchbar{
+    position:sticky;top:0;z-index:20;
+    background:#111111;
+    padding:8px 14px 10px;
+    margin:0 -14px;
+    box-shadow:0 8px 14px -10px rgba(0,0,0,.9);
+  }
+  .filters{padding:2px 0 4px}
+  .search{position:relative}
+  .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.55}
+  #q{
+    width:100%;padding:15px 44px 15px 42px;
+    background:#1A1A1C;border:1px solid var(--line);border-radius:16px;
+    color:var(--text);font-size:15px;font-family:inherit;
+    outline:none;appearance:none;
+  }
+  #q::placeholder{color:#7C7C84}
+  #q:focus{border-color:#4A4A50;background:#1F1F22}
+  #clear{
+    position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    width:30px;height:30px;border:0;border-radius:50%;
+    background:#333338;color:#CFCFD6;font-size:16px;line-height:1;
+    display:none;cursor:pointer;
+  }
+  #clear.show{display:block}
+
+  .chips{
+    display:flex;gap:8px;overflow-x:auto;padding:10px 0 0;
+    scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;
+    padding:9px 15px;border-radius:999px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#D6D6DC;font-size:13.5px;font-family:inherit;white-space:nowrap;
+    cursor:pointer;transition:background .15s,border-color .15s,color .15s;
+  }
+  .chip[aria-pressed="true"]{
+    background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:700;
+  }
+  .chip:active{transform:scale(.98)}
+
+  .status{
+    display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+    padding:12px 0 2px;color:var(--sub);font-size:12.5px;
+  }
+  .status b{color:var(--text);font-weight:600}
+  .status .basis{text-align:right}
+
+  /* ---------- cards ---------- */
+  .list{display:grid;gap:12px;padding-top:8px}
+  .card{
+    display:grid;grid-template-columns:104px 1fr;gap:12px;
+    background:var(--card);border:1px solid #26262A;
+    border-radius:18px;padding:12px;
+  }
+  .thumb{
+    position:relative;border-radius:13px;overflow:hidden;
+    background:linear-gradient(160deg,#2A2A30,#17171A);
+    min-height:104px;display:flex;align-items:center;justify-content:center;
+  }
+  .thumb .emoji{font-size:34px;opacity:.92;filter:saturate(1.05)}
+  .thumb.station{background:linear-gradient(160deg,#1F3242,#121A21)}
+  .thumb.odori{background:linear-gradient(160deg,#243141,#141C24)}
+  .thumb.susukino{background:linear-gradient(160deg,#3A2430,#1F1319)}
+  .thumb.nakajima{background:linear-gradient(160deg,#1E3A30,#111F19)}
+  .num{
+    position:absolute;top:6px;left:6px;
+    min-width:26px;height:26px;padding:0 6px;border-radius:8px;
+    background:var(--yellow);color:#141414;
+    font-weight:800;font-size:14px;line-height:26px;text-align:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.35);
+  }
+  .tier{
+    position:absolute;bottom:6px;left:6px;
+    padding:3px 8px;border-radius:7px;
+    font-size:10.5px;font-weight:700;color:#fff;letter-spacing:.01em;
+  }
+  .tier.low{background:var(--green)}
+  .tier.mid{background:var(--amber)}
+  .tier.high{background:var(--purple)}
+
+  .body{min-width:0}
+  .name{margin:0;font-size:16px;line-height:1.32;letter-spacing:-.01em}
+  .name small{display:block;font-size:11.5px;color:var(--sub);font-weight:400;margin-top:2px}
+  .loc{margin:4px 0 0;font-size:12.5px;color:var(--yellow);font-weight:600}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 0}
+  .tag{
+    font-size:11px;color:#C9C9D0;background:#26262A;border:1px solid #303036;
+    padding:3px 7px;border-radius:7px;white-space:nowrap;
+  }
+  .tag.onsen{background:#3A1220;border-color:#5C1B33;color:#FFC9DC}
+  .desc{margin:8px 0 0;font-size:12.5px;color:#B9B9C2;line-height:1.55}
+  .bathline{
+    margin:8px 0 0;font-size:12px;color:#D9D9E0;background:#191A1D;
+    border:1px solid #2A2B30;border-left:3px solid var(--onsen);
+    border-radius:9px;padding:7px 9px;line-height:1.5;
+  }
+  .bathline b{color:#FFC9DC;font-weight:700}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px;font-size:11.5px;color:#8F8F97}
+  .meta .price{color:var(--yellow);font-weight:800;font-size:13px}
+  .actions{display:grid;gap:8px;margin-top:12px;grid-column:1 / -1}
+  .btn{
+    display:block;text-align:center;text-decoration:none;
+    padding:12px 6px;border-radius:12px;
+    font-size:13.5px;font-weight:700;color:#fff;
+    border:0;cursor:pointer;
+  }
+  .btn.trip{background:var(--trip)}
+  .btn:active{filter:brightness(.92)}
+
+  .empty{
+    display:none;text-align:center;padding:44px 16px;color:var(--sub);
+    border:1px dashed #303036;border-radius:18px;background:#171719;
+  }
+  .empty b{display:block;color:var(--text);font-size:15px;margin-bottom:6px}
+  .empty.show{display:block}
+
+  /* ---------- tip + footer ---------- */
+  .tip{
+    margin-top:16px;padding:14px 15px;border-radius:16px;
+    background:#181A1B;border:1px solid #2A2E30;
+  }
+  .tip h2{margin:0 0 6px;font-size:14px}
+  .tip p{margin:0 0 8px;font-size:12.5px;color:#AEAEB6;line-height:1.6}
+  .tip ul{margin:0;padding-left:18px}
+  .tip li{font-size:12.5px;color:#AEAEB6;line-height:1.65;margin-bottom:5px}
+  .tip .facts{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+  .tip .facts span{font-size:11px;color:#C9C9D0;background:#232326;padding:3px 7px;border-radius:7px}
+  .tip a{color:#F0D683}
+
+  footer{margin-top:22px;padding-top:16px;border-top:1px solid #232326;color:#8F8F97;font-size:11.5px;line-height:1.7}
+  footer p{margin:0 0 8px}
+  footer .notice{color:#C9C9D0}
+  footer strong{color:#E6E6EA}
+
+  @media (min-width:620px){
+    h1{font-size:28px}
+    .list{grid-template-columns:1fr 1fr}
+    .card{grid-template-columns:96px 1fr}
+    .card .desc{font-size:12px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand"><b>PICK</b> JAPAN STAY</div>
+    <h1>삿포로 <span>대욕장</span> 호텔 10곳</h1>
+    <p class="lead">목욕탕(대욕장)이 있는 곳만 골랐어요 · 2026년 11월 15일 트립닷컴에서 시설·요금 확인</p>
+  </header>
+
+  <nav class="tabs" aria-label="페이지 이동">
+    <a class="tab" href="index.html">🏨 일본 숙소</a>
+    <a class="tab on" href="sapporo.html" aria-current="page">♨️ 삿포로 대욕장</a>
+    <a class="tab" href="essentials.html">🧳 필수템 8선</a>
+  </nav>
+
+  <div class="searchbar">
+    <div class="search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#BFBFC6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="text" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="번호 또는 동네·숙소명 (예: 오도리, 유엔)" aria-label="숙소 검색">
+      <button id="clear" type="button" aria-label="검색어 지우기">✕</button>
+    </div>
+  </div>
+
+  <div class="filters">
+
+    <div class="chips" id="areaChips" role="group" aria-label="지역 필터">
+      <button class="chip" data-area="all" aria-pressed="true">전체 지역</button>
+      <button class="chip" data-area="station" aria-pressed="false">🚉 삿포로역</button>
+      <button class="chip" data-area="odori" aria-pressed="false">🌳 오도리</button>
+      <button class="chip" data-area="susukino" aria-pressed="false">🏮 스스키노</button>
+      <button class="chip" data-area="nakajima" aria-pressed="false">💧 나카지마공원</button>
+    </div>
+
+    <div class="chips" id="bathChips" role="group" aria-label="욕탕 종류 필터">
+      <button class="chip" data-bath="all" aria-pressed="true">♨️ 전체 욕탕</button>
+      <button class="chip" data-bath="onsen" aria-pressed="false">천연온천</button>
+      <button class="chip" data-bath="sauna" aria-pressed="false">사우나</button>
+      <button class="chip" data-bath="bathonly" aria-pressed="false">대욕장만</button>
+    </div>
+  </div>
+
+  <div class="status" aria-live="polite">
+    <span><b id="count">10</b>곳</span>
+    <span class="basis">1박·2인·세금 포함 · 2026-12-01 체크인 조회</span>
+  </div>
+
+  <main class="list" id="list">
+
+    <!-- 1 -->
+    <article class="card" data-num="1" data-area="station" data-bath="onsen sauna" data-tier="high"
+      data-search="JR 타워 호텔 닛코 삿포로 JR tower hotel nikko sapporo 삿포로역 직결 천연온천 스파 사우나 22층 전망">
+      <div class="thumb station"><span class="num">1</span><span class="emoji">🏙️</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">JR 타워 호텔 닛코 삿포로<small>JR Tower Hotel Nikko Sapporo</small></h2>
+        <p class="loc">삿포로역 · 역에서 100m(도보 2분)</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 천연온천</span>
+          <span class="tag">🧖 사우나</span>
+          <span class="tag">🚉 삿포로역 직결</span>
+          <span class="tag">🌃 고층 야경</span>
+        </div>
+        <p class="bathline"><b>대욕장</b> 22층 스파 ‘스카이 리조트 스파’. 천연온천과 사우나가 있고, 고층 창으로 삿포로 시내와 데이네 산맥이 보여요. 스파는 <b>별도 요금</b>이고 만 18세 이상만 이용하는 상품이 있어요.</p>
+        <p class="desc">JR 삿포로역과 바로 이어지는 5성급. 2003년 준공·2018년 리모델링, 330실. 다이마루·스텔라플레이스와 연결돼 짐이 많아도 편하고, 35층 조식당 전망이 좋다는 후기가 많아요.</p>
+        <div class="meta"><span class="price">274,265원</span><span>9.5점 · 리뷰 1,405</span><span>위치 9.7</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/sapporo-hotel-detail-705159/jr-tower-hotel-nikko-sapporo/" data-trip="https://kr.trip.com/hotels/sapporo-hotel-detail-705159/jr-tower-hotel-nikko-sapporo/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="card" data-num="2" data-area="station" data-bath="bathonly" data-tier="high"
+      data-search="더 게이트 호텔 삿포로 바이 훌릭 THE GATE HOTEL SAPPORO by HULIC 2025 신축 대욕장 헬스장 지하 연결">
+      <div class="thumb station"><span class="num">2</span><span class="emoji">🏨</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">더 게이트 호텔 삿포로 바이 훌릭<small>THE GATE HOTEL SAPPORO by HULIC</small></h2>
+        <p class="loc">삿포로역 · 역에서 390m(지하철 삿포로역 110m)</p>
+        <div class="tags">
+          <span class="tag">🛁 대욕장</span>
+          <span class="tag">🏋 헬스장 무료</span>
+          <span class="tag">✨ 2025년 신축</span>
+          <span class="tag">🚶 지하로 연결</span>
+        </div>
+        <p class="bathline"><b>대욕장</b> 1개 탕 규모의 아담한 대욕장. 시설은 새것이고 깨끗하지만 “탕이 하나뿐이라 작다”는 후기도 있어요. 천연온천은 아닙니다.</p>
+        <p class="desc">2025년 문을 연 172실 신축 호텔. 삿포로역과 지하로 이어져 눈·비 오는 날 캐리어 끌기 편해요. 오도리 공원 620m, 타마쿠지 890m. 일부 후기에 방음·먼지 지적이 있었어요.</p>
+        <div class="meta"><span class="price">215,345원</span><span>9.5점 · 리뷰 520</span><span>청결 9.6</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/sapporo-hotel-detail-129923417/the-gate-hotel-sapporo-by-hulic/" data-trip="https://kr.trip.com/hotels/sapporo-hotel-detail-129923417/the-gate-hotel-sapporo-by-hulic/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="card" data-num="3" data-area="station" data-bath="bathonly" data-tier="mid"
+      data-search="호텔 에미온 삿포로 Hotel Emion Sapporo 2023 대욕장 넓은 욕탕 세븐일레븐 지하통로 연결">
+      <div class="thumb station"><span class="num">3</span><span class="emoji">🛁</span><span class="tier mid">중간급</span></div>
+      <div class="body">
+        <h2 class="name">호텔 에미온 삿포로<small>Hotel Emion Sapporo</small></h2>
+        <p class="loc">삿포로역 · 역에서 380m(지하철 삿포로역 280m)</p>
+        <div class="tags">
+          <span class="tag">🛁 넓은 대욕장</span>
+          <span class="tag">🏪 1층 세븐일레븐</span>
+          <span class="tag">✨ 2023년 신축</span>
+          <span class="tag">👨‍👩‍👧 가족실</span>
+        </div>
+        <p class="bathline"><b>대욕장</b> “넓고 드라이기가 6대”라는 후기가 많은 대형 욕장. 노천탕이 있다는 후기도 있어요. 천연온천은 아니고 가온수입니다.</p>
+        <p class="desc">2023년 개관 295실. JR 삿포로역 지하 통로와 이어져 겨울 이동이 편해요. 조식(가리비 미소된장국) 평가가 좋고, 1층 편의점이 있어 아이 동반 가족에게 편합니다.</p>
+        <div class="meta"><span class="price">134,337원</span><span>9.4점 · 리뷰 3,812</span><span>청결 9.6</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/sapporo-hotel-detail-112955989/hotel-emion-sapporo/" data-trip="https://kr.trip.com/hotels/sapporo-hotel-detail-112955989/hotel-emion-sapporo/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="card" data-num="4" data-area="station" data-bath="bathonly" data-tier="mid"
+      data-search="미쓰이 가든 호텔 삿포로 웨스트 Mitsui Garden Hotel Sapporo West 2층 대욕장 아침 저녁 다이마루">
+      <div class="thumb station"><span class="num">4</span><span class="emoji">🎨</span><span class="tier mid">중간급</span></div>
+      <div class="body">
+        <h2 class="name">미쓰이 가든 호텔 삿포로 웨스트<small>Mitsui Garden Hotel Sapporo West</small></h2>
+        <p class="loc">삿포로역 · 역에서 480m(도보 5분)</p>
+        <div class="tags">
+          <span class="tag">🛁 2층 대욕장</span>
+          <span class="tag">🧺 욕장 안 세탁기</span>
+          <span class="tag">🛍 다이마루 한 블록</span>
+          <span class="tag">🖼 공용욕탕 조각품</span>
+        </div>
+        <p class="bathline"><b>대욕장</b> 2층에 있어요. 작지만 깨끗하고 <b>아침·저녁 모두</b> 이용 가능. 욕장 안에 세탁·건조 기능이 있고, 공용 욕탕에 지역을 모티브로 한 조각 작품이 놓여 있습니다. 온천은 아닙니다.</p>
+        <p class="desc">2020년 개관, 리뷰 1,334개에 9.4점. 삿포로역에서 두 블록, 다이마루 백화점과 가까워 쇼핑 동선이 좋아요. 홋카이도 대학까지 도보 7분.</p>
+        <div class="meta"><span class="price">166,362원</span><span>9.4점 · 리뷰 1,334</span><span>삿포로 8위</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/sapporo-hotel-detail-49334869/mitsui-garden-hotel-sapporo-west/" data-trip="https://kr.trip.com/hotels/sapporo-hotel-detail-49334869/mitsui-garden-hotel-sapporo-west/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="card" data-num="5" data-area="station" data-bath="onsen sauna" data-tier="mid"
+      data-search="삿포로 호텔 by 그랑벨 SAPPORO HOTEL by GRANBELL 루프탑 온천 최상층 사우나 야경 2025">
+      <div class="thumb station"><span class="num">5</span><span class="emoji">🌃</span><span class="tier mid">중간급</span></div>
+      <div class="body">
+        <h2 class="name">삿포로 호텔 by 그랑벨<small>SAPPORO HOTEL by GRANBELL</small></h2>
+        <p class="loc">삿포로역 동쪽 · 역에서 460m(도보 약 8~10분)</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 루프탑 온천</span>
+          <span class="tag">🧖 사우나</span>
+          <span class="tag">🌆 270도 전망</span>
+          <span class="tag">✨ 2025년 개관</span>
+        </div>
+        <p class="bathline"><b>대욕장</b> 호텔 꼭대기층 온천. 270도로 트인 전망이 특징이고 사우나도 있어요. “대욕장만으로도 온천에 따로 갈 필요가 없다”는 후기가 있습니다.</p>
+        <p class="desc">2025년 개관한 새 호텔로 시설이 깨끗해요. 역에서 8~10분이라 위치를 아쉬워하는 후기도 있지만, 조용하고 1층에 편의점이 두 곳 있습니다.</p>
+        <div class="meta"><span class="price">163,921원</span><span>8.8점 · 리뷰 913</span><span>삿포로 17위</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/sapporo-hotel-detail-124300563/sapporo-hotel-by-granbell/" data-trip="https://kr.trip.com/hotels/sapporo-hotel-detail-124300563/sapporo-hotel-by-granbell/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="card" data-num="6" data-area="odori" data-bath="onsen sauna" data-tier="low"
+      data-search="호텔 몬토레 에델호프 삿포로 Hotel Monterey Edelhof 14층 대욕장 온천 사우나 라운지 오도리 공원">
+      <div class="thumb odori"><span class="num">6</span><span class="emoji">🏰</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">호텔 몬토레 에델호프 삿포로<small>Hotel Monterey Edelhof Sapporo</small></h2>
+        <p class="loc">오도리 · 오도리 공원 370m(삿포로역 700m)</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 본관 14층 대욕장</span>
+          <span class="tag">🧖 사우나</span>
+          <span class="tag">🛋 대욕장 라운지</span>
+          <span class="tag">💴 무료</span>
+        </div>
+        <p class="bathline"><b>대욕장</b> 본관 14층, <b>투숙객 무료</b>. “소규모 대중목욕탕 같은 온천 대욕장”이라는 안내와 함께 사우나·라운지가 있어요. 라운지에서 무료 음료를 마시며 쉴 수 있습니다.</p>
+        <p class="desc">2000년 준공 300실, 유럽풍 인테리어. 오도리 공원·TV타워가 도보 거리라 관광 동선이 좋아요. 객실이 넓다는 평이 많고, 가격 대비 만족도가 높습니다.</p>
+        <div class="meta"><span class="price">93,037원</span><span>9.2점 · 리뷰 1,656</span><span>청결 9.4</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/sapporo-hotel-detail-1454486/hotel-monterey-edelhof-sapporo/" data-trip="https://kr.trip.com/hotels/sapporo-hotel-detail-1454486/hotel-monterey-edelhof-sapporo/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="card" data-num="7" data-area="odori" data-bath="onsen sauna" data-tier="high"
+      data-search="온센 료칸 유엔 삿포로 Onsen Ryokan Yuen 노천 온천 사우나 타누키코지 오도리 료칸">
+      <div class="thumb odori"><span class="num">7</span><span class="emoji">♨️</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">온센 료칸 유엔 삿포로<small>Onsen Ryokan Yuen Sapporo</small></h2>
+        <p class="loc">오도리 · 오도리 공원 660m(도보 3분)</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 노천 온천</span>
+          <span class="tag">🧖 사우나</span>
+          <span class="tag">🛖 료칸 스타일</span>
+          <span class="tag">🍱 일본식 조식</span>
+        </div>
+        <p class="bathline"><b>대욕장</b> 도심 호텔인데 <b>노천탕</b>이 있는 온천. 겨울 야외 온천 경험이 좋다는 후기가 많아요. 다만 “실내탕은 가온수, 노천탕만 온천수”라는 후기도 있습니다.</p>
+        <p class="desc">2020년 개관 182실. 다다미와 목재를 살린 료칸 스타일 객실이라 조용해요. 타누키코지 680m, 삿포로역 1km. 일본식 조식(1인 4,000엔)이 따로 있습니다.</p>
+        <div class="meta"><span class="price">244,637원</span><span>9.1점 · 리뷰 312</span><span>청결 9.5</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/sapporo-hotel-detail-57831126/onsen-ryokan-yuen-sapporo/" data-trip="https://kr.trip.com/hotels/sapporo-hotel-detail-57831126/onsen-ryokan-yuen-sapporo/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+    <!-- 8 -->
+    <article class="card" data-num="8" data-area="susukino" data-bath="bathonly" data-tier="mid"
+      data-search="카락사 호텔 삿포로 karaksa hotel Sapporo 스스키노 대욕장 2층 타누키코지 새벽 2시">
+      <div class="thumb susukino"><span class="num">8</span><span class="emoji">🏮</span><span class="tier mid">중간급</span></div>
+      <div class="body">
+        <h2 class="name">카락사 호텔 삿포로<small>karaksa hotel Sapporo</small></h2>
+        <p class="loc">스스키노 · 스스키노역 300m(도보 5분)</p>
+        <div class="tags">
+          <span class="tag">🛁 2층 대욕장</span>
+          <span class="tag">🌙 새벽 2시까지</span>
+          <span class="tag">🛍 타누키코지 100m</span>
+          <span class="tag">👨‍👩‍👧 커넥팅룸</span>
+        </div>
+        <p class="bathline"><b>대욕장</b> 2층에 온천 스파와 공용 욕탕, 마사지 의자·휴식 공간이 있어요. <b>새벽 2시까지</b> 열려 늦게 돌아와도 들어갈 수 있습니다. 천연온천은 아닙니다.</p>
+        <p class="desc">타누키코지 상점가 바로 옆, 스스키노 한 블록. 2018년 개관·2024년 리모델링. 2층에 무료 음료·과자가 있는 웰컴 공간이 있어요. 가족용 커넥팅룸이 있습니다.</p>
+        <div class="meta"><span class="price">121,255원</span><span>9.3점 · 리뷰 885</span><span>삿포로 4위</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/sapporo-hotel-detail-9147711/karaksa-hotel-sapporo/" data-trip="https://kr.trip.com/hotels/sapporo-hotel-detail-9147711/karaksa-hotel-sapporo/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+    <!-- 9 -->
+    <article class="card" data-num="9" data-area="susukino" data-bath="sauna" data-tier="high"
+      data-search="베셀 호텔 캄파나 스스키노 Vessel Hotel Campana Susukino 대욕장 사우나 해산물 조식 뷔페">
+      <div class="thumb susukino"><span class="num">9</span><span class="emoji">🦀</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">베셀 호텔 캄파나 스스키노<small>Vessel Hotel Campana Susukino</small></h2>
+        <p class="loc">스스키노 · 스스키노역 390m(도보 6분)</p>
+        <div class="tags">
+          <span class="tag">🛁 대욕장</span>
+          <span class="tag">🧖 사우나</span>
+          <span class="tag">🍣 해산물 조식</span>
+          <span class="tag">🧴 어메니티 넉넉</span>
+        </div>
+        <p class="bathline"><b>대욕장</b> 사우나가 있는 대욕장. “온천은 아니지만 사우나와 깨끗한 시설로 만족”이라는 평가가 많습니다. 어메니티를 개수 제한 없이 챙길 수 있어요.</p>
+        <p class="desc">2019년 개관, 리뷰 2,298개로 검증된 인기 호텔. 해산물 조식 뷔페가 유명하고 타누키코지 280m·나카지마 공원 950m. 단체 투숙 시 조식 대기가 있다는 후기도 있습니다.</p>
+        <div class="meta"><span class="price">195,919원</span><span>9.3점 · 리뷰 2,298</span><span>삿포로 9위</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/sapporo-hotel-detail-31315741/vessel-hotel-campana-susukino/" data-trip="https://kr.trip.com/hotels/sapporo-hotel-detail-31315741/vessel-hotel-campana-susukino/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+    <!-- 10 -->
+    <article class="card" data-num="10" data-area="nakajima" data-bath="bathonly" data-tier="low"
+      data-search="다이와 로이넷 호텔 삿포로 나카지마 공원 Daiwa Roynet Hotel Sapporo Nakajima Koen 대욕장 가성비">
+      <div class="thumb nakajima"><span class="num">10</span><span class="emoji">🌳</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">다이와 로이넷 호텔 삿포로 나카지마 공원<small>Daiwa Roynet Hotel Sapporo Nakajima Koen</small></h2>
+        <p class="loc">나카지마공원 · 나카지마코엔역 300m(도보 4분)</p>
+        <div class="tags">
+          <span class="tag">🛁 넓은 공용 욕탕</span>
+          <span class="tag">💴 가장 저렴</span>
+          <span class="tag">🌳 공원 옆</span>
+          <span class="tag">🚇 역 4분</span>
+        </div>
+        <p class="bathline"><b>대욕장</b> “온천은 없지만 넓은 공용 욕탕이 있다”고 호텔이 직접 답한 시설. 조용히 몸 담그기엔 충분하고, 대욕장이 깨끗하다는 후기가 많아요.</p>
+        <p class="desc">2022년 개관. 나카지마 공원 옆이라 산책하기 좋고, 스스키노까지 도보 10분 안쪽. 이 페이지 10곳 중 1박 요금이 가장 낮습니다. 삿포로역에서는 2.8km로 지하철 이용.</p>
+        <div class="meta"><span class="price">69,300원</span><span>9.3점 · 리뷰 672</span><span>청결 9.3</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/sapporo-hotel-detail-92381544/daiwa-roynet-hotel-sapporo-nakajima-koen/" data-trip="https://kr.trip.com/hotels/sapporo-hotel-detail-92381544/daiwa-roynet-hotel-sapporo-nakajima-koen/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+  </main>
+
+  <div class="empty" id="empty">
+    <b>조건에 맞는 숙소가 없어요</b>
+    다른 지역이나 욕탕 종류를 골라보세요.
+  </div>
+
+  <section class="tip">
+    <h2>♨️ 삿포로에서 대욕장 고를 때 알아둘 것</h2>
+    <ul>
+      <li><b>‘대욕장’과 ‘천연온천’은 달라요.</b> 이 10곳은 모두 대욕장이 있지만, 천연온천인 곳은 <b>JR 타워 호텔 닛코 삿포로 · 온센 료칸 유엔 삿포로 · 삿포로 호텔 by 그랑벨</b> 3곳입니다. 나머지는 가온수 대욕장이에요.</li>
+      <li><b>사우나까지 있으면</b> JR 타워 · 유엔 · 몬토레 에델호프 · 베셀 캄파나 · 삿포로 호텔 by 그랑벨. 몬토레는 대욕장이 무료, JR 타워는 스파가 별도 요금입니다.</li>
+      <li><b>겨울엔 역과 이어진 곳이 편해요.</b> JR 타워(직결), 더 게이트(지하 연결), 호텔 에미온(지하 통로 연결)은 눈 오는 날 캐리어 끌기 좋습니다.</li>
+      <li><b>홋카이도 숙박세</b>가 2026년 4월 1일부터 시작됐어요. 요금에 포함되거나 현장에서 따로 낼 수 있고, 삿포로시가 별도로 부과할 수도 있습니다.</li>
+    </ul>
+    <div class="facts">
+      <span>📅 요금 조회 2026-11-15</span>
+      <span>🛏 1박·2인·세금 포함</span>
+      <span>🏨 10곳 모두 대욕장 확인</span>
+    </div>
+  </section>
+
+  <footer>
+    <p class="notice"><strong>제휴 마케팅 활동의 일환으로 예약 시 일정액의 수수료를 제공받을 수 있습니다.</strong></p>
+    <p>가격은 2026년 11월 15일 트립닷컴에서 <b>2026년 12월 1일 체크인·1박·성인 2명·세금 및 서비스비용 포함</b> 조건으로 조회한 최저가(무료 취소 조건)입니다. 날짜·성수기·환율·객실 타입에 따라 실제 요금은 달라지니 버튼에서 다시 확인해 주세요.</p>
+    <p>역까지 거리, 평점, 리뷰 수, 대욕장·온천·사우나 유무와 운영 안내는 2026년 11월 15일 트립닷컴 숙소 상세 페이지에서 확인한 내용입니다. 대욕장 이용 시간·요금·연령 제한은 예고 없이 바뀔 수 있으니 예약 전에 숙소 안내를 다시 확인하세요. (예: JR 타워 호텔 닛코 삿포로 스파는 정기 점검으로 2026년 11월 1~21일, 2027년 5월 10~11일 휴무)</p>
+    <p>사진은 각 숙소의 실제 모습이 아니라 지역을 나타내는 이미지입니다.</p>
+    <p><a href="index.html" style="color:#F0D683">🏨 일본 숙소 10곳 보기</a> · <a href="essentials.html" style="color:#F0D683">🧳 필수템 8선 보기</a></p>
+  </footer>
+
+</div>
+
+<script>
+/* =========================================================
+   제휴 설정 — index.html과 동일한 값 (트립닷컴 AID / SID)
+   ========================================================= */
+var AFFILIATE_CONFIG = {
+  trip:  { aid: "11254538", sid: "335287562" }
+};
+
+function withTripAffiliate(url){
+  var aid = AFFILIATE_CONFIG.trip.aid;
+  if(!aid){ return url; }
+  var sep = url.indexOf("?") === -1 ? "?" : "&";
+  var out = url + sep + "Allianceid=" + encodeURIComponent(aid);
+  if(AFFILIATE_CONFIG.trip.sid){
+    out += "&SID=" + encodeURIComponent(AFFILIATE_CONFIG.trip.sid);
+  }
+  return out;
+}
+
+(function applyAffiliate(){
+  var tripLinks = document.querySelectorAll("a[data-trip]");
+  for(var j = 0; j < tripLinks.length; j++){
+    tripLinks[j].href = withTripAffiliate(tripLinks[j].getAttribute("data-trip"));
+  }
+})();
+
+/* =========================================================
+   검색 + 필터 (지역 / 욕탕 종류)
+   ========================================================= */
+(function(){
+  var q = document.getElementById("q");
+  var clearBtn = document.getElementById("clear");
+  var countEl = document.getElementById("count");
+  var emptyEl = document.getElementById("empty");
+  var cards = Array.prototype.slice.call(document.querySelectorAll("#list .card"));
+
+  var state = { area: "all", bath: "all", text: "" };
+
+  function bindGroup(containerId, key){
+    var group = document.getElementById(containerId);
+    if(!group){ return; }
+    group.addEventListener("click", function(e){
+      var btn = e.target.closest ? e.target.closest(".chip") : null;
+      if(!btn || !group.contains(btn)){ return; }
+      var chips = group.querySelectorAll(".chip");
+      for(var i = 0; i < chips.length; i++){
+        chips[i].setAttribute("aria-pressed", chips[i] === btn ? "true" : "false");
+      }
+      state[key] = btn.getAttribute("data-" + key);
+      apply();
+    });
+  }
+
+  function normalize(s){
+    return (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  function matches(card){
+    if(state.area !== "all" && card.getAttribute("data-area") !== state.area){ return false; }
+    if(state.bath !== "all"){
+      var bath = " " + card.getAttribute("data-bath") + " ";
+      if(state.bath === "bathonly"){
+        if(bath.indexOf(" onsen ") !== -1){ return false; }
+      } else if(bath.indexOf(" " + state.bath + " ") === -1){ return false; }
+    }
+    if(state.text){
+      var hay = normalize(card.getAttribute("data-search") + " " +
+        card.querySelector(".name").textContent + " " +
+        card.querySelector(".loc").textContent);
+      var words = state.text.split(" ").filter(Boolean);
+      for(var w = 0; w < words.length; w++){
+        if(hay.indexOf(words[w]) === -1){ return false; }
+      }
+    }
+    return true;
+  }
+
+  function apply(){
+    var shown = 0;
+    for(var i = 0; i < cards.length; i++){
+      var ok = matches(cards[i]);
+      cards[i].style.display = ok ? "" : "none";
+      if(ok){ shown++; }
+    }
+    countEl.textContent = shown;
+    emptyEl.classList.toggle("show", shown === 0);
+    clearBtn.classList.toggle("show", !!state.text);
+  }
+
+  function onText(){
+    state.text = normalize(q.value);
+    apply();
+  }
+
+  bindGroup("areaChips", "area");
+  bindGroup("bathChips", "bath");
+  q.addEventListener("input", onText);
+  q.addEventListener("search", onText);
+  clearBtn.addEventListener("click", function(){ q.value = ""; state.text = ""; apply(); q.focus(); });
+  apply();
+})();
+</script>
+</body>
+</html>
