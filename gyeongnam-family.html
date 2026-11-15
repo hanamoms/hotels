@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>부산·경주·경남 가족 패밀리룸 호텔 11곳 · 4인 가족 숙소</title>
+<meta name="description" content="부산 해운대·송도·기장, 경주 보문·황리단길, 거제·남해·통영에서 4인 가족이 묵기 좋은 패밀리룸 숙소 11곳. 트립닷컴에서 2026-12-01 체크인·1박·성인 2명+어린이 2명 조건으로 실제 요금을 확인했어요.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="부산·경주·경남 가족 패밀리룸 호텔 11곳">
+<meta property="og:description" content="해운대·송도·기장, 보문·황리단길, 거제·남해·통영까지. 4인 가족이 실제로 묵을 수 있는 패밀리룸과 1박 요금(세금 포함)을 정리했습니다.">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%91%A8%E2%80%8D%F0%9F%91%A9%E2%80%8D%F0%9F%91%A7%E2%80%8D%F0%9F%91%A6%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#111111;
+    --card:#1C1C1E;
+    --card2:#242426;
+    --line:#2E2E31;
+    --text:#F2F2F4;
+    --sub:#A1A1A8;
+    --yellow:#F5C518;
+    --trip:#1E88E5;
+    --green:#2E7D32;
+    --amber:#A15C00;
+    --purple:#5E35B1;
+    --fam:#2E7D6B;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic","Noto Sans KR",Roboto,sans-serif;
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+    padding-bottom:calc(28px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 14px}
+
+  /* ---------- header ---------- */
+  header.top{padding:18px 0 10px}
+  .brand{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--sub);letter-spacing:.08em;text-transform:uppercase}
+  .brand b{color:var(--yellow);letter-spacing:0}
+  h1{font-size:24px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.02em}
+  h1 span{color:var(--yellow)}
+  .lead{margin:0;color:var(--sub);font-size:13.5px}
+
+  /* ---------- page switch tabs (5개) ---------- */
+  .tabs{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:14px 0 4px}
+  .tab{
+    display:flex;align-items:center;justify-content:center;gap:4px;
+    text-decoration:none;padding:11px 4px;border-radius:13px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#C9C9D0;font-size:12.5px;font-weight:600;text-align:center;line-height:1.25;
+  }
+  .tab.on{background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:800}
+  .tab:active{transform:scale(.99)}
+
+  /* ---------- sticky search + filters ---------- */
+  .searchbar{
+    position:sticky;top:0;z-index:20;
+    background:#111111;
+    padding:8px 14px 10px;
+    margin:0 -14px;
+    box-shadow:0 8px 14px -10px rgba(0,0,0,.9);
+  }
+  .filters{padding:2px 0 4px}
+  .search{position:relative}
+  .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.55}
+  #q{
+    width:100%;padding:15px 44px 15px 42px;
+    background:#1A1A1C;border:1px solid var(--line);border-radius:16px;
+    color:var(--text);font-size:15px;font-family:inherit;
+    outline:none;appearance:none;
+  }
+  #q::placeholder{color:#7C7C84}
+  #q:focus{border-color:#4A4A50;background:#1F1F22}
+  #clear{
+    position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    width:30px;height:30px;border:0;border-radius:50%;
+    background:#333338;color:#CFCFD6;font-size:16px;line-height:1;
+    display:none;cursor:pointer;
+  }
+  #clear.show{display:block}
+
+  .chips{
+    display:flex;gap:8px;overflow-x:auto;padding:10px 0 0;
+    scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;
+    padding:9px 15px;border-radius:999px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#D6D6DC;font-size:13.5px;font-family:inherit;white-space:nowrap;
+    cursor:pointer;transition:background .15s,border-color .15s,color .15s;
+  }
+  .chip[aria-pressed="true"]{
+    background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:700;
+  }
+  .chip:active{transform:scale(.98)}
+
+  .status{
+    display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+    padding:12px 0 2px;color:var(--sub);font-size:12.5px;
+  }
+  .status b{color:var(--text);font-weight:600}
+  .status .basis{text-align:right}
+
+  /* ---------- cards ---------- */
+  .list{display:grid;gap:12px;padding-top:8px}
+  .card{
+    display:grid;grid-template-columns:104px 1fr;gap:12px;
+    background:var(--card);border:1px solid #26262A;
+    border-radius:18px;padding:12px;
+  }
+  .thumb{
+    position:relative;border-radius:13px;overflow:hidden;
+    background:linear-gradient(160deg,#2A2A30,#17171A);
+    min-height:104px;display:flex;align-items:center;justify-content:center;
+  }
+  .thumb .emoji{font-size:34px;opacity:.92;filter:saturate(1.05)}
+  .thumb.busan{background:linear-gradient(160deg,#1F3242,#121A21)}
+  .thumb.gyeongju{background:linear-gradient(160deg,#3A2430,#1F1319)}
+  .thumb.gyeongnam{background:linear-gradient(160deg,#1E3A30,#111F19)}
+  .num{
+    position:absolute;top:6px;left:6px;
+    min-width:26px;height:26px;padding:0 6px;border-radius:8px;
+    background:var(--yellow);color:#141414;
+    font-weight:800;font-size:14px;line-height:26px;text-align:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.35);
+  }
+  .tier{
+    position:absolute;bottom:6px;left:6px;
+    padding:3px 8px;border-radius:7px;
+    font-size:10.5px;font-weight:700;color:#fff;letter-spacing:.01em;
+  }
+  .tier.low{background:var(--green)}
+  .tier.mid{background:var(--amber)}
+  .tier.high{background:var(--purple)}
+
+  .body{min-width:0}
+  .name{margin:0;font-size:16px;line-height:1.32;letter-spacing:-.01em}
+  .name small{display:block;font-size:11.5px;color:var(--sub);font-weight:400;margin-top:2px}
+  .loc{margin:4px 0 0;font-size:12.5px;color:var(--yellow);font-weight:600}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 0}
+  .tag{
+    font-size:11px;color:#C9C9D0;background:#26262A;border:1px solid #303036;
+    padding:3px 7px;border-radius:7px;white-space:nowrap;
+  }
+  .tag.fam{background:#0F2E28;border-color:#1E5045;color:#9FE8D6}
+  .desc{margin:8px 0 0;font-size:12.5px;color:#B9B9C2;line-height:1.55}
+  .roomline{
+    margin:8px 0 0;font-size:12px;color:#D9D9E0;background:#191A1D;
+    border:1px solid #2A2B30;border-left:3px solid var(--fam);
+    border-radius:9px;padding:7px 9px;line-height:1.5;
+  }
+  .roomline b{color:#9FE8D6;font-weight:700}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px;font-size:11.5px;color:#8F8F97}
+  .meta .price{color:var(--yellow);font-weight:800;font-size:13px}
+  .actions{display:grid;gap:8px;margin-top:12px;grid-column:1 / -1}
+  .btn{
+    display:block;text-align:center;text-decoration:none;
+    padding:12px 6px;border-radius:12px;
+    font-size:13.5px;font-weight:700;color:#fff;
+    border:0;cursor:pointer;
+  }
+  .btn.trip{background:var(--trip)}
+  .btn.coupang{background:var(--yellow);color:#141414}
+  .actions .btn.coupang{grid-column:1 / -1}
+  .btn:active{filter:brightness(.92)}
+
+  .empty{
+    display:none;text-align:center;padding:44px 16px;color:var(--sub);
+    border:1px dashed #303036;border-radius:18px;background:#171719;
+  }
+  .empty b{display:block;color:var(--text);font-size:15px;margin-bottom:6px}
+  .empty.show{display:block}
+
+  /* ---------- tip + footer ---------- */
+  .tip{
+    margin-top:16px;padding:14px 15px;border-radius:16px;
+    background:#181A1B;border:1px solid #2A2E30;
+  }
+  .tip h2{margin:0 0 6px;font-size:14px}
+  .tip p{margin:0 0 8px;font-size:12.5px;color:#AEAEB6;line-height:1.6}
+  .tip ul{margin:0;padding-left:18px}
+  .tip li{font-size:12.5px;color:#AEAEB6;line-height:1.65;margin-bottom:5px}
+  .tip .facts{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+  .tip .facts span{font-size:11px;color:#C9C9D0;background:#232326;padding:3px 7px;border-radius:7px}
+  .tip a{color:#F0D683}
+
+  footer{margin-top:22px;padding-top:16px;border-top:1px solid #232326;color:#8F8F97;font-size:11.5px;line-height:1.7}
+  footer p{margin:0 0 8px}
+  footer .notice{color:#C9C9D0}
+  footer strong{color:#E6E6EA}
+
+  @media (min-width:480px){
+    .tabs{grid-template-columns:repeat(5,1fr)}
+    .tab{font-size:11.5px;padding:11px 2px}
+  }
+  @media (min-width:620px){
+    h1{font-size:28px}
+    .list{grid-template-columns:1fr 1fr}
+    .card{grid-template-columns:96px 1fr}
+    .card .desc{font-size:12px}
+    .tab{font-size:11.5px;padding:11px 2px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand"><b>PICK</b> FAMILY STAY</div>
+    <h1>4인 가족이 묵기 좋은 <span>부산·경주·경남</span> 숙소 11곳</h1>
+    <p class="lead">패밀리룸이 있는 곳만 · 성인 2명 + 어린이 2명 기준 실제 요금 · 2026년 11월 15일 조회</p>
+  </header>
+
+  <nav class="tabs" aria-label="페이지 이동">
+    <a class="tab" href="index.html">🏨 일본 숙소</a>
+    <a class="tab" href="sapporo.html">♨️ 삿포로 대욕장</a>
+    <a class="tab" href="korea-onsen.html">🇰🇷 국내 온천</a>
+    <a class="tab on" href="gyeongnam-family.html" aria-current="page">👨‍👩‍👧‍👦 부산·경남 가족</a>
+    <a class="tab" href="essentials.html">🧳 필수템 8선</a>
+  </nav>
+
+  <div class="searchbar">
+    <div class="search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#BFBFC6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="text" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="번호 또는 지역·숙소명 (예: 해운대, 거제)" aria-label="숙소 검색">
+      <button id="clear" type="button" aria-label="검색어 지우기">✕</button>
+    </div>
+  </div>
+
+  <div class="filters">
+
+    <div class="chips" id="areaChips" role="group" aria-label="지역 필터">
+      <button class="chip" data-area="all" aria-pressed="true">전체 지역</button>
+      <button class="chip" data-area="busan" aria-pressed="false">🌊 부산</button>
+      <button class="chip" data-area="gyeongju" aria-pressed="false">🏯 경주</button>
+      <button class="chip" data-area="gyeongnam" aria-pressed="false">🌴 거제·남해·통영</button>
+    </div>
+
+    <div class="chips" id="famChips" role="group" aria-label="가족 포인트 필터">
+      <button class="chip" data-fam="all" aria-pressed="true">👨‍👩‍👧‍👦 전체</button>
+      <button class="chip" data-fam="pool" aria-pressed="false">💦 물놀이·키즈</button>
+      <button class="chip" data-fam="onsen" aria-pressed="false">♨️ 온천·사우나</button>
+      <button class="chip" data-fam="ocean" aria-pressed="false">🌅 오션뷰</button>
+      <button class="chip" data-fam="ondol" aria-pressed="false">🛌 온돌·요이불</button>
+    </div>
+  </div>
+
+  <div class="status" aria-live="polite">
+    <span><b id="count">11</b>곳</span>
+    <span class="basis">1박·성인 2 + 어린이 2·세금 포함 · 2026-12-01 체크인</span>
+  </div>
+
+  <main class="list" id="list">
+
+    <!-- 1 -->
+    <article class="card" data-num="1" data-area="busan" data-fam="ondol" data-tier="mid"
+      data-search="한화리조트 해운대 Hanwha Resort Haeundae 부산 해운대역 미포 디럭스룸 요이불 패밀리 가족 리조트">
+      <div class="thumb busan"><span class="num">1</span><span class="emoji">🏖️</span><span class="tier mid">중간급</span></div>
+      <div class="body">
+        <h2 class="name">한화리조트 해운대<small>Hanwha Resort Haeundae</small></h2>
+        <p class="loc">부산 해운대 · 해운대역 도보권(해운대해수욕장 인근)</p>
+        <div class="tags">
+          <span class="tag fam">👨‍👩‍👧‍👦 가족 여행객에게 적합</span>
+          <span class="tag">⛳ 미니 골프</span>
+          <span class="tag">🍝 이탈리안 레스토랑</span>
+          <span class="tag">🏅 부산 업스케일 5위</span>
+        </div>
+        <p class="roomline"><b>패밀리룸</b> <b>디럭스 룸</b> — 더블 침대 1개 + 요이불 세트 2개로 4명이 잡니다(침대 2개 아님). 어린이 동반 기준으로 조회한 요금입니다.</p>
+        <p class="desc">해운대 해변과 해운대역 사이에 있어 아이와 짐 들고 움직이기 편한 리조트형 숙소예요. 호텔 안에 미니 골프와 레스토랑이 있어 저녁에 밖으로 나가지 않아도 되는 게 장점입니다.</p>
+        <div class="meta"><span class="price">132,463원</span><span>8.5점 · 리뷰 67</span><span>정가 178,000원</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/detail/?hotelId=689015" data-trip="https://kr.trip.com/hotels/detail/?hotelId=689015" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 보기</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iHfvjkbTiK" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="card" data-num="2" data-area="busan" data-fam="pool onsen ocean" data-tier="high"
+      data-search="윈덤 그랜드 부산 이진 Wyndham Grand Busan Ijin 송도 프리미엄룸 실내수영장 사우나 오션뷰 패밀리">
+      <div class="thumb busan"><span class="num">2</span><span class="emoji">🌉</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">윈덤 그랜드 부산 이진<small>Wyndham Grand Busan Ijin</small></h2>
+        <p class="loc">부산 송도 · 송도해수욕장 940m(남항대교 전망)</p>
+        <div class="tags">
+          <span class="tag fam">👨‍👩‍👧‍👦 가족친화형</span>
+          <span class="tag">🏊 실내 수영장</span>
+          <span class="tag">🧖 사우나</span>
+          <span class="tag">🌅 오션뷰</span>
+          <span class="tag">🏅 부산 프리미엄 7위</span>
+        </div>
+        <p class="roomline"><b>패밀리룸</b> <b>프리미엄 룸</b> — 더블 침대 1개 + 싱글 침대 1개. 수영장·사우나가 있는 <b>윈덤 웰니스 클럽(5층)</b>은 투숙객 1박 1회 무료이고, 수영장은 12세 미만 보호자 동반 입장입니다.</p>
+        <p class="desc">2023년 문을 연 271실 규모로, 송도 앞바다와 남항대교가 창으로 들어와요. 수영장 창가 뷰가 좋다는 후기가 많고, 27층 라운지·올데이 다이닝까지 호텔 안에서 해결됩니다. 송도해상케이블카·자갈치시장과도 가까워요.</p>
+        <div class="meta"><span class="price">247,500원</span><span>9.4점 · 리뷰 581</span><span>청결 9.5</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/detail/?hotelId=113514136" data-trip="https://kr.trip.com/hotels/detail/?hotelId=113514136" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 보기</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iHfxXHLcGW" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="card" data-num="3" data-area="busan" data-fam="pool" data-tier="high"
+      data-search="아난티 앳 부산 빌라쥬 Ananti at Busan Village 기장 오시리아 키즈클럽 Cabin B 포레스트뷰 롯데월드 어드벤처">
+      <div class="thumb busan"><span class="num">3</span><span class="emoji">🌲</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">아난티 앳 부산 빌라쥬<small>Ananti at Busan Village</small></h2>
+        <p class="loc">부산 기장 오시리아 · 롯데월드 어드벤처 부산 인근</p>
+        <div class="tags">
+          <span class="tag fam">👨‍👩‍👧‍👦 가족친화형</span>
+          <span class="tag">🧸 키즈 클럽</span>
+          <span class="tag">🎨 예술·공예 체험</span>
+          <span class="tag">🏅 부산 프리미엄 5위</span>
+        </div>
+        <p class="roomline"><b>패밀리룸</b> <b>Cabin B 포레스트 뷰</b> — 더블 침대 2개, 70㎡. 빌라형 객실이라 4인이 각자 공간을 나눠 쓰기 좋습니다.</p>
+        <p class="desc">마을처럼 넓게 배치된 리조트형 호텔이라 건물 사이를 산책하는 재미가 있어요. 키즈 클럽과 공예 체험 프로그램이 있어 비 오는 날에도 아이가 심심할 틈이 없고, 옆에 롯데월드 어드벤처 부산이 있어 1박 2일 테마파크 일정과 붙이기 좋습니다.</p>
+        <div class="meta"><span class="price">307,967원</span><span>9.1점 · 리뷰 207</span><span>정가 401,200원</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/detail/?hotelId=113752161" data-trip="https://kr.trip.com/hotels/detail/?hotelId=113752161" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 보기</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iHfKAXJ2yG" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="card" data-num="4" data-area="busan" data-fam="ocean" data-tier="low"
+      data-search="라비앙즈 메종 드 호텔 Raviens Maison de Hotel 해운대 패밀리 쿼드러플 가성비 신축 2025">
+      <div class="thumb busan"><span class="num">4</span><span class="emoji">🏨</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">라비앙즈 메종 드 호텔<small>Raviens Maison de Hotel</small></h2>
+        <p class="loc">부산 해운대 · 해운대역·해운대해수욕장 도보 10분 안쪽</p>
+        <div class="tags">
+          <span class="tag fam">👨‍👩‍👧‍👦 2025년 오픈</span>
+          <span class="tag">🌅 오션뷰 객실</span>
+          <span class="tag">📍 위치 최고</span>
+          <span class="tag">🧳 무료 짐 보관</span>
+        </div>
+        <p class="roomline"><b>패밀리룸</b> <b>스탠다드 패밀리 쿼드러플(뷰 없음)</b> — 더블 침대 2개. 이름 그대로 4인용으로 나온 객실이고, 이 가격은 창이 없는 타입 기준입니다.</p>
+        <p class="desc">2025년에 문을 연 새 호텔이라 상태가 깨끗하다는 후기가 많아요. 해운대 지하철역·먹자골목·해변까지 걸어서 10분 이내라 차 없이 가는 가족 여행에 특히 편하고, 11곳 중 1박 요금이 가장 낮습니다.</p>
+        <div class="meta"><span class="price">85,000원</span><span>8.7점 · 리뷰 639</span><span>정가 170,000원</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/detail/?hotelId=130010809" data-trip="https://kr.trip.com/hotels/detail/?hotelId=130010809" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 보기</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iHfL4Z2apE" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="card" data-num="5" data-area="gyeongju" data-fam="pool onsen" data-tier="mid"
+      data-search="라한셀렉트 경주 Lahan Select Gyeongju 보문호 패밀리 마운틴뷰 트윈 키즈라운지 수영장 사우나">
+      <div class="thumb gyeongju"><span class="num">5</span><span class="emoji">🏯</span><span class="tier mid">중간급</span></div>
+      <div class="body">
+        <h2 class="name">라한셀렉트 경주<small>Lahan Select Gyeongju</small></h2>
+        <p class="loc">경북 경주 보문관광단지 · 보문호 690m(바니베어뮤지엄 170m)</p>
+        <div class="tags">
+          <span class="tag fam">👨‍👩‍👧‍👦 대한민국 패밀리 호텔 10위</span>
+          <span class="tag">🛝 실내 놀이터</span>
+          <span class="tag">🧸 키즈 클럽</span>
+          <span class="tag">🏊 수영장·사우나</span>
+        </div>
+        <p class="roomline"><b>패밀리룸</b> <b>패밀리 마운틴 뷰 트윈룸</b> — 더블 침대 2개, 44㎡. 4인용으로 나온 객실이라 침대를 붙이지 않아도 됩니다. 수영장은 평수기 대인 40,000원·소인 28,000원에 <b>투숙객 50% 할인</b>.</p>
+        <p class="desc">보문호 바로 앞이라 아침 산책로가 좋고, 호수 뷰 객실 후기가 특히 많아요. 키즈 라운지·카페(라한원더랜드)와 실내 볼링장까지 있어 리조트 안에서 하루가 다 갑니다. 조식은 성인 48,000원·소인 28,000원 별도.</p>
+        <div class="meta"><span class="price">198,000원</span><span>9.0점 · 리뷰 443</span><span>정가 220,000원</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/detail/?hotelId=1586942" data-trip="https://kr.trip.com/hotels/detail/?hotelId=1586942" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 보기</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iHfN3C9mFw" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="card" data-num="6" data-area="gyeongju" data-fam="pool onsen" data-tier="high"
+      data-search="소노캄 경주 Sono Calm Gyeongju 보문호 온천 디럭스 스위트B 실내 온수 수영장 2025 리모델링">
+      <div class="thumb gyeongju"><span class="num">6</span><span class="emoji">♨️</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">소노캄 경주<small>Sono Calm Gyeongju</small></h2>
+        <p class="loc">경북 경주 보문관광단지 · 보문호 650m(천년민속쉼터 160m)</p>
+        <div class="tags">
+          <span class="tag fam">👨‍👩‍👧‍👦 가족 여행객에게 적합</span>
+          <span class="tag">♨️ 온천 호텔 (대한민국 4위)</span>
+          <span class="tag">🏊 실내 온수풀</span>
+          <span class="tag">🌊 호숫가</span>
+        </div>
+        <p class="roomline"><b>패밀리룸</b> <b>디럭스 스위트B</b> — 더블 침대 1개 + 싱글 침대 1개, 취사 가능한 스위트 타입. 온천·사우나·실내 수영장은 별도 요금이고 <b>풀앤스파 2인 포함</b> 패키지도 있습니다.</p>
+        <p class="desc">2025년 리모델링해 객실이 깨끗해졌어요. 겨울에 아이와 실내 온수풀에서 놀기 좋고, 보문호를 끼고 있어 자전거·산책 동선이 이어집니다. 경주월드·엑스포대공원이 차로 5분 거리예요.</p>
+        <div class="meta"><span class="price">295,018원</span><span>8.9점 · 리뷰 182</span><span>위치 9.2</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/detail/?hotelId=3727063" data-trip="https://kr.trip.com/hotels/detail/?hotelId=3727063" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 보기</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iG4ynwFi6m" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="card" data-num="7" data-area="gyeongju" data-fam="" data-tier="mid"
+      data-search="신라 레거시 호텔 Silla Legacy Hotel 경주 황리단길 중앙시장 슈페리어 스위트 신축 2025 조식">
+      <div class="thumb gyeongju"><span class="num">7</span><span class="emoji">🏮</span><span class="tier mid">중간급</span></div>
+      <div class="body">
+        <h2 class="name">신라 레거시 호텔<small>Silla Legacy Hotel</small></h2>
+        <p class="loc">경북 경주 황리단길 · 경주중앙시장 도보권</p>
+        <div class="tags">
+          <span class="tag fam">👨‍👩‍👧‍👦 가족 여행객에게 적합</span>
+          <span class="tag">🥐 맛있는 조식</span>
+          <span class="tag">🏋 무료 헬스장</span>
+          <span class="tag">✨ 2025년 오픈</span>
+        </div>
+        <p class="roomline"><b>패밀리룸</b> <b>슈페리어 스위트룸</b> — 더블 침대 2개로 4인이 묵는 스위트. 관광지가 몰린 황리단길 쪽이라 보문단지와는 다른 동선입니다.</p>
+        <p class="desc">2025년 문을 연 신축이라 시설이 깨끗하고, 후기에 “아이와 함께 가기 좋다”는 평가가 붙어 있어요. 걸어서 황리단길·중앙시장·대릉원 권역을 볼 수 있어 아이와 낮에 돌아다니기 좋습니다.</p>
+        <div class="meta"><span class="price">163,800원</span><span>8.9점 · 리뷰 385</span><span>정가 182,000원</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/detail/?hotelId=127828413" data-trip="https://kr.trip.com/hotels/detail/?hotelId=127828413" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 보기</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iHfPjqooFw" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 8 -->
+    <article class="card" data-num="8" data-area="gyeongnam" data-fam="pool ocean" data-tier="mid"
+      data-search="소노캄 거제 Sono Calm Geoje 패밀리 오션뷰 워터파크 오션어드벤처 씨월드 일출">
+      <div class="thumb gyeongnam"><span class="num">8</span><span class="emoji">🌊</span><span class="tier mid">중간급</span></div>
+      <div class="body">
+        <h2 class="name">소노캄 거제<small>Sono Calm Geoje</small></h2>
+        <p class="loc">경남 거제 · 오션어드벤처 거제·거제씨월드 인근</p>
+        <div class="tags">
+          <span class="tag fam">👨‍👩‍👧‍👦 경남 패밀리 호텔 1위</span>
+          <span class="tag">💦 워터파크</span>
+          <span class="tag">🌅 일출·오션뷰</span>
+          <span class="tag">🍳 조식 후기 좋음</span>
+        </div>
+        <p class="roomline"><b>패밀리룸</b> <b>패밀리 (클린/오션뷰/침대)</b> — 더블 침대 2개, 바다를 보는 4인용 객실입니다. 물놀이는 오션어드벤처(별도)와 함께 쓰는 구성이에요.</p>
+        <p class="desc">거제에서 4인 가족 객실을 가장 많이 찾는 곳이에요. 일출이 보이는 오션뷰 객실 후기가 많고, 실내 워터파크 오션어드벤처가 붙어 있어 날씨와 상관없이 아이와 물놀이를 할 수 있습니다.</p>
+        <div class="meta"><span class="price">176,851원</span><span>9.1점 · 리뷰 249</span><span>정가 202,000원</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/detail/?hotelId=5085169" data-trip="https://kr.trip.com/hotels/detail/?hotelId=5085169" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 보기</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iHfQzcH62m" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 9 -->
+    <article class="card" data-num="9" data-area="gyeongnam" data-fam="pool" data-tier="mid"
+      data-search="한화리조트 거제 벨버디어 Hanwha Resort Geoje Belvedere 워터파크 키즈클럽 트램폴린 디럭스룸">
+      <div class="thumb gyeongnam"><span class="num">9</span><span class="emoji">🎠</span><span class="tier mid">중간급</span></div>
+      <div class="body">
+        <h2 class="name">한화리조트 거제 벨버디어<small>Hanwha Resort Geoje Belvedere</small></h2>
+        <p class="loc">경남 거제 유호 · 바운스 어드벤처&트램폴린 파크 인근</p>
+        <div class="tags">
+          <span class="tag fam">👨‍👩‍👧‍👦 가족친화형</span>
+          <span class="tag">💦 워터파크</span>
+          <span class="tag">🧸 키즈 클럽</span>
+          <span class="tag">🏅 경남 업스케일 4위</span>
+        </div>
+        <p class="roomline"><b>패밀리룸</b> <b>디럭스룸</b> — 싱글 침대 2개 + 요이불 세트 2개로 4명이 잡니다. 물놀이 시설과 사우나 입장권은 별도 상품으로도 팔아요.</p>
+        <p class="desc">거제 북쪽 유호 바다를 보는 리조트로, 워터파크와 키즈 클럽이 함께 있어 아이 중심 일정에 맞습니다. 바로 옆에 트램폴린 파크가 있어 오후 시간을 보내기 좋아요. 아직 리뷰 수가 적은 편(55개)이라 후기를 조금 더 보고 고르세요.</p>
+        <div class="meta"><span class="price">184,381원</span><span>9.2점 · 리뷰 55</span><span>정가 233,764원</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/detail/?hotelId=29185246" data-trip="https://kr.trip.com/hotels/detail/?hotelId=29185246" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 보기</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iHfRKBmlKm" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 10 -->
+    <article class="card" data-num="10" data-area="gyeongnam" data-fam="ocean pool" data-tier="high"
+      data-search="쏠비치 남해 Sol Beach Namhae 설리해수욕장 오션뷰 디럭스 2더블 2025 신규 수영장">
+      <div class="thumb gyeongnam"><span class="num">10</span><span class="emoji">🌅</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">쏠비치 남해<small>Sol Beach Namhae</small></h2>
+        <p class="loc">경남 남해 · 설리해수욕장·설리스카이워크 인근</p>
+        <div class="tags">
+          <span class="tag fam">👨‍👩‍👧‍👦 가족 여행객에게 적합</span>
+          <span class="tag">🏊 수영장 후기 최상</span>
+          <span class="tag">🏝 오션뷰 빌라</span>
+          <span class="tag">🌇 일몰 뷰 (뷰 맛집 7위)</span>
+        </div>
+        <p class="roomline"><b>패밀리룸</b> <b>[호텔] 디럭스(뷰프리/2더블)</b> — 더블 침대 2개인 4인용 객실입니다. 같은 단지에 빌라·패밀리 타입이 따로 있어 취사가 필요하면 그쪽을 보세요.</p>
+        <p class="desc">2025년 문을 연 남해 신축 리조트로, 수영장 관리 후기가 특히 좋아요. 설리해수욕장과 스카이워크가 가까워 아침·저녁으로 바다를 끼고 걷기 좋고, 석양이 지는 시간대 사진이 잘 나옵니다.</p>
+        <div class="meta"><span class="price">247,193원</span><span>9.0점 · 리뷰 197</span><span>정가 285,000원</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/detail/?hotelId=128575165" data-trip="https://kr.trip.com/hotels/detail/?hotelId=128575165" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 보기</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iHfSTRfccu" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 11 -->
+    <article class="card" data-num="11" data-area="gyeongnam" data-fam="ocean ondol" data-tier="high"
+      data-search="스탠포드 호텔앤리조트 통영 Stanford Hotel Resort Tongyeong 콘도 스위트 온돌 오션뷰 수륙해수욕장">
+      <div class="thumb gyeongnam"><span class="num">11</span><span class="emoji">⛵</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">스탠포드 호텔앤리조트 통영<small>Stanford Hotel &amp; Resort Tongyeong</small></h2>
+        <p class="loc">경남 통영 · 수륙해수욕장·트라이애슬론광장 인근</p>
+        <div class="tags">
+          <span class="tag fam">👨‍👩‍👧‍👦 가족친화형</span>
+          <span class="tag">🛌 온돌 객실</span>
+          <span class="tag">🌅 오션뷰</span>
+          <span class="tag">🏅 경남 업스케일 1위</span>
+        </div>
+        <p class="roomline"><b>패밀리룸</b> <b>콘도 스위트 온돌 (취사 불가)</b> — 더블 침대 1개 + 요이불 세트 2개. 아이와 함께면 온돌 쪽이 편한데, <b>이 타입은 취사가 안 됩니다</b>(주방 있는 타입은 따로 확인하세요).</p>
+        <p class="desc">통영 바다를 정면으로 보는 리조트형 호텔이에요. 한산대첩광장·중앙시장·케이블카가 차로 10분 안쪽이라 통영 시내 관광과 묶기 좋고, 아침에 수륙해수욕장 산책이 가능합니다.</p>
+        <div class="meta"><span class="price">269,965원</span><span>8.9점 · 리뷰 131</span><span>위치 최고</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/detail/?hotelId=10560309" data-trip="https://kr.trip.com/hotels/detail/?hotelId=10560309" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 보기</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iHfTYMoM5Q" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+  </main>
+
+  <div class="empty" id="empty">
+    <b>조건에 맞는 숙소가 없어요</b>
+    다른 지역이나 가족 포인트를 골라보세요.
+  </div>
+
+  <section class="tip">
+    <h2>👨‍👩‍👧‍👦 4인 가족 숙소 고를 때 확인할 것</h2>
+    <ul>
+      <li><b>‘패밀리룸’이라는 이름만 보고 고르면 안 돼요.</b> 이 페이지는 2026-12-01 체크인·성인 2명+어린이 2명(만 5세·8세) 조건으로 실제 예약되는 4인용 객실만 골랐습니다.</li>
+      <li><b>침대 2개인지, 요이불인지 확인하세요.</b> 한화리조트 두 곳(해운대·거제)은 <b>더블/싱글 침대 + 요이불 세트</b> 구성이고, 나머지는 침대 2개 이상입니다.</li>
+      <li><b>물놀이 시설은 대부분 별도 요금입니다.</b> 라한셀렉트 경주 수영장은 투숙객 50% 할인, 소노캄 경주는 풀앤스파 포함 패키지가 있고, 오션어드벤처(거제)·벨버디어 워터파크는 입장권을 따로 사야 합니다.</li>
+      <li><b>온돌·취사 여부</b>: 스탠포드 통영의 콘도 스위트 온돌은 <b>취사 불가</b>이고, 소노캄 경주의 디럭스 스위트B는 취사 가능 타입입니다. 이유식·간식 준비가 필요하면 꼭 확인하세요.</li>
+      <li><b>12월 초 평일이 가장 쌉니다.</b> 같은 숙소도 주말·연말 성수기에는 1박에 5만~10만 원 이상 차이가 납니다.</li>
+    </ul>
+    <div class="facts">
+      <span>📅 요금 조회 2026-11-15</span>
+      <span>🛏 1박·성인 2 + 어린이 2·세금 포함</span>
+      <span>🏨 11곳 4인용 객실 확인</span>
+    </div>
+  </section>
+
+  <footer>
+    <p class="notice"><strong>제휴 마케팅 활동의 일환으로 예약 시 일정액의 수수료를 제공받을 수 있습니다.</strong></p>
+    <p class="notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+    <p>가격은 2026년 11월 15일 트립닷컴에서 <b>2026년 12월 1일 체크인·1박·객실 1개·성인 2명+어린이 2명(만 5세·8세)·세금 및 서비스비용 포함</b> 조건으로 조회한 최저가입니다. 어린이 동반 시 어린이가 무료로 투숙하는 객실 기준이며, 어린이 나이를 바꾸면 요금이 달라질 수 있습니다. 날짜·성수기·객실 타입에 따라 실제 요금은 달라지니 버튼에서 다시 확인해 주세요.</p>
+    <p>거리, 평점, 리뷰 수, 객실 유형·침대 구성, 시설과 이용 요금은 2026년 11월 15일 트립닷컴 숙소·객실 페이지에서 확인한 내용입니다. 수영장·온천·워터파크 운영 시간과 요금, 휴장일은 예고 없이 바뀔 수 있으니 예약 전에 숙소 안내를 다시 확인하세요.</p>
+    <p>쿠팡 파트너스 버튼의 상품은 쿠팡에 등록된 같은 숙소의 숙박 상품이며, 표시 요금은 링크를 만든 시점의 노출가입니다. 트립닷컴 요금과 다를 수 있습니다.</p>
+    <p>사진은 각 숙소의 실제 모습이 아니라 지역을 나타내는 이미지입니다.</p>
+    <p><a href="index.html" style="color:#F0D683">🏨 일본 숙소 10곳 보기</a> · <a href="sapporo.html" style="color:#F0D683">♨️ 삿포로 대욕장 10곳 보기</a> · <a href="korea-onsen.html" style="color:#F0D683">🇰🇷 국내 온천 11곳 보기</a> · <a href="essentials.html" style="color:#F0D683">🧳 필수템 8선 보기</a></p>
+  </footer>
+
+</div>
+
+<script>
+/* =========================================================
+   제휴 설정 — 다른 페이지와 동일한 값 (트립닷컴 AID / SID)
+   ========================================================= */
+var AFFILIATE_CONFIG = {
+  trip:  { aid: "11254538", sid: "335287562" }
+};
+
+function withTripAffiliate(url){
+  var aid = AFFILIATE_CONFIG.trip.aid;
+  if(!aid){ return url; }
+  var sep = url.indexOf("?") === -1 ? "?" : "&";
+  var out = url + sep + "Allianceid=" + encodeURIComponent(aid);
+  if(AFFILIATE_CONFIG.trip.sid){
+    out += "&SID=" + encodeURIComponent(AFFILIATE_CONFIG.trip.sid);
+  }
+  return out;
+}
+
+(function applyAffiliate(){
+  var tripLinks = document.querySelectorAll("a[data-trip]");
+  for(var j = 0; j < tripLinks.length; j++){
+    tripLinks[j].href = withTripAffiliate(tripLinks[j].getAttribute("data-trip"));
+  }
+})();
+
+/* =========================================================
+   검색 + 필터 (지역 / 가족 포인트)
+   ========================================================= */
+(function(){
+  var q = document.getElementById("q");
+  var clearBtn = document.getElementById("clear");
+  var countEl = document.getElementById("count");
+  var emptyEl = document.getElementById("empty");
+  var cards = Array.prototype.slice.call(document.querySelectorAll("#list .card"));
+
+  var state = { area: "all", fam: "all", text: "" };
+
+  function bindGroup(containerId, key){
+    var group = document.getElementById(containerId);
+    if(!group){ return; }
+    group.addEventListener("click", function(e){
+      var btn = e.target.closest ? e.target.closest(".chip") : null;
+      if(!btn || !group.contains(btn)){ return; }
+      var chips = group.querySelectorAll(".chip");
+      for(var i = 0; i < chips.length; i++){
+        chips[i].setAttribute("aria-pressed", chips[i] === btn ? "true" : "false");
+      }
+      state[key] = btn.getAttribute("data-" + key);
+      apply();
+    });
+  }
+
+  function normalize(s){
+    return (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  function matches(card){
+    if(state.area !== "all" && card.getAttribute("data-area") !== state.area){ return false; }
+    if(state.fam !== "all"){
+      var fam = " " + (card.getAttribute("data-fam") || "") + " ";
+      if(fam.indexOf(" " + state.fam + " ") === -1){ return false; }
+    }
+    if(state.text){
+      var hay = normalize(card.getAttribute("data-search") + " " +
+        card.querySelector(".name").textContent + " " +
+        card.querySelector(".loc").textContent);
+      var words = state.text.split(" ").filter(Boolean);
+      for(var w = 0; w < words.length; w++){
+        if(hay.indexOf(words[w]) === -1){ return false; }
+      }
+    }
+    return true;
+  }
+
+  function apply(){
+    var shown = 0;
+    for(var i = 0; i < cards.length; i++){
+      var ok = matches(cards[i]);
+      cards[i].style.display = ok ? "" : "none";
+      if(ok){ shown++; }
+    }
+    countEl.textContent = shown;
+    emptyEl.classList.toggle("show", shown === 0);
+    clearBtn.classList.toggle("show", !!state.text);
+  }
+
+  function onText(){
+    state.text = normalize(q.value);
+    apply();
+  }
+
+  bindGroup("areaChips", "area");
+  bindGroup("famChips", "fam");
+  q.addEventListener("input", onText);
+  q.addEventListener("search", onText);
+  clearBtn.addEventListener("click", function(){ q.value = ""; state.text = ""; apply(); q.focus(); });
+  apply();
+})();
+</script>
+</body>
+</html>
