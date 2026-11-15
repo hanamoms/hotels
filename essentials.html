@@ -46,7 +46,7 @@
   .lead{margin:0;color:var(--sub);font-size:13.5px}
 
   /* ---------- page switch tabs ---------- */
-  .tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0 4px}
+  .tabs{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:14px 0 4px}
   .tab{
     display:flex;align-items:center;justify-content:center;gap:4px;
     text-decoration:none;padding:11px 4px;border-radius:13px;
@@ -199,10 +199,15 @@
   footer .notice{color:#C9C9D0}
   footer strong{color:#E6E6EA}
 
+  @media (min-width:500px){
+    .tabs{grid-template-columns:repeat(4,1fr)}
+    .tab{font-size:12px;padding:11px 2px}
+  }
   @media (min-width:620px){
     h1{font-size:27px}
     .list{grid-template-columns:1fr 1fr}
     .item{grid-template-columns:84px 1fr}
+    .tab{font-size:12.5px;padding:11px 4px}
   }
   @media (prefers-reduced-motion:reduce){
     *{transition:none!important}
@@ -221,6 +226,7 @@
   <nav class="tabs" aria-label="페이지 이동">
     <a class="tab" href="index.html">🏨 일본 숙소</a>
     <a class="tab" href="sapporo.html">♨️ 삿포로 대욕장</a>
+    <a class="tab" href="korea-onsen.html">🇰🇷 국내 온천</a>
     <a class="tab on" href="essentials.html" aria-current="page">🧳 필수템 8선</a>
   </nav>
 

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>국내 온천 호텔 9곳 · 요즘 많이 찾는 노천탕·스파 숙소</title>
+<meta name="description" content="요즘 국내 온천 여행 이야기에서 자주 나오는 온천 호텔·리조트 9곳. 트립닷컴 숙소 페이지에서 온천·사우나 시설이 확인된 곳만 골라 지역, 1박 가격(2026-12-01 2인 기준), 평점을 정리했어요.">
+<meta name="og:type" content="website">
+<meta property="og:title" content="국내 온천 호텔 9곳 · 요즘 많이 찾는 노천탕·스파 숙소">
+<meta property="og:description" content="부산 해운대·기장, 강원 속초·정선, 경주 보문, 충남 덕산, 충주 수안보까지. 트립닷컴에서 온천 시설이 확인된 숙소 9곳과 1박 가격.">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A8%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#111111;
+    --card:#1C1C1E;
+    --card2:#242426;
+    --line:#2E2E31;
+    --text:#F2F2F4;
+    --sub:#A1A1A8;
+    --yellow:#F5C518;
+    --trip:#1E88E5;
+    --green:#2E7D32;
+    --amber:#A15C00;
+    --purple:#5E35B1;
+    --onsen:#C2185B;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic","Noto Sans KR",Roboto,sans-serif;
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+    padding-bottom:calc(28px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 14px}
+
+  /* ---------- header ---------- */
+  header.top{padding:18px 0 10px}
+  .brand{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--sub);letter-spacing:.08em;text-transform:uppercase}
+  .brand b{color:var(--yellow);letter-spacing:0}
+  h1{font-size:24px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.02em}
+  h1 span{color:var(--yellow)}
+  .lead{margin:0;color:var(--sub);font-size:13.5px}
+
+  /* ---------- page switch tabs (4개, 모바일 2x2) ---------- */
+  .tabs{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:14px 0 4px}
+  .tab{
+    display:flex;align-items:center;justify-content:center;gap:4px;
+    text-decoration:none;padding:11px 4px;border-radius:13px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#C9C9D0;font-size:12.5px;font-weight:600;text-align:center;line-height:1.25;
+  }
+  .tab.on{background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:800}
+  .tab:active{transform:scale(.99)}
+
+  /* ---------- sticky search + filters ---------- */
+  .searchbar{
+    position:sticky;top:0;z-index:20;
+    background:#111111;
+    padding:8px 14px 10px;
+    margin:0 -14px;
+    box-shadow:0 8px 14px -10px rgba(0,0,0,.9);
+  }
+  .filters{padding:2px 0 4px}
+  .search{position:relative}
+  .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.55}
+  #q{
+    width:100%;padding:15px 44px 15px 42px;
+    background:#1A1A1C;border:1px solid var(--line);border-radius:16px;
+    color:var(--text);font-size:15px;font-family:inherit;
+    outline:none;appearance:none;
+  }
+  #q::placeholder{color:#7C7C84}
+  #q:focus{border-color:#4A4A50;background:#1F1F22}
+  #clear{
+    position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    width:30px;height:30px;border:0;border-radius:50%;
+    background:#333338;color:#CFCFD6;font-size:16px;line-height:1;
+    display:none;cursor:pointer;
+  }
+  #clear.show{display:block}
+
+  .chips{
+    display:flex;gap:8px;overflow-x:auto;padding:10px 0 0;
+    scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;
+    padding:9px 15px;border-radius:999px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#D6D6DC;font-size:13.5px;font-family:inherit;white-space:nowrap;
+    cursor:pointer;transition:background .15s,border-color .15s,color .15s;
+  }
+  .chip[aria-pressed="true"]{
+    background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:700;
+  }
+  .chip:active{transform:scale(.98)}
+
+  .status{
+    display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+    padding:12px 0 2px;color:var(--sub);font-size:12.5px;
+  }
+  .status b{color:var(--text);font-weight:600}
+  .status .basis{text-align:right}
+
+  /* ---------- cards ---------- */
+  .list{display:grid;gap:12px;padding-top:8px}
+  .card{
+    display:grid;grid-template-columns:104px 1fr;gap:12px;
+    background:var(--card);border:1px solid #26262A;
+    border-radius:18px;padding:12px;
+  }
+  .thumb{
+    position:relative;border-radius:13px;overflow:hidden;
+    background:linear-gradient(160deg,#2A2A30,#17171A);
+    min-height:104px;display:flex;align-items:center;justify-content:center;
+  }
+  .thumb .emoji{font-size:34px;opacity:.92;filter:saturate(1.05)}
+  .thumb.busan{background:linear-gradient(160deg,#1F3242,#121A21)}
+  .thumb.gangwon{background:linear-gradient(160deg,#1E3A30,#111F19)}
+  .thumb.gyeongbuk{background:linear-gradient(160deg,#3A2430,#1F1319)}
+  .thumb.chungcheong{background:linear-gradient(160deg,#3A3220,#1E1A10)}
+  .num{
+    position:absolute;top:6px;left:6px;
+    min-width:26px;height:26px;padding:0 6px;border-radius:8px;
+    background:var(--yellow);color:#141414;
+    font-weight:800;font-size:14px;line-height:26px;text-align:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.35);
+  }
+  .tier{
+    position:absolute;bottom:6px;left:6px;
+    padding:3px 8px;border-radius:7px;
+    font-size:10.5px;font-weight:700;color:#fff;letter-spacing:.01em;
+  }
+  .tier.low{background:var(--green)}
+  .tier.mid{background:var(--amber)}
+  .tier.high{background:var(--purple)}
+
+  .body{min-width:0}
+  .name{margin:0;font-size:16px;line-height:1.32;letter-spacing:-.01em}
+  .name small{display:block;font-size:11.5px;color:var(--sub);font-weight:400;margin-top:2px}
+  .loc{margin:4px 0 0;font-size:12.5px;color:var(--yellow);font-weight:600}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 0}
+  .tag{
+    font-size:11px;color:#C9C9D0;background:#26262A;border:1px solid #303036;
+    padding:3px 7px;border-radius:7px;white-space:nowrap;
+  }
+  .tag.onsen{background:#3A1220;border-color:#5C1B33;color:#FFC9DC}
+  .desc{margin:8px 0 0;font-size:12.5px;color:#B9B9C2;line-height:1.55}
+  .bathline{
+    margin:8px 0 0;font-size:12px;color:#D9D9E0;background:#191A1D;
+    border:1px solid #2A2B30;border-left:3px solid var(--onsen);
+    border-radius:9px;padding:7px 9px;line-height:1.5;
+  }
+  .bathline b{color:#FFC9DC;font-weight:700}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px;font-size:11.5px;color:#8F8F97}
+  .meta .price{color:var(--yellow);font-weight:800;font-size:13px}
+  .actions{display:grid;gap:8px;margin-top:12px;grid-column:1 / -1}
+  .btn{
+    display:block;text-align:center;text-decoration:none;
+    padding:12px 6px;border-radius:12px;
+    font-size:13.5px;font-weight:700;color:#fff;
+    border:0;cursor:pointer;
+  }
+  .btn.trip{background:var(--trip)}
+  .btn:active{filter:brightness(.92)}
+
+  .empty{
+    display:none;text-align:center;padding:44px 16px;color:var(--sub);
+    border:1px dashed #303036;border-radius:18px;background:#171719;
+  }
+  .empty b{display:block;color:var(--text);font-size:15px;margin-bottom:6px}
+  .empty.show{display:block}
+
+  /* ---------- tip + footer ---------- */
+  .tip{
+    margin-top:16px;padding:14px 15px;border-radius:16px;
+    background:#181A1B;border:1px solid #2A2E30;
+  }
+  .tip h2{margin:0 0 6px;font-size:14px}
+  .tip p{margin:0 0 8px;font-size:12.5px;color:#AEAEB6;line-height:1.6}
+  .tip ul{margin:0;padding-left:18px}
+  .tip li{font-size:12.5px;color:#AEAEB6;line-height:1.65;margin-bottom:5px}
+  .tip .facts{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+  .tip .facts span{font-size:11px;color:#C9C9D0;background:#232326;padding:3px 7px;border-radius:7px}
+  .tip a{color:#F0D683}
+
+  footer{margin-top:22px;padding-top:16px;border-top:1px solid #232326;color:#8F8F97;font-size:11.5px;line-height:1.7}
+  footer p{margin:0 0 8px}
+  footer .notice{color:#C9C9D0}
+  footer strong{color:#E6E6EA}
+
+  @media (min-width:480px){
+    .tabs{grid-template-columns:repeat(4,1fr)}
+    .tab{font-size:12px;padding:11px 2px}
+  }
+  @media (min-width:620px){
+    h1{font-size:28px}
+    .list{grid-template-columns:1fr 1fr}
+    .card{grid-template-columns:96px 1fr}
+    .card .desc{font-size:12px}
+    .tab{font-size:12.5px;padding:11px 4px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand"><b>PICK</b> KOREA ONSEN</div>
+    <h1>요즘 뜨는 <span>국내 온천</span> 호텔 9곳</h1>
+    <p class="lead">트립닷컴 숙소 페이지에서 온천·사우나 시설이 확인된 곳만 · 2026년 11월 15일 시설·요금 확인</p>
+  </header>
+
+  <nav class="tabs" aria-label="페이지 이동">
+    <a class="tab" href="index.html">🏨 일본 숙소</a>
+    <a class="tab" href="sapporo.html">♨️ 삿포로 대욕장</a>
+    <a class="tab on" href="korea-onsen.html" aria-current="page">🇰🇷 국내 온천</a>
+    <a class="tab" href="essentials.html">🧳 필수템 8선</a>
+  </nav>
+
+  <div class="searchbar">
+    <div class="search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#BFBFC6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="text" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="번호 또는 지역·숙소명 (예: 해운대, 수안보)" aria-label="숙소 검색">
+      <button id="clear" type="button" aria-label="검색어 지우기">✕</button>
+    </div>
+  </div>
+
+  <div class="filters">
+
+    <div class="chips" id="areaChips" role="group" aria-label="지역 필터">
+      <button class="chip" data-area="all" aria-pressed="true">전체 지역</button>
+      <button class="chip" data-area="busan" aria-pressed="false">🌊 부산</button>
+      <button class="chip" data-area="gangwon" aria-pressed="false">🏔 강원</button>
+      <button class="chip" data-area="gyeongbuk" aria-pressed="false">🏯 경북(경주)</button>
+      <button class="chip" data-area="chungcheong" aria-pressed="false">♨️ 충청</button>
+    </div>
+
+    <div class="chips" id="bathChips" role="group" aria-label="온천 종류 필터">
+      <button class="chip" data-bath="all" aria-pressed="true">♨️ 전체</button>
+      <button class="chip" data-bath="spring" aria-pressed="false">천연온천 표기</button>
+      <button class="chip" data-bath="sauna" aria-pressed="false">사우나</button>
+      <button class="chip" data-bath="pool" aria-pressed="false">수영장·워터파크</button>
+    </div>
+  </div>
+
+  <div class="status" aria-live="polite">
+    <span><b id="count">9</b>곳</span>
+    <span class="basis">1박·2인·세금 포함 · 2026-12-01 체크인 조회</span>
+  </div>
+
+  <main class="list" id="list">
+
+    <!-- 1 -->
+    <article class="card" data-num="1" data-area="busan" data-bath="spring sauna pool" data-tier="high"
+      data-search="파라다이스 호텔 부산 Paradise Hotel Busan 해운대 씨메르 야외 온천 스파 사우나 인피니티풀 오션뷰">
+      <div class="thumb busan"><span class="num">1</span><span class="emoji">🌊</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">파라다이스 호텔 부산<small>Paradise Hotel Busan</small></h2>
+        <p class="loc">부산 해운대 · 해운대해수욕장 430m(해운대역 710m)</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 천연 온천</span>
+          <span class="tag">🌅 씨메르 야외 온천</span>
+          <span class="tag">🧖 사우나</span>
+          <span class="tag">🏊 오션풀</span>
+        </div>
+        <p class="bathline"><b>온천</b> 트립닷컴이 <b>‘천연 온천’</b>으로 표기한 숙소. 바다를 보는 야외 온천 스파 <b>씨메르</b>는 별도 요금(성인 44,000원)이고, 투숙객은 1박에 1회 50% 할인됩니다. 사우나는 55,000원.</p>
+        <p class="desc">1987년 준공·2017년 리모델링, 529실. 해운대 해변 바로 앞이라 밤에 씨메르 조명 켜질 때 사진 찍으려는 사람이 많아요. 12월에는 스파 부대시설 정기휴무(12/16)가 있지만 씨메르는 정상 운영입니다.</p>
+        <div class="meta"><span class="price">248,903원</span><span>9.4점 · 리뷰 713</span><span>위치 9.6</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/busan-hotel-detail-689014/paradise-hotel-busan/" data-trip="https://kr.trip.com/hotels/busan-hotel-detail-689014/paradise-hotel-busan/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="card" data-num="2" data-area="busan" data-bath="sauna pool" data-tier="high"
+      data-search="아난티 앳 부산 코브 Ananti at Busan Cove 기장 오션뷰 인피니티풀 야외 온천 사우나 스파 워터하우스">
+      <div class="thumb busan"><span class="num">2</span><span class="emoji">🛋️</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">아난티 앳 부산 코브<small>Ananti at Busan Cove</small></h2>
+        <p class="loc">부산 기장 · 기장해안로(해운대에서 차로 25분)</p>
+        <div class="tags">
+          <span class="tag">♨️ 온천(별도)</span>
+          <span class="tag">♾ 인피니티풀</span>
+          <span class="tag">🧖 사우나</span>
+          <span class="tag">🌿 정원·산책로</span>
+        </div>
+        <p class="bathline"><b>온천</b> 시설 목록에 <b>온천·사우나·스파</b>가 모두 있고, 셋 다 별도 요금입니다. 야외 수영장과 인피니티풀, 어린이 수영장도 따로 있어요. 트립닷컴 ‘온천 호텔’ 배지가 붙은 곳입니다.</p>
+        <p class="desc">2017년 준공·2023년 리모델링, 309실. 바다와 산을 함께 보는 배치라 ‘호텔 안에서 다 해결된다’는 후기가 많아요. 부산역·해운대 셔틀은 사전 예약제, 1박 보증금 20만 원.</p>
+        <div class="meta"><span class="price">269,644원</span><span>9.0점 · 리뷰 598</span><span>청결 9.3</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/busan-hotel-detail-8810122/ananti-at-busan-cove/" data-trip="https://kr.trip.com/hotels/busan-hotel-detail-8810122/ananti-at-busan-cove/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="card" data-num="3" data-area="gangwon" data-bath="sauna pool" data-tier="high"
+      data-search="파크로쉬 리조트 앤 웰니스 Park Roche Resort Wellness 정선 가리왕산 온천 사우나 스파 아쿠아클럽 웰니스 요가">
+      <div class="thumb gangwon"><span class="num">3</span><span class="emoji">🏔️</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">파크로쉬 리조트 앤 웰니스<small>Park Roche Resort &amp; Wellness</small></h2>
+        <p class="loc">강원 정선 · 가리왕산 케이블카 150m</p>
+        <div class="tags">
+          <span class="tag">♨️ 온천·사우나</span>
+          <span class="tag">💧 아쿠아 클럽</span>
+          <span class="tag">🧘 요가·웰니스</span>
+          <span class="tag">🌲 산속 뷰</span>
+        </div>
+        <p class="bathline"><b>온천</b> 온천·사우나·스파(풀서비스 스파)와 실내·야외 수영장을 모두 갖춘 웰니스 리조트. 사우나 입장 마감은 <b>21:30</b>이고, <b>웰니스·아쿠아 클럽은 만 16세 이상</b>만 쓸 수 있어요.</p>
+        <p class="desc">2018년 개관 204실. 객실마다 창으로 산이 들어오고, 요가·명상 프로그램이 포함된 상품이 있어요. 이 페이지 최저가는 <b>아쿠아+웰니스 클럽 2인 포함</b> 패키지 기준입니다.</p>
+        <div class="meta"><span class="price">242,224원</span><span>9.0점 · 리뷰 218</span><span>청결 9.4</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/jeongseon-gun-hotel-detail-15309493/park-roche-resortandwellness/" data-trip="https://kr.trip.com/hotels/jeongseon-gun-hotel-detail-15309493/park-roche-resortandwellness/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="card" data-num="4" data-area="gangwon" data-bath="sauna pool" data-tier="mid"
+      data-search="체스터톤스 속초 Chestertons Sokcho 온천 사우나 야외수영장 키즈클럽 청초호 신축 2021">
+      <div class="thumb gangwon"><span class="num">4</span><span class="emoji">🏖️</span><span class="tier mid">중간급</span></div>
+      <div class="body">
+        <h2 class="name">체스터톤스 속초<small>Chestertons Sokcho</small></h2>
+        <p class="loc">강원 속초 · 청초호 0.1km(속초해변 2.1km)</p>
+        <div class="tags">
+          <span class="tag">♨️ 온천·사우나</span>
+          <span class="tag">🏊 야외 수영장</span>
+          <span class="tag">🧸 키즈 클럽</span>
+          <span class="tag">🧺 세탁기</span>
+        </div>
+        <p class="bathline"><b>온천</b> 온천·사우나·욕탕 시설이 모두 별도 요금으로 안내돼 있어요. 야외 수영장과 어린이 수영장, 키즈 클럽까지 있어 가족 단위 후기가 많은 곳입니다.</p>
+        <p class="desc">2021년 개관 968실로 규모가 커요. 청초호 바로 앞이고 하나로마트가 붙어 있어 장 보기 편하다는 후기가 많습니다. 다만 청결·냉장고 크기에 대한 아쉬움 후기도 일부 있어요.</p>
+        <div class="meta"><span class="price">67,219원</span><span>8.9점 · 리뷰 570</span><span>위치 9.3</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/sokcho-si-hotel-detail-83273661/chestertons-sokcho/" data-trip="https://kr.trip.com/hotels/sokcho-si-hotel-detail-83273661/chestertons-sokcho/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="card" data-num="5" data-area="gyeongbuk" data-bath="sauna pool" data-tier="mid"
+      data-search="소노캄 경주 Sono Calm Gyeongju 보문호 온천 사우나 실내수영장 풀앤스파 2025 리모델링">
+      <div class="thumb gyeongbuk"><span class="num">5</span><span class="emoji">🏯</span><span class="tier mid">중간급</span></div>
+      <div class="body">
+        <h2 class="name">소노캄 경주<small>Sono Calm Gyeongju</small></h2>
+        <p class="loc">경북 경주 보문단지 · 보문호 650m(천년민속쉼터 160m)</p>
+        <div class="tags">
+          <span class="tag">♨️ 온천(별도)</span>
+          <span class="tag">🏊 실내 온수풀</span>
+          <span class="tag">🧖 사우나</span>
+          <span class="tag">✨ 2025 리모델링</span>
+        </div>
+        <p class="bathline"><b>온천</b> 온천·사우나·실내 수영장이 모두 별도 요금이고, <b>풀앤스파 입장권 2인</b>이 포함된 패키지 상품도 있어요. 트립닷컴 ‘온천 호텔’ 순위 4위로 표기된 숙소입니다.</p>
+        <p class="desc">2006년 준공 후 2025년 리모델링, 417실. 보문호를 끼고 있어 산책·자전거 동선이 좋고, 경주월드·엑스포대공원이 차로 5분 거리예요. 최저가는 3인 기준 객실이라 2인으로는 더 비쌀 수 있습니다.</p>
+        <div class="meta"><span class="price">257,398원</span><span>8.9점 · 리뷰 182</span><span>위치 9.2</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/gyeongju-hotel-detail-3727063/sono-calm-gyeongju/" data-trip="https://kr.trip.com/hotels/gyeongju-hotel-detail-3727063/sono-calm-gyeongju/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="card" data-num="6" data-area="chungcheong" data-bath="sauna pool" data-tier="high"
+      data-search="스플라스 리솜 Splas Resom 예산 덕산 온천 워터파크 사우나 객실 온천수 가족 리조트">
+      <div class="thumb chungcheong"><span class="num">6</span><span class="emoji">💦</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">스플라스 리솜<small>Splas Resom</small></h2>
+        <p class="loc">충남 예산 덕산 · 덕산온천 관광지 260m(스파&워터파크 100m 이내)</p>
+        <div class="tags">
+          <span class="tag">♨️ 온천·사우나</span>
+          <span class="tag">💦 워터파크</span>
+          <span class="tag">🛁 객실 온천수</span>
+          <span class="tag">👨‍👩‍👧 가족 리조트</span>
+        </div>
+        <p class="bathline"><b>온천</b> 온천·사우나 시설이 있고 바로 앞에 <b>스플라스 스파&워터파크</b>가 붙어 있어요. 리뷰에 “객실 샤워 물도 온천수”라는 언급이 여러 건 있습니다. 워터파크는 투숙객 30% 할인, 수영복·수영모·아쿠아슈즈 필수.</p>
+        <p class="desc">2023년 개관 406실. 침실과 거실이 나뉜 객실이 많아 가족 여행 후기가 좋아요. 금연 리조트이고, 최저가는 <b>워터파크 2인 포함</b> 패키지 기준입니다. 아직 리뷰 수가 적은 편(11개)이라 후기를 더 보고 고르는 게 좋아요.</p>
+        <div class="meta"><span class="price">211,285원</span><span>8.3점 · 리뷰 11</span><span>부정 리뷰 없음</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/yesan-gun-hotel-detail-112894520/splas-resom/" data-trip="https://kr.trip.com/hotels/yesan-gun-hotel-detail-112894520/splas-resom/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="card" data-num="7" data-area="busan" data-bath="spring sauna" data-tier="mid"
+      data-search="호텔 농심 Hotel Nongshim 부산 동래 온천 온천수 허심청 온천장역 금강공원">
+      <div class="thumb busan"><span class="num">7</span><span class="emoji">♨️</span><span class="tier mid">중간급</span></div>
+      <div class="body">
+        <h2 class="name">호텔 농심<small>Hotel Nongshim</small></h2>
+        <p class="loc">부산 동래 · 온천장역 370m(허심청 100m)</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 천연 온천</span>
+          <span class="tag">🛁 온천수 객실</span>
+          <span class="tag">🧖 사우나</span>
+          <span class="tag">🚶 허심청 도보 1분</span>
+        </div>
+        <p class="bathline"><b>온천</b> 트립닷컴이 <b>‘천연 온천’</b>으로 표기한 동래 온천 숙소. 온천·사우나가 별도 요금이고, <b>허심청 온천탕 무료 이용권 2매</b>가 포함된 패키지(220,000원)도 있습니다. 2층 통로로 허심청과 바로 이어져요.</p>
+        <p class="desc">2002년 준공 238실. 금강공원 숲 아래 있어 도심인데 조용하고, 온천욕 하러 오는 단골이 많아요. 시설은 연식이 있지만 온천수 품질 후기가 좋습니다.</p>
+        <div class="meta"><span class="price">178,755원</span><span>8.5점 · 리뷰 103</span><span>위치 8.9</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/busan-hotel-detail-689009/nongshim-hotel/" data-trip="https://kr.trip.com/hotels/busan-hotel-detail-689009/nongshim-hotel/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+    <!-- 8 -->
+    <article class="card" data-num="8" data-area="chungcheong" data-bath="spring sauna" data-tier="low"
+      data-search="라마다 바이윈덤 호텔 충주 수안보 Ramada by Wyndham Chungju Suanbo 천연 온천 사우나 스파 온천수 객실">
+      <div class="thumb chungcheong"><span class="num">8</span><span class="emoji">🛁</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">라마다 바이윈덤 호텔 충주 수안보<small>Ramada by Wyndham Hotel Chungju Suanbo</small></h2>
+        <p class="loc">충북 충주 수안보 · 수안보온천역 1.0km</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 천연 온천</span>
+          <span class="tag">🧖 사우나</span>
+          <span class="tag">🛁 객실 온천수</span>
+          <span class="tag">💴 저렴한 편</span>
+        </div>
+        <p class="bathline"><b>온천</b> 트립닷컴이 <b>‘천연 온천’</b>으로 표기했고 온천·사우나·스파가 모두 있습니다. 객실에서도 온천수를 받을 수 있다는 후기가 많아요. <b>온천&사우나는 매주 월요일 휴장</b>이니 월요일 숙박이면 미리 확인하세요.</p>
+        <p class="desc">2019년 준공·2022년 리모델링, 100실. 수안보 온천단지 안이라 주변에 온천탕·맛집이 많아요. 다만 시설 노후와 청결 관련 지적이 꾸준히 나오는 곳이라, 온천수 중심으로 기대치를 맞추는 게 좋습니다.</p>
+        <div class="meta"><span class="price">117,809원</span><span>7.5점 · 리뷰 144</span><span>온천 패키지 139,000원</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/chungju-hotel-detail-1735848/ramada-by-wyndham-hotel-chungju-suanbo/" data-trip="https://kr.trip.com/hotels/chungju-hotel-detail-1735848/ramada-by-wyndham-hotel-chungju-suanbo/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+    <!-- 9 -->
+    <article class="card" data-num="9" data-area="chungcheong" data-bath="none" data-tier="low"
+      data-search="수안보 온천 힐링 호텔 Suanbo Hot Spring Healing Hotel 충주 온천수 전객실 가족스파온천탕 프라이빗">
+      <div class="thumb chungcheong"><span class="num">9</span><span class="emoji">🌿</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">수안보 온천 힐링 호텔<small>Suanbo Hot Spring Healing Hotel</small></h2>
+        <p class="loc">충북 충주 수안보 · 수안보 벚꽃길 290m(수안보온천역 1.3km)</p>
+        <div class="tags">
+          <span class="tag">♨️ 전 객실 온천수</span>
+          <span class="tag">🛁 가족스파온천탕</span>
+          <span class="tag">🐶 펫룸</span>
+          <span class="tag">💴 가장 저렴</span>
+        </div>
+        <p class="bathline"><b>온천</b> 호텔이 “자연 용출 53도의 온천수를 <b>전 객실</b>과 가족스파온천탕에 공급한다”고 안내하는 온천 전문 호텔이에요. 가족스파온천탕은 3시간 단위 대여. 다만 <b>대중탕은 없고</b> 사우나 이용이 안 됐다는 후기도 있습니다.</p>
+        <p class="desc">2023년 개관 26실 소규모. 방이 넓고 조용해 조용한 온천 휴식에 맞아요. <b>조식은 운영하지 않습니다</b>(1층 치킨·카페에서 따로). 이 페이지 9곳 중 1박 요금이 가장 낮습니다.</p>
+        <div class="meta"><span class="price">93,551원</span><span>7.7점 · 리뷰 82</span><span>청결 7.8</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/chungju-hotel-detail-112740382/suanbo-hot-spring-healing-hotel/" data-trip="https://kr.trip.com/hotels/chungju-hotel-detail-112740382/suanbo-hot-spring-healing-hotel/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+  </main>
+
+  <div class="empty" id="empty">
+    <b>조건에 맞는 숙소가 없어요</b>
+    다른 지역이나 온천 종류를 골라보세요.
+  </div>
+
+  <section class="tip">
+    <h2>♨️ 겨울에 국내 온천 호텔 고를 때 알아둘 것</h2>
+    <ul>
+      <li><b>‘온천’과 ‘사우나’는 요금이 따로인 경우가 많아요.</b> 아난티·체스터톤스·소노캄·파크로쉬는 온천·사우나가 별도 요금이고, 파라다이스(씨메르)와 스플라스(워터파크)는 투숙객 할인이 붙습니다.</li>
+      <li><b>패키지가 개별 구매보다 쌉니다.</b> 파크로쉬(아쿠아+웰니스 2인), 소노캄 경주(풀앤스파 2인), 라마다 수안보(온천&사우나 2인), 호텔 농심(허심청 2매) 모두 입장권 포함 상품이 있어요.</li>
+      <li><b>휴장일을 먼저 보세요.</b> 라마다 수안보 온천&사우나는 월요일 휴장, 파라다이스 부산 스파 부대시설은 12월 16일 정기휴무입니다.</li>
+      <li><b>연령·복장 제한</b>: 파크로쉬 웰니스·아쿠아 클럽은 만 16세 이상, 스플라스 워터파크는 수영복·수영모·아쿠아슈즈가 필수예요.</li>
+      <li><b>12월 초 평일이 가장 쌉니다.</b> 같은 숙소도 주말·연말 성수기에는 1박에 5만~10만 원 이상 차이가 납니다.</li>
+    </ul>
+    <div class="facts">
+      <span>📅 요금 조회 2026-11-15</span>
+      <span>🛏 1박·2인·세금 포함</span>
+      <span>🏨 9곳 모두 온천 시설 확인</span>
+    </div>
+  </section>
+
+  <footer>
+    <p class="notice"><strong>제휴 마케팅 활동의 일환으로 예약 시 일정액의 수수료를 제공받을 수 있습니다.</strong></p>
+    <p>가격은 2026년 11월 15일 트립닷컴에서 <b>2026년 12월 1일 체크인·1박·성인 2명·세금 및 서비스비용 포함</b> 조건으로 조회한 최저가(무료 취소 조건)입니다. 소노캄 경주는 3인 기준 객실이 최저가였습니다. 날짜·성수기·객실 타입에 따라 실제 요금은 달라지니 버튼에서 다시 확인해 주세요.</p>
+    <p>지역·거리, 평점, 리뷰 수, 온천·사우나·수영장 유무와 요금 안내는 2026년 11월 15일 트립닷컴 숙소 상세 페이지에서 확인한 내용입니다. 온천·사우나 이용 시간과 요금, 휴장일은 예고 없이 바뀔 수 있으니 예약 전에 숙소 안내를 다시 확인하세요.</p>
+    <p>사진은 각 숙소의 실제 모습이 아니라 지역을 나타내는 이미지입니다.</p>
+    <p><a href="index.html" style="color:#F0D683">🏨 일본 숙소 10곳 보기</a> · <a href="sapporo.html" style="color:#F0D683">♨️ 삿포로 대욕장 10곳 보기</a> · <a href="essentials.html" style="color:#F0D683">🧳 필수템 8선 보기</a></p>
+  </footer>
+
+</div>
+
+<script>
+/* =========================================================
+   제휴 설정 — index.html과 동일한 값 (트립닷컴 AID / SID)
+   ========================================================= */
+var AFFILIATE_CONFIG = {
+  trip:  { aid: "11254538", sid: "335287562" }
+};
+
+function withTripAffiliate(url){
+  var aid = AFFILIATE_CONFIG.trip.aid;
+  if(!aid){ return url; }
+  var sep = url.indexOf("?") === -1 ? "?" : "&";
+  var out = url + sep + "Allianceid=" + encodeURIComponent(aid);
+  if(AFFILIATE_CONFIG.trip.sid){
+    out += "&SID=" + encodeURIComponent(AFFILIATE_CONFIG.trip.sid);
+  }
+  return out;
+}
+
+(function applyAffiliate(){
+  var tripLinks = document.querySelectorAll("a[data-trip]");
+  for(var j = 0; j < tripLinks.length; j++){
+    tripLinks[j].href = withTripAffiliate(tripLinks[j].getAttribute("data-trip"));
+  }
+})();
+
+/* =========================================================
+   검색 + 필터 (지역 / 온천 종류)
+   ========================================================= */
+(function(){
+  var q = document.getElementById("q");
+  var clearBtn = document.getElementById("clear");
+  var countEl = document.getElementById("count");
+  var emptyEl = document.getElementById("empty");
+  var cards = Array.prototype.slice.call(document.querySelectorAll("#list .card"));
+
+  var state = { area: "all", bath: "all", text: "" };
+
+  function bindGroup(containerId, key){
+    var group = document.getElementById(containerId);
+    if(!group){ return; }
+    group.addEventListener("click", function(e){
+      var btn = e.target.closest ? e.target.closest(".chip") : null;
+      if(!btn || !group.contains(btn)){ return; }
+      var chips = group.querySelectorAll(".chip");
+      for(var i = 0; i < chips.length; i++){
+        chips[i].setAttribute("aria-pressed", chips[i] === btn ? "true" : "false");
+      }
+      state[key] = btn.getAttribute("data-" + key);
+      apply();
+    });
+  }
+
+  function normalize(s){
+    return (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  function matches(card){
+    if(state.area !== "all" && card.getAttribute("data-area") !== state.area){ return false; }
+    if(state.bath !== "all"){
+      var bath = " " + card.getAttribute("data-bath") + " ";
+      if(bath.indexOf(" " + state.bath + " ") === -1){ return false; }
+    }
+    if(state.text){
+      var hay = normalize(card.getAttribute("data-search") + " " +
+        card.querySelector(".name").textContent + " " +
+        card.querySelector(".loc").textContent);
+      var words = state.text.split(" ").filter(Boolean);
+      for(var w = 0; w < words.length; w++){
+        if(hay.indexOf(words[w]) === -1){ return false; }
+      }
+    }
+    return true;
+  }
+
+  function apply(){
+    var shown = 0;
+    for(var i = 0; i < cards.length; i++){
+      var ok = matches(cards[i]);
+      cards[i].style.display = ok ? "" : "none";
+      if(ok){ shown++; }
+    }
+    countEl.textContent = shown;
+    emptyEl.classList.toggle("show", shown === 0);
+    clearBtn.classList.toggle("show", !!state.text);
+  }
+
+  function onText(){
+    state.text = normalize(q.value);
+    apply();
+  }
+
+  bindGroup("areaChips", "area");
+  bindGroup("bathChips", "bath");
+  q.addEventListener("input", onText);
+  q.addEventListener("search", onText);
+  clearBtn.addEventListener("click", function(){ q.value = ""; state.text = ""; apply(); q.focus(); });
+  apply();
+})();
+</script>
+</body>
+</html>
