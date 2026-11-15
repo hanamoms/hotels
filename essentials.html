@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>일본 여행 필수템 8선 · 유심 돼지코 캐리어 보조배터리</title>
+<meta name="description" content="일본 여행 준비물 8가지를 출발 전·짐 싸기·비행·이동 단계로 정리했습니다. 유심, 돼지코, 기내용 캐리어, 압축팩, 맥세이프 보조배터리, 손저울, 여권케이스, 목베개 — 가격과 실사용 팁, 주의사항까지.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="일본 여행 필수템 8선 · 엄마의 여행메모">
+<meta property="og:description" content="출발 전·짐 싸기·비행·이동 단계별로 챙기는 일본 여행 준비물 8가지. 가격과 실사용 팁, 주의사항 정리.">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A7%B3%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#111111;
+    --card:#1C1C1E;
+    --card2:#242426;
+    --line:#2E2E31;
+    --text:#F2F2F4;
+    --sub:#A1A1A8;
+    --yellow:#F5C518;
+    --pre:#1E88E5;
+    --pack:#2E7D32;
+    --fly:#5E35B1;
+    --coupang:#E52528;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic","Noto Sans KR",Roboto,sans-serif;
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+    padding-bottom:calc(28px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 14px}
+
+  /* ---------- header ---------- */
+  header.top{padding:18px 0 10px}
+  .brand{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--sub);letter-spacing:.08em;text-transform:uppercase}
+  .brand b{color:var(--yellow);letter-spacing:0}
+  h1{font-size:23px;line-height:1.32;margin:10px 0 6px;letter-spacing:-.02em}
+  h1 span{color:var(--yellow)}
+  .lead{margin:0;color:var(--sub);font-size:13.5px}
+
+  /* ---------- page switch tabs ---------- */
+  .tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0 4px}
+  .tab{
+    display:flex;align-items:center;justify-content:center;gap:6px;
+    text-decoration:none;padding:11px 8px;border-radius:13px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#C9C9D0;font-size:13.5px;font-weight:600;text-align:center;
+  }
+  .tab.on{background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:800}
+  .tab:active{transform:scale(.99)}
+
+  /* ---------- sticky search + filters ---------- */
+  .searchbar{
+    position:sticky;top:0;z-index:20;
+    background:#111111;
+    padding:8px 14px 10px;
+    margin:0 -14px;
+    box-shadow:0 8px 14px -10px rgba(0,0,0,.9);
+  }
+  .filters{padding:2px 0 4px}
+  .search{position:relative}
+  .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.55}
+  #q{
+    width:100%;padding:15px 44px 15px 42px;
+    background:#1A1A1C;border:1px solid var(--line);border-radius:16px;
+    color:var(--text);font-size:15px;font-family:inherit;
+    outline:none;appearance:none;
+  }
+  #q::placeholder{color:#7C7C84}
+  #q:focus{border-color:#4A4A50;background:#1F1F22}
+  #clear{
+    position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    width:30px;height:30px;border:0;border-radius:50%;
+    background:#333338;color:#CFCFD6;font-size:16px;line-height:1;
+    display:none;cursor:pointer;
+  }
+  #clear.show{display:block}
+
+  .chips{
+    display:flex;gap:8px;overflow-x:auto;padding:10px 0 0;
+    scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;
+    padding:9px 15px;border-radius:999px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#D6D6DC;font-size:13.5px;font-family:inherit;white-space:nowrap;
+    cursor:pointer;transition:background .15s,border-color .15s,color .15s;
+  }
+  .chip[aria-pressed="true"]{
+    background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:700;
+  }
+  .chip:active{transform:scale(.98)}
+
+  .status{
+    display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+    padding:12px 0 2px;color:var(--sub);font-size:12.5px;
+  }
+  .status b{color:var(--text);font-weight:600}
+
+  /* ---------- items ---------- */
+  .list{display:grid;gap:12px;padding-top:8px}
+  .item{
+    display:grid;grid-template-columns:92px 1fr;gap:12px;
+    background:var(--card);border:1px solid #26262A;
+    border-radius:18px;padding:12px;
+  }
+  .thumb{
+    position:relative;border-radius:13px;overflow:hidden;
+    background:linear-gradient(160deg,#2A2A30,#17171A);
+    min-height:92px;display:flex;align-items:center;justify-content:center;
+  }
+  .thumb .emoji{font-size:32px;opacity:.94;filter:saturate(1.05)}
+  .thumb.pre{background:linear-gradient(160deg,#20304A,#141B28)}
+  .thumb.pack{background:linear-gradient(160deg,#1E3320,#121A13)}
+  .thumb.fly{background:linear-gradient(160deg,#2C2244,#171223)}
+  .num{
+    position:absolute;top:6px;left:6px;
+    min-width:26px;height:26px;padding:0 6px;border-radius:8px;
+    background:var(--yellow);color:#141414;
+    font-weight:800;font-size:14px;line-height:26px;text-align:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.35);
+  }
+  .stepbadge{
+    position:absolute;bottom:6px;left:6px;
+    padding:3px 7px;border-radius:7px;
+    font-size:10px;font-weight:700;color:#fff;letter-spacing:.01em;white-space:nowrap;
+  }
+  .stepbadge.pre{background:var(--pre)}
+  .stepbadge.pack{background:var(--pack)}
+  .stepbadge.fly{background:var(--fly)}
+
+  .body{min-width:0}
+  .name{margin:0;font-size:15.5px;line-height:1.34;letter-spacing:-.01em}
+  .name small{display:block;font-size:11.5px;color:var(--sub);font-weight:400;margin-top:2px}
+  .meta{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:7px 0 0}
+  .price{font-size:16px;font-weight:800;color:var(--yellow);letter-spacing:-.01em}
+  .off{font-size:10.5px;font-weight:700;color:#FFD9D9;background:#7A1F1F;padding:2px 6px;border-radius:6px}
+  .ship{font-size:10.5px;color:#C9C9D0;background:#26262A;border:1px solid #303036;padding:2px 7px;border-radius:7px}
+  .evid{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 0}
+  .evid span{
+    font-size:11px;color:#C9C9D0;background:#26262A;border:1px solid #303036;
+    padding:3px 7px;border-radius:7px;white-space:nowrap;
+  }
+  .evid span.rank{color:#FFE9A8;border-color:#4A3F1A;background:#2C2612}
+
+  .blk{grid-column:1 / -1;margin:10px 0 0;font-size:12.5px;line-height:1.6;color:#B9B9C2}
+  .blk b{display:inline-block;font-size:11px;font-weight:800;color:#141414;background:#D8D8DE;
+    padding:1px 6px;border-radius:5px;margin-right:6px;vertical-align:1px}
+  .blk.tip b{background:var(--yellow)}
+  .blk.warn{color:#E4C9A6}
+  .blk.warn b{background:#C77A2E;color:#181008}
+
+  .go{
+    grid-column:1 / -1;display:block;text-align:center;text-decoration:none;
+    margin-top:11px;padding:13px 6px;border-radius:13px;
+    background:var(--coupang);color:#fff;
+    font-size:14px;font-weight:800;letter-spacing:-.01em;
+  }
+  .go:active{filter:brightness(.93)}
+  .go span{font-weight:600;font-size:11.5px;opacity:.9;margin-left:4px}
+
+  .empty{
+    display:none;text-align:center;padding:44px 16px;color:var(--sub);
+    border:1px dashed #303036;border-radius:18px;background:#171719;
+  }
+  .empty b{display:block;color:var(--text);font-size:15px;margin-bottom:6px}
+  .empty.show{display:block}
+
+  /* ---------- steps recap ---------- */
+  .steps{
+    margin-top:18px;padding:14px 15px;border-radius:16px;
+    background:#181A1B;border:1px solid #2A2E30;
+  }
+  .steps h2{margin:0 0 8px;font-size:14px}
+  .steps ol{margin:0;padding-left:18px;font-size:12.5px;color:#B9B9C2;line-height:1.7}
+  .steps li b{color:#E6E6EA}
+
+  /* ---------- cross link ---------- */
+  .cross{
+    margin-top:16px;padding:15px;border-radius:16px;
+    background:linear-gradient(150deg,#1F1F24,#17171A);border:1px solid #2E2E33;
+    display:flex;align-items:center;justify-content:space-between;gap:12px;text-decoration:none;
+  }
+  .cross .t{font-size:13.5px;color:#E6E6EA;font-weight:700;line-height:1.4}
+  .cross .s{display:block;margin-top:3px;font-size:11.5px;color:var(--sub);font-weight:400}
+  .cross .arw{flex:0 0 auto;color:var(--yellow);font-size:18px;font-weight:800}
+
+  footer{margin-top:22px;padding-top:16px;border-top:1px solid #232326;color:#8F8F97;font-size:11.5px;line-height:1.7}
+  footer p{margin:0 0 8px}
+  footer .notice{color:#C9C9D0}
+  footer strong{color:#E6E6EA}
+
+  @media (min-width:620px){
+    h1{font-size:27px}
+    .list{grid-template-columns:1fr 1fr}
+    .item{grid-template-columns:84px 1fr}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand"><b>PICK</b> JAPAN TRIP</div>
+    <h1>🧳 엄마의 여행메모 · 일본 여행 <span>필수템 8선</span></h1>
+    <p class="lead">출발 전 · 짐 싸기 · 비행·이동 — 단계별로 챙길 것만 골랐어요. 가격과 실사용 팁, 주의사항까지 함께 적었습니다.</p>
+  </header>
+
+  <nav class="tabs" aria-label="페이지 이동">
+    <a class="tab" href="index.html">🏨 숙소 모음</a>
+    <a class="tab on" href="essentials.html" aria-current="page">🧳 필수템 8선</a>
+  </nav>
+
+  <div class="searchbar">
+    <div class="search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#BFBFC6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="text" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="번호 또는 상품명·용도 (예: 유심, 충전)" aria-label="필수템 검색">
+      <button id="clear" type="button" aria-label="검색어 지우기">✕</button>
+    </div>
+  </div>
+
+  <div class="filters">
+    <div class="chips" id="stepChips" role="group" aria-label="준비 단계 필터">
+      <button class="chip" data-step="all" aria-pressed="true">🧳 전체</button>
+      <button class="chip" data-step="pre" aria-pressed="false">🛫 출발 전</button>
+      <button class="chip" data-step="pack" aria-pressed="false">🧳 짐 싸기</button>
+      <button class="chip" data-step="fly" aria-pressed="false">✈️ 비행·이동</button>
+    </div>
+  </div>
+
+  <div class="status" aria-live="polite">
+    <span><b id="count">8</b>개</span>
+    <span>출발 전 3 · 짐 싸기 3 · 비행·이동 2</span>
+  </div>
+
+  <main class="list" id="list">
+
+    <!-- 1 -->
+    <article class="item" data-num="1" data-step="pre"
+      data-search="유심 유심칩 eSIM 이심 데이터 인터넷 와이파이 로밍 4일 무제한 유심사 출발 전 통신">
+      <div class="thumb pre"><span class="num">1</span><span class="emoji">📶</span><span class="stepbadge pre">출발 전</span></div>
+      <div class="body">
+        <h2 class="name">일본 유심 4일 무제한<small>유심사 일본 유심칩 · 1개 · 4일</small></h2>
+        <div class="meta"><span class="price">9,790원</span></div>
+        <div class="evid">
+          <span class="rank">상품평 3,121개</span>
+          <span>리뷰 만족도 최고 85%</span>
+          <span>편리성 82%</span>
+        </div>
+      </div>
+      <p class="blk tip"><b>팁</b>비행기에서 내려 바로 데이터가 필요할 때 가장 먼저 챙길 것. 4일 무제한이라 2~3박 일정에 딱 맞습니다.</p>
+      <p class="blk warn"><b>주의</b>유심을 빼고 끼우는 게 어려운 분은 같은 상품의 eSIM 옵션으로 구매하세요. 기내에서 내려 유심을 교체하면 한국 번호로 오는 인증 문자가 안 올 수 있으니, 필요한 인증은 출발 전에 미리 끝내 두세요.</p>
+      <a class="go" href="https://link.coupang.com/a/iF4qSyrEHs" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 <span>9,790원</span></a>
+    </article>
+
+    <!-- 2 -->
+    <article class="item" data-num="2" data-step="pre"
+      data-search="돼지코 변환 플러그 어댑터 콘센트 전원 220V 110V 충전기 플라이토 출발 전">
+      <div class="thumb pre"><span class="num">2</span><span class="emoji">🔌</span><span class="stepbadge pre">출발 전</span></div>
+      <div class="body">
+        <h2 class="name">돼지코 변환 플러그 3개입<small>플라이토 220V 변환 110V 무나사 여행용 어댑터 · 3개</small></h2>
+        <div class="meta"><span class="price">4,000원</span><span class="ship">3개입</span></div>
+        <div class="evid">
+          <span class="rank">쿠팡랭킹 3위</span>
+          <span>상품평 4,919개</span>
+          <span>만족도 100%</span>
+        </div>
+      </div>
+      <p class="blk tip"><b>팁</b>일본 콘센트는 2구 평형이라 한국 플러그가 그대로는 안 들어갑니다. 3개입 4,000원이라 가족 여행에서 인원수대로 나눠 쓰기 좋고, 잃어버려도 부담이 없어요.</p>
+      <p class="blk warn"><b>주의</b>변환 플러그이고 <b style="background:#3A2A18;color:#F0C69A">전압 변환기는 아닙니다</b> — 휴대폰·노트북 충전기처럼 100~240V 겸용 기기에만 쓰세요. 220V 전용 드라이기·고데기를 그대로 꽂으면 기기가 망가지거나 위험할 수 있습니다.</p>
+      <a class="go" href="https://link.coupang.com/a/iF4sxpGDqC" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 <span>4,000원</span></a>
+    </article>
+
+    <!-- 3 -->
+    <article class="item" data-num="3" data-step="pre"
+      data-search="여권 케이스 여권지갑 RFID 차단 카스토리 여권 탑승권 지갑 출발 전">
+      <div class="thumb pre"><span class="num">3</span><span class="emoji">🛂</span><span class="stepbadge pre">출발 전</span></div>
+      <div class="body">
+        <h2 class="name">RFID 차단 여권케이스<small>카스토리 RFID 차단 여권지갑</small></h2>
+        <div class="meta"><span class="price">6,800원</span></div>
+        <div class="evid">
+          <span class="rank">'여권 케이스' 쿠팡랭킹 1위</span>
+        </div>
+      </div>
+      <p class="blk tip"><b>팁</b>여권·탑승권·엔화 소액을 한 곳에 모아두면 입국심사와 체크인 때 꺼내기 쉽습니다. RFID 차단 기능이 있어 개인정보 스캔 위험도 줄일 수 있어요.</p>
+      <p class="blk warn"><b>주의</b>여권은 케이스에 넣어도 항상 몸에 지니고 다니세요. 케이스에 여권과 현금을 같이 넣으면 한 번에 잃어버릴 수 있으니, 큰 현금은 따로 나눠 두는 편이 안전합니다.</p>
+      <a class="go" href="https://link.coupang.com/a/iF4BFgAD2i" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 <span>6,800원</span></a>
+    </article>
+
+    <!-- 4 -->
+    <article class="item" data-num="4" data-step="pack"
+      data-search="캐리어 기내용 20인치 하드케이스 코멧 TSA 커스텀 락 여행용 가방 LCC 짐 싸기 수하물">
+      <div class="thumb pack"><span class="num">4</span><span class="emoji">🧳</span><span class="stepbadge pack">짐 싸기</span></div>
+      <div class="body">
+        <h2 class="name">기내용 캐리어 20인치<small>코멧 하드케이스 여행용 캐리어 (TSA 커스텀 락)</small></h2>
+        <div class="meta"><span class="price">29,890원</span><span class="off">70% 할인</span><span class="ship">로켓배송</span></div>
+        <div class="evid">
+          <span class="rank">상품평 2,185개</span>
+          <span>만족도 최고 81% · 좋음 12%</span>
+          <span>무료배송·무료반품</span>
+        </div>
+      </div>
+      <p class="blk tip"><b>팁</b>일본 소도시 여행은 좁은 골목과 기차 이동이 많아 20인치가 가장 편합니다. TSA 잠금장치가 있어 위탁 수하물 검사 때도 안전하고, 무료반품이 붙어 있어 사이즈가 안 맞으면 바로 교환할 수 있어요.</p>
+      <p class="blk warn"><b>주의</b>기내 반입 사이즈·무게는 항공사(LCC)마다 다릅니다. 예약한 항공사 규정을 먼저 확인하고, 기념품까지 생각하면 위탁용 캐리어와 나눠 쓰는 편이 낫습니다.</p>
+      <a class="go" href="https://link.coupang.com/a/iF4vhlQYI8" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 <span>29,890원</span></a>
+    </article>
+
+    <!-- 5 -->
+    <article class="item" data-num="5" data-step="pack"
+      data-search="압축팩 여행용 압축 코멧 10매 지퍼백 짐 싸기 옷 수건 부피 캐리어">
+      <div class="thumb pack"><span class="num">5</span><span class="emoji">🗜️</span><span class="stepbadge pack">짐 싸기</span></div>
+      <div class="body">
+        <h2 class="name">여행용 압축팩 10매<small>코멧 여행용 압축팩 · 1세트 · 10개입</small></h2>
+        <div class="meta"><span class="price">5,990원</span><span class="ship">로켓배송</span></div>
+        <div class="evid">
+          <span class="rank">쿠팡랭킹 4위</span>
+          <span>10개입</span>
+        </div>
+      </div>
+      <p class="blk tip"><b>팁</b>온천·료칸 여행은 수건과 겉옷이 부피를 많이 차지합니다. 더러운 옷을 압축해 넣으면 캐리어 절반이 비고, 10매라 4~5일 일정에 넉넉해요.</p>
+      <p class="blk warn"><b>주의</b>젖은 옷은 마른 뒤에 넣고 지퍼를 끝까지 밀봉하세요. 액체류와 같이 넣으면 새는 경우가 있으니 화장품은 따로 담는 게 안전합니다.</p>
+      <a class="go" href="https://link.coupang.com/a/iF4wPNN5ky" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 <span>5,990원</span></a>
+    </article>
+
+    <!-- 6 -->
+    <article class="item" data-num="6" data-step="pack"
+      data-search="손저울 휴대용 저울 무게 홈플래닛 캐리어 수하물 23kg 짐 싸기 귀국">
+      <div class="thumb pack"><span class="num">6</span><span class="emoji">⚖️</span><span class="stepbadge pack">짐 싸기</span></div>
+      <div class="body">
+        <h2 class="name">휴대용 손저울<small>홈플래닛 휴대용 손저울 · 혼합색상 · 1개</small></h2>
+        <div class="meta"><span class="price">5,390원</span><span class="off">51% 할인</span><span class="ship">로켓배송</span></div>
+        <div class="evid">
+          <span class="rank">쿠팡랭킹 4위</span>
+        </div>
+      </div>
+      <p class="blk tip"><b>팁</b>일본에서 기념품을 사면 위탁 수하물이 23kg을 넘기기 쉽습니다. 공항에서 초과 요금을 내는 대신 숙소에서 미리 무게를 재 두면 5천원으로 수십 배를 아낄 수 있어요.</p>
+      <p class="blk warn"><b>주의</b>무게 기준은 항공사·노선·좌석 등급마다 다르니 예약한 항공사 기준을 확인하세요. 저울마다 오차가 있으니 한도보다 1kg 정도 여유를 두고 재는 게 안전합니다.</p>
+      <a class="go" href="https://link.coupang.com/a/iF4z0TmgtE" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 <span>5,390원</span></a>
+    </article>
+
+    <!-- 7 -->
+    <article class="item" data-num="7" data-step="fly"
+      data-search="보조배터리 맥세이프 마그네틱 유무선 지오맥스 10000mAh 초슬림 충전 비행 이동 기내">
+      <div class="thumb fly"><span class="num">7</span><span class="emoji">🔋</span><span class="stepbadge fly">비행·이동</span></div>
+      <div class="body">
+        <h2 class="name">맥세이프 보조배터리 10,000mAh<small>지오맥스 초슬림 마그네틱 유무선 · 블랙 · SQ-PB10</small></h2>
+        <div class="meta"><span class="price">17,860원</span><span class="off">74% 할인</span><span class="ship">로켓배송</span></div>
+        <div class="evid">
+          <span class="rank">쿠팡랭킹 5위</span>
+          <span>리뷰 759개</span>
+          <span>만족도 100%</span>
+        </div>
+      </div>
+      <p class="blk tip"><b>팁</b>지도·사진으로 하루 종일 쓰는 폰. 케이블 없이 폰 뒤에 붙여 들고 다닐 수 있어 지도를 보며 걷는 일본 여행에서 특히 편합니다. 초슬림이라 가방 속 부피도 적어요.</p>
+      <p class="blk warn"><b>주의</b>보조배터리는 <b style="background:#3A2A18;color:#F0C69A">기내 반입만</b> 되고 위탁 수하물로 부칠 수 없습니다(리튬배터리 규정). 무선 충전은 휴대폰이 마그네틱 충전을 지원해야 하며, 두꺼운 케이스를 끼우면 붙지 않을 수 있어요.</p>
+      <a class="go" href="https://link.coupang.com/a/iF4yoYRKfY" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 <span>17,860원</span></a>
+    </article>
+
+    <!-- 8 -->
+    <article class="item" data-num="8" data-step="fly"
+      data-search="목베개 기내용 여행용 잠쿨쿨 비행기 휴대용 목 받침 파우치 비행 이동">
+      <div class="thumb fly"><span class="num">8</span><span class="emoji">😴</span><span class="stepbadge fly">비행·이동</span></div>
+      <div class="body">
+        <h2 class="name">기내용 목베개<small>잠쿨쿨 여행용 기내용 목베개 비행기 휴대용</small></h2>
+        <div class="meta"><span class="price">14,800원</span><span class="off">40% 할인</span></div>
+        <div class="evid">
+          <span class="rank">'여행용 목베개' 쿠팡랭킹 1위</span>
+        </div>
+      </div>
+      <p class="blk tip"><b>팁</b>새벽 출발 비행이나 밤 비행에서 목을 받쳐 주면 도착 후 컨디션이 다릅니다. 파우치가 있어 캐리어 손잡이에 매달아 두기 좋아요.</p>
+      <p class="blk warn"><b>주의</b>부피가 있어 기내 가방을 꽉 채우면 자리가 부족할 수 있으니, 파우치에 넣어 손잡이에 걸어 두는 편이 편합니다. 좌석 창가·복도에 따라 목을 받치는 각도가 달라 미리 목 둘레를 확인하세요.</p>
+      <a class="go" href="https://link.coupang.com/a/iF4DjVFd9w" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 <span>14,800원</span></a>
+    </article>
+
+  </main>
+
+  <div class="empty" id="empty">
+    <b>조건에 맞는 준비물이 없어요</b>
+    다른 단계를 골라보세요.
+  </div>
+
+  <section class="steps">
+    <h2>🕒 이 순서로 챙기면 놓치지 않아요</h2>
+    <ol>
+      <li><b>출발 전</b> — 유심(또는 eSIM), 돼지코, 여권케이스</li>
+      <li><b>짐 싸기</b> — 캐리어, 압축팩, 손저울</li>
+      <li><b>비행·이동</b> — 보조배터리(기내 반입), 목베개</li>
+    </ol>
+  </section>
+
+  <a class="cross" href="index.html">
+    <span>
+      <span class="t">🏨 일본 숙소는 정하셨나요?</span>
+      <span class="s">도쿄·오사카·요코하마·후쿠오카·삿포로 10곳 · 역 거리와 온천 정보</span>
+    </span>
+    <span class="arw">→</span>
+  </a>
+
+  <footer>
+    <p class="notice"><strong>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</strong></p>
+    <p>가격은 <strong>2026년 11월 15일</strong> 쿠팡 파트너스 링크 생성 화면의 판매가 기준입니다. 쿠팡 판매가·할인율·로켓배송 여부는 수시로 바뀌니 정확한 금액은 쿠팡 상품 페이지에서 확인해 주세요.</p>
+    <p>상품평 수·만족도·쿠팡랭킹은 같은 날짜 쿠팡 상품·검색 화면에 표시된 값입니다. 순위와 평가는 시간이 지나면 달라질 수 있습니다.</p>
+    <p>이미지는 상품 사진이 아니라 용도를 나타내는 표시입니다. 상품명·구성·배송 조건은 상품 페이지 안내를 기준으로 확인하세요.</p>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var q = document.getElementById("q");
+  var clearBtn = document.getElementById("clear");
+  var countEl = document.getElementById("count");
+  var emptyEl = document.getElementById("empty");
+  var items = Array.prototype.slice.call(document.querySelectorAll("#list .item"));
+
+  var state = { step: "all", text: "" };
+
+  function normalize(s){
+    return (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  var group = document.getElementById("stepChips");
+  group.addEventListener("click", function(e){
+    var btn = e.target.closest ? e.target.closest(".chip") : null;
+    if(!btn || !group.contains(btn)){ return; }
+    var chips = group.querySelectorAll(".chip");
+    for(var i = 0; i < chips.length; i++){
+      chips[i].setAttribute("aria-pressed", chips[i] === btn ? "true" : "false");
+    }
+    state.step = btn.getAttribute("data-step");
+    apply();
+  });
+
+  function matches(item){
+    if(state.step !== "all" && item.getAttribute("data-step") !== state.step){ return false; }
+    var t = state.text;
+    if(!t){ return true; }
+    if(/^[0-9]+$/.test(t)){
+      return item.getAttribute("data-num") === t;
+    }
+    var haystack = normalize(item.getAttribute("data-search") + " " + item.textContent);
+    var words = t.split(" ");
+    for(var i = 0; i < words.length; i++){
+      if(words[i] && haystack.indexOf(words[i]) === -1){ return false; }
+    }
+    return true;
+  }
+
+  function apply(){
+    var shown = 0;
+    for(var i = 0; i < items.length; i++){
+      var ok = matches(items[i]);
+      items[i].style.display = ok ? "" : "none";
+      if(ok){ shown++; }
+    }
+    countEl.textContent = String(shown);
+    emptyEl.className = shown === 0 ? "empty show" : "empty";
+  }
+
+  var timer = null;
+  q.addEventListener("input", function(){
+    state.text = normalize(q.value);
+    clearBtn.className = q.value ? "show" : "";
+    if(timer){ clearTimeout(timer); }
+    timer = setTimeout(apply, 90);
+  });
+  q.addEventListener("keydown", function(e){
+    if(e.key === "Enter"){ e.preventDefault(); q.blur(); }
+  });
+  clearBtn.addEventListener("click", function(){
+    q.value = "";
+    state.text = "";
+    clearBtn.className = "";
+    q.focus();
+    apply();
+  });
+
+  apply();
+})();
+</script>
+</body>
+</html>
