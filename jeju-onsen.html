@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>제주 온천·온수풀 호텔 5곳 · 겨울에도 따뜻한 서귀포 숙소</title>
+<meta name="description" content="겨울 제주에서 따뜻한 물에 몸을 담글 수 있는 서귀포 숙소 5곳. JW 메리어트 제주, 디아넥스호텔, WE호텔 제주, 더그랜드섬오름, 롯데호텔 제주. 온천수·온수풀·사우나 시설과 운영시간, 휴장일, 1박 가격(2026-11-17 쿠팡 기준)을 정리했어요.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="제주 온천·온수풀 호텔 5곳 · 겨울에도 따뜻한 서귀포 숙소">
+<meta property="og:description" content="유리탄산 온천수 노천탕, 아라고나이트 온천, 한라산 화산암반수 수영장, 사계절 온수풀까지. 서귀포에서 따뜻한 물이 있는 숙소 5곳과 1박 가격.">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A8%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#111111;
+    --card:#1C1C1E;
+    --card2:#242426;
+    --line:#2E2E31;
+    --text:#F2F2F4;
+    --sub:#A1A1A8;
+    --yellow:#F5C518;
+    --trip:#1E88E5;
+    --green:#2E7D32;
+    --amber:#A15C00;
+    --purple:#5E35B1;
+    --onsen:#C2185B;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic","Noto Sans KR",Roboto,sans-serif;
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+    padding-bottom:calc(28px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 14px}
+
+  /* ---------- header ---------- */
+  header.top{padding:18px 0 10px}
+  .brand{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--sub);letter-spacing:.08em;text-transform:uppercase}
+  .brand b{color:var(--yellow);letter-spacing:0}
+  h1{font-size:24px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.02em}
+  h1 span{color:var(--yellow)}
+  .lead{margin:0;color:var(--sub);font-size:13.5px}
+
+  /* ---------- page switch tabs (7개, 모바일 3+3+1) ---------- */
+  .tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0 4px}
+  .tab{
+    display:flex;align-items:center;justify-content:center;gap:4px;
+    text-decoration:none;padding:11px 4px;border-radius:13px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#C9C9D0;font-size:12.5px;font-weight:600;text-align:center;line-height:1.25;
+  }
+  .tab.on{background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:800}
+  .tab:active{transform:scale(.99)}
+
+  /* ---------- sticky search + filters ---------- */
+  .searchbar{
+    position:sticky;top:0;z-index:20;
+    background:#111111;
+    padding:8px 14px 10px;
+    margin:0 -14px;
+    box-shadow:0 8px 14px -10px rgba(0,0,0,.9);
+  }
+  .filters{padding:2px 0 4px}
+  .search{position:relative}
+  .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.55}
+  #q{
+    width:100%;padding:15px 44px 15px 42px;
+    background:#1A1A1C;border:1px solid var(--line);border-radius:16px;
+    color:var(--text);font-size:15px;font-family:inherit;
+    outline:none;appearance:none;
+  }
+  #q::placeholder{color:#7C7C84}
+  #q:focus{border-color:#4A4A50;background:#1F1F22}
+  #clear{
+    position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    width:30px;height:30px;border:0;border-radius:50%;
+    background:#333338;color:#CFCFD6;font-size:16px;line-height:1;
+    display:none;cursor:pointer;
+  }
+  #clear.show{display:block}
+
+  .chips{
+    display:flex;gap:8px;overflow-x:auto;padding:10px 0 0;
+    scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;
+    padding:9px 15px;border-radius:999px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#D6D6DC;font-size:13.5px;font-family:inherit;white-space:nowrap;
+    cursor:pointer;transition:background .15s,border-color .15s,color .15s;
+  }
+  .chip[aria-pressed="true"]{
+    background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:700;
+  }
+  .chip:active{transform:scale(.98)}
+
+  .status{
+    display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+    padding:12px 0 2px;color:var(--sub);font-size:12.5px;
+  }
+  .status b{color:var(--text);font-weight:600}
+  .status .basis{text-align:right}
+
+  /* ---------- cards ---------- */
+  .list{display:grid;gap:12px;padding-top:8px}
+  .card{
+    display:grid;grid-template-columns:104px 1fr;gap:12px;
+    background:var(--card);border:1px solid #26262A;
+    border-radius:18px;padding:12px;
+  }
+  .thumb{
+    position:relative;border-radius:13px;overflow:hidden;
+    background:linear-gradient(160deg,#2A2A30,#17171A);
+    min-height:104px;display:flex;align-items:center;justify-content:center;
+  }
+  .thumb .emoji{font-size:34px;opacity:.92;filter:saturate(1.05)}
+  .thumb.jungmun{background:linear-gradient(160deg,#16323A,#0D1B20)}
+  .thumb.south{background:linear-gradient(160deg,#1F3242,#121A21)}
+  .thumb.andeok{background:linear-gradient(160deg,#1E3A30,#111F19)}
+  .thumb.mid{background:linear-gradient(160deg,#3A2430,#1F1319)}
+  .num{
+    position:absolute;top:6px;left:6px;
+    min-width:26px;height:26px;padding:0 6px;border-radius:8px;
+    background:var(--yellow);color:#141414;
+    font-weight:800;font-size:14px;line-height:26px;text-align:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.35);
+  }
+  .tier{
+    position:absolute;bottom:6px;left:6px;
+    padding:3px 8px;border-radius:7px;
+    font-size:10.5px;font-weight:700;color:#fff;letter-spacing:.01em;
+  }
+  .tier.low{background:var(--green)}
+  .tier.mid2{background:var(--amber)}
+  .tier.high{background:var(--purple)}
+
+  .body{min-width:0}
+  .name{margin:0;font-size:16px;line-height:1.32;letter-spacing:-.01em}
+  .name small{display:block;font-size:11.5px;color:var(--sub);font-weight:400;margin-top:2px}
+  .loc{margin:4px 0 0;font-size:12.5px;color:var(--yellow);font-weight:600}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 0}
+  .tag{
+    font-size:11px;color:#C9C9D0;background:#26262A;border:1px solid #303036;
+    padding:3px 7px;border-radius:7px;white-space:nowrap;
+  }
+  .tag.onsen{background:#3A1220;border-color:#5C1B33;color:#FFC9DC}
+  .tag.fam{background:#0F2E28;border-color:#1E5045;color:#9FE8D6}
+  .desc{margin:8px 0 0;font-size:12.5px;color:#B9B9C2;line-height:1.55}
+  .bathline{
+    margin:8px 0 0;font-size:12px;color:#D9D9E0;background:#191A1D;
+    border:1px solid #2A2B30;border-left:3px solid var(--onsen);
+    border-radius:9px;padding:7px 9px;line-height:1.5;
+  }
+  .bathline b{color:#FFC9DC;font-weight:700}
+  .hours{
+    margin:8px 0 0;font-size:12px;color:#DCDCE2;background:#16181A;
+    border:1px solid #282B2E;border-left:3px solid var(--yellow);
+    border-radius:9px;padding:7px 9px;line-height:1.5;
+  }
+  .hours b{color:var(--yellow);font-weight:700}
+  .hours .off{color:#FF9E9E;font-weight:700}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px;font-size:11.5px;color:#8F8F97}
+  .meta .price{color:var(--yellow);font-weight:800;font-size:13px}
+  .actions{display:grid;gap:8px;margin-top:12px;grid-column:1 / -1}
+  .btn{
+    display:block;text-align:center;text-decoration:none;
+    padding:12px 6px;border-radius:12px;
+    font-size:13.5px;font-weight:700;color:#fff;
+    border:0;cursor:pointer;
+  }
+  .btn.trip{background:var(--trip)}
+  .btn.coupang{background:var(--yellow);color:#141414}
+  .btn:active{filter:brightness(.92)}
+
+  .empty{
+    display:none;text-align:center;padding:44px 16px;color:var(--sub);
+    border:1px dashed #303036;border-radius:18px;background:#171719;
+  }
+  .empty b{display:block;color:var(--text);font-size:15px;margin-bottom:6px}
+  .empty.show{display:block}
+
+  /* ---------- tip + footer ---------- */
+  .tip{
+    margin-top:16px;padding:14px 15px;border-radius:16px;
+    background:#181A1B;border:1px solid #2A2E30;
+  }
+  .tip h2{margin:0 0 6px;font-size:14px}
+  .tip p{margin:0 0 8px;font-size:12.5px;color:#AEAEB6;line-height:1.6}
+  .tip ul{margin:0;padding-left:18px}
+  .tip li{font-size:12.5px;color:#AEAEB6;line-height:1.65;margin-bottom:5px}
+  .tip li b{color:#E6E6EA}
+  .tip .facts{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+  .tip .facts span{font-size:11px;color:#C9C9D0;background:#232326;padding:3px 7px;border-radius:7px}
+  .tip a{color:#F0D683}
+
+  footer{margin-top:22px;padding-top:16px;border-top:1px solid #232326;color:#8F8F97;font-size:11.5px;line-height:1.7}
+  footer p{margin:0 0 8px}
+  footer .notice{color:#C9C9D0}
+  footer strong{color:#E6E6EA}
+
+  @media (max-width:619px){
+    .tabs > .tab:nth-child(7){grid-column:2}
+  }
+  @media (min-width:480px){
+    .tab{font-size:11.5px;padding:11px 2px}
+  }
+  @media (min-width:620px){
+    .tabs{grid-template-columns:repeat(7,1fr)}
+    h1{font-size:28px}
+    .list{grid-template-columns:1fr 1fr}
+    .card{grid-template-columns:96px 1fr}
+    .card .desc{font-size:12px}
+    .tab{font-size:10.5px;padding:10px 2px;gap:2px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand"><b>PICK</b> JEJU ONSEN</div>
+    <h1>겨울 제주, <span>따뜻한 물</span> 있는 숙소 5곳</h1>
+    <p class="lead">서귀포 온천수·온수풀·사우나가 있는 곳만 · 2026년 11월 17일 가격·시설 확인</p>
+  </header>
+
+  <nav class="tabs" aria-label="페이지 이동">
+    <a class="tab" href="index.html">🏨 일본 숙소</a>
+    <a class="tab" href="sapporo.html">♨️ 삿포로 대욕장</a>
+    <a class="tab" href="korea-onsen.html">🇰🇷 국내 온천</a>
+    <a class="tab" href="seoul-onsen.html">♨️ 서울근교 온천</a>
+    <a class="tab" href="gyeongnam-family.html">👨‍👩‍👧‍👦 부산·경남 가족</a>
+    <a class="tab on" href="jeju-onsen.html" aria-current="page">🍊 제주 온천</a>
+    <a class="tab" href="essentials.html">🧳 필수템 8선</a>
+  </nav>
+
+  <div class="searchbar">
+    <div class="search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#BFBFC6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="text" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="번호 또는 지역·숙소명 (예: 중문, 온천)" aria-label="숙소 검색">
+      <button id="clear" type="button" aria-label="검색어 지우기">✕</button>
+    </div>
+  </div>
+
+  <div class="filters">
+
+    <div class="chips" id="areaChips" role="group" aria-label="지역 필터">
+      <button class="chip" data-area="all" aria-pressed="true">전체 지역</button>
+      <button class="chip" data-area="jungmun" aria-pressed="false">🌴 중문</button>
+      <button class="chip" data-area="south" aria-pressed="false">🌊 서귀포 남부</button>
+      <button class="chip" data-area="andeok" aria-pressed="false">🌿 안덕</button>
+      <button class="chip" data-area="mid" aria-pressed="false">⛰ 중산간</button>
+    </div>
+
+    <div class="chips" id="featChips" role="group" aria-label="시설 필터">
+      <button class="chip" data-feat="all" aria-pressed="true">♨️ 전체</button>
+      <button class="chip" data-feat="spring" aria-pressed="false">천연 온천수</button>
+      <button class="chip" data-feat="pool" aria-pressed="false">온수풀·수영장</button>
+      <button class="chip" data-feat="sauna" aria-pressed="false">사우나 무료</button>
+      <button class="chip" data-feat="fam" aria-pressed="false">👨‍👩‍👧‍👦 가족·키즈</button>
+    </div>
+  </div>
+
+  <div class="status" aria-live="polite">
+    <span><b id="count">5</b>곳</span>
+    <span class="basis">1박·성인 2인·세금 포함 · 2026-11-17 쿠팡 조회</span>
+  </div>
+
+  <main class="list" id="list">
+
+    <!-- 1 -->
+    <article class="card" data-num="1" data-area="south" data-feat="spring pool sauna fam" data-tier="high"
+      data-search="JW 메리어트 제주 리조트 앤 스파 JW Marriott Jeju Resort Spa 서귀포 법환 태평로 152 외돌개 유리탄산 온천수 실내 야외 노천탕 바데풀 사우나 인피니티풀 스파">
+      <div class="thumb south"><span class="num">1</span><span class="emoji">♨️</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">JW 메리어트 제주 리조트 &amp; 스파<small>JW Marriott Jeju Resort &amp; Spa</small></h2>
+        <p class="loc">제주 서귀포시 태평로 152 · 외돌개 790m, 올레 7코스 바로 앞</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 유리탄산 온천수</span>
+          <span class="tag">🛁 실내·야외 노천탕</span>
+          <span class="tag">💦 바데풀</span>
+          <span class="tag">🧖 사우나 무료</span>
+          <span class="tag">🏊 인피니티풀</span>
+        </div>
+        <p class="bathline"><b>온천</b> 유리탄산 온천수를 쓰는 <b>실내·야외 노천탕</b>과 <b>바데풀</b>, 사우나가 한자리에 있어요. 실내·야외 수영장(인피니티풀 포함)과 사우나는 투숙객이면 따로 돈을 내지 않고 쓸 수 있고, 스파 트리트먼트(SPA by JW)만 예약제로 따로 냅니다.</p>
+        <p class="hours"><b>🕘 체크인</b> 15:00 · <b>체크아웃</b> 11:00 · 1박 보증금 100,000원</p>
+        <p class="desc">2023년 문을 연 103실 리조트로, 빌 벤슬리 디자인에 미쉐린 원키 호텔이에요. 절벽 위에서 바다를 보며 노천탕에 몸을 담그는 게 이 곳의 핵심이고, 산책로가 올레 7코스와 바로 이어집니다. 다만 5곳 중 1박 요금이 가장 높고, 조식 뷔페도 성인 72,000원(12세 이하 25,000원)으로 비싼 편이에요. 반려동물은 동반할 수 없습니다.</p>
+        <div class="meta"><span class="price">1,287,000원</span><span>9.1점 · 리뷰 208</span><span>청결 9.2</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/seogwipo-hotel-detail-107203613/jw-marriott-jeju-resort-spa/" data-trip="https://kr.trip.com/hotels/seogwipo-hotel-detail-107203613/jw-marriott-jeju-resort-spa/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iJ0Fc3F1rw" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="card" data-num="2" data-area="andeok" data-feat="spring pool sauna" data-tier="mid2"
+      data-search="디아넥스 호텔 The Annex Hotel 서귀포 안덕 산록남로762번길 71 아라고나이트 고온천 온천 사우나 수영장 핀크스 본태박물관">
+      <div class="thumb andeok"><span class="num">2</span><span class="emoji">🛁</span><span class="tier mid2">중간급</span></div>
+      <div class="body">
+        <h2 class="name">디아넥스호텔<small>The Annex Hotel · 제주 서귀포</small></h2>
+        <p class="loc">제주 서귀포시 안덕면 산록남로762번길 71 · 본태박물관 100m</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 아라고나이트 온천수</span>
+          <span class="tag">🌡 42도 고온천</span>
+          <span class="tag">🏊 온천수 실내수영장</span>
+          <span class="tag">🧖 온천 사우나</span>
+          <span class="tag">🌿 숲속의 조용함</span>
+        </div>
+        <p class="bathline"><b>온천</b> 국내에서 드문 <b>아라고나이트 온천수</b>(42도)를 쓰는 곳이에요. 온천 사우나와 온천수 실내 수영장이 이어져 있고, 상품에 따라 <b>기준 인원 온천·수영장 1일 1회 무료</b>가 들어 있습니다. 재입장이나 인원 추가는 성인 25,000원·소인 12,500원(정상가 42,000원 / 21,000원). <b>수영복·수영모가 필수</b>이고 수영모는 대여가 없어 현장에서 사야 해요.</p>
+        <p class="hours"><b>🕘 온천·사우나</b> 07:00~21:00 · <b>수영장</b> 09:00~20:00 · <span class="off">매월 셋째 수요일 휴장</span></p>
+        <p class="desc">2015년 문을 연 43실 호텔로, 핀크스 리조트 숲 안에 있어 조용해요. 리뷰 152개 중 87개가 온천 이야기를 할 만큼 온천 만족도가 높고, 청결 점수도 9.8입니다. 조식 뷔페는 성인 40,000원(3~6세 12,000원, 7~11세 28,000원). 위치가 외진 편이라 렌터카가 있으면 편하고, 근처에 본태박물관·수풍석뮤지엄이 걸어서 갈 거리예요.</p>
+        <div class="meta"><span class="price">191,250원</span><span>9.4점 · 리뷰 152</span><span>청결 9.8</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/seogwipo-hotel-detail-21845898/the-annex/" data-trip="https://kr.trip.com/hotels/seogwipo-hotel-detail-21845898/the-annex/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iJ0Jgn78PQ" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="card" data-num="3" data-area="mid" data-feat="pool sauna fam" data-tier="low"
+      data-search="WE호텔 제주 WE Hotel Jeju 서귀포 1100로 453-95 한라산 중산간 화산암반수 실내수영장 사우나 웰니스 스파 다채 슬로우말차">
+      <div class="thumb mid"><span class="num">3</span><span class="emoji">🌲</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">WE호텔 제주<small>WE Hotel Jeju</small></h2>
+        <p class="loc">제주 서귀포시 1100로 453-95 · 한라산 중산간 숲속</p>
+        <div class="tags">
+          <span class="tag">💧 천연 화산암반수</span>
+          <span class="tag">🏊 실내수영장 무료</span>
+          <span class="tag">🧖 사우나 10,000원</span>
+          <span class="tag">🌲 편백숲 산책로</span>
+          <span class="tag fam">🧘 웰니스 프로그램</span>
+        </div>
+        <p class="bathline"><b>물</b> 한라산 지하에서 끌어올린 <b>천연 화산암반수</b>를 객실과 수영장, 스파에 쓰는 웰니스 리조트예요. 온천이 아니라 미네랄이 많은 암반수라서 ‘온천’ 표기는 없지만, <b>실내 수영장은 투숙객 무료</b>이고 사우나는 성인 10,000원입니다. 야외 수영장·자쿠지·폭포는 하계 시즌에 엽니다.</p>
+        <p class="hours"><b>🕘 수영장·사우나</b> 08:00~21:30 (20:30 입장 마감)</p>
+        <p class="desc">2014년 개관, WE병원이 붙은 헬스리조트라 조용히 쉬러 오는 손님이 많아요. 2만 평 숲의 편백 산책로와 슬로우 말차·다채 레스토랑이 좋다는 후기가 많고, 이 페이지에서 1박 요금이 가장 낮습니다. 대신 중산간이라 <b>차 없이 가면 이동이 불편하고 밤길이 어둡다</b>는 후기가 꾸준해요. 조식 뷔페는 성인 45,000원(4~13세 25,000원).</p>
+        <div class="meta"><span class="price">136,790원~</span><span>8.4점 · 리뷰 151</span><span>다른 날짜 최저가</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/seogwipo-hotel-detail-1666708/we-hotel-jeju/" data-trip="https://kr.trip.com/hotels/seogwipo-hotel-detail-1666708/we-hotel-jeju/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iJ0Ma3aNI4" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="card" data-num="4" data-area="south" data-feat="pool sauna fam" data-tier="mid2"
+      data-search="더 그랜드 섬오름 The Grand Sumorum 서귀포 막숙포로 118 법환포구 범섬 오션뷰 실내 미온수풀 야외 온수 자쿠지 사우나 무료 패밀리 트윈">
+      <div class="thumb south"><span class="num">4</span><span class="emoji">🌅</span><span class="tier mid2">중간급</span></div>
+      <div class="body">
+        <h2 class="name">더그랜드섬오름<small>The Grand Sumorum</small></h2>
+        <p class="loc">제주 서귀포시 막숙포로 118 · 법환포구 620m, 범섬 오션뷰</p>
+        <div class="tags">
+          <span class="tag fam">🏊 실내 미온수풀</span>
+          <span class="tag">🛁 야외 온수 자쿠지</span>
+          <span class="tag">🧖 사우나 무료</span>
+          <span class="tag">🌅 오션뷰</span>
+          <span class="tag fam">👨‍👩‍👧 최대 3인 패밀리룸</span>
+        </div>
+        <p class="bathline"><b>물놀이</b> <b>실내 미온수풀</b>과 야외 수영장, <b>온수 자쿠지</b>, 사우나를 <b>투숙객 전원 무료</b>로 쓸 수 있어요. 겨울에도 실내에서 아이와 물놀이를 하고, 밖에서 따뜻한 자쿠지에 몸을 담글 수 있는 구성입니다. 쿠팡 상품은 <b>패밀리 트윈(본관·최대 3인)</b> 기준이에요.</p>
+        <p class="hours"><b>🕘 체크인</b> 15:00 · <b>체크아웃</b> 11:00 · <b>조식</b> 07:00~10:00</p>
+        <p class="desc">2013년 개관·2020년 리모델링한 132실 호텔로, 문을 나서면 바로 바다라 저녁 산책이 좋아요. 수영장이 실내·야외·키즈풀로 나뉘어 있고, 부모님과 함께 온 가족 후기가 특히 좋습니다(리뷰 208개, 청결 9.1). 조식 뷔페는 성인 30,000원·17세 이하 18,000원이고, 7세 이하 어린이는 추가 비용이 없어요. 서귀포 시내와 중문 사이에 있어 차로 움직이기 편합니다.</p>
+        <div class="meta"><span class="price">140,038원</span><span>8.9점 · 리뷰 208</span><span>패밀리 트윈(3인)</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/seogwipo-hotel-detail-988317/hotel-sumorum/" data-trip="https://kr.trip.com/hotels/seogwipo-hotel-detail-988317/hotel-sumorum/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iJ0O2B2MDI" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="card" data-num="5" data-area="jungmun" data-feat="pool sauna fam" data-tier="high"
+      data-search="롯데호텔 제주 Lotte Hotel Jeju 서귀포 중문관광로72번길 35 사계절 온수풀 해온 실내수영장 사우나 키즈 플레이토피아 주상절리">
+      <div class="thumb jungmun"><span class="num">5</span><span class="emoji">🌊</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">롯데호텔 제주<small>Lotte Hotel Jeju</small></h2>
+        <p class="loc">제주 서귀포시 중문관광로72번길 35 · 중문색달해변 370m</p>
+        <div class="tags">
+          <span class="tag fam">🌊 사계절 온수풀 ‘해온’ 무료</span>
+          <span class="tag">🏊 실내수영장·피트니스 무료</span>
+          <span class="tag">🧖 사우나 15,000원</span>
+          <span class="tag fam">🧸 플레이토피아</span>
+          <span class="tag">🌴 중문관광단지</span>
+        </div>
+        <p class="bathline"><b>물놀이</b> 사계절 <b>야외 온수풀 ‘해온’</b>과 실내 수영장, 피트니스가 투숙객 무료예요. 38도 안팎 스파풀이 있어 아이와 밤에도 놀 수 있다는 후기가 많습니다. 사우나는 성인 15,000원·소인 10,000원이고, <b>피트니스클럽은 매월 첫째 주 화요일</b>이 정기휴무예요. ⚠️ <b>2026년 11월 24일(화)은 ‘해온’ 정기 점검일</b>이라 그날은 온수풀을 쓰지 못합니다.</p>
+        <p class="hours"><b>🕘 체크인</b> 15:00 · <b>체크아웃</b> 11:00 · <b>공항 셔틀</b> 사전예약(공항→호텔 15:00 / 호텔→공항 10:00·13:00)</p>
+        <p class="desc">2000년 개관한 500실 특1급 호텔이에요. 중문관광단지 한가운데라 주상절리·천제연폭포·박물관이 가깝고, 호텔 안에 편의점·키즈 놀이터(플레이토피아)가 있어 아이와 머물기 좋습니다. 공항 리무진 600번이 호텔 앞에 서고 셔틀도 있어 <b>차 없이 가기 가장 수월한 곳</b>이에요. 조식 뷔페는 성인 85,000원(투숙객 72,250원)이고, 이 상품은 내국인 전용입니다.</p>
+        <div class="meta"><span class="price">260,520원</span><span>9.3점 · 리뷰 690</span><span>청결 9.5</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/seogwipo-hotel-detail-988290/lotte-hotel-jeju/" data-trip="https://kr.trip.com/hotels/seogwipo-hotel-detail-988290/lotte-hotel-jeju/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iJ0RUT1xJc" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+  </main>
+
+  <div class="empty" id="empty">
+    <b>조건에 맞는 숙소가 없어요</b>
+    다른 지역이나 시설을 골라보세요.
+  </div>
+
+  <section class="tip">
+    <h2>♨️ 제주에서 따뜻한 물 찾을 때 알아둘 것</h2>
+    <ul>
+      <li><b>‘온천’과 ‘온수풀’은 달라요.</b> JW 메리어트(유리탄산 온천수)와 디아넥스(아라고나이트 42도 온천수)는 땅에서 올라온 온천수를 쓰고, 롯데 ‘해온’과 섬오름 미온수풀은 데운 물이에요. 피부로 온천수를 느끼고 싶으면 앞의 두 곳을 고르세요.</li>
+      <li><b>디아넥스는 매월 셋째 수요일이 휴장일이에요.</b> 온천·수영장이 같이 문을 닫으니 그 요일에 묵는다면 다른 날짜를 보는 게 좋아요. 기준 인원은 온천 1일 1회 무료라 1박이면 한 번만 들어갈 수 있습니다.</li>
+      <li><b>롯데호텔 ‘해온’은 11월 24일(화) 정기 점검</b>이에요. 그날은 야외 온수풀이 쉬고 실내 수영장만 열리니, 온수풀이 목적이면 날짜를 옮기세요.</li>
+      <li><b>WE호텔은 11월 17~18일이 매진</b>이었어요. 표시한 136,790원은 다른 날짜의 최저가라, 원하는 날짜를 넣고 다시 확인해야 정확합니다.</li>
+      <li><b>사우나 무료인 곳은 세 곳.</b> JW 메리어트·섬오름은 사우나가 무료, WE호텔은 10,000원, 디아넥스는 상품에 따라 1일 1회 무료, 롯데는 15,000원이에요. 1박에 사우나를 두 번 하려면 요금 차이를 따져보세요.</li>
+      <li><b>차 없이 가면 롯데가 편해요.</b> 나머지 네 곳은 중문에서도 차로 10~25분 거리라 렌터카나 택시가 필요합니다. 5곳 모두 수영장 이용 때 수영복이 필요하고, 디아넥스는 수영모까지 챙기셔야 해요.</li>
+      <li><b>가격은 11월 17~18일 평일 기준</b>이에요. 12월 말~1월 연말 성수기와 주말은 같은 방이 1.5~2배까지 오릅니다.</li>
+    </ul>
+    <div class="facts">
+      <span>📅 가격 2026-11-17 확인</span>
+      <span>🛏 1박·성인 2인·세금 포함</span>
+      <span>♨️ 5곳 온천·수영장·사우나 안내 확인</span>
+    </div>
+  </section>
+
+  <footer>
+    <p class="notice"><strong>제휴 마케팅 활동의 일환으로 예약 시 일정액의 수수료를 제공받을 수 있습니다.</strong></p>
+    <p class="notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+    <p>가격은 2026년 11월 17일 쿠팡 트래블에서 <b>2026년 11월 17~18일 1박·성인 2명·세금 및 봉사료 포함</b> 조건으로 조회한 최저가입니다. WE호텔 제주는 그 날짜가 매진이라 다른 날짜 최저가를 적었고, 더그랜드섬오름은 패밀리 트윈(최대 3인) 기준입니다. 날짜·성수기·객실 타입에 따라 실제 요금은 달라지니 버튼에서 다시 확인해 주세요.</p>
+    <p>주소·온천수 종류·운영시간·휴장일·사우나 요금은 2026년 11월 17일 각 숙소와 트립닷컴 숙소 상세 페이지에서 확인한 내용입니다. 평점과 리뷰 수는 트립닷컴 기준이며, 시설 이용 시간과 요금은 예고 없이 바뀔 수 있으니 예약 전에 숙소 안내를 다시 확인하세요.</p>
+    <p>사진은 각 숙소의 실제 모습이 아니라 지역과 시설을 나타내는 이미지입니다.</p>
+    <p><a href="index.html" style="color:#F0D683">🏨 일본 숙소 10곳 보기</a> · <a href="sapporo.html" style="color:#F0D683">♨️ 삿포로 대욕장 10곳 보기</a> · <a href="korea-onsen.html" style="color:#F0D683">🇰🇷 국내 온천 11곳 보기</a> · <a href="seoul-onsen.html" style="color:#F0D683">♨️ 서울근교 온천 5곳 보기</a> · <a href="gyeongnam-family.html" style="color:#F0D683">👨‍👩‍👧‍👦 부산·경남 가족 숙소 보기</a> · <a href="essentials.html" style="color:#F0D683">🧳 필수템 8선 보기</a></p>
+  </footer>
+
+</div>
+
+<script>
+/* =========================================================
+   제휴 설정 — 다른 페이지와 동일한 값 (트립닷컴 AID / SID)
+   ========================================================= */
+var AFFILIATE_CONFIG = {
+  trip:  { aid: "11254538", sid: "335287562" }
+};
+
+function withTripAffiliate(url){
+  var aid = AFFILIATE_CONFIG.trip.aid;
+  if(!aid){ return url; }
+  var sep = url.indexOf("?") === -1 ? "?" : "&";
+  var out = url + sep + "Allianceid=" + encodeURIComponent(aid);
+  if(AFFILIATE_CONFIG.trip.sid){
+    out += "&SID=" + encodeURIComponent(AFFILIATE_CONFIG.trip.sid);
+  }
+  return out;
+}
+
+(function applyAffiliate(){
+  var tripLinks = document.querySelectorAll("a[data-trip]");
+  for(var j = 0; j < tripLinks.length; j++){
+    tripLinks[j].href = withTripAffiliate(tripLinks[j].getAttribute("data-trip"));
+  }
+})();
+
+/* =========================================================
+   검색 + 필터 (지역 / 시설)
+   ========================================================= */
+(function(){
+  var q = document.getElementById("q");
+  var clearBtn = document.getElementById("clear");
+  var countEl = document.getElementById("count");
+  var emptyEl = document.getElementById("empty");
+  var cards = Array.prototype.slice.call(document.querySelectorAll("#list .card"));
+
+  var state = { area: "all", feat: "all", text: "" };
+
+  function bindGroup(containerId, key){
+    var group = document.getElementById(containerId);
+    if(!group){ return; }
+    group.addEventListener("click", function(e){
+      var btn = e.target.closest ? e.target.closest(".chip") : null;
+      if(!btn || !group.contains(btn)){ return; }
+      var chips = group.querySelectorAll(".chip");
+      for(var i = 0; i < chips.length; i++){
+        chips[i].setAttribute("aria-pressed", chips[i] === btn ? "true" : "false");
+      }
+      state[key] = btn.getAttribute("data-" + key);
+      apply();
+    });
+  }
+
+  function normalize(s){
+    return (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  function matches(card){
+    if(state.area !== "all" && card.getAttribute("data-area") !== state.area){ return false; }
+    if(state.feat !== "all"){
+      var feat = " " + card.getAttribute("data-feat") + " ";
+      if(feat.indexOf(" " + state.feat + " ") === -1){ return false; }
+    }
+    if(state.text){
+      if(/^[0-9]+$/.test(state.text)){
+        return card.getAttribute("data-num") === state.text;
+      }
+      var hay = normalize(card.getAttribute("data-search") + " " +
+        card.querySelector(".name").textContent + " " +
+        card.querySelector(".loc").textContent);
+      var words = state.text.split(" ").filter(Boolean);
+      for(var w = 0; w < words.length; w++){
+        if(hay.indexOf(words[w]) === -1){ return false; }
+      }
+    }
+    return true;
+  }
+
+  function apply(){
+    var shown = 0;
+    for(var i = 0; i < cards.length; i++){
+      var ok = matches(cards[i]);
+      cards[i].style.display = ok ? "" : "none";
+      if(ok){ shown++; }
+    }
+    countEl.textContent = shown;
+    emptyEl.classList.toggle("show", shown === 0);
+    clearBtn.classList.toggle("show", !!state.text);
+  }
+
+  function onText(){
+    state.text = normalize(q.value);
+    apply();
+  }
+
+  bindGroup("areaChips", "area");
+  bindGroup("featChips", "feat");
+  q.addEventListener("input", onText);
+  q.addEventListener("search", onText);
+  clearBtn.addEventListener("click", function(){ q.value = ""; state.text = ""; apply(); q.focus(); });
+  apply();
+})();
+</script>
+</body>
+</html>
