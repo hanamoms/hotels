@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>크루즈 6선 · 부산항에서 타는 일본·중국·싱가포르 크루즈 가격 비교</title>
+<meta name="description" content="비행기 없이 부산항에서 타는 이스턴 비너스 3일·4일, MSC 벨리시마 5일, 그리고 상하이·싱가포르에서 타는 아도라 매직 시티 3일·디즈니 어드벤처 4일·내비게이터 오브 더 시즈 6일까지. 1인 요금과 출발일, 기항지 일정, 크루즈 처음 타는 분이 꼭 알아야 할 여권·식사·봉사료 안내를 정리했어요.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="크루즈 6선 · 부산항에서 타는 일본·중국·싱가포르 크루즈">
+<meta property="og:description" content="부산 출발 3척 + 상하이·싱가포르 출발 3척. 1인 15만 원대부터, 출발일과 기항지 일정까지 한눈에.">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%A2%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#111111;
+    --card:#1C1C1E;
+    --card2:#242426;
+    --line:#2E2E31;
+    --text:#F2F2F4;
+    --sub:#A1A1A8;
+    --yellow:#F5C518;
+    --trip:#1E88E5;
+    --green:#2E7D32;
+    --amber:#A15C00;
+    --purple:#5E35B1;
+    --sea:#0E7490;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic","Noto Sans KR",Roboto,sans-serif;
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+    padding-bottom:calc(28px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 14px}
+
+  /* ---------- header ---------- */
+  header.top{padding:18px 0 10px}
+  .brand{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--sub);letter-spacing:.08em;text-transform:uppercase}
+  .brand b{color:var(--yellow);letter-spacing:0}
+  h1{font-size:24px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.02em}
+  h1 span{color:var(--yellow)}
+  .lead{margin:0;color:var(--sub);font-size:13.5px}
+
+  /* ---------- page switch tabs (10개, 모바일 3+3+3+1 가운데 정렬) ---------- */
+  .tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:14px 0 4px}
+  .tab{
+    flex:0 0 calc((100% - 16px)/3);
+    display:flex;align-items:center;justify-content:center;gap:4px;
+    text-decoration:none;padding:11px 4px;border-radius:13px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#C9C9D0;font-size:12.5px;font-weight:600;text-align:center;line-height:1.25;
+    word-break:keep-all;
+  }
+  .tab.on{background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:800}
+  .tab:active{transform:scale(.99)}
+
+  /* ---------- sticky search + filters ---------- */
+  .searchbar{
+    position:sticky;top:0;z-index:20;
+    background:#111111;
+    padding:8px 14px 10px;
+    margin:0 -14px;
+    box-shadow:0 8px 14px -10px rgba(0,0,0,.9);
+  }
+  .filters{padding:2px 0 4px}
+  .search{position:relative}
+  .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.55}
+  #q{
+    width:100%;padding:15px 44px 15px 42px;
+    background:#1A1A1C;border:1px solid var(--line);border-radius:16px;
+    color:var(--text);font-size:15px;font-family:inherit;
+    outline:none;appearance:none;
+  }
+  #q::placeholder{color:#7C7C84}
+  #q:focus{border-color:#4A4A50;background:#1F1F22}
+  #clear{
+    position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    width:30px;height:30px;border:0;border-radius:50%;
+    background:#333338;color:#CFCFD6;font-size:16px;line-height:1;
+    display:none;cursor:pointer;
+  }
+  #clear.show{display:block}
+
+  .chips{
+    display:flex;gap:8px;overflow-x:auto;padding:10px 0 0;
+    scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;
+    padding:9px 15px;border-radius:999px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#D6D6DC;font-size:13.5px;font-family:inherit;white-space:nowrap;
+    cursor:pointer;transition:background .15s,border-color .15s,color .15s;
+  }
+  .chip[aria-pressed="true"]{
+    background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:700;
+  }
+  .chip:active{transform:scale(.98)}
+
+  .status{
+    display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+    padding:12px 0 2px;color:var(--sub);font-size:12.5px;
+  }
+  .status b{color:var(--text);font-weight:600}
+  .status .basis{text-align:right}
+
+  /* ---------- quick table ---------- */
+  .tablewrap{
+    margin-top:10px;overflow-x:auto;border:1px solid #2A2A2E;border-radius:16px;background:#171719;
+    -webkit-overflow-scrolling:touch;
+  }
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:12.5px}
+  caption{text-align:left;padding:12px 13px 0;color:var(--yellow);font-weight:700;font-size:13px}
+  th,td{padding:10px 10px;border-bottom:1px solid #26262A;text-align:left;vertical-align:top}
+  thead th{color:#9C9CA4;font-weight:600;font-size:11.5px;white-space:nowrap;background:#1B1B1E}
+  tbody tr:last-child td{border-bottom:0}
+  td.ship{color:#E6E6EA;font-weight:700;white-space:nowrap}
+  td.price{color:var(--yellow);font-weight:800;white-space:nowrap}
+  td.when{color:#B9B9C2;white-space:nowrap}
+  tbody tr.on{background:#20201F}
+
+  /* ---------- cards ---------- */
+  .list{display:grid;gap:12px;padding-top:12px}
+  .card{
+    display:grid;grid-template-columns:104px 1fr;gap:12px;
+    background:var(--card);border:1px solid #26262A;
+    border-radius:18px;padding:12px;
+  }
+  .thumb{
+    position:relative;border-radius:13px;overflow:hidden;
+    background:linear-gradient(160deg,#2A2A30,#17171A);
+    min-height:104px;display:flex;align-items:center;justify-content:center;
+  }
+  .thumb .emoji{font-size:34px;opacity:.92;filter:saturate(1.05)}
+  .thumb.venus3{background:linear-gradient(160deg,#12303A,#0A1A20)}
+  .thumb.venus4{background:linear-gradient(160deg,#1F3350,#0E1826)}
+  .thumb.bellissima{background:linear-gradient(160deg,#2A2438,#14101C)}
+  .thumb.adora{background:linear-gradient(160deg,#3A2A18,#1D1509)}
+  .thumb.disney{background:linear-gradient(160deg,#2B1B3A,#150D1E)}
+  .thumb.navigator{background:linear-gradient(160deg,#1A2C3E,#0D1721)}
+  .num{
+    position:absolute;top:6px;left:6px;
+    min-width:26px;height:26px;padding:0 6px;border-radius:8px;
+    background:var(--yellow);color:#141414;
+    font-weight:800;font-size:14px;line-height:26px;text-align:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.35);
+  }
+  .tier{
+    position:absolute;bottom:6px;left:6px;
+    padding:3px 8px;border-radius:7px;
+    font-size:10.5px;font-weight:700;color:#fff;letter-spacing:.01em;
+  }
+  .tier.low{background:var(--green)}
+  .tier.mid2{background:var(--amber)}
+  .tier.high{background:var(--purple)}
+
+  .body{min-width:0}
+  .name{margin:0;font-size:16px;line-height:1.32;letter-spacing:-.01em}
+  .name small{display:block;font-size:11.5px;color:var(--sub);font-weight:400;margin-top:2px}
+  .loc{margin:4px 0 0;font-size:12.5px;color:var(--yellow);font-weight:600}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 0}
+  .tag{
+    font-size:11px;color:#C9C9D0;background:#26262A;border:1px solid #303036;
+    padding:3px 7px;border-radius:7px;white-space:nowrap;
+  }
+  .tag.sea{background:#0C2E36;border-color:#155E70;color:#A8E6F2}
+  .tag.fam{background:#0F2E28;border-color:#1E5045;color:#9FE8D6}
+  .desc{margin:8px 0 0;font-size:12.5px;color:#B9B9C2;line-height:1.55}
+  .route{
+    margin:8px 0 0;font-size:12px;color:#D9D9E0;background:#191A1D;
+    border:1px solid #2A2B30;border-left:3px solid var(--sea);
+    border-radius:9px;padding:7px 9px;line-height:1.55;
+  }
+  .route b{color:#A8E6F2;font-weight:700}
+  .hours{
+    margin:8px 0 0;font-size:12px;color:#DCDCE2;background:#16181A;
+    border:1px solid #282B2E;border-left:3px solid var(--yellow);
+    border-radius:9px;padding:7px 9px;line-height:1.55;
+  }
+  .hours b{color:var(--yellow);font-weight:700}
+  .hours .off{color:#FF9E9E;font-weight:700}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px;font-size:11.5px;color:#8F8F97}
+  .meta .price{color:var(--yellow);font-weight:800;font-size:13px}
+  .actions{display:grid;gap:8px;margin-top:12px;grid-column:1 / -1}
+  .btn{
+    display:block;text-align:center;text-decoration:none;
+    padding:12px 6px;border-radius:12px;
+    font-size:13.5px;font-weight:700;color:#fff;
+    border:0;cursor:pointer;
+  }
+  .btn.trip{background:var(--trip)}
+  .btn.soft{background:#2A2A2F;color:#E6E6EA}
+  .btn:active{filter:brightness(.92)}
+
+  .empty{
+    display:none;text-align:center;padding:44px 16px;color:var(--sub);
+    border:1px dashed #303036;border-radius:18px;background:#171719;
+  }
+  .empty b{display:block;color:var(--text);font-size:15px;margin-bottom:6px}
+  .empty.show{display:block}
+
+  /* ---------- tip + footer ---------- */
+  .tip{
+    margin-top:16px;padding:14px 15px;border-radius:16px;
+    background:#181A1B;border:1px solid #2A2E30;
+  }
+  .tip h2{margin:0 0 6px;font-size:14px}
+  .tip p{margin:0 0 8px;font-size:12.5px;color:#AEAEB6;line-height:1.6}
+  .tip ul{margin:0;padding-left:18px}
+  .tip li{font-size:12.5px;color:#AEAEB6;line-height:1.65;margin-bottom:6px}
+  .tip li b{color:#E6E6EA}
+  .tip .facts{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+  .tip .facts span{font-size:11px;color:#C9C9D0;background:#232326;padding:3px 7px;border-radius:7px}
+  .tip a{color:#F0D683}
+  .pack{
+    margin-top:12px;padding:13px 14px;border-radius:16px;
+    background:#12181C;border:1px solid #223038;
+  }
+  .pack h2{margin:0 0 5px;font-size:13.5px;color:#A8E6F2}
+  .pack p{margin:0 0 10px;font-size:12.5px;color:#AEAEB6;line-height:1.6}
+
+  footer{margin-top:22px;padding-top:16px;border-top:1px solid #232326;color:#8F8F97;font-size:11.5px;line-height:1.7}
+  footer p{margin:0 0 8px}
+  footer .notice{color:#C9C9D0}
+  footer strong{color:#E6E6EA}
+
+  @media (min-width:480px){
+    .tab{font-size:11.5px;padding:11px 2px}
+  }
+  @media (min-width:620px){
+    .tabs{display:grid;grid-template-columns:repeat(5,1fr)}
+    h1{font-size:28px}
+    .list{grid-template-columns:1fr 1fr}
+    .card{grid-template-columns:96px 1fr}
+    .card .desc{font-size:12px}
+    .tab{font-size:11px;padding:11px 4px;gap:4px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand"><b>PICK</b> CRUISE</div>
+    <h1>비행기 없이, <span>부산항에서</span> 타는 크루즈 6선</h1>
+    <p class="lead">부산 출발 3척 + 상하이·싱가포르 출발 3척 · 2026년 11월 19일 트립닷컴에서 확인</p>
+  </header>
+
+  <nav class="tabs" aria-label="페이지 이동">
+    <a class="tab" href="index.html">🏨 일본 숙소</a>
+    <a class="tab" href="sapporo.html">♨️ 삿포로 대욕장</a>
+    <a class="tab" href="korea-onsen.html">🇰🇷 국내 온천</a>
+    <a class="tab" href="seoul-onsen.html">♨️ 서울근교 온천</a>
+    <a class="tab" href="gyeongnam-family.html">👨‍👩‍👧‍👦 부산·경남 가족</a>
+    <a class="tab" href="jeju-onsen.html">🍊 제주 온천</a>
+    <a class="tab" href="jeolla-onsen.html">♨️ 전라도 온천</a>
+    <a class="tab" href="chungcheong-onsen.html">♨️ 충청도 온천</a>
+    <a class="tab on" href="cruise.html" aria-current="page">🚢 크루즈</a>
+    <a class="tab" href="essentials.html">🧳 필수템 8선</a>
+  </nav>
+
+  <div class="searchbar">
+    <div class="search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#BFBFC6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="text" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="번호 또는 배 이름·도시 (예: 부산, 디즈니)" aria-label="크루즈 검색">
+      <button id="clear" type="button" aria-label="검색어 지우기">✕</button>
+    </div>
+  </div>
+
+  <div class="filters">
+
+    <div class="chips" id="areaChips" role="group" aria-label="지역 필터">
+      <button class="chip" data-area="all" aria-pressed="true">전체</button>
+      <button class="chip" data-area="japan" aria-pressed="false">🇯🇵 일본 (부산 출발)</button>
+      <button class="chip" data-area="china" aria-pressed="false">🇨🇳 중국·한중일</button>
+      <button class="chip" data-area="sea" aria-pressed="false">🇸🇬 동남아 (싱가포르 출발)</button>
+    </div>
+
+    <div class="chips" id="durChips" role="group" aria-label="기간 필터">
+      <button class="chip" data-dur="all" aria-pressed="true">🕘 전체 기간</button>
+      <button class="chip" data-dur="short" aria-pressed="false">2~3일 (짧게)</button>
+      <button class="chip" data-dur="mid" aria-pressed="false">4~5일</button>
+      <button class="chip" data-dur="long" aria-pressed="false">6일 이상</button>
+    </div>
+  </div>
+
+  <div class="status" aria-live="polite">
+    <span><b id="count">6</b>척</span>
+    <span class="basis">1인·내측 객실·항구 이용료 포함 · 2026-11-19 조회</span>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <caption>한눈에 보기</caption>
+      <thead>
+        <tr><th>배</th><th>출발지</th><th>기간</th><th>1인 가격</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="ship">이스턴 비너스</td><td>부산</td><td class="when">2박 3일</td><td class="price">511,334원</td></tr>
+        <tr><td class="ship">이스턴 비너스</td><td>부산</td><td class="when">3박 4일</td><td class="price">901,334원</td></tr>
+        <tr><td class="ship">MSC 벨리시마</td><td>부산</td><td class="when">4박 5일</td><td class="price">757,163원</td></tr>
+        <tr><td class="ship">아도라 매직 시티</td><td>상하이</td><td class="when">2박 3일</td><td class="price">158,671원</td></tr>
+        <tr><td class="ship">디즈니 어드벤처</td><td>싱가포르</td><td class="when">3박 4일</td><td class="price">528,284원</td></tr>
+        <tr><td class="ship">내비게이터 오브 더 시즈</td><td>싱가포르</td><td class="when">5박 6일</td><td class="price">841,756원</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <main class="list" id="list">
+
+    <!-- 1 -->
+    <article class="card" data-num="1" data-area="japan" data-dur="short" data-tier="low"
+      data-search="이스턴 비너스 Eastern Venus 이스턴크루즈 부산 나가사키 부산 2박3일 3일 크루즈 부산항국제여객터미널 일본 규슈 첫 크루즈 가성비">
+      <div class="thumb venus3"><span class="num">1</span><span class="emoji">⛴</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">이스턴 비너스 3일<small>Eastern Venus · 부산 → 나가사키 → 부산 · 2박 3일</small></h2>
+        <p class="loc">부산항국제여객터미널 출발 · 2026년 12월 13일(일)</p>
+        <div class="tags">
+          <span class="tag sea">✈️ 비행기 필요 없음</span>
+          <span class="tag">🚢 675명 아담한 배</span>
+          <span class="tag fam">♨️ 나가사키 하루 관광</span>
+          <span class="tag">🆕 2024년 새 단장</span>
+        </div>
+        <p class="route"><b>가는 길</b> 12월 13일 부산 18:00 출항 → 14일 나가사키 08:50~18:00 → 15일 부산 09:00 도착. 배에서 하루 자고 일어나면 일본이에요. 나가사키에서 내려 구경하는 시간이 <b>아침부터 저녁까지 꼬박 하루</b>라 첫 크루즈로 부담이 적어요.</p>
+        <p class="hours"><b>🕘 승선 마감</b> 16:00 · <b>출항</b> 18:00 · <b>나가사키</b> 08:50~18:00 · <b>부산 도착</b> 09:00</p>
+        <p class="desc">675명이 타는 아담한 배라 사람이 많지 않고, 2024년에 새로 단장했어요. 같은 배·같은 일정에서 객실만 골라요 — 창문 없는 내측 511,334원, 창문 있는 오션뷰 684,667원, 스위트 1,390,000원(모두 1인 요금·항구 이용료 포함). 배 안 식사와 공연은 무료이고, 음료·인터넷은 따로 내요. 봉사료는 성인 1박에 16달러(4~18세 8달러)로 하선 전에 선내에서 정산해요.</p>
+        <div class="meta"><span class="price">511,334원</span><span>내측 · 1인</span><span>26,594톤 · 675명</span><span>12데크</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/cruises/line-249747/?departure=2026-12-13" data-trip="https://kr.trip.com/cruises/line-249747/?departure=2026-12-13" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 12월 13일 가격 보기</a>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="card" data-num="2" data-area="japan" data-dur="mid" data-tier="high"
+      data-search="이스턴 비너스 Eastern Venus 부산 사세보 가고시마 부산 3박4일 4일 크루즈 규슈 온천 가고시마 사쿠라지마">
+      <div class="thumb venus4"><span class="num">2</span><span class="emoji">🌊</span><span class="tier high">프리미엄</span></div>
+      <div class="body">
+        <h2 class="name">이스턴 비너스 4일<small>Eastern Venus · 부산 → 사세보 → 가고시마 → 부산 · 3박 4일</small></h2>
+        <p class="loc">부산항국제여객터미널 출발 · 2026년 12월 10일(목)</p>
+        <div class="tags">
+          <span class="tag sea">✈️ 비행기 필요 없음</span>
+          <span class="tag">🇯🇵 일본 두 도시</span>
+          <span class="tag fam">🌋 가고시마 사쿠라지마</span>
+          <span class="tag">🛏 하루 더 자고 오기</span>
+        </div>
+        <p class="route"><b>가는 길</b> 12월 10일 부산 18:00 출항 → 11일 사세보 08:00~18:00 → 12일 가고시마 08:00~17:00 → 13일 부산 11:00 도착. 사세보와 가고시마에 <b>한 곳씩 하루</b> 내려요. 배에서 자는 밤이 3번이라 짐을 풀고 두 도시를 여유 있게 도는 일정이에요.</p>
+        <p class="hours"><b>🕘 승선 마감</b> 16:00 · <b>출항</b> 18:00 · <b>사세보</b> 08:00~18:00 · <b>가고시마</b> 08:00~17:00 · <b>부산 도착</b> 11:00</p>
+        <p class="desc">3일 상품과 같은 배인데 하루 더 길어요. 가격은 내측 901,334원, 오션뷰 1,161,334원, 스위트 2,240,000원(1인 요금·항구 이용료 포함). 3일보다 1박이 더 붙어 39만 원 정도 차이가 나니, 나가사키 한 곳만 보고 싶으면 3일, 두 도시를 천천히 보고 싶으면 이쪽이에요. 한겨울 규슈는 서울보다 덜 춥지만 바닷바람이 세니 목도리와 따뜻한 겉옷을 챙기세요.</p>
+        <div class="meta"><span class="price">901,334원</span><span>내측 · 1인</span><span>26,594톤 · 675명</span><span>12월 10일 출발</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/cruises/line-249859/?departure=2026-12-10" data-trip="https://kr.trip.com/cruises/line-249859/?departure=2026-12-10" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 12월 10일 가격 보기</a>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="card" data-num="3" data-area="china" data-dur="mid" data-tier="mid2"
+      data-search="MSC 벨리시마 Bellissima 부산 상하이 서귀포 제주 부산 4박5일 5일 한중일 초대형 럭셔리 크루즈 6일 사세보">
+      <div class="thumb bellissima"><span class="num">3</span><span class="emoji">🏙</span><span class="tier mid2">중간급</span></div>
+      <div class="body">
+        <h2 class="name">MSC 벨리시마 5일<small>MSC Bellissima · 부산 → 상하이 → 서귀포 → 부산 · 4박 5일</small></h2>
+        <p class="loc">부산항국제여객터미널 출발 · 2027년 2월 13일(토) · 2월 22일 · 8월 18일 · 8월 22일</p>
+        <div class="tags">
+          <span class="tag sea">✈️ 비행기 필요 없음</span>
+          <span class="tag">🌏 한·중 두 나라</span>
+          <span class="tag fam">🚢 17만 톤 초대형</span>
+          <span class="tag">🏊 수영장·공연·키즈클럽</span>
+        </div>
+        <p class="route"><b>가는 길</b> 부산 21:00 출항 → 하루 바다 → 상하이 07:00~16:30 → 서귀포 14:00~22:00 → 부산 10:00 도착. 하루는 바다 위에서 쉬고, 상하이와 서귀포에 하루씩 내려요.</p>
+        <p class="hours"><b>🕘 승선 마감</b> 19:00 · <b>출항</b> 21:00 · <b>상하이</b> 07:00~16:30 · <b>서귀포</b> 14:00~22:00 · <b>부산 도착</b> 10:00</p>
+        <p class="desc">171,598톤·5,655명짜리 초대형 배예요. 19개 층에 수영장·공연장·키즈클럽·식당이 가득해서, 배 안에서 지내는 하루가 심심하지 않아요. 트립닷컴 평점 4.4점(리뷰 1,822개). 가격은 날짜에 따라 차이가 커요 — 2027년 8월 22일 내측 757,163원, 8월 18일 797,084원, 2월 13일 1,296,093원(1인·항구 이용료 포함). 발코니는 8월 22일 기준 1,382,587원, 스위트 1,741,874원이에요. 상하이에 내려 관광하실 거라면 중국 입국 비자·무비자 조건을 예약 전에 꼭 확인하세요. 사세보를 한 번 더 들르는 6일 상품은 2027년 2월 26일 1,056,568원부터예요.</p>
+        <div class="meta"><span class="price">757,163원</span><span>내측 · 1인</span><span>171,598톤 · 5,655명</span><span>4.4점 · 리뷰 1,822</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/cruises/line-246093/?departure=2027-02-13" data-trip="https://kr.trip.com/cruises/line-246093/?departure=2027-02-13" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 출발일별 가격 보기</a>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="card" data-num="4" data-area="china" data-dur="short" data-tier="low"
+      data-search="아도라 매직 시티 Adora Magic City 상하이 주말 미니 휴가 2박3일 3일 중국 크루즈 가성비 10만원대 서귀포 부산">
+      <div class="thumb adora"><span class="num">4</span><span class="emoji">🎡</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">아도라 매직 시티 3일<small>Adora Magic City · 상하이 → 바다 → 상하이 · 2박 3일</small></h2>
+        <p class="loc">중국 상하이 출발 · 2026년 12월 18일 · 2027년 4월 16일 · 12월 3·10·17·24일 등</p>
+        <div class="tags">
+          <span class="tag">✈️ 상하이까지 비행기</span>
+          <span class="tag">💰 15만 원대</span>
+          <span class="tag fam">👨‍👩‍👧 5,246명 대형선</span>
+          <span class="tag">🇨🇳 2024년 취항 새 배</span>
+        </div>
+        <p class="route"><b>가는 길</b> 금요일 저녁 상하이 21:30 출항 → 토요일은 하루 종일 바다 → 일요일 아침 09:00 상하이 도착. <b>기항지 없이 배에서만</b> 이틀을 보내는 주말 코스예요. 짐을 풀고 공연·수영장·식당을 마음껏 쓰다 내리면 돼요.</p>
+        <p class="hours"><b>🕘 승선 마감</b> 19:30 · <b>출항</b> 21:30 · <b>상하이 도착</b> 09:00 · <b>서비스 요금</b> 1박 HK$140(4세 이상)</p>
+        <p class="desc">136,201톤·5,246명, 2024년에 취항한 새 배예요(평점 4.4점·리뷰 2,715개). 가격이 가장 가벼워요 — 2027년 12월 3·10·17·24일 내측 158,671원, 4월 16일 164,659원, 2026년 12월 18일 240,502원(1인·항구 이용료 포함). 오션뷰 182,622원, 발코니 214,555원, 스위트 449,069원. 중국 배라 식당 메뉴가 중국 입맛에 맞춰져 있다는 후기가 많으니 참고하세요. 기항지까지 있는 코스를 원하시면 같은 배로 <b>4일 상하이-서귀포 273,433원부터</b>, <b>5일 상하이-서귀포-부산 330,315원부터</b>도 있어요. 상하이까지 비행기로 가야 하고, 중국 입국 비자·무비자 조건은 출발 전에 확인하세요.</p>
+        <div class="meta"><span class="price">158,671원</span><span>내측 · 1인</span><span>136,201톤 · 5,246명</span><span>4.4점 · 리뷰 2,715</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/cruises/line-227137/?departure=2027-12-03" data-trip="https://kr.trip.com/cruises/line-227137/?departure=2027-12-03" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 출발일별 가격 보기</a>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="card" data-num="5" data-area="sea" data-dur="mid" data-tier="mid2"
+      data-search="디즈니 어드벤처 Disney Adventure 싱가포르 해상항해 3박4일 4일 아시아 최초 디즈니 크루즈 손주 아이 가족 롤러코스터 불꽃놀이">
+      <div class="thumb disney"><span class="num">5</span><span class="emoji">🏰</span><span class="tier mid2">중간급</span></div>
+      <div class="body">
+        <h2 class="name">디즈니 어드벤처 4일<small>Disney Adventure · 싱가포르 → 바다 → 싱가포르 · 3박 4일</small></h2>
+        <p class="loc">싱가포르 마리나베이크루즈센터 출발 · 2027년 1월 4일(월) 등 매주 출발</p>
+        <div class="tags">
+          <span class="tag sea">🏰 아시아 첫 디즈니 크루즈</span>
+          <span class="tag fam">👨‍👩‍👧 손주와 함께</span>
+          <span class="tag">🎢 바다 위 롤러코스터</span>
+          <span class="tag">🎆 불꽃놀이</span>
+        </div>
+        <p class="route"><b>가는 길</b> 1월 4일 싱가포르 17:00 출항 → 5일 바다 → 6일 바다 → 7일 아침 07:00 싱가포르 도착. <b>내리는 곳 없이 배에서만</b> 사흘을 보내는 코스라, 아이와 손주가 배 안에서 하루 종일 놀기 좋아요.</p>
+        <p class="hours"><b>🕘 승선 마감</b> 16:00 · <b>출항</b> 17:00 · <b>싱가포르 도착</b> 07:00 · <b>1세 미만</b> 탑승 불가</p>
+        <p class="desc">2026년에 취항한 208,000톤·6,700명짜리 디즈니 전용선이에요(평점 4.6점·리뷰 2,137개). 물 위에서 가장 긴 롤러코스터와 밤 불꽃놀이가 이 배의 자랑이고, 누적 예약이 2만 5천 건이 넘어요. 내측 528,284원, 발코니 681,314원, 오션뷰 773,131원, 스위트 1,837,683원(1인·항구 이용료 포함). 봉사료는 1박에 16달러(스위트·컨시어지 27.25달러)이고 음료에는 18%가 붙어요. 싱가포르까지 비행기로 가야 하니 항공권과 하루 숙소를 함께 계획하세요. 5일 코스(596,150원부터)와 랑카위를 들르는 5일(634,740원부터)도 있어요.</p>
+        <div class="meta"><span class="price">528,284원</span><span>내측 · 1인</span><span>208,000톤 · 6,700명</span><span>4.6점 · 리뷰 2,137</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/cruises/line-108662/?departure=2027-01-04" data-trip="https://kr.trip.com/cruises/line-108662/?departure=2027-01-04" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 출발일별 가격 보기</a>
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="card" data-num="6" data-area="sea" data-dur="long" data-tier="mid2"
+      data-search="내비게이터 오브 더 시즈 Navigator of the Seas 로얄캐리비안 싱가포르 페낭 푸켓 5박6일 6일 동남아 크루즈 겐팅 드림">
+      <div class="thumb navigator"><span class="num">6</span><span class="emoji">🏝</span><span class="tier mid2">중간급</span></div>
+      <div class="body">
+        <h2 class="name">내비게이터 오브 더 시즈 6일<small>Navigator of the Seas · 싱가포르 → 페낭 → 푸켓 → 싱가포르 · 5박 6일</small></h2>
+        <p class="loc">싱가포르 마리나베이크루즈센터 출발 · 2027년 2월 8일(월) · 5월 24일 · 7월 5일 · 8월 14일</p>
+        <div class="tags">
+          <span class="tag sea">🏝 따뜻한 동남아</span>
+          <span class="tag">🇲🇾 페낭 + 🇹🇭 푸켓</span>
+          <span class="tag fam">🛏 푸켓 1박 2일 정박</span>
+          <span class="tag">⭐ 4.8점</span>
+        </div>
+        <p class="route"><b>가는 길</b> 2월 8일 싱가포르 16:00 출항 → 9일 페낭 14:30~21:00 → 10일 푸켓 08:00 입항 → 11일 푸켓 20:00 출항 → 12일 바다 → 13일 싱가포르 07:00 도착. <b>푸켓은 하루를 꼬박 묵는</b> 일정이라 저녁 노을과 다음 날 오전까지 섬에서 보낼 수 있어요.</p>
+        <p class="hours"><b>🕘 승선 마감</b> 14:00 · <b>출항</b> 16:00 · <b>페낭</b> 14:30~21:00 · <b>푸켓</b> 1박 2일 · <b>싱가포르 도착</b> 07:00</p>
+        <p class="desc">137,276톤·3,114명, 2024년에 새로 단장한 로얄캐리비안 배예요. 평점 4.8점(리뷰 21개)으로 이 페이지에서 가장 높고, 가족끼리 와서 좋았다는 후기가 많아요. 내측 841,756원, 오션뷰 874,807원, 발코니 1,355,073원, 스위트 2,220,583원(1인·항구 이용료 포함). 봉사료는 1박에 18.50달러, 스위트는 21달러예요. 같은 노선 <b>5일 상품이 642,420원부터</b>(11월 29일·12월 3일 등)라, 20만 원을 아끼고 하루 짧게 다녀오는 편도 있어요. 푸켓에 내리려면 태국 전자 도착 카드(TDAC)를 <b>도착 3일 전까지</b> 써야 하고, 싱가포르까지는 비행기로 가야 해요.</p>
+        <div class="meta"><span class="price">841,756원</span><span>내측 · 1인</span><span>137,276톤 · 3,114명</span><span>4.8점 · 리뷰 21</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/cruises/line-152069/?departure=2027-02-08" data-trip="https://kr.trip.com/cruises/line-152069/?departure=2027-02-08" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 2월 8일 가격 보기</a>
+      </div>
+    </article>
+
+  </main>
+
+  <div class="empty" id="empty">
+    <b>조건에 맞는 크루즈가 없어요</b>
+    지역이나 기간을 다시 골라보세요.
+  </div>
+
+  <section class="tip">
+    <h2>🚢 크루즈가 처음이라면, 이것만은 알아두세요</h2>
+    <ul>
+      <li><b>부산에서 타면 비행기가 필요 없어요.</b> 이스턴 비너스와 MSC 벨리시마는 <b>부산항국제여객터미널</b>에서 타고 내려요. 서울에서 KTX로 내려와도 당일 승선이 되고, 짐을 들고 공항을 오갈 일이 없어요. 반면 상하이(아도라)와 싱가포르(디즈니·내비게이터)는 <b>비행기로 먼저 가야</b> 하니 항공권과 하루 숙소를 같이 준비하세요.</li>
+      <li><b>가격은 ‘1인 요금’이에요.</b> 두 분이 가면 2인분을 내고, 내측(창문 없음)이 가장 싸고 오션뷰 → 발코니 → 스위트 순으로 올라가요. 혼자 예약하면 1인 요금이 더 붙을 수 있으니 예약 화면에서 확인하세요.</li>
+      <li><b>여권은 돌아오는 날부터 6개월 이상 남아 있어야 해요.</b> 네 상품 모두 같은 조건을 안내하고 있어요. 만료일이 가까우면 먼저 갱신하세요.</li>
+      <li><b>배 안 식사는 포함, 음료·인터넷·기항지 투어는 따로예요.</b> 지정된 식당의 세 끼와 공연은 무료이고, 탄산음료·주류·와이파이·기항지 관광·사진은 유료예요. 술과 음료를 많이 드시면 음료 패키지가 나을 수 있어요.</li>
+      <li><b>봉사료(팁)는 표시 가격에 없어요.</b> 하선 전에 선내 계정에서 정산해요. 이스턴 비너스는 성인 1박 16달러, 디즈니 16달러, 내비게이터 18.50달러(스위트는 더 비싸요), 아도라는 HK$140 정도예요. 5일이면 1인당 8만 원 안팎이 더 드는 셈이에요.</li>
+      <li><b>이름은 여권과 똑같이 적어야 해요.</b> 예약 후 이름을 바꾸면 돈이 더 들거나 승선이 안 될 수 있어요.</li>
+      <li><b>중국에 내리는 코스는 서류를 미리 보세요.</b> MSC 벨리시마(상하이)와 아도라(상하이 출발)는 중국 입국과 관련된 <b>비자·무비자 조건</b>을 예약 전에 확인해야 해요. 푸켓이 들어간 내비게이터는 태국 전자 도착 카드(TDAC)를 도착 3일 전까지 써야 하고요.</li>
+      <li><b>임신·아기 동반은 규정이 있어요.</b> 대부분 임신 23~24주가 넘으면 타지 못하고, 생후 6개월(긴 항해는 12개월)이 안 된 아기는 탑승이 안 돼요. 디즈니는 1세 미만은 안 돼요.</li>
+      <li><b>가격은 날짜에 따라 크게 달라져요.</b> 같은 배·같은 방이 2월과 8월에 두 배 가까이 차이 나요. 버튼에서 날짜를 바꿔 꼭 다시 확인하세요.</li>
+    </ul>
+    <div class="facts">
+      <span>📅 2026-11-19 트립닷컴 확인</span>
+      <span>🛏 1인·내측 객실 기준</span>
+      <span>🧾 항구 이용료 포함</span>
+      <span>✈️ 부산 출발 3척 / 해외 출발 3척</span>
+    </div>
+  </section>
+
+  <section class="pack">
+    <h2>🧳 타기 전에 챙길 것</h2>
+    <p>멀미약, 상비약, 여권 사본, 아쿠아슈즈, 보조배터리, 저녁 식사용 단정한 옷 한 벌. 배 안은 낮에는 따뜻하고 밤에는 서늘해요. 여행 필수템 8선을 함께 봐두세요.</p>
+    <a class="btn soft" href="essentials.html">🧳 여행 필수템 8선 보기</a>
+  </section>
+
+  <footer>
+    <p class="notice"><strong>제휴 마케팅 활동의 일환으로 예약 시 일정액의 수수료를 제공받을 수 있습니다.</strong></p>
+    <p>가격은 2026년 11월 19일 트립닷컴 크루즈에 표시된 <b>1인 요금(항구 이용료 포함), 내측 객실</b> 기준입니다. 같은 상품이라도 출발일·객실 타입·잔여 좌석에 따라 금액이 달라지고, 선상 봉사료·음료·인터넷·기항지 투어·비자 비용은 포함되지 않아요.</p>
+    <p>출항·입항 시각과 기항지 일정은 트립닷컴 상품 상세의 ‘여행 일정’에 안내된 값이며, 날씨와 선사 사정으로 바뀔 수 있어요. 여권 유효기간(귀항일부터 6개월 이상)·비자·입국 서류 조건은 예약 전에 상품 안내와 해당 국가 대사관 안내로 다시 확인하세요.</p>
+    <p>사진은 각 배의 실제 모습이 아니라 크루즈를 나타내는 이미지입니다.</p>
+    <p><a href="index.html" style="color:#F0D683">🏨 일본 숙소 10곳 보기</a> · <a href="sapporo.html" style="color:#F0D683">♨️ 삿포로 대욕장 10곳 보기</a> · <a href="korea-onsen.html" style="color:#F0D683">🇰🇷 국내 온천 11곳 보기</a> · <a href="seoul-onsen.html" style="color:#F0D683">♨️ 서울근교 온천 5곳 보기</a> · <a href="gyeongnam-family.html" style="color:#F0D683">👨‍👩‍👧‍👦 부산·경남 가족 숙소 보기</a> · <a href="jeju-onsen.html" style="color:#F0D683">🍊 제주 온천 5곳 보기</a> · <a href="jeolla-onsen.html" style="color:#F0D683">♨️ 전라도 온천 5곳 보기</a> · <a href="chungcheong-onsen.html" style="color:#F0D683">♨️ 충청도 온천 5곳 보기</a> · <a href="essentials.html" style="color:#F0D683">🧳 필수템 8선 보기</a></p>
+  </footer>
+
+</div>
+
+<script>
+/* =========================================================
+   제휴 설정 — 다른 페이지와 동일한 값 (트립닷컴 AID / SID)
+   ========================================================= */
+var AFFILIATE_CONFIG = {
+  trip:  { aid: "11254538", sid: "335287562" }
+};
+
+function withTripAffiliate(url){
+  var aid = AFFILIATE_CONFIG.trip.aid;
+  if(!aid){ return url; }
+  var sep = url.indexOf("?") === -1 ? "?" : "&";
+  var out = url + sep + "Allianceid=" + encodeURIComponent(aid);
+  if(AFFILIATE_CONFIG.trip.sid){
+    out += "&SID=" + encodeURIComponent(AFFILIATE_CONFIG.trip.sid);
+  }
+  return out;
+}
+
+(function applyAffiliate(){
+  var tripLinks = document.querySelectorAll("a[data-trip]");
+  for(var j = 0; j < tripLinks.length; j++){
+    tripLinks[j].href = withTripAffiliate(tripLinks[j].getAttribute("data-trip"));
+  }
+})();
+
+/* =========================================================
+   검색 + 필터 (지역 / 기간)
+   ========================================================= */
+(function(){
+  var q = document.getElementById("q");
+  var clearBtn = document.getElementById("clear");
+  var countEl = document.getElementById("count");
+  var emptyEl = document.getElementById("empty");
+  var cards = Array.prototype.slice.call(document.querySelectorAll("#list .card"));
+
+  var state = { area: "all", dur: "all", text: "" };
+
+  function bindGroup(containerId, key){
+    var group = document.getElementById(containerId);
+    if(!group){ return; }
+    group.addEventListener("click", function(e){
+      var btn = e.target.closest ? e.target.closest(".chip") : null;
+      if(!btn || !group.contains(btn)){ return; }
+      var chips = group.querySelectorAll(".chip");
+      for(var i = 0; i < chips.length; i++){
+        chips[i].setAttribute("aria-pressed", chips[i] === btn ? "true" : "false");
+      }
+      state[key] = btn.getAttribute("data-" + key);
+      apply();
+    });
+  }
+
+  function normalize(s){
+    return (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  function matches(card){
+    if(state.area !== "all" && card.getAttribute("data-area") !== state.area){ return false; }
+    if(state.dur !== "all" && card.getAttribute("data-dur") !== state.dur){ return false; }
+    if(state.text){
+      if(/^[0-9]+$/.test(state.text)){
+        return card.getAttribute("data-num") === state.text;
+      }
+      var hay = normalize(card.getAttribute("data-search") + " " +
+        card.querySelector(".name").textContent + " " +
+        card.querySelector(".loc").textContent);
+      var words = state.text.split(" ").filter(Boolean);
+      for(var w = 0; w < words.length; w++){
+        if(hay.indexOf(words[w]) === -1){ return false; }
+      }
+    }
+    return true;
+  }
+
+  function apply(){
+    var shown = 0;
+    for(var i = 0; i < cards.length; i++){
+      var ok = matches(cards[i]);
+      cards[i].style.display = ok ? "" : "none";
+      if(ok){ shown++; }
+    }
+    countEl.textContent = shown;
+    emptyEl.classList.toggle("show", shown === 0);
+    clearBtn.classList.toggle("show", !!state.text);
+  }
+
+  function onText(){
+    state.text = normalize(q.value);
+    apply();
+  }
+
+  bindGroup("areaChips", "area");
+  bindGroup("durChips", "dur");
+  q.addEventListener("input", onText);
+  q.addEventListener("search", onText);
+  clearBtn.addEventListener("click", function(){ q.value = ""; state.text = ""; apply(); q.focus(); });
+  apply();
+})();
+</script>
+</body>
+</html>
