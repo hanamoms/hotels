@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>강원도 가족 온천 5곳 · 부모님 모시고 가기 좋은 숙소</title>
+<meta name="description" content="속초·고성·양양·강릉에서 부모님·가족과 따뜻한 온천물에 몸을 담글 수 있는 숙소 5곳. 한화리조트 설악 쏘라노, 소노캄 델피노, 척산온천휴양촌, 오색그린야드호텔, 호텔 탑스텐. 온천수 종류와 운영시간, 가족온천실 예약법, 셔틀·겨울 도로, 1박 가격을 정리했어요.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="강원도 가족 온천 5곳 · 부모님 모시고 가기 좋은 숙소">
+<meta property="og:description" content="국내 1호 보양온천 설악 워터피아, 원암온천 델피노, 53℃ 척산온천 가족탕, 지하 470m 탄산온천 오색, 정동진역 셔틀 탑스텐까지. 강원도 온천 숙소 5곳과 1박 가격.">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A8%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#111111;
+    --card:#1C1C1E;
+    --card2:#242426;
+    --line:#2E2E31;
+    --text:#F2F2F4;
+    --sub:#A1A1A8;
+    --yellow:#F5C518;
+    --trip:#1E88E5;
+    --green:#2E7D32;
+    --amber:#A15C00;
+    --purple:#5E35B1;
+    --onsen:#C2185B;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic","Noto Sans KR",Roboto,sans-serif;
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+    padding-bottom:calc(28px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 14px}
+
+  /* ---------- header ---------- */
+  header.top{padding:18px 0 10px}
+  .brand{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--sub);letter-spacing:.08em;text-transform:uppercase}
+  .brand b{color:var(--yellow);letter-spacing:0}
+  h1{font-size:24px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.02em}
+  h1 span{color:var(--yellow)}
+  .lead{margin:0;color:var(--sub);font-size:13.5px}
+
+  /* ---------- page switch tabs (11개, 모바일 3+3+3+2 가운데 정렬) ---------- */
+  .tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:14px 0 4px}
+  .tab{
+    flex:0 0 calc((100% - 16px)/3);
+    display:flex;align-items:center;justify-content:center;gap:4px;
+    text-decoration:none;padding:11px 4px;border-radius:13px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#C9C9D0;font-size:12.5px;font-weight:600;text-align:center;line-height:1.25;
+    word-break:keep-all;
+  }
+  .tab.on{background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:800}
+  .tab:active{transform:scale(.99)}
+
+  /* ---------- sticky search + filters ---------- */
+  .searchbar{
+    position:sticky;top:0;z-index:20;
+    background:#111111;
+    padding:8px 14px 10px;
+    margin:0 -14px;
+    box-shadow:0 8px 14px -10px rgba(0,0,0,.9);
+  }
+  .filters{padding:2px 0 4px}
+  .search{position:relative}
+  .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.55}
+  #q{
+    width:100%;padding:15px 44px 15px 42px;
+    background:#1A1A1C;border:1px solid var(--line);border-radius:16px;
+    color:var(--text);font-size:15px;font-family:inherit;
+    outline:none;appearance:none;
+  }
+  #q::placeholder{color:#7C7C84}
+  #q:focus{border-color:#4A4A50;background:#1F1F22}
+  #clear{
+    position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    width:30px;height:30px;border:0;border-radius:50%;
+    background:#333338;color:#CFCFD6;font-size:16px;line-height:1;
+    display:none;cursor:pointer;
+  }
+  #clear.show{display:block}
+
+  .chips{
+    display:flex;gap:8px;overflow-x:auto;padding:10px 0 0;
+    scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;
+    padding:9px 15px;border-radius:999px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#D6D6DC;font-size:13.5px;font-family:inherit;white-space:nowrap;
+    cursor:pointer;transition:background .15s,border-color .15s,color .15s;
+  }
+  .chip[aria-pressed="true"]{
+    background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:700;
+  }
+  .chip:active{transform:scale(.98)}
+
+  .status{
+    display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+    padding:12px 0 2px;color:var(--sub);font-size:12.5px;
+  }
+  .status b{color:var(--text);font-weight:600}
+  .status .basis{text-align:right}
+
+  /* ---------- cards ---------- */
+  .list{display:grid;gap:12px;padding-top:8px}
+  .card{
+    display:grid;grid-template-columns:104px 1fr;gap:12px;
+    background:var(--card);border:1px solid #26262A;
+    border-radius:18px;padding:12px;
+  }
+  .thumb{
+    position:relative;border-radius:13px;overflow:hidden;
+    background:linear-gradient(160deg,#2A2A30,#17171A);
+    min-height:104px;display:flex;align-items:center;justify-content:center;
+  }
+  .thumb .emoji{font-size:34px;opacity:.92;filter:saturate(1.05)}
+  .thumb.yesan{background:linear-gradient(160deg,#2C2230,#15101A)}
+  .thumb.asan{background:linear-gradient(160deg,#1F2C33,#0F171B)}
+  .thumb.chungju{background:linear-gradient(160deg,#22302A,#101A15)}
+  .thumb.jecheon{background:linear-gradient(160deg,#1B3026,#0E1A15)}
+  .thumb.daejeon{background:linear-gradient(160deg,#26243A,#12111C)}
+  .thumb.sokcho{background:linear-gradient(160deg,#1B2C36,#0D171C)}
+  .thumb.sokcho2{background:linear-gradient(160deg,#2E2320,#17100F)}
+  .thumb.goseong{background:linear-gradient(160deg,#1F2A3A,#0E1420)}
+  .thumb.yangyang{background:linear-gradient(160deg,#213028,#101A14)}
+  .thumb.gangneung{background:linear-gradient(160deg,#2A2233,#131019)}
+  .num{
+    position:absolute;top:6px;left:6px;
+    min-width:26px;height:26px;padding:0 6px;border-radius:8px;
+    background:var(--yellow);color:#141414;
+    font-weight:800;font-size:14px;line-height:26px;text-align:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.35);
+  }
+  .tier{
+    position:absolute;bottom:6px;left:6px;
+    padding:3px 8px;border-radius:7px;
+    font-size:10.5px;font-weight:700;color:#fff;letter-spacing:.01em;
+  }
+  .tier.low{background:var(--green)}
+  .tier.mid2{background:var(--amber)}
+  .tier.high{background:var(--purple)}
+
+  .body{min-width:0}
+  .name{margin:0;font-size:16px;line-height:1.32;letter-spacing:-.01em}
+  .name small{display:block;font-size:11.5px;color:var(--sub);font-weight:400;margin-top:2px}
+  .loc{margin:4px 0 0;font-size:12.5px;color:var(--yellow);font-weight:600}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 0}
+  .tag{
+    font-size:11px;color:#C9C9D0;background:#26262A;border:1px solid #303036;
+    padding:3px 7px;border-radius:7px;white-space:nowrap;
+  }
+  .tag.onsen{background:#3A1220;border-color:#5C1B33;color:#FFC9DC}
+  .tag.fam{background:#0F2E28;border-color:#1E5045;color:#9FE8D6}
+  .desc{margin:8px 0 0;font-size:12.5px;color:#B9B9C2;line-height:1.55}
+  .bathline{
+    margin:8px 0 0;font-size:12px;color:#D9D9E0;background:#191A1D;
+    border:1px solid #2A2B30;border-left:3px solid var(--onsen);
+    border-radius:9px;padding:7px 9px;line-height:1.5;
+  }
+  .bathline b{color:#FFC9DC;font-weight:700}
+  .hours{
+    margin:8px 0 0;font-size:12px;color:#DCDCE2;background:#16181A;
+    border:1px solid #282B2E;border-left:3px solid var(--yellow);
+    border-radius:9px;padding:7px 9px;line-height:1.5;
+  }
+  .hours b{color:var(--yellow);font-weight:700}
+  .hours .off{color:#FF9E9E;font-weight:700}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px;font-size:11.5px;color:#8F8F97}
+  .meta .price{color:var(--yellow);font-weight:800;font-size:13px}
+  .actions{display:grid;gap:8px;margin-top:12px;grid-column:1 / -1}
+  .btn{
+    display:block;text-align:center;text-decoration:none;
+    padding:12px 6px;border-radius:12px;
+    font-size:13.5px;font-weight:700;color:#fff;
+    border:0;cursor:pointer;
+  }
+  .btn.trip{background:var(--trip)}
+  .btn.coupang{background:var(--yellow);color:#141414}
+  .btn:active{filter:brightness(.92)}
+
+  .empty{
+    display:none;text-align:center;padding:44px 16px;color:var(--sub);
+    border:1px dashed #303036;border-radius:18px;background:#171719;
+  }
+  .empty b{display:block;color:var(--text);font-size:15px;margin-bottom:6px}
+  .empty.show{display:block}
+
+  /* ---------- tip + footer ---------- */
+  .tip{
+    margin-top:16px;padding:14px 15px;border-radius:16px;
+    background:#181A1B;border:1px solid #2A2E30;
+  }
+  .tip h2{margin:0 0 6px;font-size:14px}
+  .tip p{margin:0 0 8px;font-size:12.5px;color:#AEAEB6;line-height:1.6}
+  .tip ul{margin:0;padding-left:18px}
+  .tip li{font-size:12.5px;color:#AEAEB6;line-height:1.65;margin-bottom:6px}
+  .tip li b{color:#E6E6EA}
+  .tip .facts{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+  .tip .facts span{font-size:11px;color:#C9C9D0;background:#232326;padding:3px 7px;border-radius:7px}
+  .tip a{color:#F0D683}
+
+  footer{margin-top:22px;padding-top:16px;border-top:1px solid #232326;color:#8F8F97;font-size:11.5px;line-height:1.7}
+  footer p{margin:0 0 8px}
+  footer .notice{color:#C9C9D0}
+  footer strong{color:#E6E6EA}
+
+  @media (min-width:480px){
+    .tab{font-size:11.5px;padding:11px 2px}
+  }
+  @media (min-width:620px){
+    .tabs{display:flex;gap:8px}
+    .tab{flex:0 0 calc((100% - 32px)/5)}
+    h1{font-size:28px}
+    .list{grid-template-columns:1fr 1fr}
+    .card{grid-template-columns:96px 1fr}
+    .card .desc{font-size:12px}
+    .tab{font-size:11px;padding:11px 4px;gap:4px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand"><b>PICK</b> GANGWON ONSEN</div>
+    <h1>강원도에서 <span>따뜻한 물</span> 있는 숙소 5곳</h1>
+    <p class="lead">속초·고성·양양·강릉 온천 숙소 중에서 부모님·가족과 함께 가기 좋은 곳만 · 2026년 11월 19일 확인</p>
+  </header>
+
+  <nav class="tabs" aria-label="페이지 이동">
+    <a class="tab" href="index.html">🏨 일본 숙소</a>
+    <a class="tab" href="sapporo.html">♨️ 삿포로 대욕장</a>
+    <a class="tab" href="korea-onsen.html">🇰🇷 국내 온천</a>
+    <a class="tab" href="seoul-onsen.html">♨️ 서울근교 온천</a>
+    <a class="tab" href="gyeongnam-family.html">👨‍👩‍👧‍👦 부산·경남 가족</a>
+    <a class="tab" href="jeju-onsen.html">🍊 제주 온천</a>
+    <a class="tab" href="jeolla-onsen.html">♨️ 전라도 온천</a>
+    <a class="tab" href="chungcheong-onsen.html">♨️ 충청도 온천</a>
+    <a class="tab on" href="gangwon-onsen.html" aria-current="page">🏔️ 강원도 온천</a>
+    <a class="tab" href="cruise.html">🚢 크루즈</a>
+    <a class="tab" href="essentials.html">🧳 필수템 8선</a>
+  </nav>
+
+  <div class="searchbar">
+    <div class="search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#BFBFC6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="text" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="번호 또는 지역·숙소명 (예: 속초, 설악)" aria-label="숙소 검색">
+      <button id="clear" type="button" aria-label="검색어 지우기">✕</button>
+    </div>
+  </div>
+
+  <div class="filters">
+
+    <div class="chips" id="areaChips" role="group" aria-label="지역 필터">
+      <button class="chip" data-area="all" aria-pressed="true">전체 지역</button>
+      <button class="chip" data-area="sokcho" aria-pressed="false">♨️ 속초</button>
+      <button class="chip" data-area="goseong" aria-pressed="false">⛰ 고성</button>
+      <button class="chip" data-area="yangyang" aria-pressed="false">🌲 양양</button>
+      <button class="chip" data-area="gangneung" aria-pressed="false">🌊 강릉</button>
+    </div>
+
+    <div class="chips" id="featChips" role="group" aria-label="시설 필터">
+      <button class="chip" data-feat="all" aria-pressed="true">♨️ 전체</button>
+      <button class="chip" data-feat="spring" aria-pressed="false">천연 온천수</button>
+      <button class="chip" data-feat="pool" aria-pressed="false">온수풀·워터파크</button>
+      <button class="chip" data-feat="spa" aria-pressed="false">사우나·스파</button>
+      <button class="chip" data-feat="fam" aria-pressed="false">👨‍👩‍👧‍👦 가족룸·온돌</button>
+    </div>
+  </div>
+
+  <div class="status" aria-live="polite">
+    <span><b id="count">5</b>곳</span>
+    <span class="basis">1박 최저 상품가 기준 · 2026-11-19 조회</span>
+  </div>
+
+  <main class="list" id="list">
+
+    <!-- 1 -->
+    <article class="card" data-num="1" data-area="sokcho" data-feat="spring pool spa fam" data-tier="high"
+      data-search="한화리조트 설악 쏘라노 설악워터피아 Hanwha Resort Seorak Sorano 속초 강원 속초시 미시령로 2983번길 111 보양온천 49도 천연온천수 워터피아 야외 스파밸리 나이트스파 콘도 취사 대가족 설악산">
+      <div class="thumb sokcho"><span class="num">1</span><span class="emoji">♨️</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">한화리조트 설악 쏘라노<small>Hanwha Resort Seorak Sorano · 국내 1호 보양온천 '설악 워터피아'</small></h2>
+        <p class="loc">강원 속초시 미시령로 2983번길 111 · 워터피아까지 도보 1분</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 국내 1호 보양온천 49℃</span>
+          <span class="tag fam">🏊 사계절 온천 워터파크</span>
+          <span class="tag">🌙 야외 스파밸리·나이트스파</span>
+          <span class="tag fam">🍳 콘도형 취사 가능</span>
+          <span class="tag">🛏 1,369실 대형 리조트</span>
+        </div>
+        <p class="bathline"><b>온천</b> 설악 워터피아는 지하 680m에서 하루 3,000t씩 솟는 <b>49℃ 천연 온천수</b>를 써요. 2009년 나라가 인정한 <b>국내 1호 보양온천</b>이고, 실내 온천탕과 야외 스파밸리(16개 탕)가 모두 같은 온천수예요. 낮에는 물놀이 시설, 저녁에는 조명 켜진 <b>나이트 스파</b>로 즐길 수 있어요. 수영복·수영모는 꼭 챙기시고, 65세 이상은 4인승 슬라이드(메일스트롬)를 탈 수 없어요.</p>
+        <p class="hours"><b>🕘 워터피아</b> 10:00~20:30(주간 10:00~17:00 · 나이트스파 18:00~20:30) · <b>조식</b> 07:00~10:30 · <b>체크인</b> 15:00~22:00 · <b>체크아웃</b> 11:00</p>
+        <p class="desc">1,369실 규모의 큰 리조트예요. 평점 <b>8.3점(리뷰 167)</b>에 위치 점수 8.7로 높은 편이에요. 다만 시설 점수는 7.6으로 낮아 <b>'별관이 오래됐다'</b>는 후기가 많으니, 예약할 때 본관(쏘라노)인지 별관인지 꼭 확인하세요. 리조트 안에 편의점·식당·코인세탁실이 있어 밖에 나가지 않아도 되고, 속초 시내까지 5.5km예요. 조식 뷔페는 성인 37,000원으로 따로 내는 돈이에요. 투숙객이 워터피아를 반값에 이용했다는 후기가 많으니 체크인할 때 한 번 물어보세요. <b>11월(저시즌)에는 사우나를 15:00~17:00에만 연다는 안내</b>가 있어, 사우나가 목적이면 미리 전화로 확인하시는 게 좋아요.</p>
+        <div class="meta"><span class="price">143,040원부터</span><span>8.3점 · 리뷰 167</span><span>1,369실</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/sokcho-si-hotel-detail-1015097/hanwha-resort-seorak-sorano/" data-trip="https://kr.trip.com/hotels/sokcho-si-hotel-detail-1015097/hanwha-resort-seorak-sorano/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iN80vr8iv7" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="card" data-num="2" data-area="goseong" data-feat="spring pool spa fam" data-tier="mid2"
+      data-search="소노캄 델피노 Sono Calm Del Pino 고성 원암온천 온천사우나 오션플레이 울산바위 설악마운틴뷰 소노벨 소노캄 C 패밀리 취사 강원 고성군 토성면 미시령옛길 1153">
+      <div class="thumb goseong"><span class="num">2</span><span class="emoji">🏔</span><span class="tier mid2">중간급</span></div>
+      <div class="body">
+        <h2 class="name">소노캄 델피노<small>Sono Calm Del Pino · 원암온천수 온천사우나</small></h2>
+        <p class="loc">강원 고성군 토성면 미시령옛길 1153 · 잠실에서 차로 1시간 50분</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 원암온천 천연 온천수</span>
+          <span class="tag">🗻 울산바위 보이는 사우나</span>
+          <span class="tag fam">🏊 오션플레이 온수 워터파크</span>
+          <span class="tag fam">🛏 소노캄 C 패밀리 4인</span>
+          <span class="tag fam">🍳 소노벨은 취사 가능</span>
+        </div>
+        <p class="bathline"><b>온천</b> 델피노 온천사우나는 <b>원암온천 천연 온천수</b>로 운영해요. 건식·습식 사우나에 온탕·열탕·냉탕·이벤트탕, 그리고 <b>울산바위가 보이는 노천탕</b>까지 있어요. 사우나는 소노펠리체 부대동 1층(오션플레이 안)에 있고, <b>12월 1일~3월 1일은 야외 노천탕을 쉬어요</b>. 같은 온천수를 데워 쓰는 실내 워터파크 <b>오션플레이</b>도 있어 겨울에도 물놀이를 할 수 있어요(아쿠아슈즈 필수).</p>
+        <p class="hours"><b>🕘 온천사우나</b> 06:00~20:00 · <b>오션플레이</b> 10:00~18:00(토요일 실내 19:00·실외 18:00까지) · <b>체크인</b> 15:00~21:00 · <b>체크아웃</b> 11:00</p>
+        <p class="desc">1,201실 규모로, 호텔형인 <b>소노캄 A·B·C동</b>과 취사가 되는 콘도형 <b>소노벨 이스트·웨스트</b>로 나뉘어요. 평점 <b>8.7점(리뷰 494)</b>에 청결 8.6·위치 9.2로 이 페이지에서 가장 높고, "침대에서 울산바위가 보인다"는 후기가 많아요. 소노캄 C 패밀리(41㎡, 더블 침대 2개)는 4인까지 묵을 수 있어요. 조식 뷔페 셰프스키친은 성인 43,000원이고 <b>하루 전 예약제</b>(1부 07:00·2부 08:40·3부 10:20)예요. 오션플레이는 대인 52,000원·소인 47,000원이에요. 객실 청결에 아쉽다는 후기도 있으니 체크인할 때 방 상태를 한 번 보세요.</p>
+        <div class="meta"><span class="price">134,000원부터</span><span>8.7점 · 리뷰 494</span><span>1,201실</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/goseong-gun-hotel-detail-3695339/delpino/" data-trip="https://kr.trip.com/hotels/goseong-gun-hotel-detail-3695339/delpino/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iN82njbMei" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="card" data-num="3" data-area="sokcho" data-feat="spring spa fam" data-tier="low"
+      data-search="척산온천휴양촌 Cheoksan Hot Spring 속초 관광로 327 53도 천연온천수 노천탕 가족온천실 2인 4인 3시간 당일 전화 예약 찜질방 맨발걷기 금강송">
+      <div class="thumb sokcho2"><span class="num">3</span><span class="emoji">🛁</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">척산온천휴양촌<small>Cheoksan Hot Spring · 53℃ 천연 온천수와 가족온천실</small></h2>
+        <p class="loc">강원 속초시 관광로 327 · 설악산 들머리에서 차로 10분</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 53℃ 천연 온천수</span>
+          <span class="tag fam">🛁 2·4인 가족온천실(3시간)</span>
+          <span class="tag">🌿 노천탕·찜질방</span>
+          <span class="tag">🌲 금강송 산책로·맨발길</span>
+          <span class="tag">📞 가족탕은 당일 9시 전화 예약</span>
+        </div>
+        <p class="bathline"><b>온천</b> 지하 4,000m에서 올라오는 <b>53℃ 천연 온천수</b>예요. 알칼리성이 강해 피부 노폐물을 씻어낸다고 알려졌어요. 대중온천에 온탕·열탕·황금탕·냉탕·어린이탕이 있고, 남녀 <b>노천탕</b>과 찜질방도 있어요. 가족끼리 한 공간에서 씻고 싶으면 <b>가족온천실</b>을 쓰면 되는데, 3시간 기준 2인 50,000원·4인 70,000원이고 <b>그날 아침 9시부터 전화로만</b> 예약받아요(033-636-4000).</p>
+        <p class="hours"><b>🕘 대중온천·사우나</b> 05:30~20:00 · <b>노천탕</b> 19:00까지 · <b>가족온천실</b> 3시간(2인 50,000원·4인 70,000원·추가 1인 15,000원) · <b>체크인</b> 15:00(가족실 18:00) · <b>체크아웃</b> 11:00</p>
+        <p class="desc">1985년에 문을 연 정통 온천이에요. 사우나는 대인 11,000원·소인(1~6세) 7,000원, 사우나+찜질방은 20,000원·15,000원이에요. <b>숙박객은 대중온천 1회 무료</b>이고, 객실 욕실에도 온천수가 나오는 자쿠지탕이 있어요. 숙박은 더블침실 90,000원(주중)·트윈·온돌실 110,000원부터이고 취사는 안 돼요. 3,000그루 금강송 산책로와 맨발 걷기길, 설악산 능선이 보이는 전망대도 있어요. 4인 가족이면 사우나+찜질방(70,000원)과 4인 가족온천실(70,000원)이 같은 값이라, <b>한 공간에서 함께 씻고 싶으면 가족온천실</b>이 좋아요. 5명 이상은 추가 인원을 받을 수 있는지 먼저 물어보세요.</p>
+        <div class="meta"><span class="price">가족온천실 2인 50,000원</span><span>더블침실 90,000원부터</span><span>사우나 11,000원</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://www.choksan.co.kr/" target="_blank" rel="noopener nofollow">공식 홈페이지에서 예약</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iN84nuYMAm" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 온천 입장권 보기</a>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="card" data-num="4" data-area="yangyang" data-feat="spring spa fam" data-tier="mid2"
+      data-search="오색그린야드호텔 Osaek Greenyard Hotel 양양 서면 대청봉길 34 탄산온천 27도 알칼리 온천 암반파동욕장 주전골 설악산 남설악 한계령">
+      <div class="thumb yangyang"><span class="num">4</span><span class="emoji">🌲</span><span class="tier mid2">중간급</span></div>
+      <div class="body">
+        <h2 class="name">오색그린야드호텔<small>Osaek Greenyard Hotel · 탄산온천 + 알칼리 온천 복합 스파</small></h2>
+        <p class="loc">강원 양양군 서면 대청봉길 34 · 주전골 입구 도보 5분</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 지하 470m 탄산온천</span>
+          <span class="tag onsen">🌡 알칼리 온천 온·냉 복합</span>
+          <span class="tag fam">🪨 50℃ 암반파동욕장</span>
+          <span class="tag">🥾 남설악 산책·등산</span>
+          <span class="tag">🅿️ 주차 무료</span>
+        </div>
+        <p class="bathline"><b>온천</b> <b>지하 470m 탄산온천(약 27℃)</b>과 해발 650m에서 나오는 <b>알칼리 온천</b>을 함께 쓰는 온·냉 복합 스파예요. 남녀 각 400명이 들어갈 수 있는 큰 규모이고, 50℃로 데운 돌 위에 눕는 <b>암반파동욕장</b>도 있어요. 탄산온천은 물이 차갑게 느껴지니 오래 담그지 말고 알칼리 온천과 번갈아 드시면 좋아요. 사우나와 찜질도 함께 있어요.</p>
+        <p class="hours"><b>🕘 온천</b> 06:00~22:00(금·토 23:00까지) · <b>조식</b> 뷔페 성인 30,000원 · <b>체크인</b> 15:00~24:00 · <b>체크아웃</b> 11:00</p>
+        <p class="desc">155실 규모로 2008년에 리모델링한 호텔이에요. 평점 <b>8.0점(리뷰 101)</b>에 청결 8.5로 좋지만 시설 점수는 7.0이에요. 건물이 오래되어 복도·지하 주차장이 낡았다는 후기가 있는 대신, <b>방이 넓고 침구가 깨끗하다</b>는 이야기가 많아요. 설악산 오색 코스 들머리라 다음 날 대청봉·주전골 산행을 하실 분께 좋고, 주전골 입구까지 도보 5분·오색약수까지 도보 10분이에요. 다만 겨울에는 <b>한계령·미시령 길이 얼 수 있으니</b> 눈 예보를 보고, 눈이 오면 체인이나 대중교통을 준비하세요.</p>
+        <div class="meta"><span class="price">112,340원부터</span><span>8.0점 · 리뷰 101</span><span>155실</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/yangyang-hotel-detail-5705350/osaek-greenyard-hotel/" data-trip="https://kr.trip.com/hotels/yangyang-hotel-detail-5705350/osaek-greenyard-hotel/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iN85ScIlqK" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="card" data-num="5" data-area="gangneung" data-feat="spring pool spa fam" data-tier="low"
+      data-search="호텔 탑스텐 Hotel Tops 10 강릉 옥계 헌화로 455-34 금진온천 아쿠아파크 정동진역 셔틀 오션뷰 스카이라운지 뷔페 포세이돈">
+      <div class="thumb gangneung"><span class="num">5</span><span class="emoji">🌊</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">호텔 탑스텐<small>Hotel Tops 10 · 금진온천과 동해 오션뷰</small></h2>
+        <p class="loc">강원 강릉시 옥계면 헌화로 455-34 · 정동진역에서 차로 14분</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 금진온천(붉은빛 미네랄)</span>
+          <span class="tag fam">🌊 동해 오션뷰 객실</span>
+          <span class="tag fam">🚌 정동진역 무료 셔틀</span>
+          <span class="tag fam">🏊 실내 수영장·아쿠아파크</span>
+          <span class="tag">🍽 뷔페 포세이돈</span>
+        </div>
+        <p class="bathline"><b>온천</b> 금진온천은 미네랄이 많아 <b>붉은빛이 도는 천연 온천수</b>예요. 1층 금진온천에 바테탕·온천탕·냉탕과 습식·건식 사우나가 있어요. 투숙객은 성인 11,000원·소인 8,000원(정상가 16,000원·11,000원)이고, <b>매월 마지막 주 수요일은 휴관</b>이에요(7·8·12월은 쉬지 않아요). 사우나는 만 13세 이상부터 들어갈 수 있고, 13세 미만은 보호자와 함께면 돼요.</p>
+        <p class="hours"><b>🕘 금진온천</b> 07:00~20:00(입장 마감 19:00) · <b>아쿠아파크</b> 10:00~19:00 · <b>체크인</b> 15:00 · <b>체크아웃</b> 11:00</p>
+        <p class="desc">332실 규모로 평점 <b>8.7점(리뷰 508)</b>이에요. <b>KTX 정동진역에서 무료 셔틀</b>을 타고 올 수 있어 차 없이도 편해요(주중 10:20~17:20, 주말 10:20~17:20 사이 6회). 강릉역에는 셔틀이 없으니 꼭 정동진역에서 내리세요. 주변에 식당이 드물어 끼니는 호텔 안 뷔페 포세이돈이나 카페에서 해결하는 편이 좋아요. 바다 쪽 객실은 '부분 오션뷰'이고, 15층 스카이라운지에서 보는 동해가 좋다는 후기가 많아요. '온천탕이 넓어졌고 물이 좋다'는 최근 후기도 있어요. 셔틀은 투숙객 확인(예약 바우처)이 필요해요.</p>
+        <div class="meta"><span class="price">101,879원부터</span><span>8.7점 · 리뷰 508</span><span>332실</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/gangneung-si-hotel-detail-13682789/hotel-tops-10/" data-trip="https://kr.trip.com/hotels/gangneung-si-hotel-detail-13682789/hotel-tops-10/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iN87pIr00G" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+  </main>
+
+  <div class="empty" id="empty">
+    <b>조건에 맞는 숙소가 없어요</b>
+    다른 지역이나 시설을 골라보세요.
+  </div>
+
+  <section class="tip">
+    <h2>♨️ 강원도 온천 갈 때 알아두면 좋은 것</h2>
+    <ul>
+      <li><b>‘온천수’인지 ‘온수풀’인지 먼저 보세요.</b> 한화리조트 설악(49℃ 설악 온천수)·소노캄 델피노(원암온천수)·척산온천(53℃)·호텔 탑스텐(금진온천)은 땅에서 올라온 천연 온천수예요. 오색그린야드는 지하 470m 탄산온천과 알칼리 온천을 함께 쓰는 복합 스파예요.</li>
+      <li><b>겨울 야외 온천은 숙소마다 다 열어요.</b> 델피노 노천탕은 12월 1일~3월 1일 쉬고, 설악 워터피아는 저시즌(12월 10일까지) 야외 스파밸리를 10:00~17:00에 열어요. 가시는 날 운영표를 한 번 더 확인하세요.</li>
+      <li><b>한화리조트 설악은 11월에 사우나 시간이 짧아요.</b> 저시즌에는 사우나를 15:00~17:00에만 연다는 안내가 있어요. 사우나가 목적이면 033-630-5500으로 먼저 확인하시고, 워터피아(온천탕)는 10:00~20:30로 길게 열어요.</li>
+      <li><b>차 없이 가시려면 호텔 탑스텐이에요.</b> KTX 정동진역에서 무료 셔틀이 다녀요(강릉역은 셔틀 없음). 나머지 네 곳은 차가 있어야 편하고, 속초는 서울에서 시외버스로 2시간 30분 안팎이에요.</li>
+      <li><b>수영복·수영모·아쿠아슈즈를 챙기세요.</b> 설악 워터피아와 델피노 오션플레이는 수영모·아쿠아슈즈가 없으면 들어갈 수 없어요. 65세 이상은 슬라이드 이용이 안 되는 곳이 있으니 미리 보세요.</li>
+      <li><b>척산온천 가족온천실은 그날 아침 9시부터 전화만 받아요.</b> 033-636-4000으로 도착일 9시에 바로 전화하세요. 주말·연휴에는 원하는 시간이 일찍 마감되고, 가족온천실은 사전 날짜 예약이 안 돼요.</li>
+      <li><b>겨울 강원도 도로는 얼 수 있어요.</b> 오색은 한계령·미시령을 넘어가야 하고, 고성은 미시령옛길이 구불구불해요. 눈 예보가 있으면 체인이나 대중교통을 준비하시고, 밤에는 특히 천천히 오세요.</li>
+      <li><b>가격은 날짜에 따라 크게 달라져요.</b> 여기 적은 금액은 2026년 11월 19일에 확인한 1박 최저 상품가이고, 주말·연말 성수기에는 같은 방이 1.5~2배까지 올라요. 버튼에서 날짜를 넣고 다시 확인하세요.</li>
+    </ul>
+    <div class="facts">
+      <span>📅 2026-11-19 확인</span>
+      <span>🛏 1박 최저 상품가</span>
+      <span>♨️ 5곳 온천·운영시간 확인</span>
+    </div>
+  </section>
+
+  <footer>
+    <p class="notice"><strong>제휴 마케팅 활동의 일환으로 예약 시 일정액의 수수료를 제공받을 수 있습니다.</strong></p>
+    <p class="notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+    <p>가격은 2026년 11월 19일 쿠팡 트래블에 뜬 상품 중 가장 낮은 1박 가격을 ‘~부터’로 적은 것입니다(척산온천휴양촌은 공식 홈페이지 기준 요금). 객실 타입·날짜·인원에 따라 실제 요금은 달라지고, 트립닷컴은 같은 숙소를 다른 요금으로 팔 때도 있어요(같은 시점 트립닷컴 상세 페이지의 최저가 표시는 한화리조트 설악 92,972원·델피노 107,505원·오색그린야드 80,231원·호텔 탑스텐 85,407원이었어요). 두 버튼의 가격을 함께 비교해 보세요.</p>
+    <p>온천수 종류·운영시간·요금·셔틀 시간은 2026년 11월 19일 각 숙소의 공식 안내와 트립닷컴 상세 페이지에서 확인한 내용입니다. 평점과 리뷰 수는 트립닷컴 기준이에요. 시설 이용 시간과 요금은 예고 없이 바뀔 수 있으니 예약 전에 숙소 안내를 다시 확인하세요.</p>
+    <p>사진은 각 숙소의 실제 모습이 아니라 지역과 시설을 나타내는 이미지입니다.</p>
+    <p><a href="index.html" style="color:#F0D683">🏨 일본 숙소 10곳 보기</a> · <a href="sapporo.html" style="color:#F0D683">♨️ 삿포로 대욕장 10곳 보기</a> · <a href="korea-onsen.html" style="color:#F0D683">🇰🇷 국내 온천 11곳 보기</a> · <a href="seoul-onsen.html" style="color:#F0D683">♨️ 서울근교 온천 5곳 보기</a> · <a href="gyeongnam-family.html" style="color:#F0D683">👨‍👩‍👧‍👦 부산·경남 가족 숙소 보기</a> · <a href="jeju-onsen.html" style="color:#F0D683">🍊 제주 온천 5곳 보기</a> · <a href="jeolla-onsen.html" style="color:#F0D683">♨️ 전라도 온천 5곳 보기</a> · <a href="chungcheong-onsen.html" style="color:#F0D683">♨️ 충청도 온천 5곳 보기</a> · <a href="cruise.html" style="color:#F0D683">🚢 크루즈 6선 보기</a> · <a href="essentials.html" style="color:#F0D683">🧳 필수템 8선 보기</a></p>
+  </footer>
+
+</div>
+
+<script>
+/* =========================================================
+   제휴 설정 — 다른 페이지와 동일한 값 (트립닷컴 AID / SID)
+   ========================================================= */
+var AFFILIATE_CONFIG = {
+  trip:  { aid: "11254538", sid: "335287562" }
+};
+
+function withTripAffiliate(url){
+  var aid = AFFILIATE_CONFIG.trip.aid;
+  if(!aid){ return url; }
+  var sep = url.indexOf("?") === -1 ? "?" : "&";
+  var out = url + sep + "Allianceid=" + encodeURIComponent(aid);
+  if(AFFILIATE_CONFIG.trip.sid){
+    out += "&SID=" + encodeURIComponent(AFFILIATE_CONFIG.trip.sid);
+  }
+  return out;
+}
+
+(function applyAffiliate(){
+  var tripLinks = document.querySelectorAll("a[data-trip]");
+  for(var j = 0; j < tripLinks.length; j++){
+    tripLinks[j].href = withTripAffiliate(tripLinks[j].getAttribute("data-trip"));
+  }
+})();
+
+/* =========================================================
+   검색 + 필터 (지역 / 시설)
+   ========================================================= */
+(function(){
+  var q = document.getElementById("q");
+  var clearBtn = document.getElementById("clear");
+  var countEl = document.getElementById("count");
+  var emptyEl = document.getElementById("empty");
+  var cards = Array.prototype.slice.call(document.querySelectorAll("#list .card"));
+
+  var state = { area: "all", feat: "all", text: "" };
+
+  function bindGroup(containerId, key){
+    var group = document.getElementById(containerId);
+    if(!group){ return; }
+    group.addEventListener("click", function(e){
+      var btn = e.target.closest ? e.target.closest(".chip") : null;
+      if(!btn || !group.contains(btn)){ return; }
+      var chips = group.querySelectorAll(".chip");
+      for(var i = 0; i < chips.length; i++){
+        chips[i].setAttribute("aria-pressed", chips[i] === btn ? "true" : "false");
+      }
+      state[key] = btn.getAttribute("data-" + key);
+      apply();
+    });
+  }
+
+  function normalize(s){
+    return (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  function matches(card){
+    if(state.area !== "all" && card.getAttribute("data-area") !== state.area){ return false; }
+    if(state.feat !== "all"){
+      var feat = " " + card.getAttribute("data-feat") + " ";
+      if(feat.indexOf(" " + state.feat + " ") === -1){ return false; }
+    }
+    if(state.text){
+      if(/^[0-9]+$/.test(state.text)){
+        return card.getAttribute("data-num") === state.text;
+      }
+      var hay = normalize(card.getAttribute("data-search") + " " +
+        card.querySelector(".name").textContent + " " +
+        card.querySelector(".loc").textContent);
+      var words = state.text.split(" ").filter(Boolean);
+      for(var w = 0; w < words.length; w++){
+        if(hay.indexOf(words[w]) === -1){ return false; }
+      }
+    }
+    return true;
+  }
+
+  function apply(){
+    var shown = 0;
+    for(var i = 0; i < cards.length; i++){
+      var ok = matches(cards[i]);
+      cards[i].style.display = ok ? "" : "none";
+      if(ok){ shown++; }
+    }
+    countEl.textContent = shown;
+    emptyEl.classList.toggle("show", shown === 0);
+    clearBtn.classList.toggle("show", !!state.text);
+  }
+
+  function onText(){
+    state.text = normalize(q.value);
+    apply();
+  }
+
+  bindGroup("areaChips", "area");
+  bindGroup("featChips", "feat");
+  q.addEventListener("input", onText);
+  q.addEventListener("search", onText);
+  clearBtn.addEventListener("click", function(){ q.value = ""; state.text = ""; apply(); q.focus(); });
+  apply();
+})();
+</script>
+</body>
+</html>

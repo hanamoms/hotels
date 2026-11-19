@@ -45,7 +45,7 @@
   h1 span{color:var(--yellow)}
   .lead{margin:0;color:var(--sub);font-size:13.5px}
 
-  /* ---------- page switch tabs (10개, 모바일 3+3+3+1 가운데 정렬) ---------- */
+  /* ---------- page switch tabs (11개, 모바일 3+3+3+2 가운데 정렬) ---------- */
   .tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:14px 0 4px}
   .tab{
     flex:0 0 calc((100% - 16px)/3);
@@ -205,7 +205,8 @@
     .tab{font-size:11.5px;padding:11px 2px}
   }
   @media (min-width:620px){
-    .tabs{display:grid;grid-template-columns:repeat(5,1fr)}
+    .tabs{display:flex;gap:8px}
+    .tab{flex:0 0 calc((100% - 32px)/5)}
     h1{font-size:27px}
     .list{grid-template-columns:1fr 1fr}
     .item{grid-template-columns:84px 1fr}
@@ -237,6 +238,7 @@
     <a class="tab" href="jeju-onsen.html">🍊 제주 온천</a>
     <a class="tab" href="jeolla-onsen.html">♨️ 전라도 온천</a>
     <a class="tab" href="chungcheong-onsen.html">♨️ 충청도 온천</a>
+    <a class="tab" href="gangwon-onsen.html">🏔️ 강원도 온천</a>
     <a class="tab" href="cruise.html">🚢 크루즈</a>
     <a class="tab on" href="essentials.html" aria-current="page">🧳 필수템 8선</a>
   </nav>
