@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>충청도 가족 온천 5곳 · 부모님 모시고 가기 좋은 숙소</title>
+<meta name="description" content="충남·충북·대전에서 부모님·가족과 따뜻한 온천물에 몸을 담글 수 있는 숙소 5곳. 스플라스 리솜(덕산), 온양제일호텔, 라마다 바이윈덤 충주 수안보, 포레스트 리솜·레스트리, 호텔 인터시티. 온천수 종류와 운영시간, 휴무일, 준비물, 1박 가격을 정리했어요.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="충청도 가족 온천 5곳 · 부모님 모시고 가기 좋은 숙소">
+<meta property="og:description" content="덕산온천수 전 객실 공급, 온양온천역 도보 5분, 수안보 53℃ 약알칼리성 온천, 숲속 노천 스파, 유성온천지구 4성 호텔까지. 충청도 온천 숙소 5곳과 1박 가격.">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A8%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#111111;
+    --card:#1C1C1E;
+    --card2:#242426;
+    --line:#2E2E31;
+    --text:#F2F2F4;
+    --sub:#A1A1A8;
+    --yellow:#F5C518;
+    --trip:#1E88E5;
+    --green:#2E7D32;
+    --amber:#A15C00;
+    --purple:#5E35B1;
+    --onsen:#C2185B;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic","Noto Sans KR",Roboto,sans-serif;
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+    padding-bottom:calc(28px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 14px}
+
+  /* ---------- header ---------- */
+  header.top{padding:18px 0 10px}
+  .brand{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--sub);letter-spacing:.08em;text-transform:uppercase}
+  .brand b{color:var(--yellow);letter-spacing:0}
+  h1{font-size:24px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.02em}
+  h1 span{color:var(--yellow)}
+  .lead{margin:0;color:var(--sub);font-size:13.5px}
+
+  /* ---------- page switch tabs (9개, 모바일 3+3+3 가운데 정렬) ---------- */
+  .tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:14px 0 4px}
+  .tab{
+    flex:0 0 calc((100% - 16px)/3);
+    display:flex;align-items:center;justify-content:center;gap:4px;
+    text-decoration:none;padding:11px 4px;border-radius:13px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#C9C9D0;font-size:12.5px;font-weight:600;text-align:center;line-height:1.25;
+    word-break:keep-all;
+  }
+  .tab.on{background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:800}
+  .tab:active{transform:scale(.99)}
+
+  /* ---------- sticky search + filters ---------- */
+  .searchbar{
+    position:sticky;top:0;z-index:20;
+    background:#111111;
+    padding:8px 14px 10px;
+    margin:0 -14px;
+    box-shadow:0 8px 14px -10px rgba(0,0,0,.9);
+  }
+  .filters{padding:2px 0 4px}
+  .search{position:relative}
+  .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.55}
+  #q{
+    width:100%;padding:15px 44px 15px 42px;
+    background:#1A1A1C;border:1px solid var(--line);border-radius:16px;
+    color:var(--text);font-size:15px;font-family:inherit;
+    outline:none;appearance:none;
+  }
+  #q::placeholder{color:#7C7C84}
+  #q:focus{border-color:#4A4A50;background:#1F1F22}
+  #clear{
+    position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    width:30px;height:30px;border:0;border-radius:50%;
+    background:#333338;color:#CFCFD6;font-size:16px;line-height:1;
+    display:none;cursor:pointer;
+  }
+  #clear.show{display:block}
+
+  .chips{
+    display:flex;gap:8px;overflow-x:auto;padding:10px 0 0;
+    scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;
+    padding:9px 15px;border-radius:999px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#D6D6DC;font-size:13.5px;font-family:inherit;white-space:nowrap;
+    cursor:pointer;transition:background .15s,border-color .15s,color .15s;
+  }
+  .chip[aria-pressed="true"]{
+    background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:700;
+  }
+  .chip:active{transform:scale(.98)}
+
+  .status{
+    display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+    padding:12px 0 2px;color:var(--sub);font-size:12.5px;
+  }
+  .status b{color:var(--text);font-weight:600}
+  .status .basis{text-align:right}
+
+  /* ---------- cards ---------- */
+  .list{display:grid;gap:12px;padding-top:8px}
+  .card{
+    display:grid;grid-template-columns:104px 1fr;gap:12px;
+    background:var(--card);border:1px solid #26262A;
+    border-radius:18px;padding:12px;
+  }
+  .thumb{
+    position:relative;border-radius:13px;overflow:hidden;
+    background:linear-gradient(160deg,#2A2A30,#17171A);
+    min-height:104px;display:flex;align-items:center;justify-content:center;
+  }
+  .thumb .emoji{font-size:34px;opacity:.92;filter:saturate(1.05)}
+  .thumb.yesan{background:linear-gradient(160deg,#2C2230,#15101A)}
+  .thumb.asan{background:linear-gradient(160deg,#1F2C33,#0F171B)}
+  .thumb.chungju{background:linear-gradient(160deg,#22302A,#101A15)}
+  .thumb.jecheon{background:linear-gradient(160deg,#1B3026,#0E1A15)}
+  .thumb.daejeon{background:linear-gradient(160deg,#26243A,#12111C)}
+  .num{
+    position:absolute;top:6px;left:6px;
+    min-width:26px;height:26px;padding:0 6px;border-radius:8px;
+    background:var(--yellow);color:#141414;
+    font-weight:800;font-size:14px;line-height:26px;text-align:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.35);
+  }
+  .tier{
+    position:absolute;bottom:6px;left:6px;
+    padding:3px 8px;border-radius:7px;
+    font-size:10.5px;font-weight:700;color:#fff;letter-spacing:.01em;
+  }
+  .tier.low{background:var(--green)}
+  .tier.mid2{background:var(--amber)}
+  .tier.high{background:var(--purple)}
+
+  .body{min-width:0}
+  .name{margin:0;font-size:16px;line-height:1.32;letter-spacing:-.01em}
+  .name small{display:block;font-size:11.5px;color:var(--sub);font-weight:400;margin-top:2px}
+  .loc{margin:4px 0 0;font-size:12.5px;color:var(--yellow);font-weight:600}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 0}
+  .tag{
+    font-size:11px;color:#C9C9D0;background:#26262A;border:1px solid #303036;
+    padding:3px 7px;border-radius:7px;white-space:nowrap;
+  }
+  .tag.onsen{background:#3A1220;border-color:#5C1B33;color:#FFC9DC}
+  .tag.fam{background:#0F2E28;border-color:#1E5045;color:#9FE8D6}
+  .desc{margin:8px 0 0;font-size:12.5px;color:#B9B9C2;line-height:1.55}
+  .bathline{
+    margin:8px 0 0;font-size:12px;color:#D9D9E0;background:#191A1D;
+    border:1px solid #2A2B30;border-left:3px solid var(--onsen);
+    border-radius:9px;padding:7px 9px;line-height:1.5;
+  }
+  .bathline b{color:#FFC9DC;font-weight:700}
+  .hours{
+    margin:8px 0 0;font-size:12px;color:#DCDCE2;background:#16181A;
+    border:1px solid #282B2E;border-left:3px solid var(--yellow);
+    border-radius:9px;padding:7px 9px;line-height:1.5;
+  }
+  .hours b{color:var(--yellow);font-weight:700}
+  .hours .off{color:#FF9E9E;font-weight:700}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px;font-size:11.5px;color:#8F8F97}
+  .meta .price{color:var(--yellow);font-weight:800;font-size:13px}
+  .actions{display:grid;gap:8px;margin-top:12px;grid-column:1 / -1}
+  .btn{
+    display:block;text-align:center;text-decoration:none;
+    padding:12px 6px;border-radius:12px;
+    font-size:13.5px;font-weight:700;color:#fff;
+    border:0;cursor:pointer;
+  }
+  .btn.trip{background:var(--trip)}
+  .btn.coupang{background:var(--yellow);color:#141414}
+  .btn:active{filter:brightness(.92)}
+
+  .empty{
+    display:none;text-align:center;padding:44px 16px;color:var(--sub);
+    border:1px dashed #303036;border-radius:18px;background:#171719;
+  }
+  .empty b{display:block;color:var(--text);font-size:15px;margin-bottom:6px}
+  .empty.show{display:block}
+
+  /* ---------- tip + footer ---------- */
+  .tip{
+    margin-top:16px;padding:14px 15px;border-radius:16px;
+    background:#181A1B;border:1px solid #2A2E30;
+  }
+  .tip h2{margin:0 0 6px;font-size:14px}
+  .tip p{margin:0 0 8px;font-size:12.5px;color:#AEAEB6;line-height:1.6}
+  .tip ul{margin:0;padding-left:18px}
+  .tip li{font-size:12.5px;color:#AEAEB6;line-height:1.65;margin-bottom:6px}
+  .tip li b{color:#E6E6EA}
+  .tip .facts{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+  .tip .facts span{font-size:11px;color:#C9C9D0;background:#232326;padding:3px 7px;border-radius:7px}
+  .tip a{color:#F0D683}
+
+  footer{margin-top:22px;padding-top:16px;border-top:1px solid #232326;color:#8F8F97;font-size:11.5px;line-height:1.7}
+  footer p{margin:0 0 8px}
+  footer .notice{color:#C9C9D0}
+  footer strong{color:#E6E6EA}
+
+  @media (min-width:480px){
+    .tab{font-size:11.5px;padding:11px 2px}
+  }
+  @media (min-width:620px){
+    .tabs{display:grid;grid-template-columns:repeat(9,1fr)}
+    h1{font-size:28px}
+    .list{grid-template-columns:1fr 1fr}
+    .card{grid-template-columns:96px 1fr}
+    .card .desc{font-size:12px}
+    .tab{font-size:10.5px;padding:10px 2px;gap:2px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand"><b>PICK</b> CHUNGCHEONG ONSEN</div>
+    <h1>충청도에서 <span>따뜻한 물</span> 있는 숙소 5곳</h1>
+    <p class="lead">충남·충북·대전 온천 숙소 중에서 부모님·가족과 함께 가기 좋은 곳만 · 2026년 11월 19일 확인</p>
+  </header>
+
+  <nav class="tabs" aria-label="페이지 이동">
+    <a class="tab" href="index.html">🏨 일본 숙소</a>
+    <a class="tab" href="sapporo.html">♨️ 삿포로 대욕장</a>
+    <a class="tab" href="korea-onsen.html">🇰🇷 국내 온천</a>
+    <a class="tab" href="seoul-onsen.html">♨️ 서울근교 온천</a>
+    <a class="tab" href="gyeongnam-family.html">👨‍👩‍👧‍👦 부산·경남 가족</a>
+    <a class="tab" href="jeju-onsen.html">🍊 제주 온천</a>
+    <a class="tab" href="jeolla-onsen.html">♨️ 전라도 온천</a>
+    <a class="tab on" href="chungcheong-onsen.html" aria-current="page">♨️ 충청도 온천</a>
+    <a class="tab" href="essentials.html">🧳 필수템 8선</a>
+  </nav>
+
+  <div class="searchbar">
+    <div class="search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#BFBFC6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="text" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="번호 또는 지역·숙소명 (예: 수안보, 온천)" aria-label="숙소 검색">
+      <button id="clear" type="button" aria-label="검색어 지우기">✕</button>
+    </div>
+  </div>
+
+  <div class="filters">
+
+    <div class="chips" id="areaChips" role="group" aria-label="지역 필터">
+      <button class="chip" data-area="all" aria-pressed="true">전체 지역</button>
+      <button class="chip" data-area="yesan" aria-pressed="false">♨️ 예산 덕산</button>
+      <button class="chip" data-area="asan" aria-pressed="false">🚉 아산 온양</button>
+      <button class="chip" data-area="chungju" aria-pressed="false">⛰ 충주 수안보</button>
+      <button class="chip" data-area="jecheon" aria-pressed="false">🌲 제천</button>
+      <button class="chip" data-area="daejeon" aria-pressed="false">🏙 대전 유성</button>
+    </div>
+
+    <div class="chips" id="featChips" role="group" aria-label="시설 필터">
+      <button class="chip" data-feat="all" aria-pressed="true">♨️ 전체</button>
+      <button class="chip" data-feat="spring" aria-pressed="false">천연 온천수</button>
+      <button class="chip" data-feat="pool" aria-pressed="false">온수풀·워터파크</button>
+      <button class="chip" data-feat="spa" aria-pressed="false">사우나·스파</button>
+      <button class="chip" data-feat="fam" aria-pressed="false">👨‍👩‍👧‍👦 가족룸·온돌</button>
+    </div>
+  </div>
+
+  <div class="status" aria-live="polite">
+    <span><b id="count">5</b>곳</span>
+    <span class="basis">1박 최저 상품가 기준 · 2026-11-19 조회</span>
+  </div>
+
+  <main class="list" id="list">
+
+    <!-- 1 -->
+    <article class="card" data-num="1" data-area="yesan" data-feat="spring pool spa fam" data-tier="high"
+      data-search="스플라스 리솜 Splas Resom 덕산 예산 충청남도 예산군 덕산면 온천단지3로 45-7 덕산온천 국민보양온천 워터파크 스파 사우나 콘도 취사 대가족 윤봉길 의사 기념관 충의사">
+      <div class="thumb yesan"><span class="num">1</span><span class="emoji">♨️</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">스플라스 리솜 (덕산)<small>Splas Resom · 406실 전 객실 온천수</small></h2>
+        <p class="loc">충남 예산군 덕산면 온천단지3로 45-7 · 덕산온천 관광지 도보 3분</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 국민 보양온천 덕산온천수</span>
+          <span class="tag fam">🏊 사계절 스파·워터파크</span>
+          <span class="tag">🛁 전 객실 욕실 온천수</span>
+          <span class="tag fam">🍳 콘도형 취사 가능</span>
+          <span class="tag fam">👨‍👩‍👧‍👦 최대 9인 객실</span>
+        </div>
+        <p class="bathline"><b>온천</b> 6백 년 된 덕산온천지구의 물이에요. 2010년부터 나라가 지정해 관리하는 <b>보양온천</b>이고, 406실 <b>모든 객실 욕실에도 덕산온천수가 나옵니다</b>. 워터파크와 스파도 같은 온천수를 데워 쓰기 때문에 겨울에도 물이 따뜻해요. 투숙객은 스파&워터파크 <b>30% 할인</b>(36개월~8세 50%)이고, 수영복·수영모(캡모자 괜찮아요)·아쿠아슈즈는 꼭 챙기셔야 해요.</p>
+        <p class="hours"><b>🕘 온천사우나</b> 07:00~19:00 · <b>스파&워터파크</b> 09:00~18:00 · <b>체크인</b> 15:00~22:00 · <b>체크아웃</b> 11:00</p>
+        <p class="desc">2023년에 문을 연 새 리조트라 시설이 깨끗하고, 청결 점수 8.5예요. "샤워할 때 물이 온천수라 좋았다", "바로 앞 워터파크라 아이와 편했다", "부모님이 좋아하셨다"는 후기가 많아요. 방은 <b>취사가 되는 콘도형(G)</b>과 <b>취사가 안 되는 호텔형(S)</b>으로 나뉘니 예약할 때 확인하세요. 가장 큰 G70은 7인 기준·최대 9인이라 두 가족이 함께 가도 돼요. 조식 뷔페는 따로 내는 돈이고(성인 3만8천~4만3천 원대, 안내 시점에 따라 달라요), 서울 센트럴시티에서 덕산스파로 오는 직통버스가 리조트 앞에 서요.</p>
+        <div class="meta"><span class="price">265,600원부터</span><span>8.3점 · 리뷰 11</span><span>406실</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/yesan-gun-hotel-detail-112894520/splas-resom/" data-trip="https://kr.trip.com/hotels/yesan-gun-hotel-detail-112894520/splas-resom/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iNnyBfAjrE" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="card" data-num="2" data-area="asan" data-feat="spring spa fam" data-tier="low"
+      data-search="온양제일호텔 The Cheil Hotel Onyang 제일호텔 아산 온양 온천대로 1462 온양온천역 라듐온천 마니타온 온천사우나 가족탕 온돌룸 현충사">
+      <div class="thumb asan"><span class="num">2</span><span class="emoji">🚉</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">온양제일호텔<small>The Cheil Hotel Onyang · 전철역에서 걸어서 5분</small></h2>
+        <p class="loc">충남 아산시 온천대로 1462 · 온양온천역 1번 출구 도보 5~8분</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 온양온천 라듐온천수</span>
+          <span class="tag fam">🚉 1호선 온양온천역 도보 5분</span>
+          <span class="tag">🛁 객실 욕실에도 온천수</span>
+          <span class="tag">🧖 지하 1층 온천사우나</span>
+          <span class="tag fam">🛏 온돌룸·가족탕 객실</span>
+        </div>
+        <p class="bathline"><b>온천</b> 백제 때부터 이름난 온양온천수예요. 지하 305m 바위틈에서 올라오는 <b>52~55℃ 물</b>로, 마니타온이 많은 <b>라듐온천</b>이에요. 지하 1층 온천사우나(06:00~20:00)는 <b>투숙객 50% 할인</b>이라 성인 12,000원이 <b>6,000원</b>이고, 객실 욕실에도 온천수가 나와요. 사우나 요금·할인은 예약 전에 한 번 더 확인하세요(일부 후기에는 투숙객 무료라고 적힌 것도 있어요).</p>
+        <p class="hours"><b>🕘 온천사우나</b> 06:00~20:00(입장 마감 19:00) · <b>체크인</b> 15:00 · <b>체크아웃</b> 11:00 · <b>조식</b> 1층 식당에서 따로</p>
+        <p class="desc">1979년에 문을 연 141실 호텔이에요. 건물은 오래됐지만 <b>욕실을 계속 새로 단장</b>해 깨끗하다는 후기가 많고, 위치 점수 9.2로 이 페이지에서 가장 높아요. <b>차 없이 전철로 다녀오기 가장 편한 곳</b>이라 부모님 모시고 가성비로 묵기 좋아요. 1층에 식당·카페·편의점이 있고 "조식이 맛있다"는 이야기도 많아요. 7층부터는 가족탕이 있는 객실도 있어요. 다만 화장지·세면도구는 챙기시는 게 좋다는 후기가 있으니 준비해 가세요.</p>
+        <div class="meta"><span class="price">110,000원부터</span><span>8.4점 · 리뷰 210</span><span>위치 9.2</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/asan-si-hotel-detail-10518653/the-cheil-hotel-onyang/" data-trip="https://kr.trip.com/hotels/asan-si-hotel-detail-10518653/the-cheil-hotel-onyang/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iNnBzY7bBk" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="card" data-num="3" data-area="chungju" data-feat="spring spa fam" data-tier="low"
+      data-search="라마다 바이윈덤 호텔 충주 수안보 Ramada by Wyndham Chungju Suanbo 수안보온천 충북 충주시 수안보면 조산공원길 99 약알칼리성 온천 사우나 노천 콰드러플 한실 양실 안마의자">
+      <div class="thumb chungju"><span class="num">3</span><span class="emoji">⛰</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">라마다 바이윈덤 호텔 충주 수안보<small>Ramada by Wyndham Suanbo · 300평 스파사우나</small></h2>
+        <p class="loc">충북 충주시 수안보면 조산공원길 99 · 수안보온천역 1km</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 충주시 보증 천연온천수</span>
+          <span class="tag fam">🛁 300평 스파사우나</span>
+          <span class="tag fam">💺 객실마다 안마의자</span>
+          <span class="tag fam">🛏 4인 쿼드러플(한실·양실)</span>
+          <span class="tag">💰 이 페이지에서 가장 낮은 1박</span>
+        </div>
+        <p class="bathline"><b>온천</b> 수안보온천은 수온 <b>53℃</b>, 산도 8.3의 <b>약알칼리성 온천수</b>예요. 지하 250m에서 하루 4,800t이 나오고 <b>충주시가 보증하고 공급</b>해요. 300평 규모 스파사우나에 40도·53도 온탕과 냉탕, 편백 사우나가 있고, 시멘트를 쓰지 않고 통원석을 깎아 만든 탕이에요. 사우나 요금은 정상 19,900원, 투숙객 할인 13,000~15,000원이에요.</p>
+        <p class="hours"><b>🕘 스파사우나</b> 06:00~20:00 · <span class="off">매주 월요일 휴장</span> · <span class="off">노천온천은 공사 중이라 쉬고 있어요</span> · <b>체크인</b> 15:00 · <b>체크아웃</b> 11:00</p>
+        <p class="desc">2019년에 문을 열고 2022년에 리모델링한 103실 호텔이에요. <b>객실마다 안마의자(세라젬)</b>가 있어 "부모님이 좋아하셨다"는 후기가 많고, 4인 가족이 넉넉히 자는 <b>쿼드러플(한실=저상형 퀸+싱글 2, 양실=더블+싱글 2)</b>이 있어요. 다만 오래된 부분이 남아 시설 점수 6.8·청결 7.4로 낮은 편이라, 새 시설을 기대하시면 다른 곳이 나아요. 조식은 07:00~09:30, 성인 18,000원으로 간단한 편이에요. 월요일에는 사우나가 쉬니 <b>월요일은 피해서</b> 예약하세요.</p>
+        <div class="meta"><span class="price">89,000원부터</span><span>7.5점 · 리뷰 145</span><span>4인 쿼드러플</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/chungju-hotel-detail-1735848/ramada-by-wyndham-hotel-chungju-suanbo/" data-trip="https://kr.trip.com/hotels/chungju-hotel-detail-1735848/ramada-by-wyndham-hotel-chungju-suanbo/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iNnDu5maVU" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="card" data-num="4" data-area="jecheon" data-feat="pool spa fam" data-tier="high"
+      data-search="포레스트 리솜 Forest Resom 레스트리 Restree Resom 제천 충북 제천시 백운면 금봉로 365 해브나인 스파 인피니티풀 노천 스톤스파 빌라 G70 대가족 수영모 아쿠아슈즈">
+      <div class="thumb jecheon"><span class="num">4</span><span class="emoji">🌲</span><span class="tier high">고급</span></div>
+      <div class="body">
+        <h2 class="name">포레스트 리솜 &amp; 레스트리<small>Forest Resom · Restree Resom · 숲속 온수 스파</small></h2>
+        <p class="loc">충북 제천시 백운면 금봉로 365 · 해브나인 스파 도보 3분</p>
+        <div class="tags">
+          <span class="tag fam">🌲 숲속 인피니티풀·노천 스톤스파</span>
+          <span class="tag fam">🎫 투숙객 스파 30% 할인</span>
+          <span class="tag">🏡 독채 빌라형(포레스트)</span>
+          <span class="tag">🏨 호텔형(레스트리)</span>
+          <span class="tag fam">👨‍👩‍👧‍👦 G70 최대 9인</span>
+        </div>
+        <p class="bathline"><b>온천·스파</b> 숲속 <b>해브나인 스파</b>의 노천 온수풀과 인피니티풀, 스톤스파를 써요. 물을 데워 두기 때문에 <b>겨울에도 야외 스파에 들어갈 수 있어요</b>. 스파 09:00~18:00, 사우나 07:00~20:00이고 투숙객은 <b>30% 할인</b>(36개월~8세 50%)이에요. 수영복·수영모(캡모자 괜찮아요)·아쿠아슈즈는 필수이고, 한 번 들어가면 <b>다시 나왔다 들어갈 수 없어요</b>. 인기 있는 스톤스파는 미리 예약하세요.</p>
+        <p class="hours"><b>🕘 해브나인 스파</b> 09:00~18:00 · <b>사우나</b> 07:00~20:00 · <b>체크인</b> 15:00~22:00 · <b>체크아웃</b> 11:00 · <b>조식</b> 07:30~11:00</p>
+        <p class="desc"><b>포레스트(빌라형)</b>는 숲속에 집들이 흩어져 있어 조용하고, <b>레스트리(타워형)</b>는 본관과 가까운 호텔형이에요. 두 곳 모두 같은 해브나인 스파를 써요. 가장 큰 G70은 7인 기준·최대 9인이라 <b>대가족이 한 채에서</b> 지낼 수 있어요. 산속이라 리조트 안은 걸어 다니거나 전동카트를 이용해야 하고, 식당마다 브레이크타임이 있으니 도착 전에 식사 시간을 확인하세요. 조식 뷔페는 4만8천~5만5천 원대로 비싼 편이에요. 평점은 레스트리 8.8(리뷰 20)·포레스트 9.0(리뷰 4)이고, "조부모님 모시고 좋았다"는 후기가 많아요.</p>
+        <div class="meta"><span class="price">510,000원부터</span><span>8.8~9.0점 · 리뷰 24</span><span>최대 9인</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/jecheon-si-hotel-detail-135477222/forest-resom/" data-trip="https://kr.trip.com/hotels/jecheon-si-hotel-detail-135477222/forest-resom/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iNnHI7n1wq" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="card" data-num="5" data-area="daejeon" data-feat="fam" data-tier="mid2"
+      data-search="호텔 인터시티 Hotel Interciti 대전 유성 온천로 92 유성온천지구 족욕체험장 한방족욕장 4성 2023 리뉴얼 디럭스 패밀리 스위트 온돌 뷔페 더스크래치">
+      <div class="thumb daejeon"><span class="num">5</span><span class="emoji">🏙</span><span class="tier mid2">중간급</span></div>
+      <div class="body">
+        <h2 class="name">호텔 인터시티<small>Hotel Interciti · 2023년 전관 리뉴얼 4성</small></h2>
+        <p class="loc">대전 유성구 온천로 92 · 유성온천역 7번 출구 도보 7~8분</p>
+        <div class="tags">
+          <span class="tag fam">🏨 유성온천지구 4성 호텔</span>
+          <span class="tag fam">🦶 문 앞 무료 족욕장</span>
+          <span class="tag fam">🛏 패밀리·스위트 온돌(4인)</span>
+          <span class="tag">🍽 16층 뷔페 레스토랑</span>
+          <span class="tag">🚗 주차 객실당 1대 무료</span>
+        </div>
+        <p class="bathline"><b>온천</b> 유성온천지구 한가운데 있는 호텔이에요. 다만 <b>호텔 안에 온천탕·사우나는 없어요</b>. 온천은 바로 앞 <b>유성온천 족욕체험장·한방족욕장(도보 1분, 무료)</b>과 근처 온천탕에서 즐기세요. 대신 객실은 2023년에 전관 리뉴얼해서 깨끗하고, 조용히 쉬기 좋아요.</p>
+        <p class="hours"><b>🕘 족욕장</b> 호텔에서 100m 안 · <b>조식</b> 07:00~10:00(성인 39,000원) · <b>체크인</b> 15:00 · <b>체크아웃</b> 11:00</p>
+        <p class="desc">1999년 개관, 2023년 전관 리뉴얼한 198실 호텔이에요. 평점 <b>9.3(청결 9.5)</b>으로 이 페이지에서 가장 높고, "침구가 편하고 조용했다", "조식이 건강식이라 좋았다"는 후기가 많아요. <b>디럭스 패밀리(36㎡, 더블+싱글)</b>와 <b>스위트 패밀리 프라임·스위트 온돌(79㎡, 4인)</b>이 있어 가족이 넓게 쓸 수 있어요. 16층에 뷔페, 1층에 카페가 있고, 주차는 객실당 1대 무료(추가 1대 20,000원)예요. 서울에서 KTX 대전역에서 내려 지하철로 유성온천역까지 오면 걸어서 닿아요.</p>
+        <div class="meta"><span class="price">168,500원부터</span><span>9.3점 · 리뷰 204</span><span>청결 9.5</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/daejeon-hotel-detail-1970792/hotel-interciti/" data-trip="https://kr.trip.com/hotels/daejeon-hotel-detail-1970792/hotel-interciti/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iNnQGoKPxk" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기</a>
+      </div>
+    </article>
+
+  </main>
+
+  <div class="empty" id="empty">
+    <b>조건에 맞는 숙소가 없어요</b>
+    다른 지역이나 시설을 골라보세요.
+  </div>
+
+  <section class="tip">
+    <h2>♨️ 충청도 온천 갈 때 알아두면 좋은 것</h2>
+    <ul>
+      <li><b>‘온천수’인지 ‘온수풀’인지 먼저 보세요.</b> 스플라스 리솜(덕산온천수)·온양제일호텔(온양온천수)·라마다 수안보(수안보온천수)는 땅에서 올라온 온천수를 써요. 포레스트 리솜은 숲속 온수풀·스파이고, 호텔 인터시티는 호텔 안에 온천탕이 없어 문 앞 족욕장을 이용해요.</li>
+      <li><b>차 없이 가시려면 온양제일호텔이나 호텔 인터시티예요.</b> 온양제일호텔은 1호선 온양온천역에서 걸어서 5~8분, 인터시티는 유성온천역 7번 출구에서 7~8분이에요. 두 곳 모두 역에서 짐을 끌고 갈 만해요.</li>
+      <li><b>라마다 수안보는 월요일을 피하세요.</b> 스파사우나가 매주 월요일 쉬고, 노천온천은 공사 중이라 지금은 이용할 수 없어요. 대신 객실마다 안마의자가 있어 부모님이 편히 쉬시기 좋아요.</li>
+      <li><b>수영복·수영모·아쿠아슈즈를 챙기세요.</b> 스플라스 리솜과 포레스트 리솜 스파는 수영모(캡모자 가능)와 아쿠아슈즈가 없으면 들어갈 수 없어요. 수건은 숙소에서 주지만, 3세 이하 아이는 방수기저귀가 필요해요.</li>
+      <li><b>온양제일호텔 사우나는 투숙객 반값이에요.</b> 성인 12,000원이 6,000원이 되고, 1박 동안 여러 번 드나들 수 있다는 후기가 많아요. 일부 후기에는 무료라고 적힌 것도 있어 예약 전에 호텔(041-547-2500)로 확인하시면 확실해요.</li>
+      <li><b>대가족이면 G70 객실을 보세요.</b> 스플라스 리솜과 포레스트 리솜 모두 G70이 7인 기준·최대 9인이라 두 가족이 한 방에서 지낼 수 있어요. 4인 가족이면 라마다 쿼드러플이나 인터시티 스위트 온돌(4인)도 넓어요.</li>
+      <li><b>포레스트 리솜은 산속이라 식사 시간을 미리 보세요.</b> 리조트 안에서 걸어 다니거나 전동카트를 타야 하고, 식당마다 브레이크타임이 있어 도착 시간과 겹치면 끼니를 놓칠 수 있어요.</li>
+      <li><b>가격은 날짜에 따라 크게 달라져요.</b> 여기 적은 금액은 2026년 11월 19일에 확인한 1박 최저 상품가이고, 주말·연말 성수기에는 같은 방이 1.5~2배까지 올라요. 버튼에서 날짜를 넣고 다시 확인하세요.</li>
+    </ul>
+    <div class="facts">
+      <span>📅 2026-11-19 확인</span>
+      <span>🛏 1박 최저 상품가</span>
+      <span>♨️ 5곳 온천·운영시간·휴무 확인</span>
+    </div>
+  </section>
+
+  <footer>
+    <p class="notice"><strong>제휴 마케팅 활동의 일환으로 예약 시 일정액의 수수료를 제공받을 수 있습니다.</strong></p>
+    <p class="notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+    <p>가격은 2026년 11월 19일 쿠팡 트래블에 뜬 상품 중 가장 낮은 1박 가격을 ‘~부터’로 적은 것입니다. 객실 타입·날짜·인원에 따라 실제 요금은 달라지고, 트립닷컴은 같은 숙소를 다른 요금으로 팔 때도 있어요(예: 호텔 인터시티는 트립닷컴에서 12월 1일 평일 1박·성인 2인 143,839원으로 떠 있었어요). 두 버튼의 가격을 함께 비교해 보세요.</p>
+    <p>온천수 종류·운영시간·휴무일·요금·체크인 시간은 2026년 11월 19일 각 숙소의 공식 안내와 트립닷컴 상세 페이지에서 확인한 내용입니다. 평점과 리뷰 수는 트립닷컴 기준이에요. 시설 이용 시간과 요금은 예고 없이 바뀔 수 있으니 예약 전에 숙소 안내를 다시 확인하세요.</p>
+    <p>사진은 각 숙소의 실제 모습이 아니라 지역과 시설을 나타내는 이미지입니다.</p>
+    <p><a href="index.html" style="color:#F0D683">🏨 일본 숙소 10곳 보기</a> · <a href="sapporo.html" style="color:#F0D683">♨️ 삿포로 대욕장 10곳 보기</a> · <a href="korea-onsen.html" style="color:#F0D683">🇰🇷 국내 온천 11곳 보기</a> · <a href="seoul-onsen.html" style="color:#F0D683">♨️ 서울근교 온천 5곳 보기</a> · <a href="gyeongnam-family.html" style="color:#F0D683">👨‍👩‍👧‍👦 부산·경남 가족 숙소 보기</a> · <a href="jeju-onsen.html" style="color:#F0D683">🍊 제주 온천 5곳 보기</a> · <a href="jeolla-onsen.html" style="color:#F0D683">♨️ 전라도 온천 5곳 보기</a> · <a href="essentials.html" style="color:#F0D683">🧳 필수템 8선 보기</a></p>
+  </footer>
+
+</div>
+
+<script>
+/* =========================================================
+   제휴 설정 — 다른 페이지와 동일한 값 (트립닷컴 AID / SID)
+   ========================================================= */
+var AFFILIATE_CONFIG = {
+  trip:  { aid: "11254538", sid: "335287562" }
+};
+
+function withTripAffiliate(url){
+  var aid = AFFILIATE_CONFIG.trip.aid;
+  if(!aid){ return url; }
+  var sep = url.indexOf("?") === -1 ? "?" : "&";
+  var out = url + sep + "Allianceid=" + encodeURIComponent(aid);
+  if(AFFILIATE_CONFIG.trip.sid){
+    out += "&SID=" + encodeURIComponent(AFFILIATE_CONFIG.trip.sid);
+  }
+  return out;
+}
+
+(function applyAffiliate(){
+  var tripLinks = document.querySelectorAll("a[data-trip]");
+  for(var j = 0; j < tripLinks.length; j++){
+    tripLinks[j].href = withTripAffiliate(tripLinks[j].getAttribute("data-trip"));
+  }
+})();
+
+/* =========================================================
+   검색 + 필터 (지역 / 시설)
+   ========================================================= */
+(function(){
+  var q = document.getElementById("q");
+  var clearBtn = document.getElementById("clear");
+  var countEl = document.getElementById("count");
+  var emptyEl = document.getElementById("empty");
+  var cards = Array.prototype.slice.call(document.querySelectorAll("#list .card"));
+
+  var state = { area: "all", feat: "all", text: "" };
+
+  function bindGroup(containerId, key){
+    var group = document.getElementById(containerId);
+    if(!group){ return; }
+    group.addEventListener("click", function(e){
+      var btn = e.target.closest ? e.target.closest(".chip") : null;
+      if(!btn || !group.contains(btn)){ return; }
+      var chips = group.querySelectorAll(".chip");
+      for(var i = 0; i < chips.length; i++){
+        chips[i].setAttribute("aria-pressed", chips[i] === btn ? "true" : "false");
+      }
+      state[key] = btn.getAttribute("data-" + key);
+      apply();
+    });
+  }
+
+  function normalize(s){
+    return (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  function matches(card){
+    if(state.area !== "all" && card.getAttribute("data-area") !== state.area){ return false; }
+    if(state.feat !== "all"){
+      var feat = " " + card.getAttribute("data-feat") + " ";
+      if(feat.indexOf(" " + state.feat + " ") === -1){ return false; }
+    }
+    if(state.text){
+      if(/^[0-9]+$/.test(state.text)){
+        return card.getAttribute("data-num") === state.text;
+      }
+      var hay = normalize(card.getAttribute("data-search") + " " +
+        card.querySelector(".name").textContent + " " +
+        card.querySelector(".loc").textContent);
+      var words = state.text.split(" ").filter(Boolean);
+      for(var w = 0; w < words.length; w++){
+        if(hay.indexOf(words[w]) === -1){ return false; }
+      }
+    }
+    return true;
+  }
+
+  function apply(){
+    var shown = 0;
+    for(var i = 0; i < cards.length; i++){
+      var ok = matches(cards[i]);
+      cards[i].style.display = ok ? "" : "none";
+      if(ok){ shown++; }
+    }
+    countEl.textContent = shown;
+    emptyEl.classList.toggle("show", shown === 0);
+    clearBtn.classList.toggle("show", !!state.text);
+  }
+
+  function onText(){
+    state.text = normalize(q.value);
+    apply();
+  }
+
+  bindGroup("areaChips", "area");
+  bindGroup("featChips", "feat");
+  q.addEventListener("input", onText);
+  q.addEventListener("search", onText);
+  clearBtn.addEventListener("click", function(){ q.value = ""; state.text = ""; apply(); q.focus(); });
+  apply();
+})();
+</script>
+</body>
+</html>
