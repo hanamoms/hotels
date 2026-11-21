@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>후쿠오카·유후인 온천 숙소 5곳 + 티켓 5종 · 부모님 모시고 가기 좋은 료칸</title>
+<meta name="description" content="후쿠오카 시내 천연온천 호텔 2곳과 유후인 온천 료칸 3곳. 노천탕 운영시간, 역 픽업, 조석식, 1박 가격과 함께 유후인 버스투어·공항 버스·JR 큐슈 패스·지하철 1일권·후쿠오카타워 티켓까지 정리했어요.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="후쿠오카·유후인 온천 숙소 5곳 + 티켓 5종">
+<meta property="og:description" content="하카타역 5분 천연온천 호텔부터 유후산이 보이는 료칸까지. 노천탕 시간·역 픽업·조석식·1박 가격과 유후인 가는 티켓을 한 번에.">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A8%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#111111;
+    --card:#1C1C1E;
+    --card2:#242426;
+    --line:#2E2E31;
+    --text:#F2F2F4;
+    --sub:#A1A1A8;
+    --yellow:#F5C518;
+    --trip:#1E88E5;
+    --green:#2E7D32;
+    --amber:#A15C00;
+    --purple:#5E35B1;
+    --onsen:#C2185B;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic","Noto Sans KR",Roboto,sans-serif;
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+    padding-bottom:calc(28px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 14px}
+
+  /* ---------- header ---------- */
+  header.top{padding:18px 0 10px}
+  .brand{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--sub);letter-spacing:.08em;text-transform:uppercase}
+  .brand b{color:var(--yellow);letter-spacing:0}
+  h1{font-size:24px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.02em}
+  h1 span{color:var(--yellow)}
+  .lead{margin:0;color:var(--sub);font-size:13.5px}
+
+  /* ---------- page switch tabs ---------- */
+  .tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:14px 0 4px}
+  .tab{
+    flex:0 0 calc((100% - 16px)/3);
+    display:flex;align-items:center;justify-content:center;gap:4px;
+    text-decoration:none;padding:11px 4px;border-radius:13px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#C9C9D0;font-size:12.5px;font-weight:600;text-align:center;line-height:1.25;
+    word-break:keep-all;
+  }
+  .tab.on{background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:800}
+  .tab:active{transform:scale(.99)}
+
+  /* ---------- sticky search + filters ---------- */
+  .searchbar{
+    position:sticky;top:0;z-index:20;
+    background:#111111;
+    padding:8px 14px 10px;
+    margin:0 -14px;
+    box-shadow:0 8px 14px -10px rgba(0,0,0,.9);
+  }
+  .filters{padding:2px 0 4px}
+  .search{position:relative}
+  .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.55}
+  #q{
+    width:100%;padding:15px 44px 15px 42px;
+    background:#1A1A1C;border:1px solid var(--line);border-radius:16px;
+    color:var(--text);font-size:15px;font-family:inherit;
+    outline:none;appearance:none;
+  }
+  #q::placeholder{color:#7C7C84}
+  #q:focus{border-color:#4A4A50;background:#1F1F22}
+  #clear{
+    position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    width:30px;height:30px;border:0;border-radius:50%;
+    background:#333338;color:#CFCFD6;font-size:16px;line-height:1;
+    display:none;cursor:pointer;
+  }
+  #clear.show{display:block}
+
+  .chips{
+    display:flex;gap:8px;overflow-x:auto;padding:10px 0 0;
+    scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;
+    padding:9px 15px;border-radius:999px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#D6D6DC;font-size:13.5px;font-family:inherit;white-space:nowrap;
+    cursor:pointer;transition:background .15s,border-color .15s,color .15s;
+  }
+  .chip[aria-pressed="true"]{
+    background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:700;
+  }
+  .chip:active{transform:scale(.98)}
+
+  .status{
+    display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+    padding:12px 0 2px;color:var(--sub);font-size:12.5px;
+  }
+  .status b{color:var(--text);font-weight:600}
+  .status .basis{text-align:right}
+
+  /* ---------- cards ---------- */
+  .list{display:grid;gap:12px;padding-top:8px}
+  .card{
+    display:grid;grid-template-columns:104px 1fr;gap:12px;
+    background:var(--card);border:1px solid #26262A;
+    border-radius:18px;padding:12px;
+  }
+  .thumb{
+    position:relative;border-radius:13px;overflow:hidden;
+    background:linear-gradient(160deg,#2A2A30,#17171A);
+    min-height:104px;display:flex;align-items:center;justify-content:center;
+  }
+  .thumb .emoji{font-size:34px;opacity:.92;filter:saturate(1.05)}
+  .thumb.mebaeso{background:linear-gradient(160deg,#332430,#191018)}
+  .thumb.sansui{background:linear-gradient(160deg,#23303A,#0F171C)}
+  .thumb.shuhokan{background:linear-gradient(160deg,#2E2A22,#17140E)}
+  .thumb.yaoji{background:linear-gradient(160deg,#1F2C33,#0E161A)}
+  .thumb.croom{background:linear-gradient(160deg,#262436,#12111C)}
+  .num{
+    position:absolute;top:6px;left:6px;
+    min-width:26px;height:26px;padding:0 6px;border-radius:8px;
+    background:var(--yellow);color:#141414;
+    font-weight:800;font-size:14px;line-height:26px;text-align:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.35);
+  }
+  .tier{
+    position:absolute;bottom:6px;left:6px;
+    padding:3px 8px;border-radius:7px;
+    font-size:10.5px;font-weight:700;color:#fff;letter-spacing:.01em;
+  }
+  .tier.low{background:var(--green)}
+  .tier.mid2{background:var(--amber)}
+  .tier.high{background:var(--purple)}
+
+  .body{min-width:0}
+  .name{margin:0;font-size:16px;line-height:1.32;letter-spacing:-.01em}
+  .name small{display:block;font-size:11.5px;color:var(--sub);font-weight:400;margin-top:2px}
+  .loc{margin:4px 0 0;font-size:12.5px;color:var(--yellow);font-weight:600}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 0}
+  .tag{
+    font-size:11px;color:#C9C9D0;background:#26262A;border:1px solid #303036;
+    padding:3px 7px;border-radius:7px;white-space:nowrap;
+  }
+  .tag.onsen{background:#3A1220;border-color:#5C1B33;color:#FFC9DC}
+  .tag.fam{background:#0F2E28;border-color:#1E5045;color:#9FE8D6}
+  .desc{margin:8px 0 0;font-size:12.5px;color:#B9B9C2;line-height:1.55}
+  .bathline{
+    margin:8px 0 0;font-size:12px;color:#D9D9E0;background:#191A1D;
+    border:1px solid #2A2B30;border-left:3px solid var(--onsen);
+    border-radius:9px;padding:7px 9px;line-height:1.5;
+  }
+  .bathline b{color:#FFC9DC;font-weight:700}
+  .hours{
+    margin:8px 0 0;font-size:12px;color:#DCDCE2;background:#16181A;
+    border:1px solid #282B2E;border-left:3px solid var(--yellow);
+    border-radius:9px;padding:7px 9px;line-height:1.5;
+  }
+  .hours b{color:var(--yellow);font-weight:700}
+  .hours .off{color:#FF9E9E;font-weight:700}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px;font-size:11.5px;color:#8F8F97}
+  .meta .price{color:var(--yellow);font-weight:800;font-size:13px}
+  .actions{display:grid;gap:8px;margin-top:12px;grid-column:1 / -1}
+  .btn{
+    display:block;text-align:center;text-decoration:none;
+    padding:12px 6px;border-radius:12px;
+    font-size:13.5px;font-weight:700;color:#fff;
+    border:0;cursor:pointer;
+  }
+  .btn.trip{background:var(--trip)}
+  .btn.coupang{background:var(--yellow);color:#141414}
+  .btn:active{filter:brightness(.92)}
+
+  /* ---------- tickets ---------- */
+  .tickethead{margin:30px 0 4px;padding-top:18px;border-top:1px solid #232326}
+  .tickethead h2{margin:0;font-size:19px;letter-spacing:-.01em}
+  .tickethead h2 span{color:var(--yellow)}
+  .tickethead p{margin:6px 0 0;font-size:12.5px;color:var(--sub);line-height:1.6}
+  .tickets{display:grid;gap:12px;margin-top:12px}
+  .tcard{
+    background:var(--card);border:1px solid #26262A;border-radius:16px;padding:13px 14px;
+  }
+  .tcard .thead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+  .tcard h3{margin:0;font-size:15px;line-height:1.35;letter-spacing:-.01em}
+  .tcard h3 .ticon{margin-right:5px}
+  .tcard .tprice{
+    flex:0 0 auto;color:var(--yellow);font-weight:800;font-size:14px;
+    white-space:nowrap;line-height:1.35;text-align:right;
+  }
+  .tcard .tprice small{display:block;color:#8F8F97;font-weight:500;font-size:10.5px}
+  .tcard .twhy{margin:7px 0 0;font-size:12.5px;color:#C4C4CC;line-height:1.6}
+  .tcard .tline{
+    margin:8px 0 0;font-size:11.5px;color:#D9D9E0;background:#191A1D;
+    border:1px solid #2A2B30;border-left:3px solid #3A3A40;border-radius:9px;
+    padding:7px 9px;line-height:1.55;
+  }
+  .tcard .tline b{color:var(--yellow);font-weight:700}
+  .tcard .tactions{display:grid;gap:8px;margin-top:11px}
+  .tcard .tactions .btn{padding:11px 6px;font-size:13px}
+
+  .empty{
+    display:none;text-align:center;padding:44px 16px;color:var(--sub);
+    border:1px dashed #303036;border-radius:18px;background:#171719;
+  }
+  .empty b{display:block;color:var(--text);font-size:15px;margin-bottom:6px}
+  .empty.show{display:block}
+
+  /* ---------- tip + footer ---------- */
+  .tip{
+    margin-top:18px;padding:14px 15px;border-radius:16px;
+    background:#181A1B;border:1px solid #2A2E30;
+  }
+  .tip h2{margin:0 0 6px;font-size:14px}
+  .tip p{margin:0 0 8px;font-size:12.5px;color:#AEAEB6;line-height:1.6}
+  .tip ul{margin:0;padding-left:18px}
+  .tip li{font-size:12.5px;color:#AEAEB6;line-height:1.65;margin-bottom:6px}
+  .tip li b{color:#E6E6EA}
+  .tip .facts{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+  .tip .facts span{font-size:11px;color:#C9C9D0;background:#232326;padding:3px 7px;border-radius:7px}
+  .tip a{color:#F0D683}
+
+  footer{margin-top:22px;padding-top:16px;border-top:1px solid #232326;color:#8F8F97;font-size:11.5px;line-height:1.7}
+  footer p{margin:0 0 8px}
+  footer .notice{color:#C9C9D0}
+  footer strong{color:#E6E6EA}
+
+  @media (min-width:480px){
+    .tab{font-size:11.5px;padding:11px 2px}
+  }
+  @media (min-width:620px){
+    .tabs{display:flex;gap:8px}
+    .tab{flex:0 0 calc((100% - 32px)/5);font-size:11px;padding:11px 4px;gap:4px}
+    h1{font-size:28px}
+    .list{grid-template-columns:1fr 1fr}
+    .card{grid-template-columns:96px 1fr}
+    .card .desc{font-size:12px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand"><b>PICK</b> FUKUOKA · YUFUIN ONSEN</div>
+    <h1>후쿠오카·유후인 <span>온천 있는 숙소</span> 5곳</h1>
+    <p class="lead">하카타역에서 걸어갈 수 있는 천연온천 호텔 2곳 + 유후산이 보이는 료칸 3곳 · 2026년 11월 21일 확인</p>
+  </header>
+
+  <nav class="tabs" aria-label="페이지 이동">
+    <a class="tab" href="index.html">🏨 일본 숙소</a>
+    <a class="tab" href="sapporo.html">♨️ 삿포로 대욕장</a>
+    <a class="tab" href="korea-onsen.html">🇰🇷 국내 온천</a>
+    <a class="tab" href="seoul-onsen.html">♨️ 서울근교 온천</a>
+    <a class="tab" href="gyeongnam-family.html">👨‍👩‍👧‍👦 부산·경남 가족</a>
+    <a class="tab" href="jeju-onsen.html">🍊 제주 온천</a>
+    <a class="tab" href="jeolla-onsen.html">♨️ 전라도 온천</a>
+    <a class="tab" href="chungcheong-onsen.html">♨️ 충청도 온천</a>
+    <a class="tab" href="gangwon-onsen.html">🏔️ 강원도 온천</a>
+    <a class="tab" href="gyeongbuk-onsen.html">♨️ 경북 온천</a>
+    <a class="tab on" href="fukuoka-yufuin.html" aria-current="page">♨️ 후쿠오카·유후인</a>
+    <a class="tab" href="cruise.html">🚢 크루즈</a>
+    <a class="tab" href="essentials.html">🧳 필수템 8선</a>
+  </nav>
+
+  <div class="searchbar">
+    <div class="search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#BFBFC6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="text" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="번호 또는 지역·숙소명 (예: 유후인, 하카타)" aria-label="숙소 검색">
+      <button id="clear" type="button" aria-label="검색어 지우기">✕</button>
+    </div>
+  </div>
+
+  <div class="filters">
+
+    <div class="chips" id="areaChips" role="group" aria-label="지역 필터">
+      <button class="chip" data-area="all" aria-pressed="true">전체 지역</button>
+      <button class="chip" data-area="yufuin" aria-pressed="false">♨️ 유후인 온천</button>
+      <button class="chip" data-area="hakata" aria-pressed="false">🏙 하카타 시내</button>
+    </div>
+
+    <div class="chips" id="featChips" role="group" aria-label="시설 필터">
+      <button class="chip" data-feat="all" aria-pressed="true">♨️ 전체</button>
+      <button class="chip" data-feat="open" aria-pressed="false">노천탕</button>
+      <button class="chip" data-feat="pickup" aria-pressed="false">역 픽업·역에서 걸어서</button>
+      <button class="chip" data-feat="meal" aria-pressed="false">조식·석식 포함</button>
+    </div>
+  </div>
+
+  <div class="status" aria-live="polite">
+    <span><b id="count">5</b>곳</span>
+    <span class="basis">12월 1일 1박·성인 2인 최저가 · 2026-11-21 조회</span>
+  </div>
+
+  <main class="list" id="list">
+
+    <!-- 1 -->
+    <article class="card" data-num="1" data-area="yufuin" data-feat="onsen open pickup meal" data-tier="mid2"
+      data-search="유후인 온센 료칸 메바에소 Mebaeso めばえ荘 유후시 유후인초 가와미나미 249-1 오이타 유후인역 1.3킬로 무료 역 픽업 샌딩 가이세키 조석식 대관 노천 가족탕 2곳 단순천 내탕 24시간 18실 유후다케 유후산 뷰">
+      <div class="thumb mebaeso"><span class="num">1</span><span class="emoji">♨️</span><span class="tier mid2">중간급</span></div>
+      <div class="body">
+        <h2 class="name">유후인 온센 료칸 메바에소<small>Yufuin Onsen Ryokan Mebaeso · 역까지 무료 픽업</small></h2>
+        <p class="loc">오이타 유후시 유후인초 가와미나미 249-1 · 유후인역 1.3km</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 유후인 온천(단순천)</span>
+          <span class="tag fam">🚐 역 픽업·샌딩 무료</span>
+          <span class="tag fam">🛁 대관 노천 2곳</span>
+          <span class="tag fam">🍱 가이세키 조식·석식</span>
+          <span class="tag fam">🌿 정원 있는 18실 작은 료칸</span>
+        </div>
+        <p class="bathline"><b>온천</b> 남녀별 <b>내탕·노천탕</b>과 <b>대관(가족) 노천탕 2곳</b>이 있어요. 대관 노천탕은 <b>예약 없이 비어 있을 때</b> 들어가면 되고, 가족끼리 따로 몸을 담글 수 있어서 부모님 모시고 가면 편해요. 물은 유후인 온천의 <b>단순천</b>이라 자극이 적어요. 다만 대관탕에는 샴푸·드라이어·수건이 없어서 방에서 가져가야 해요.</p>
+        <p class="hours"><b>🕘 내탕</b> 24시간 · <b>노천·대관탕</b> 15:00~24:00 / 06:00~10:00 · <b>체크인</b> 15:00~18:00 · <b>체크아웃</b> 10:00 · ☎ +81-977-853878</p>
+        <p class="desc">리뷰 9.4점에 <b>서비스 9.7·청결 9.8</b>로 이 페이지에서 가장 점수가 높아요. "결혼기념일 여행인데 <b>엄마 모시고 또 오고 싶다</b>"는 후기가 있을 만큼 응대가 다정하고, 가이세키도 정갈하고 양이 넉넉하다는 이야기가 많아요. 유후인역에서 1.3km라 걸으면 조금 멀지만 <b>역까지 무료로 데리러 오고 바래다줘요</b>(도착 시간을 미리 알려주세요). 18실뿐이라 조용해요. 다만 <b>주변에 편의점이 멀고</b>, 공용온천 청결에 아쉬움이 있었다는 후기도 몇 있어요. 프런트는 08:00~18:00만 열어요.</p>
+        <div class="meta"><span class="price">450,352원부터</span><span>9.4점 · 리뷰 64</span><span>18실</span><span>주차 무료</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/yufu-hotel-detail-1652251/yufuin-onsen-ryokan-mebaeso/" data-trip="https://kr.trip.com/hotels/yufu-hotel-detail-1652251/yufuin-onsen-ryokan-mebaeso/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iQB0mNphGS" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 (498,644원)</a>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="card" data-num="2" data-area="yufuin" data-feat="onsen open station meal" data-tier="mid2"
+      data-search="유후인 산스이칸 Yufuin Sansuikan ゆふいん山水館 유후시 유후인초 가와미나미 108-1 유후인역 450미터 도보 5분 10분 유후노유 아사기리노유 노천탕 사우나 뷔페 조식 석식 와규 무제한 알칼리성 단순온천 로비 음료 아이스크림">
+      <div class="thumb sansui"><span class="num">2</span><span class="emoji">⛰</span><span class="tier mid2">중간급</span></div>
+      <div class="body">
+        <h2 class="name">유후인 산스이칸<small>Yufuin Sansuikan · 유후산 정면 노천탕</small></h2>
+        <p class="loc">오이타 유후시 유후인초 가와미나미 108-1 · 유후인역 450m(걸어서 5~10분)</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 알칼리성 단순온천</span>
+          <span class="tag fam">🌫 노천탕 2곳·사우나</span>
+          <span class="tag fam">🚶 역에서 걸어서 5~10분</span>
+          <span class="tag fam">🍽 조식·석식 뷔페</span>
+          <span class="tag fam">🥤 로비 무료 음료·아이스크림</span>
+        </div>
+        <p class="bathline"><b>온천</b> 1층 <b>유후노유</b>와 2층 <b>아사기리노유</b>, 두 곳 모두 내탕과 노천탕이 있고 <b>밤과 아침에 남녀가 바뀌어요</b>. 1층에는 사우나·냉수탕·제트배스도 있어요. 유후산을 정면으로 보는 노천탕이라 <b>아침 일찍 들어가면 산이 제일 예쁘게 보여요</b>. 물은 알칼리성 단순온천으로 피부에 부드러워요.</p>
+        <p class="hours"><b>🕘 온천</b> 15:00~25:00 / 05:00~09:30 (1층은 밤에 남탕·아침에 여탕) · <b>체크인</b> 15:00~19:30 · <b>체크아웃</b> 10:00</p>
+        <p class="desc">유후인역에서 <b>걸어서 5~10분</b>이라 짐을 끌고도 갈 만하고, 이온몰도 600m 거리예요. 객실 34실 규모의 큰 료칸이라 엘리베이터·시설이 편하고, 조식·석식 <b>뷔페에 와규 요리가 나와서</b> "먹는 재미가 있다"는 평이 많아요. 로비에서 <b>음료·아이스크림·츄하이를 무료</b>로 주는 것도 어르신들이 좋아하는 부분이에요. 다만 오래된 료칸이라 <b>시설이 조금 낡았다</b>는 후기가 있고, 뷔페 품질은 기대만큼은 아니었다는 의견도 있어요. 체크인이 19:30까지라 늦게 도착해도 괜찮아요.</p>
+        <div class="meta"><span class="price">435,976원부터</span><span>8.8점 · 리뷰 469</span><span>조식·석식 포함</span><span>주차 무료</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/yufu-hotel-detail-1678725/yufuin-sansuikan/" data-trip="https://kr.trip.com/hotels/yufu-hotel-detail-1678725/yufuin-sansuikan/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="card" data-num="3" data-area="yufuin" data-feat="onsen open station" data-tier="low"
+      data-search="유후인 호텔 슈호칸 Yufuin Hotel Shuhokan ゆふいんホテル秀峰館 유후시 유후인초 가와카미 2415-2 유후인역 830미터 도보 12분 택시 3분 전망 대욕장 4층 노천 사우나 족욕 단순천 46실 룸온리 다다미 12다다미 이불침구">
+      <div class="thumb shuhokan"><span class="num">3</span><span class="emoji">🌄</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">유후인 호텔 슈호칸<small>Yufuin Hotel Shuhokan · 4층 전망 대욕장</small></h2>
+        <p class="loc">오이타 유후시 유후인초 가와카미 2415-2 · 유후인역 830m(걸어서 12분)</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 단순천 온천</span>
+          <span class="tag fam">🌫 4층 전망 대욕장·노천탕</span>
+          <span class="tag fam">🧖 사우나·족욕</span>
+          <span class="tag fam">🛏 다다미 12조·이불 침구</span>
+          <span class="tag fam">💰 유후인에서 가장 낮은 1박</span>
+        </div>
+        <p class="bathline"><b>온천</b> 4층 <b>전망 대욕장</b>에서 유후산이 정면으로 보여요. 안에 내탕·노천탕·사우나·냉수탕이 다 있고, 여성 노천탕은 <b>나노버블</b>이 나와 물이 미끈해요. 1층에 <b>족욕</b>도 있어서 산책하고 돌아와 발만 담가도 좋아요.</p>
+        <p class="hours"><b>🕘 온천</b> 15:00~24:00 / 05:00~09:30 · <b>사우나</b> 15:00~23:00 · <b>조식</b> 07:00~08:30, 1인 23,259원(사전 예약) · <b>체크인</b> 15:00~21:00 · <b>체크아웃</b> 10:00</p>
+        <p class="desc">이 페이지에서 <b>1박이 가장 저렴한 곳</b>이에요. 방은 다다미 12조에 <b>이불을 펴고 자는 방식</b>이라 무릎이 불편하시면 침대방을 고르세요(방 타입을 예약할 때 확인). 2022년에 리모델링해서 깨끗하고, <b>엘리베이터와 휠체어 동선</b>이 되어 있어 어르신도 편해요. 유후인역에서 걸어서 12분이라 조금 있지만 택시로 3분(600엔 정도)이에요. <b>룸온리 가격</b>이라 조식은 따로 신청해야 하고, <b>미리 예약하지 않으면 당일에는 못 먹어요</b>. 1층에 라멘집이 있어요(11:00~21:00).</p>
+        <div class="meta"><span class="price">217,511원부터</span><span>8.8점 · 리뷰 364</span><span>46실</span><span>주차 50대 무료</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/yufu-hotel-detail-703537/yufuin-hotel-shuhokan/" data-trip="https://kr.trip.com/hotels/yufu-hotel-detail-703537/yufuin-hotel-shuhokan/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iQBXcwSFPw" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 (288,151원)</a>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="card" data-num="4" data-area="hakata" data-feat="onsen station" data-tier="low"
+      data-search="야오지 하카타 호텔 Yaoji Hakata Hotel 八百治博多ホテル 博多天然温泉 八百治の湯 하카타구 하카타에키마에 4-9-2 하카타역 도보 5분 천연온천 사우나 무료 입욕복 조식 뷔페 1800엔 207실">
+      <div class="thumb yaoji"><span class="num">4</span><span class="emoji">🏙</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">야오지 하카타 호텔<small>Yaoji Hakata Hotel · 하카타驿 1층 천연온천</small></h2>
+        <p class="loc">후쿠오카 하카타구 하카타에키마에 4-9-2 · 하카타역(하카타구치) 걸어서 5분</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 博多천연온천 八百治の湯</span>
+          <span class="tag fam">🚶 하카타역 걸어서 5분</span>
+          <span class="tag fam">🧖 사우나 무료</span>
+          <span class="tag fam">👘 입욕복 입고 들어갈 수 있음</span>
+          <span class="tag fam">🍳 조식 뷔페 06:30부터</span>
+        </div>
+        <p class="bathline"><b>온천</b> 호텔 1층에 <b>천연온천 八百治의湯</b>이 있어요. 칼슘·나트륨-염화물천(저온천)으로 <b>몸이 오래 따뜻하게 유지되는 물</b>이라 겨울 여행에 좋아요. 남녀 각각 온천탕 2개와 냉수탕, 사우나가 있어요. <b>숙박객은 무료</b>이고, <b>입욕복(수영복 아님)을 입고 들어갈 수 있어서</b> 피부가 예민하거나 문신이 있어도 부담이 없어요(프런트에 말하면 돼요).</p>
+        <p class="hours"><b>🕘 온천</b> 06:30~09:30 / 12:00~24:00 · <span class="off">09:30~12:00은 청소 시간이라 이용 불가</span> · <b>조식</b> 06:30~09:30, 1인 15,224원 · <b>체크인</b> 15:00 · <b>체크아웃</b> 11:00 · ☎ 092-483-5111</p>
+        <p class="desc">비행기에서 내려 <b>하카타역에서 걸어서 5분</b>이라 첫날 묵기 가장 좋아요. 207실 큰 호텔에 2019년에 리모델링해서 깨끗하고, 리뷰 1,288개에 8.7점이에요. 조식 뷔페가 06:30부터라 <b>아침 일찍 유후인으로 떠나는 날</b>에도 먹고 나갈 수 있어요. 다만 <b>온천이 쉬는 시간(09:30~12:00)</b>이 있으니 체크아웃 전에 들어가려면 시간을 맞추세요. 주차는 1일 1,500엔이고 <b>미리 예약은 안 돼요</b>. 2026년 12월 30일은 정전 점검으로 온천이 낮에 쉬어요.</p>
+        <div class="meta"><span class="price">194,489원부터</span><span>8.7점 · 리뷰 1,288</span><span>207실</span><span>하카타역 5분</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/fukuoka-hotel-detail-705508/yaoji-hakata-hotel/" data-trip="https://kr.trip.com/hotels/fukuoka-hotel-detail-705508/yaoji-hakata-hotel/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iQB2NRWFrw" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 (123,597원)</a>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="card" data-num="5" data-area="hakata" data-feat="onsen open station" data-tier="high"
+      data-search="니시테츠 호텔 크룸 하카타 Nishitetsu Hotel Croom Hakata 天然温泉 博多駅前の湯 하카타구 하카타에키마에 1-17-6 하카타역 하카타구치 도보 4분 버스터미널 1분 반노천 사우나 70도 503실 조식 뷔페 2000엔 로손">
+      <div class="thumb croom"><span class="num">5</span><span class="emoji">🚉</span><span class="tier high">높은 편</span></div>
+      <div class="body">
+        <h2 class="name">니시테츠 호텔 크룸 하카타<small>Nishitetsu Hotel Croom Hakata · 버스터미널 바로 앞</small></h2>
+        <p class="loc">후쿠오카 하카타구 하카타에키마에 1-17-6 · 하카타역 걸어서 4분, 버스터미널 1분</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 天然온천 博多역앞의湯</span>
+          <span class="tag fam">🌫 반노천탕</span>
+          <span class="tag fam">🧖 원적외선 사우나 70℃</span>
+          <span class="tag fam">🚌 유후인 가는 버스터미널 1분</span>
+          <span class="tag fam">🏪 1층 편의점</span>
+        </div>
+        <p class="bathline"><b>온천</b> 博多역앞 1초메 광천을 쓰는 <b>천연온천</b>이에요. 남녀 모두 <b>내탕 + 반노천탕</b>이 있고, 70℃ 원적외선 사우나와 냉수탕, 바깥에서 쉬는 자리까지 있어요. <b>숙박객만</b> 쓸 수 있고 밤 1시까지 열어서 저녁 식사 후 늦게 들어가도 괜찮아요.</p>
+        <p class="hours"><b>🕘 온천</b> 15:00~25:00 / 06:00~09:30 (숙박객 전용) · <b>조식</b> 06:30~09:30 뷔페 1인 16,914원 / 06:30~11:00 모닝세트 1인 10,148원 · <b>체크인</b> 15:00 · <b>체크아웃</b> 11:00</p>
+        <p class="desc">여기 가장 큰 장점은 <b>유후인 가는 고속버스가 서는 하카타 버스터미널이 걸어서 1분</b>이라는 점이에요. 다음 날 아침 버스로 유후인에 갈 계획이면 짐 들고 이동할 일이 거의 없어요. 503실이라 방이 많고 <b>셀프 체크인 기계</b>도 있어요. 1층에 편의점과 커피집이 있고, 조식은 뷔페와 가벼운 세트 중에 고를 수 있어요. 다만 <b>방이 좁고 기차역이 가까워 기차 소리</b>가 들린다는 후기가 있고, 12월 1일 기준으로는 <b>남은 객실이 적어 가격이 41만 원대로 높게</b> 떠 있어요. 날짜를 바꾸면 훨씬 싸질 수 있으니 아래 버튼에서 다른 날짜도 확인해 보세요.</p>
+        <div class="meta"><span class="price">416,155원부터</span><span>8.9점 · 리뷰 1,258</span><span>503실</span><span>주차 1일 2,000엔</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/fukuoka-hotel-detail-705327/nishitetsu-hotel-croom-hakata/" data-trip="https://kr.trip.com/hotels/fukuoka-hotel-detail-705327/nishitetsu-hotel-croom-hakata/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인</a>
+      </div>
+    </article>
+
+  </main>
+
+  <div class="empty" id="empty">
+    <b>조건에 맞는 숙소가 없어요</b>
+    다른 지역이나 시설을 골라보세요.
+  </div>
+
+  <section class="tickethead">
+    <h2>🎫 같이 예약하면 편한 <span>티켓 5가지</span></h2>
+    <p>숙소만 예약하고 공항에서 막히는 경우가 많아요. 유후인까지 어떻게 갈지, 시내에서 뭘 탈지를 미리 정해두면 훨씬 편해요. 아래 가격은 2026년 11월 21일에 확인한 값이에요.</p>
+  </section>
+
+  <section class="tickets">
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🚌</span>유후인·벳푸·다자이후 하루 투어 (한국어 가이드)</h3>
+        <div class="tprice">1인 59,050원<small>9시간 · 1일 전까지 무료 취소</small></div>
+      </div>
+      <p class="twhy">버스를 직접 알아보지 않아도 되는 게 가장 큰 장점이에요. 하카타에서 출발해 <b>유후인 온천에서 3시간 자유시간</b>, 다자이후 텐만구 1시간을 돌고 저녁에 후쿠오카로 돌아와요. 한국어 가이드라 이동할 때 설명을 들을 수 있고, 1명만 신청해도 출발한다고 안내돼 있어요.</p>
+      <p class="tline"><b>집결</b> 07:40 후쿠오카 HEARTS 버스스테이션(07:50 출발) 또는 08:00 텐진 중앙우체국(08:10 출발) · <b>도착</b> 17:45 · <b>별도</b> 가마도 지옥·벳푸 지옥 입장권, 식사</p>
+      <div class="tactions">
+        <a class="btn trip" href="https://kr.trip.com/things-to-do/detail/94584046/" data-trip="https://kr.trip.com/things-to-do/detail/94584046/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 보기 (4.9점 · 1,893명 예약)</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iQB8xOoMtE" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 유후인·벳푸 투어 보기 (43,800원)</a>
+      </div>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">✈️</span>후쿠오카 공항 ⇄ 유후인 전자버스</h3>
+        <div class="tprice">50,201원부터<small>QR로 바로 탑승</small></div>
+      </div>
+      <p class="twhy">공항에 내려 <b>하카타역까지 나가지 않고 바로 유후인으로</b> 갈 수 있는 버스예요. 표를 미리 사두면 QR코드만 보여주고 타면 되고, 티켓 교환 창구에 들를 필요가 없어요. 유후인 료칸에 묵는 일정이면 이게 제일 편해요.</p>
+      <p class="tline"><b>노선</b> 후쿠오카 공항·하카타 ⇄ 유후인 / 구로카와 온천 / 벳푸 · <b>주의</b> 좌석 지정은 안 되고 시간대만 고를 수 있어요 · 사용 하루 전 10:00까지 50% 환불</p>
+      <div class="tactions">
+        <a class="btn trip" href="https://kr.trip.com/things-to-do/detail/89037976/" data-trip="https://kr.trip.com/things-to-do/detail/89037976/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 보기</a>
+      </div>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🚄</span>JR 큐슈 레일 패스 (북부 규슈 3·5일권 등)</h3>
+        <div class="tprice">101,229원부터<small>어른 기준 · 여권 필요</small></div>
+      </div>
+      <p class="twhy">기차로 다니고 싶다면 이게 가장 경제적이에요. <b>북부 규슈권이면 하카타→유후인→벳푸→구마모토</b>를 한 장으로 다닐 수 있고, 지정석도 무료로 예약돼요(북부 규슈 최대 6회). 유후인노모리 열차도 좌석만 잡으면 이 패스로 탈 수 있어요.</p>
+      <p class="tline"><b>준비</b> 한국에서 산 교환권을 하카타역 창구에서 <b>실물 티켓으로 바꿔야</b> 해요(줄이 길어요) · <b>기간</b> 교환한 날부터 연속 3·5·7일 · 여권을 꼭 챙기세요</p>
+      <div class="tactions">
+        <a class="btn trip" href="https://kr.trip.com/things-to-do/detail/103419553/" data-trip="https://kr.trip.com/things-to-do/detail/103419553/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 보기 (4.9점 · 1.7만 명 예약)</a>
+      </div>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🚇</span>후쿠오카 지하철 1일권</h3>
+        <div class="tprice">6,100원<small>하루 무제한</small></div>
+      </div>
+      <p class="twhy">텐진·하카타·공항을 지하철로 오갈 일이 두 번만 넘어도 이득이에요. 쿠폰이 붙어 있어서 <b>후쿠오카타워·관광지 할인</b>도 받을 수 있어요. 비 오는 날이나 짐이 있을 때 특히 편해요.</p>
+      <p class="tline"><b>쓰는 곳</b> 공항역~하카타~텐진~베이사이드 · <b>주의</b> JR선(유후인 방면)에는 쓸 수 없어요</p>
+      <div class="tactions">
+        <a class="btn trip" href="https://kr.trip.com/things-to-do/detail/53919882/" data-trip="https://kr.trip.com/things-to-do/detail/53919882/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 보기 (4.8점 · 5,238명 예약)</a>
+      </div>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🌆</span>후쿠오카타워 입장권</h3>
+        <div class="tprice">7,500원부터<small>전망대 입장</small></div>
+      </div>
+      <p class="twhy">바닷가에 서 있는 234m 전망타워예요. <b>해질 무렵에 올라가면 바다와 도시가 같이 붉게 물드는</b> 게 제일 예뻐요. 1층에는 실내 놀이터 같은 공간도 있어서 손주와 함께 가도 좋아요. 유후인 다녀온 날 저녁 코스로 넣기 좋아요.</p>
+      <p class="tline"><b>가는 법</b> 지하철 베이사이드타워역에서 걸어서 8분(버스도 있어요) · <b>팁</b> 지하철 1일권 쿠폰과 같이 쓰면 더 싸게 들어갈 수 있어요</p>
+      <div class="tactions">
+        <a class="btn trip" href="https://kr.trip.com/travel-guide/attraction/fukuoka/fukuoka-tower-92677" data-trip="https://kr.trip.com/travel-guide/attraction/fukuoka/fukuoka-tower-92677" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 보기 (4.7점 · 3만 명 예약)</a>
+      </div>
+    </article>
+
+  </section>
+
+  <section class="tip">
+    <h2>♨️ 후쿠오카·유후인 갈 때 알아두면 좋은 것</h2>
+    <ul>
+      <li><b>유후인은 버스가 1시간 40분, 기차가 2시간 10분쯤 걸려요.</b> 공항에서 바로 유후인으로 가는 버스가 있고, 하카타역에서는 <b>고속버스(버스터미널 1분)</b>나 <b>유후인노모리·특급 유후</b>를 타요. 기차는 창밖이 예쁘지만 좌석이 빨리 차서 <b>한 달 전에 예약</b>하는 게 좋아요.</li>
+      <li><b>유후인 료칸은 대부분 저녁 6시까지 체크인해요.</b> 메바에소는 18:00, 산스이칸은 19:30, 슈호칸은 21:00까지예요. 늦어지면 꼭 미리 전화하세요. 저녁 식사 시간도 정해져 있어서 <b>도착 시간을 알려주는 게 안전</b>해요.</li>
+      <li><b>유후인역에서 숙소까지는 대부분 걸어서 갈 수 없어요.</b> 메바에소는 무료 픽업이 되고, 슈호칸은 택시로 3분(600엔쯤)이에요. 산스이칸만 걸어서 5~10분이에요. 짐이 크면 <b>택시를 미리 불러두세요</b>.</li>
+      <li><b>온천은 밤·아침에 남녀가 바뀌는 곳이 많아요.</b> 산스이칸은 1층·2층이 시간에 따라 남탕·여탕이 바뀌고, 슈호칸·크룸 하카타도 아침에 한 번 더 들어갈 수 있어요. 어르신과 함께면 <b>들어가기 전에 프런트에 어느 쪽인지 확인</b>해 드리세요.</li>
+      <li><b>료칸은 룸온리인지 꼭 확인하세요.</b> 슈호칸은 룸온리(조식 1인 23,259원 별도, 사전 예약 필수)이고, 메바에소·산스이칸은 조식·석식이 포함된 가격이에요. 같은 방이라도 식사가 빠지면 8~10만 원쯤 싸져요.</li>
+      <li><b>유후인 거리는 17시쯤 문을 닫아요.</b> 유노츠보 거리 가게들이 일찍 닫아서, 쇼핑은 도착한 날 오후에 하세요. 대신 료칸 조식·석식이 넉넉해서 저녁은 숙소에서 먹는 게 편해요.</li>
+      <li><b>12월 유후인은 아침에 영하로 내려가요.</b> 온천 나오는 길이 미끄러우니 <b>미끄럼 방지 신발</b>과 얇은 패딩, 목도리를 챙기세요. 노천탕은 눈이 와도 들어갈 수 있지만 비·눈이 심하면 닫는 숙소도 있어요.</li>
+      <li><b>가격은 날짜에 따라 크게 달라져요.</b> 여기 적은 금액은 2026년 11월 21일에 확인한 <b>12월 1일(화) 1박·성인 2인 최저 상품가</b>이고, 주말·연말에는 같은 방이 1.5~2배까지 올라요. 쿠팡과 트립닷컴은 같은 숙소를 다른 요금으로 팔 때도 있으니 <b>두 버튼의 가격을 비교</b>해 보세요.</li>
+    </ul>
+    <div class="facts">
+      <span>📅 2026-11-21 확인</span>
+      <span>🛏 12월 1일 1박 최저가</span>
+      <span>♨️ 5곳 온천수·운영시간 확인</span>
+      <span>🎫 티켓 5종 실측 가격</span>
+    </div>
+  </section>
+
+  <footer>
+    <p class="notice"><strong>제휴 마케팅 활동의 일환으로 예약 시 일정액의 수수료를 제공받을 수 있습니다.</strong></p>
+    <p class="notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+    <p>가격은 2026년 11월 21일 트립닷컴에서 12월 1일(화)~12월 2일(수) 1박·성인 2인 기준으로 조회한 가장 낮은 객실 요금을 ‘~부터’로 적은 것입니다. 세금·수수료가 따로 붙거나, 객실 타입·날짜·인원에 따라 실제 요금이 달라질 수 있어요. 쿠팡에서 더 싸게 뜨는 곳(야오지 하카타 호텔·슈호칸·메바에소)은 쿠팡 가격을 버튼에 함께 적었어요.</p>
+    <p>온천 이름·물의 종류·운영시간·휴무 시간·체크인 시간은 2026년 11월 21일 각 숙소 공식 안내(八百治博多ホテル, 西鉄ホテル クルーム博多, 湯布院温泉 めばえ荘, ゆふいん山水館, ゆふいんホテル秀峰館)와 트립닷컴 상세 페이지에서 확인한 내용입니다. 평점과 리뷰 수는 트립닷컴 기준이에요. 시설 이용 시간과 요금은 예고 없이 바뀔 수 있으니 예약 전에 숙소 안내를 다시 확인하세요.</p>
+    <p>티켓 가격은 2026년 11월 21일 트립닷컴 투어·티켓의 표시 가격이고, 투어 일정과 집결 장소는 상품 안내를 따른 것입니다. 버스·기차 시간은 계절과 요일에 따라 달라질 수 있어요.</p>
+    <p>사진은 각 숙소의 실제 모습이 아니라 지역과 시설을 나타내는 이미지입니다.</p>
+    <p><a href="index.html" style="color:#F0D683">🏨 일본 숙소 10곳 보기</a> · <a href="sapporo.html" style="color:#F0D683">♨️ 삿포로 대욕장 10곳 보기</a> · <a href="korea-onsen.html" style="color:#F0D683">🇰🇷 국내 온천 11곳 보기</a> · <a href="seoul-onsen.html" style="color:#F0D683">♨️ 서울근교 온천 5곳 보기</a> · <a href="gyeongnam-family.html" style="color:#F0D683">👨‍👩‍👧‍👦 부산·경남 가족 숙소 보기</a> · <a href="jeju-onsen.html" style="color:#F0D683">🍊 제주 온천 5곳 보기</a> · <a href="jeolla-onsen.html" style="color:#F0D683">♨️ 전라도 온천 5곳 보기</a> · <a href="chungcheong-onsen.html" style="color:#F0D683">♨️ 충청도 온천 5곳 보기</a> · <a href="gangwon-onsen.html" style="color:#F0D683">🏔️ 강원도 온천 5곳 보기</a> · <a href="gyeongbuk-onsen.html" style="color:#F0D683">♨️ 경북 온천 5곳 보기</a> · <a href="cruise.html" style="color:#F0D683">🚢 크루즈 6선 보기</a> · <a href="essentials.html" style="color:#F0D683">🧳 필수템 8선 보기</a></p>
+  </footer>
+
+</div>
+
+<script>
+/* =========================================================
+   제휴 설정 — 다른 페이지와 동일한 값 (트립닷컴 AID / SID)
+   ========================================================= */
+var AFFILIATE_CONFIG = {
+  trip:  { aid: "11254538", sid: "335287562" }
+};
+
+function withTripAffiliate(url){
+  var aid = AFFILIATE_CONFIG.trip.aid;
+  if(!aid){ return url; }
+  var sep = url.indexOf("?") === -1 ? "?" : "&";
+  var out = url + sep + "Allianceid=" + encodeURIComponent(aid);
+  if(AFFILIATE_CONFIG.trip.sid){
+    out += "&SID=" + encodeURIComponent(AFFILIATE_CONFIG.trip.sid);
+  }
+  return out;
+}
+
+(function applyAffiliate(){
+  var tripLinks = document.querySelectorAll("a[data-trip]");
+  for(var j = 0; j < tripLinks.length; j++){
+    tripLinks[j].href = withTripAffiliate(tripLinks[j].getAttribute("data-trip"));
+  }
+})();
+
+/* =========================================================
+   검색 + 필터 (지역 / 시설)
+   ========================================================= */
+(function(){
+  var q = document.getElementById("q");
+  var clearBtn = document.getElementById("clear");
+  var countEl = document.getElementById("count");
+  var emptyEl = document.getElementById("empty");
+  var cards = Array.prototype.slice.call(document.querySelectorAll("#list .card"));
+
+  var state = { area: "all", feat: "all", text: "" };
+
+  function bindGroup(containerId, key){
+    var group = document.getElementById(containerId);
+    if(!group){ return; }
+    group.addEventListener("click", function(e){
+      var btn = e.target.closest ? e.target.closest(".chip") : null;
+      if(!btn || !group.contains(btn)){ return; }
+      var chips = group.querySelectorAll(".chip");
+      for(var i = 0; i < chips.length; i++){
+        chips[i].setAttribute("aria-pressed", chips[i] === btn ? "true" : "false");
+      }
+      state[key] = btn.getAttribute("data-" + key);
+      apply();
+    });
+  }
+
+  function normalize(s){
+    return (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  function matches(card){
+    if(state.area !== "all" && card.getAttribute("data-area") !== state.area){ return false; }
+    if(state.feat !== "all"){
+      var feat = " " + card.getAttribute("data-feat") + " ";
+      if(feat.indexOf(" " + state.feat + " ") === -1){ return false; }
+    }
+    if(state.text){
+      if(/^[0-9]+$/.test(state.text)){
+        return card.getAttribute("data-num") === state.text;
+      }
+      var hay = normalize(card.getAttribute("data-search") + " " +
+        card.querySelector(".name").textContent + " " +
+        card.querySelector(".loc").textContent);
+      var words = state.text.split(" ").filter(Boolean);
+      for(var w = 0; w < words.length; w++){
+        if(hay.indexOf(words[w]) === -1){ return false; }
+      }
+    }
+    return true;
+  }
+
+  function apply(){
+    var shown = 0;
+    for(var i = 0; i < cards.length; i++){
+      var ok = matches(cards[i]);
+      cards[i].style.display = ok ? "" : "none";
+      if(ok){ shown++; }
+    }
+    countEl.textContent = shown;
+    emptyEl.classList.toggle("show", shown === 0);
+    clearBtn.classList.toggle("show", !!state.text);
+  }
+
+  function onText(){
+    state.text = normalize(q.value);
+    apply();
+  }
+
+  bindGroup("areaChips", "area");
+  bindGroup("featChips", "feat");
+  q.addEventListener("input", onText);
+  q.addEventListener("search", onText);
+  clearBtn.addEventListener("click", function(){ q.value = ""; state.text = ""; apply(); q.focus(); });
+  apply();
+})();
+</script>
+</body>
+</html>
