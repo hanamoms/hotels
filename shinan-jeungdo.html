@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>신안 증도 숙소 4곳 · 엘도라도 리조트부터 자은도·목포 오션뷰까지</title>
+<meta name="description" content="증도 엘도라도 리조트 15평 오션뷰 85,385원, 자은도 라마다프라자 96,934원, 씨원리조트 4인 138,195원, 목포 호텔현대 108,000원. 12월 1일 1박 요금과 조식·사우나·수영장 운영일, 태평염전·소금박물관까지 한 번에 정리했어요.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="신안 증도 숙소 4곳 · 엘도라도·자은도·목포">
+<meta property="og:description" content="증도는 다리로 들어가는 섬. 엘도라도 리조트 85,385원부터, 자은도 리조트 2곳, 목포 오션뷰 호텔까지 12월 1박 요금으로 비교했어요.">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%9D%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#111111;
+    --card:#1C1C1E;
+    --card2:#242426;
+    --line:#2E2E31;
+    --text:#F2F2F4;
+    --sub:#A1A1A8;
+    --yellow:#F5C518;
+    --trip:#1E88E5;
+    --green:#2E7D32;
+    --amber:#A15C00;
+    --purple:#5E35B1;
+    --onsen:#C2185B;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic","Noto Sans KR",Roboto,sans-serif;
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+    padding-bottom:calc(28px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 14px}
+
+  /* ---------- header ---------- */
+  header.top{padding:18px 0 10px}
+  .brand{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--sub);letter-spacing:.08em;text-transform:uppercase}
+  .brand b{color:var(--yellow);letter-spacing:0}
+  h1{font-size:24px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.02em}
+  h1 span{color:var(--yellow)}
+  .lead{margin:0;color:var(--sub);font-size:13.5px}
+
+  /* ---------- page switch tabs ---------- */
+  .tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:14px 0 4px}
+  .tab{
+    flex:0 0 calc((100% - 16px)/3);
+    display:flex;align-items:center;justify-content:center;gap:4px;
+    text-decoration:none;padding:11px 4px;border-radius:13px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#C9C9D0;font-size:12.5px;font-weight:600;text-align:center;line-height:1.25;
+    word-break:keep-all;
+  }
+  .tab.on{background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:800}
+  .tab:active{transform:scale(.99)}
+
+  /* ---------- sticky search + filters ---------- */
+  .searchbar{
+    position:sticky;top:0;z-index:20;
+    background:#111111;
+    padding:8px 14px 10px;
+    margin:0 -14px;
+    box-shadow:0 8px 14px -10px rgba(0,0,0,.9);
+  }
+  .filters{padding:2px 0 4px}
+  .search{position:relative}
+  .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.55}
+  #q{
+    width:100%;padding:15px 44px 15px 42px;
+    background:#1A1A1C;border:1px solid var(--line);border-radius:16px;
+    color:var(--text);font-size:15px;font-family:inherit;
+    outline:none;appearance:none;
+  }
+  #q::placeholder{color:#7C7C84}
+  #q:focus{border-color:#4A4A50;background:#1F1F22}
+  #clear{
+    position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    width:30px;height:30px;border:0;border-radius:50%;
+    background:#333338;color:#CFCFD6;font-size:16px;line-height:1;
+    display:none;cursor:pointer;
+  }
+  #clear.show{display:block}
+
+  .chips{
+    display:flex;gap:8px;overflow-x:auto;padding:10px 0 0;
+    scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;
+    padding:9px 15px;border-radius:999px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#D6D6DC;font-size:13.5px;font-family:inherit;white-space:nowrap;
+    cursor:pointer;transition:background .15s,border-color .15s,color .15s;
+  }
+  .chip[aria-pressed="true"]{
+    background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:700;
+  }
+  .chip:active{transform:scale(.98)}
+
+  .status{
+    display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+    padding:12px 0 2px;color:var(--sub);font-size:12.5px;
+  }
+  .status b{color:var(--text);font-weight:600}
+  .status .basis{text-align:right}
+
+  /* ---------- cards ---------- */
+  .list{display:grid;gap:12px;padding-top:8px}
+  .card{
+    display:grid;grid-template-columns:104px 1fr;gap:12px;
+    background:var(--card);border:1px solid #26262A;
+    border-radius:18px;padding:12px;
+  }
+  .thumb{
+    position:relative;border-radius:13px;overflow:hidden;
+    background:linear-gradient(160deg,#2A2A30,#17171A);
+    min-height:104px;display:flex;align-items:center;justify-content:center;
+  }
+  .thumb .emoji{font-size:34px;opacity:.92;filter:saturate(1.05)}
+  .thumb.eldorado{background:linear-gradient(160deg,#1E3138,#0B151A)}
+  .thumb.ramada{background:linear-gradient(160deg,#2B2F38,#12151A)}
+  .thumb.c1{background:linear-gradient(160deg,#1F2E38,#0D161C)}
+  .thumb.hyundai{background:linear-gradient(160deg,#2A2B33,#13141A)}
+  .num{
+    position:absolute;top:6px;left:6px;
+    min-width:26px;height:26px;padding:0 6px;border-radius:8px;
+    background:var(--yellow);color:#141414;
+    font-weight:800;font-size:14px;line-height:26px;text-align:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.35);
+  }
+  .tier{
+    position:absolute;bottom:6px;left:6px;
+    padding:3px 8px;border-radius:7px;
+    font-size:10.5px;font-weight:700;color:#fff;letter-spacing:.01em;
+  }
+  .tier.low{background:var(--green)}
+  .tier.mid2{background:var(--amber)}
+  .tier.high{background:var(--purple)}
+
+  .body{min-width:0}
+  .name{margin:0;font-size:16px;line-height:1.32;letter-spacing:-.01em}
+  .name small{display:block;font-size:11.5px;color:var(--sub);font-weight:400;margin-top:2px}
+  .loc{margin:4px 0 0;font-size:12.5px;color:var(--yellow);font-weight:600}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 0}
+  .tag{
+    font-size:11px;color:#C9C9D0;background:#26262A;border:1px solid #303036;
+    padding:3px 7px;border-radius:7px;white-space:nowrap;
+  }
+  .tag.onsen{background:#3A1220;border-color:#5C1B33;color:#FFC9DC}
+  .tag.fam{background:#0F2E28;border-color:#1E5045;color:#9FE8D6}
+  .desc{margin:8px 0 0;font-size:12.5px;color:#B9B9C2;line-height:1.55}
+  .bathline{
+    margin:8px 0 0;font-size:12px;color:#D9D9E0;background:#191A1D;
+    border:1px solid #2A2B30;border-left:3px solid var(--onsen);
+    border-radius:9px;padding:7px 9px;line-height:1.5;
+  }
+  .bathline b{color:#FFC9DC;font-weight:700}
+  .bathline .off{color:#FF9E9E;font-weight:700}
+  .hours{
+    margin:8px 0 0;font-size:12px;color:#DCDCE2;background:#16181A;
+    border:1px solid #282B2E;border-left:3px solid var(--yellow);
+    border-radius:9px;padding:7px 9px;line-height:1.5;
+  }
+  .hours b{color:var(--yellow);font-weight:700}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px;font-size:11.5px;color:#8F8F97}
+  .meta .price{color:var(--yellow);font-weight:800;font-size:13px}
+  .actions{display:grid;gap:8px;margin-top:12px;grid-column:1 / -1}
+  .btn{
+    display:block;text-align:center;text-decoration:none;
+    padding:12px 6px;border-radius:12px;
+    font-size:13.5px;font-weight:700;color:#fff;
+    border:0;cursor:pointer;
+  }
+  .btn.trip{background:var(--trip)}
+  .btn.coupang{background:var(--yellow);color:#141414}
+  .btn:active{filter:brightness(.92)}
+
+  /* ---------- photo strip ---------- */
+  .photosec{margin:28px 0 4px;padding-top:18px;border-top:1px solid #232326}
+  .photosec h2{margin:0;font-size:19px;letter-spacing:-.01em}
+  .photosec h2 span{color:var(--yellow)}
+  .photosec p{margin:6px 0 0;font-size:12.5px;color:var(--sub);line-height:1.6}
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+  .ph{margin:0;border-radius:14px;overflow:hidden;background:#1A1A1C;border:1px solid #26262A}
+  .ph.wide{grid-column:1 / -1}
+  .ph img{display:block;width:100%;height:100%;aspect-ratio:4/3;object-fit:cover}
+  .ph figcaption{
+    display:block;padding:7px 9px 8px;font-size:11.5px;color:#B9B9C2;line-height:1.45;
+    border-top:1px solid #232326;
+  }
+  .ph figcaption b{display:block;color:#E6E6EA;font-size:12px;font-weight:700}
+
+  /* ---------- course / prep ---------- */
+  .tickethead{margin:30px 0 4px;padding-top:18px;border-top:1px solid #232326}
+  .tickethead h2{margin:0;font-size:19px;letter-spacing:-.01em}
+  .tickethead h2 span{color:var(--yellow)}
+  .tickethead p{margin:6px 0 0;font-size:12.5px;color:var(--sub);line-height:1.6}
+  .tickets{display:grid;gap:12px;margin-top:12px}
+  .tcard{
+    background:var(--card);border:1px solid #26262A;border-radius:16px;padding:13px 14px;
+  }
+  .tcard .thead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+  .tcard h3{margin:0;font-size:15px;line-height:1.35;letter-spacing:-.01em}
+  .tcard h3 .ticon{margin-right:5px}
+  .tcard .tprice{
+    flex:0 0 auto;color:var(--yellow);font-weight:800;font-size:14px;
+    white-space:nowrap;line-height:1.35;text-align:right;
+  }
+  .tcard .tprice small{display:block;color:#8F8F97;font-weight:500;font-size:10.5px}
+  .tcard .twhy{margin:7px 0 0;font-size:12.5px;color:#C4C4CC;line-height:1.6}
+  .tcard .tline{
+    margin:8px 0 0;font-size:11.5px;color:#D9D9E0;background:#191A1D;
+    border:1px solid #2A2B30;border-left:3px solid #3A3A40;border-radius:9px;
+    padding:7px 9px;line-height:1.55;
+  }
+  .tcard .tline b{color:var(--yellow);font-weight:700}
+  .tcard .tactions{display:grid;gap:8px;margin-top:11px}
+  .tcard .tactions .btn{padding:11px 6px;font-size:13px}
+
+  .empty{
+    display:none;text-align:center;padding:44px 16px;color:var(--sub);
+    border:1px dashed #303036;border-radius:18px;background:#171719;
+  }
+  .empty b{display:block;color:var(--text);font-size:15px;margin-bottom:6px}
+  .empty.show{display:block}
+
+  /* ---------- tip + footer ---------- */
+  .tip{
+    margin-top:18px;padding:14px 15px;border-radius:16px;
+    background:#181A1B;border:1px solid #2A2E30;
+  }
+  .tip h2{margin:0 0 6px;font-size:14px}
+  .tip p{margin:0 0 8px;font-size:12.5px;color:#AEAEB6;line-height:1.6}
+  .tip ul{margin:0;padding-left:18px}
+  .tip li{font-size:12.5px;color:#AEAEB6;line-height:1.65;margin-bottom:6px}
+  .tip li b{color:#E6E6EA}
+  .tip .facts{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+  .tip .facts span{font-size:11px;color:#C9C9D0;background:#232326;padding:3px 7px;border-radius:7px}
+  .tip a{color:#F0D683}
+
+  footer{margin-top:22px;padding-top:16px;border-top:1px solid #232326;color:#8F8F97;font-size:11.5px;line-height:1.7}
+  footer p{margin:0 0 8px}
+  footer .notice{color:#C9C9D0}
+  footer strong{color:#E6E6EA}
+
+  @media (min-width:480px){
+    .tab{font-size:11.5px;padding:11px 2px}
+  }
+  @media (min-width:620px){
+    .tabs{display:flex;gap:8px}
+    .tab{flex:0 0 calc((100% - 32px)/5);font-size:11px;padding:11px 4px;gap:4px}
+    h1{font-size:28px}
+    .list{grid-template-columns:1fr 1fr}
+    .card{grid-template-columns:96px 1fr}
+    .card .desc{font-size:12px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand"><b>PICK</b> SHINAN · JEUNGDO</div>
+    <h1>신안 증도 <span>오션뷰·갯벌</span> 숙소 4곳</h1>
+    <p class="lead">증도 엘도라도 리조트 + 자은도 리조트 2곳 + 목포 오션뷰 호텔 · 2026년 11월 23일 확인</p>
+  </header>
+
+  <nav class="tabs" aria-label="페이지 이동">
+    <a class="tab" href="index.html">🏨 일본 숙소</a>
+    <a class="tab" href="sapporo.html">♨️ 삿포로 대욕장</a>
+    <a class="tab" href="korea-onsen.html">🇰🇷 국내 온천</a>
+    <a class="tab" href="seoul-onsen.html">♨️ 서울근교 온천</a>
+    <a class="tab" href="gyeongnam-family.html">👨‍👩‍👧‍👦 부산·경남 가족</a>
+    <a class="tab" href="jeju-onsen.html">🍊 제주 온천</a>
+    <a class="tab" href="jeolla-onsen.html">♨️ 전라도 온천</a>
+    <a class="tab" href="chungcheong-onsen.html">♨️ 충청도 온천</a>
+    <a class="tab" href="gangwon-onsen.html">🏔️ 강원도 온천</a>
+    <a class="tab" href="gyeongbuk-onsen.html">♨️ 경북 온천</a>
+    <a class="tab" href="gyeongju-yeosu.html">🌊 경주·여수</a>
+    <a class="tab on" href="shinan-jeungdo.html" aria-current="page">🏝️ 신안 증도</a>
+    <a class="tab" href="fukuoka-yufuin.html">♨️ 후쿠오카·유후인</a>
+    <a class="tab" href="cruise.html">🚢 크루즈</a>
+    <a class="tab" href="essentials.html">🧳 필수템 8선</a>
+  </nav>
+
+  <div class="searchbar">
+    <div class="search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#BFBFC6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="text" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="번호 또는 지역·숙소명 (예: 증도, 자은도, 목포)" aria-label="숙소 검색">
+      <button id="clear" type="button" aria-label="검색어 지우기">✕</button>
+    </div>
+  </div>
+
+  <div class="filters">
+
+    <div class="chips" id="areaChips" role="group" aria-label="지역 필터">
+      <button class="chip" data-area="all" aria-pressed="true">전체 지역</button>
+      <button class="chip" data-area="jeungdo" aria-pressed="false">🏝️ 증도</button>
+      <button class="chip" data-area="jaeundo" aria-pressed="false">🏖️ 자은도</button>
+      <button class="chip" data-area="mokpo" aria-pressed="false">🌉 목포·영암</button>
+    </div>
+
+    <div class="chips" id="featChips" role="group" aria-label="시설 필터">
+      <button class="chip" data-feat="all" aria-pressed="true">전체</button>
+      <button class="chip" data-feat="view" aria-pressed="false">🌅 오션뷰</button>
+      <button class="chip" data-feat="pool" aria-pressed="false">🏊 수영장·워터파크</button>
+      <button class="chip" data-feat="sauna" aria-pressed="false">♨️ 사우나</button>
+      <button class="chip" data-feat="family" aria-pressed="false">🛏 온돌·4인실</button>
+      <button class="chip" data-feat="walk" aria-pressed="false">🚶 해변 걸어서</button>
+    </div>
+  </div>
+
+  <div class="status" aria-live="polite">
+    <span><b id="count">4</b>곳</span>
+    <span class="basis">12월 1일(화) 1박·성인 2인 최저가 · 2026-11-23 조회</span>
+  </div>
+
+  <main class="list" id="list">
+
+    <!-- 1 -->
+    <article class="card" data-num="1" data-area="jeungdo" data-feat="view walk" data-tier="low"
+      data-search="엘도라도 리조트 Eldorado Resort 신안 증도면 지도증도로 1766-15 우전리 우전해수욕장 오션뷰 15평 49제곱미터 18평 59제곱미터 야외 인피니티 풀 스파 해수테라피 바비큐 BBQ 주차 무료 조식 뷔페 토요일 일요일 27000원 주중 단품 190실 2006년 85385원 짱뚱어다리 태평염전 소금박물관">
+      <div class="thumb eldorado"><span class="num">1</span><span class="emoji">🏝️</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">엘도라도 리조트<small>Eldorado Resort · 증도 우전해수욕장 앞</small></h2>
+        <p class="loc">전남광주 신안군 증도면 지도증도로 1766-15 · 우전해수욕장 880m</p>
+        <div class="tags">
+          <span class="tag fam">🌅 전 객실 오션뷰</span>
+          <span class="tag fam">🚶 우전해수욕장 도보 10분</span>
+          <span class="tag onsen">🏊 야외 인피니티 풀·스파</span>
+          <span class="tag fam">🍖 바비큐장</span>
+          <span class="tag fam">🚗 주차 무료</span>
+        </div>
+        <p class="bathline"><b>물놀이·스파</b> 야외 인피니티 풀은 <b>여름 시즌에만</b> 여는 풀이라 12월에는 물놀이를 기대하기 어려워요. 대신 스파와 해수테라피, 바닷가 바비큐장이 있어요. <b>객실까지 엘리베이터가 없다는 후기</b>가 있으니 짐이 무겁거나 계단이 힘드시면 예약할 때 <b>1층 방</b>을 미리 부탁하세요.</p>
+        <p class="hours"><b>🕘 체크인</b> 15:00 · <b>체크아웃</b> 08:00~11:00 · <b>조식</b> 뷔페는 <b>토·일만</b> 07:00~09:40 성인 27,000원, 월~금은 단품만 · ☎ 1600-3886</p>
+        <p class="desc">증도 안에서 <b>리조트형으로는 여기가 대표</b>예요. 15평 오션뷰 49㎡가 <b>85,385원</b>이라 이 페이지에서 1박이 가장 저렴하고, 방 창으로 서해 바다가 그대로 보여요. 18평(59㎡)은 105,540원이에요. 우전해수욕장까지 걸어서 10분, 짱뚱어다리 3.3km, 태평염전·소금박물관 5.2km라 증도 구경하기 좋은 자리예요. 다만 2006년에 지은 190실이라 <b>시설 평점이 6.6</b>으로 낮은 편이고(전체 7.3·리뷰 22), 주변에 식당이 거의 없어 <b>먹거리는 목포나 증도 읍내에서 사 오는 게</b> 좋아요.</p>
+        <div class="meta"><span class="price">85,385원부터</span><span>7.3점 · 리뷰 22</span><span>190실</span><span>주차 무료</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/sinan-gun-hotel-detail-14002106/eldorado-resort/" data-trip="https://kr.trip.com/hotels/sinan-gun-hotel-detail-14002106/eldorado-resort/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인 (85,385원)</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iUbCzY1ZZc" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 (92,940원)</a>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="card" data-num="2" data-area="jaeundo" data-feat="pool sauna view walk" data-tier="mid2"
+      data-search="라마다프라자호텔 자은도 Ramada Plaza by Wyndham Jaeundo 자은면 자은서부1길 163-101 백길해변 240미터 슈페리어 킹 49.6제곱미터 96934원 실내 수영장 야외 수영장 워터파크 사우나 헬스장 무료 취사 가능 인덕션 CU 편의점 키즈카페 노래방 조식 뷔페 35000원 175실 2020년">
+      <div class="thumb ramada"><span class="num">2</span><span class="emoji">🏖️</span><span class="tier mid2">중간급</span></div>
+      <div class="body">
+        <h2 class="name">라마다프라자호텔 자은도<small>Ramada Plaza by Wyndham Jaeundo · 백길해변 240m</small></h2>
+        <p class="loc">전남광주 신안군 자은면 자은서부1길 163-101 · 백길해변 240m</p>
+        <div class="tags">
+          <span class="tag fam">🏖️ 백길해변 240m</span>
+          <span class="tag onsen">♨️ 사우나 (투숙객 20% 할인)</span>
+          <span class="tag fam">🏊 실내·야외 수영장·워터파크</span>
+          <span class="tag fam">🍳 객실에서 간단한 요리</span>
+          <span class="tag fam">🚗 주차 무료</span>
+        </div>
+        <p class="bathline"><b>사우나·워터파크</b> 사우나 대인 10,000원·워터파크 대인 45,000원이고 <b>투숙객은 20% 할인</b>이에요. 다만 <span class="off">12월 1일(화)은 둘 다 쉬는 날</span>이에요 — 사우나는 12월 13일까지 <b>월·화 휴장</b>, 워터파크는 12월 15일까지 <b>월~목 휴장</b>이거든요. 12월 20일부터 연말까지는 매일 열어요.</p>
+        <p class="hours"><b>🕘 체크인</b> 15:00 · <b>체크아웃</b> 11:00 · <b>조식</b> 07:00~10:00(입장 마감 09:30) 성인 35,000원 · ☎ 061-988-8888</p>
+        <p class="desc">2020년에 지은 175실이라 <b>시설이 깔끔하고 평점 8.5</b>(리뷰 119·청결 8.8)로 좋아요. 슈페리어 킹 49.6㎡가 <b>96,934원</b>이라 리조트급치고 부담이 적어요. <b>전 객실에서 간단한 요리</b>가 되고(인덕션·냄비·그릇), 1층에 CU 편의점이 있어 <b>주변이 한적한 자은도에서 저녁 걱정을 덜 수</b> 있어요. 키즈카페·노래방도 있고요. 다만 체크인이 같은 단지 씨원리조트와 <b>통합 운영</b>이라 사람이 몰리면 줄이 길어질 수 있고, 조식 값이 트립닷컴 화면에 <b>45,000원으로도 표시</b>돼 예약 전에 확인하세요.</p>
+        <div class="meta"><span class="price">96,934원부터</span><span>8.5점 · 리뷰 119</span><span>175실</span><span>주차 무료</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/sinan-gun-hotel-detail-99157380/ramada-plaza-by-wyndham-jaeundo/" data-trip="https://kr.trip.com/hotels/sinan-gun-hotel-detail-99157380/ramada-plaza-by-wyndham-jaeundo/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인 (96,934원)</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iUbF8xWK4W" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 (106,200원)</a>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="card" data-num="3" data-area="jaeundo" data-feat="pool sauna family walk" data-tier="high"
+      data-search="씨원리조트 자은도 C-One Resort Jaeundo 자은서부1길 163-101 백길해변 270미터 아일랜드 패밀리 72.7제곱미터 퀸침대 2개 4인 138195원 워터파크 실내수영장 사우나 주방 취사 어린이 놀이공간 지하 편의점 170실 2022년">
+      <div class="thumb c1"><span class="num">3</span><span class="emoji">👨‍👩‍👧‍👦</span><span class="tier high">높은 편</span></div>
+      <div class="body">
+        <h2 class="name">씨원리조트 자은도<small>C-One Resort Jaeundo · 4인 패밀리룸 72㎡</small></h2>
+        <p class="loc">전남광주 신안군 자은면 자은서부1길 163-101 · 백길해변 270m</p>
+        <div class="tags">
+          <span class="tag fam">👨‍👩‍👧‍👦 아일랜드 패밀리 72.7㎡</span>
+          <span class="tag fam">🏊 워터파크·실내 수영장</span>
+          <span class="tag onsen">♨️ 사우나</span>
+          <span class="tag fam">🍳 주방 있는 객실</span>
+          <span class="tag fam">🛝 어린이 놀이공간</span>
+        </div>
+        <p class="bathline"><b>워터파크·사우나</b>는 모두 별도 요금이에요. 어린이 놀이공간과 워터슬라이드가 있어 <b>아이·손주와 함께</b> 가기 좋고, 객실에 주방이 있는 타입은 <b>간단히 끓여 먹을 수</b> 있어요. 겨울철 시설 운영일은 날마다 달라지니 <b>예약 전에 프런트(061-988-8888)로</b> 확인하는 게 확실해요.</p>
+        <p class="hours"><b>🕘 체크인</b> 15:00 · <b>체크아웃</b> 11:00 · <b>조식</b> 단품(양식) 07:00~10:00, 요금은 호텔 문의 · ☎ 061-988-8888</p>
+        <p class="desc">2022년에 지은 170실로 <b>이 페이지에서 시설 평점이 가장 높아요</b>(시설 8.9·전체 8.6·리뷰 49). 아일랜드 패밀리(퀸침대 2개, 72.7㎡)가 <b>4인 기준 138,195원</b>이라 <b>가족 넷이 한 방</b>에 묵을 수 있어요. 백길해변 270m라 아침저녁으로 모래사장 산책하기 좋고, 지하 편의점도 있어요. 다만 청소 상태를 지적한 후기가 몇 건 있고, 조식이 단품이라 <b>뷔페를 생각하셨다면 라마다 쪽</b>이 나아요.</p>
+        <div class="meta"><span class="price">138,195원부터</span><span>8.6점 · 리뷰 49</span><span>170실</span><span>4인 기준</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/sinan-gun-hotel-detail-96502984/c-one-resort-jaeundo/" data-trip="https://kr.trip.com/hotels/sinan-gun-hotel-detail-96502984/c-one-resort-jaeundo/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인 (138,195원)</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iUbEvyJHc4" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 (155,000원)</a>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="card" data-num="4" data-area="mokpo" data-feat="view family" data-tier="mid2"
+      data-search="호텔현대 바이 라한 목포 Hyundai Hotel Mokpo 영암군 삼호읍 대불로 91 목포역 6.4킬로 목포대교 디럭스 온돌룸 마운틴뷰 35제곱미터 요이불 108000원 디럭스 더블룸 오션뷰 조식 뷔페 35000원 사우나 남자전용 주말 당구장 탁구장 플레이스테이션 무료 무인 편의점 베이커리 207실 2006년">
+      <div class="thumb hyundai"><span class="num">4</span><span class="emoji">🌉</span><span class="tier mid2">중간급</span></div>
+      <div class="body">
+        <h2 class="name">호텔현대 바이 라한 목포<small>Hyundai Hotel by Lahan Mokpo · 목포대교 바다뷰</small></h2>
+        <p class="loc">전남광주 영암군 삼호읍 대불로 91 · 목포역 6.4km, 목포대교 건너</p>
+        <div class="tags">
+          <span class="tag fam">🌅 오션뷰·마운틴뷰</span>
+          <span class="tag fam">🛏 디럭스 온돌룸 (요이불)</span>
+          <span class="tag fam">🎱 당구·탁구·PS5 무료</span>
+          <span class="tag fam">🥐 베이커리·무인 편의점</span>
+          <span class="tag onsen">♿ 장애인 지원 객실</span>
+        </div>
+        <p class="bathline"><b>수영장·사우나</b> 실내 수영장은 <span class="off">2026년 시즌이 끝나</span>(6월 6일~9월 27일 운영) 12월에는 쓸 수 없어요. 사우나는 <b>남자 전용</b>이고 <b>토·일만</b> 06:00~19:00 열어요(투숙객 12,000원). 대신 헬스장·당구장·탁구장·플레이스테이션방이 <b>투숙객 무료</b>예요.</p>
+        <p class="hours"><b>🕘 체크인</b> 15:00 · <b>체크아웃</b> 11:00 · <b>조식</b> 뷔페 성인 35,000원(월~금 07:00~09:30, 토·일 07:00~10:00) · ☎ 061-463-2233</p>
+        <p class="desc">증도에 들어가기 전이나 나온 뒤 <b>목포에서 하룻밤</b> 묵기 좋은 호텔이에요. 2006년에 지은 207실이지만 <b>청결 8.8·평점 8.4</b>(리뷰 153)로 관리가 잘 돼 있고, 방에서 <b>목포대교와 바다</b>가 보여요. 디럭스 온돌룸 35㎡(요이불 2개)가 <b>4인 108,000원</b>, 더블 마운틴뷰도 같은 값이라 어르신과 함께라면 <b>온돌방</b>이 편해요. 1층 베이커리와 24시간 무인 편의점도 있어요. 오션뷰 방은 값이 올라가요(더블 오션뷰 조식 포함 179,000원).</p>
+        <div class="meta"><span class="price">108,000원부터</span><span>8.4점 · 리뷰 153</span><span>207실</span><span>주차 무료</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/yeongam-gun-hotel-detail-2324162/hyundai-hotel-mokpo/" data-trip="https://kr.trip.com/hotels/yeongam-gun-hotel-detail-2324162/hyundai-hotel-mokpo/" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 가격 확인 (108,000원)</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iUbImsysua" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 (110,000원)</a>
+      </div>
+    </article>
+
+  </main>
+
+  <div class="empty" id="empty">
+    <b>조건에 맞는 숙소가 없어요</b>
+    다른 지역이나 시설을 골라보세요.
+  </div>
+
+  <section class="photosec">
+    <h2>🏝️ 증도에서 찍은 <span>사진 다섯 장</span></h2>
+    <p>안개 낀 우전해수욕장, 리조트 야외 풀, 끝없이 펼쳐진 태평염전, 소금 아이스크림과 함초차, 그리고 마지막 남도 한상까지. 증도는 이렇게 <b>천천히 걷는 섬</b>이에요.</p>
+    <div class="gallery">
+      <figure class="ph wide">
+        <img src="img/jeungdo-beach.jpg" alt="안개 낀 우전해수욕장과 바다를 내려다보는 데크 정자" loading="lazy">
+        <figcaption><b>안개 낀 우전해수욕장</b>리조트 데크에서 내려다본 십리 백사장. 사람이 없어 파도 소리만 들려요.</figcaption>
+      </figure>
+      <figure class="ph">
+        <img src="img/jeungdo-pool.jpg" alt="엘도라도 리조트 야외 수영장과 바비큐장" loading="lazy">
+        <figcaption><b>리조트 야외 풀</b>여름에는 이 풀에서 놀고, 바비큐장에서 저녁을 먹어요.</figcaption>
+      </figure>
+      <figure class="ph">
+        <img src="img/jeungdo-saltfield.jpg" alt="끝없이 펼쳐진 태평염전 염전 풍경" loading="lazy">
+        <figcaption><b>태평염전</b>국내 최대 단일 염전. 겨울에는 염전이 쉬는 시기예요.</figcaption>
+      </figure>
+      <figure class="ph">
+        <img src="img/jeungdo-saltmuseum.jpg" alt="소금박물관 앞에서 마신 함초차와 소금 아이스크림" loading="lazy">
+        <figcaption><b>소금박물관 옆 한 잔</b>함초차와 짭짤달콤 소금 아이스크림은 꼭 먹어보세요.</figcaption>
+      </figure>
+      <figure class="ph wide">
+        <img src="img/jeungdo-hansang.jpg" alt="조기구이와 간장게장이 올라간 남도 한상 차림" loading="lazy">
+        <figcaption><b>마무리는 남도 한상</b>조기구이에 간장게장, 나물까지. 증도 여행의 마지막은 밥상이에요.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="tickethead">
+    <h2>🎒 증도에서 <span>꼭 들르는 곳</span></h2>
+    <p>증도는 배를 타지 않고 <b>다리로 차를 몰고 들어가는 섬</b>이에요. 숙소 근처 볼거리를 운영시간과 입장료까지 정리했어요(2026년 11월 23일 확인).</p>
+  </section>
+
+  <section class="tickets">
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🧂</span>태평염전</h3>
+        <div class="tprice">견학 무료<small>염전체험은 3월 중순~10월 중순</small></div>
+      </div>
+      <p class="twhy">전증도와 후증도를 잇는 갯벌에 만든 <b>국내 최대 단일 염전</b>이에요(등록문화재 제360호). 끝까지 펼쳐진 염전 길을 걷는 것만으로도 사진이 잘 나와요. 다만 <b>천일염을 만드는 시기는 4~10월</b>이라 겨울에는 염전이 쉬고, <b>염전체험도 하지 않아요</b>.</p>
+      <p class="tline"><b>주소</b> 신안군 증도면 지도증도로 일대 · <b>소금박물관과 바로 옆</b> · <b>팁</b> 겨울에는 염생식물원 데크 산책과 함께 둘러보세요</p>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🏛️</span>소금박물관</h3>
+        <div class="tprice">성인 3,000원<small>65세 이상 무료</small></div>
+      </div>
+      <p class="twhy">1948년에 지은 석조 소금창고를 박물관으로 고친 곳이에요. 소금이 만들어지는 과정과 염전 장인들의 이야기를 30분쯤에 걸쳐 볼 수 있고, 입구에서 <b>함초차와 소금 아이스크림</b>을 팔아요. <b>65세 이상은 입장료가 무료</b>라 어르신과 함께라면 챙길 서류만 있으면 돼요.</p>
+      <p class="tline"><b>운영</b> 09:00~18:00(입장은 폐장 30분 전까지, 점심시간 12:00~13:00) · <b>휴관</b> 연중무휴 · ☎ 061-275-0829 · 지도증도로 1058</p>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🌿</span>태평염생식물원 &amp; 짱뚱어다리</h3>
+        <div class="tprice">무료<small>둘 다 상시 개방</small></div>
+      </div>
+      <p class="twhy">염생식물원은 <b>입장료도 주차비도 무료</b>이고, 평평한 데크 탐방로가 220m라 <b>무릎이 불편해도 걷기 편해요</b>. 가을이면 갯벌이 붉게 물들고, 겨울에는 한적한 갯벌 풍경을 볼 수 있어요. 짱뚱어다리는 갯벌 위로 놓인 나무다리로 <b>연중 상시 개방</b>이에요.</p>
+      <p class="tline"><b>식물원</b> 신안군 증도면 증동리 · ☎ 061-275-7541 · <b>주의</b> 물때와 날씨에 따라 갯벌 길이 달라져요</p>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🎒</span>증도 갈 때 챙기면 좋은 것</h3>
+        <div class="tprice">5,190원부터<small>쿠팡에서 바로</small></div>
+      </div>
+      <p class="twhy">서울에서 증도까지는 <b>차로 네 시간이 넘게</b> 걸려요. 운전이 길어지니 <b>목베개</b> 하나가 은근히 큰 도움이 되고, 12월 갯벌 바람은 차가워서 <b>포켓 핫팩</b>은 주머니에 넣어두면 좋아요. 둘 다 1~3만 원대라 부담이 없어요.</p>
+      <p class="tline"><b>목베개</b> 코드나인 또아리360 메모리폼 28,900원 · <b>핫팩</b> 코멧 포켓용 100g 15개 5,190원</p>
+      <div class="tactions">
+        <a class="btn coupang" href="https://link.coupang.com/a/iUbJILQUYS" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 목베개 보기 (28,900원)</a>
+        <a class="btn coupang" href="https://link.coupang.com/a/iUbKXKi6Sq" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 핫팩 보기 (5,190원)</a>
+      </div>
+    </article>
+
+  </section>
+
+  <section class="tip">
+    <h2>🏝️ 신안 증도 갈 때 알아두면 좋은 것</h2>
+    <ul>
+      <li><b>12월에는 물놀이 시설이 거의 쉬어요.</b> 라마다 자은도는 12월 1일(화)에 사우나·워터파크가 모두 휴장이고(사우나 12월 13일까지 월·화 휴장, 워터파크 12월 15일까지 월~목 휴장), 호텔현대 목포는 실내 수영장이 <b>2026년 시즌 종료</b>, 사우나는 <b>남자 전용·주말만</b>이에요. 엘도라도 인피니티 풀도 여름 시즌에만 열어요. 물놀이를 생각하셨다면 <b>날짜를 먼저 맞춰 보세요</b>.</li>
+      <li><b>엘도라도는 객실까지 엘리베이터가 없어요.</b> 후기에서 확인된 내용이에요. 짐이 많거나 무릎·허리가 불편하시면 <b>1층 방을 예약할 때 미리 요청</b>하세요.</li>
+      <li><b>증도는 배를 타지 않아요.</b> 목포에서 <b>증도대교·연도교를 지나 차로 바로</b> 들어가요. 자은도는 목포에서 차로 <b>한 시간 안팎</b>이에요(리뷰 기준). 두 섬 모두 대중교통보다 <b>차가 있어야 편한</b> 곳이에요.</li>
+      <li><b>먹거리는 미리 사 두세요.</b> 증도·자은도 모두 식당이 많지 않아요. 엘도라도 후기에는 "읍내에서 사 가지고 들어가야 한다"는 말이 여러 번 나와요. 라마다 자은도는 <b>객실에서 간단한 요리</b>가 되고 1층에 CU 편의점이 있어요.</li>
+      <li><b>소금박물관은 65세 이상 무료예요.</b> 09:00~18:00, 점심시간 12:00~13:00, 연중무휴이고 성인은 3,000원이에요. 태평염생식물원은 입장료·주차비가 모두 무료예요.</li>
+      <li><b>겨울 염전은 소금을 거두지 않아요.</b> 천일염 생산이 4~10월이라 12월에는 염전이 쉬고 염전체험도 없어요. 대신 <b>붉은 갯벌과 데크 산책</b>을 기대하세요.</li>
+      <li><b>조식은 어느 곳이든 방값에 안 들어 있어요.</b> 엘도라도 27,000원 · 라마다 35,000원 · 호텔현대 35,000원이고, 씨원리조트는 요금을 호텔에 물어봐야 해요. 두 분이면 하루 5~7만 원이니 <b>조식 포함 상품과 꼭 비교</b>해 보세요.</li>
+      <li><b>이번 조회에서는 트립닷컴이 더 쌌어요.</b> 엘도라도 85,385원(쿠팡 92,940원) · 라마다 96,934원(106,200원) · 씨원 138,195원(155,000원) · 호텔현대 108,000원(110,000원)이었어요. 두 버튼의 가격을 같이 보세요.</li>
+      <li><b>가격은 날짜에 따라 크게 달라져요.</b> 여기 적은 금액은 2026년 11월 23일에 확인한 <b>12월 1일(화) 1박·성인 2인 최저 상품가</b>이고, 주말·연말에는 같은 방이 1.5~2배까지 올라요. 버튼에서 날짜를 넣고 다시 확인하세요.</li>
+    </ul>
+    <div class="facts">
+      <span>📅 2026-11-23 확인</span>
+      <span>🛏 12월 1일 1박 최저가</span>
+      <span>🏝️ 증도·자은도·목포 4곳</span>
+      <span>📷 증도 사진 5장</span>
+    </div>
+  </section>
+
+  <footer>
+    <p class="notice"><strong>제휴 마케팅 활동의 일환으로 예약 시 일정액의 수수료를 제공받을 수 있습니다.</strong></p>
+    <p class="notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+    <p>가격은 2026년 11월 23일 트립닷컴에서 12월 1일(화)~12월 2일(수) 1박·성인 2인 기준으로 조회한 가장 낮은 객실 요금을 ‘~부터’로 적은 것입니다. 세금·수수료가 따로 붙거나, 객실 타입·날짜·인원에 따라 실제 요금이 달라질 수 있어요. 씨원리조트는 가장 낮은 객실이 4인 기준이라 그 값을 적었고, 쿠팡 트래블 가격은 쿠팡 화면에 표시된 금액이에요.</p>
+    <p>사우나·수영장·워터파크·조식 요금과 운영시간, 휴장일, 체크인 시간은 2026년 11월 23일 트립닷컴 각 숙소 상세 페이지와 숙소 안내에서 확인한 내용입니다. 평점과 리뷰 수는 트립닷컴 기준이에요. 특히 라마다 자은도의 조식 값은 숙소 안내에 35,000원, 트립닷컴 정책표에 45,000원으로 함께 표시돼 있어 예약 전 확인이 필요해요. 시설 운영일과 요금은 예고 없이 바뀔 수 있어요.</p>
+    <p>소금박물관·태평염전·태평염생식물원·짱뚱어다리 운영시간과 입장료는 소금박물관 공식 안내와 신안군·한국관광공사 안내를 2026년 11월 23일 기준으로 정리했어요. 겨울철 운영은 달라질 수 있으니 방문 전에 전화로 확인하세요.</p>
+    <p>사진은 증도 여행 중에 찍은 실제 사진이고, 숙소의 현재 모습과는 다를 수 있어요.</p>
+    <p><a href="index.html" style="color:#F0D683">🏨 일본 숙소 10곳 보기</a> · <a href="sapporo.html" style="color:#F0D683">♨️ 삿포로 대욕장 10곳 보기</a> · <a href="korea-onsen.html" style="color:#F0D683">🇰🇷 국내 온천 11곳 보기</a> · <a href="seoul-onsen.html" style="color:#F0D683">♨️ 서울근교 온천 5곳 보기</a> · <a href="gyeongnam-family.html" style="color:#F0D683">👨‍👩‍👧‍👦 부산·경남 가족 숙소 보기</a> · <a href="jeju-onsen.html" style="color:#F0D683">🍊 제주 온천 5곳 보기</a> · <a href="jeolla-onsen.html" style="color:#F0D683">♨️ 전라도 온천 5곳 보기</a> · <a href="chungcheong-onsen.html" style="color:#F0D683">♨️ 충청도 온천 5곳 보기</a> · <a href="gangwon-onsen.html" style="color:#F0D683">🏔️ 강원도 온천 5곳 보기</a> · <a href="gyeongbuk-onsen.html" style="color:#F0D683">♨️ 경북 온천 5곳 보기</a> · <a href="gyeongju-yeosu.html" style="color:#F0D683">🌊 경주·여수 숙소 6곳 보기</a> · <a href="fukuoka-yufuin.html" style="color:#F0D683">♨️ 후쿠오카·유후인 온천 5곳 보기</a> · <a href="cruise.html" style="color:#F0D683">🚢 크루즈 6선 보기</a> · <a href="essentials.html" style="color:#F0D683">🧳 필수템 8선 보기</a></p>
+  </footer>
+
+</div>
+
+<script>
+/* =========================================================
+   제휴 설정 — 다른 페이지와 동일한 값 (트립닷컴 AID / SID)
+   ========================================================= */
+var AFFILIATE_CONFIG = {
+  trip:  { aid: "11254538", sid: "335287562" }
+};
+
+function withTripAffiliate(url){
+  var aid = AFFILIATE_CONFIG.trip.aid;
+  if(!aid){ return url; }
+  var sep = url.indexOf("?") === -1 ? "?" : "&";
+  var out = url + sep + "Allianceid=" + encodeURIComponent(aid);
+  if(AFFILIATE_CONFIG.trip.sid){
+    out += "&SID=" + encodeURIComponent(AFFILIATE_CONFIG.trip.sid);
+  }
+  return out;
+}
+
+(function applyAffiliate(){
+  var tripLinks = document.querySelectorAll("a[data-trip]");
+  for(var j = 0; j < tripLinks.length; j++){
+    tripLinks[j].href = withTripAffiliate(tripLinks[j].getAttribute("data-trip"));
+  }
+})();
+
+/* =========================================================
+   검색 + 필터 (지역 / 시설)
+   ========================================================= */
+(function(){
+  var q = document.getElementById("q");
+  var clearBtn = document.getElementById("clear");
+  var countEl = document.getElementById("count");
+  var emptyEl = document.getElementById("empty");
+  var cards = Array.prototype.slice.call(document.querySelectorAll("#list .card"));
+
+  var state = { area: "all", feat: "all", text: "" };
+
+  function bindGroup(containerId, key){
+    var group = document.getElementById(containerId);
+    if(!group){ return; }
+    group.addEventListener("click", function(e){
+      var btn = e.target.closest ? e.target.closest(".chip") : null;
+      if(!btn || !group.contains(btn)){ return; }
+      var chips = group.querySelectorAll(".chip");
+      for(var i = 0; i < chips.length; i++){
+        chips[i].setAttribute("aria-pressed", chips[i] === btn ? "true" : "false");
+      }
+      state[key] = btn.getAttribute("data-" + key);
+      apply();
+    });
+  }
+
+  function normalize(s){
+    return (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  function matches(card){
+    if(state.area !== "all" && card.getAttribute("data-area") !== state.area){ return false; }
+    if(state.feat !== "all"){
+      var feat = " " + card.getAttribute("data-feat") + " ";
+      if(feat.indexOf(" " + state.feat + " ") === -1){ return false; }
+    }
+    if(state.text){
+      if(/^[0-9]+$/.test(state.text)){
+        return card.getAttribute("data-num") === state.text;
+      }
+      var hay = normalize(card.getAttribute("data-search") + " " +
+        card.querySelector(".name").textContent + " " +
+        card.querySelector(".loc").textContent);
+      var words = state.text.split(" ").filter(Boolean);
+      for(var w = 0; w < words.length; w++){
+        if(hay.indexOf(words[w]) === -1){ return false; }
+      }
+    }
+    return true;
+  }
+
+  function apply(){
+    var shown = 0;
+    for(var i = 0; i < cards.length; i++){
+      var ok = matches(cards[i]);
+      cards[i].style.display = ok ? "" : "none";
+      if(ok){ shown++; }
+    }
+    countEl.textContent = shown;
+    emptyEl.classList.toggle("show", shown === 0);
+    clearBtn.classList.toggle("show", !!state.text);
+  }
+
+  function onText(){
+    state.text = normalize(q.value);
+    apply();
+  }
+
+  bindGroup("areaChips", "area");
+  bindGroup("featChips", "feat");
+  q.addEventListener("input", onText);
+  q.addEventListener("search", onText);
+  clearBtn.addEventListener("click", function(){ q.value = ""; state.text = ""; apply(); q.focus(); });
+  apply();
+})();
+</script>
+</body>
+</html>
