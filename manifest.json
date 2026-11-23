@@ -1,0 +1,18 @@
+{
+  "name": "하나맘스 만능 도구함",
+  "short_name": "만능 도구함",
+  "description": "사진 위치정보 지우기·모자이크, 링크 추적 제거, PDF↔사진, 사진 압축, QR, 비율 자르기, 워터마크 — 휴대폰 안에서 바로 쓰는 7가지 도구",
+  "lang": "ko",
+  "dir": "ltr",
+  "start_url": "./tools.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F7F6F2",
+  "theme_color": "#F5C518",
+  "icons": [
+    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
