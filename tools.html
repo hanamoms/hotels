@@ -43,8 +43,8 @@
   .brand b{color:var(--ink);font-size:15px;letter-spacing:-.01em}
 
   /* ---------- home ---------- */
-  h1{font-size:25px;line-height:1.32;margin:20px 0 8px;letter-spacing:-.03em}
-  .lead{margin:0;color:var(--sub);font-size:15px}
+  h1{font-size:25px;line-height:1.32;margin:20px 0 8px;letter-spacing:-.03em;word-break:keep-all}
+  .lead{margin:0;color:var(--sub);font-size:15px;word-break:keep-all}
   .lead b{color:var(--ink)}
   .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0 6px}
   .card{
@@ -55,10 +55,10 @@
   }
   .card:active{transform:scale(.985);background:#FFFDF2}
   .card .ic{font-size:27px;line-height:1}
-  .card .nm{font-size:16.5px;font-weight:800;letter-spacing:-.02em;line-height:1.3}
-  .card .ds{font-size:12.8px;color:var(--sub);line-height:1.42}
+  .card .nm{font-size:17px;font-weight:800;letter-spacing:-.02em;line-height:1.3;word-break:keep-all}
+  .card .ds{font-size:13.4px;color:var(--sub);line-height:1.45;word-break:keep-all}
   .card:last-child{grid-column:1 / -1;min-height:104px;justify-content:center}
-  .install{font-size:13px;color:var(--sub);background:#fff;border:1px dashed var(--line);border-radius:14px;padding:12px 14px;margin:18px 0 0;line-height:1.6}
+  .install{font-size:13px;color:var(--sub);background:#fff;border:1px dashed var(--line);border-radius:14px;padding:12px 14px;margin:18px 0 0;line-height:1.6;word-break:keep-all}
   .install b{color:var(--ink)}
 
   /* ---------- panel ---------- */
@@ -67,8 +67,8 @@
   .back{font:700 15.5px/1 inherit;background:#fff;border:1px solid var(--line);border-radius:12px;
     padding:12px 15px;min-height:46px;color:var(--ink);cursor:pointer}
   .back:active{background:#F1EEE5}
-  h2{font-size:22px;line-height:1.32;margin:10px 0 6px;letter-spacing:-.03em}
-  .pdesc{margin:0 0 16px;color:var(--sub);font-size:15px;line-height:1.55}
+  h2{font-size:22px;line-height:1.32;margin:10px 0 6px;letter-spacing:-.03em;word-break:keep-all}
+  .pdesc{margin:0 0 16px;color:var(--sub);font-size:15px;line-height:1.55;word-break:keep-all}
 
   /* ---------- controls ---------- */
   .pick{display:flex;align-items:center;justify-content:center;gap:8px;min-height:62px;padding:14px;
@@ -105,7 +105,7 @@
   .status code{background:#F2EFE6;border-radius:5px;padding:1px 5px;font-size:13px;word-break:break-all}
   .status.err{border-left-color:var(--err);background:#FFF5F4;color:#7A1D18}
   .status.ok{border-left-color:var(--ok);background:#F3FBF6;color:#14512F}
-  .hint{font-size:13.5px;color:var(--sub);margin:8px 0 0;line-height:1.55}
+  .hint{font-size:13.5px;color:var(--sub);margin:8px 0 0;line-height:1.55;word-break:keep-all}
   .ctl{margin:8px 0 2px}
   .field{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:800;color:#3A3A40;flex:1 1 0}
   .field input{min-width:0}
