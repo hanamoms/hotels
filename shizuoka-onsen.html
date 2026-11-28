@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>시즈오카·이즈 온천 숙소 5곳 · 인천 직항 2시간, 후지산 보이는 겨울 온천</title>
+<meta name="description" content="시즈오카 시내와 이즈나가오카 온천 숙소 5곳을 2026년 12월 15일 1박·성인 2인 요금으로 정리했어요. 호텔 오레 인, 닛폰다이라 호텔, 이즈-나가오카 호텔 텐보, 사네아츠노 야도 이즈미소, 이시노야 이즈나가오카의 온천·체크인 시간·무료 셔틀과 후지산 보는 자리, 시즈오카 오뎅·녹차·미호노마쓰바라까지 한 번에.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="시즈오카·이즈 온천 숙소 5곳 + 후지산 보는 자리">
+<meta property="og:description" content="인천에서 2시간이면 닿는 시즈오카. 시내 천연온천부터 후지산 뷰 객실, 이즈나가오카 노천탕까지 5곳을 12월 15일 1박 요금으로.">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A8%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#111111;
+    --card:#1C1C1E;
+    --card2:#242426;
+    --line:#2E2E31;
+    --text:#F2F2F4;
+    --sub:#A1A1A8;
+    --yellow:#F5C518;
+    --trip:#1E88E5;
+    --green:#2E7D32;
+    --amber:#A15C00;
+    --purple:#5E35B1;
+    --onsen:#C2185B;
+    --orange:#D84315;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic","Noto Sans KR",Roboto,sans-serif;
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+    padding-bottom:calc(28px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 14px}
+
+  /* ---------- header ---------- */
+  header.top{padding:18px 0 10px}
+  .brand{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--sub);letter-spacing:.08em;text-transform:uppercase}
+  .brand b{color:var(--yellow);letter-spacing:0}
+  h1{font-size:24px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.02em}
+  h1 span{color:var(--yellow)}
+  .lead{margin:0;color:var(--sub);font-size:13.5px}
+
+  /* ---------- page switch tabs ---------- */
+  .tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:14px 0 4px}
+  .tab{
+    flex:0 0 calc((100% - 16px)/3);
+    display:flex;align-items:center;justify-content:center;gap:4px;
+    text-decoration:none;padding:11px 4px;border-radius:13px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#C9C9D0;font-size:12.5px;font-weight:600;text-align:center;line-height:1.25;
+    word-break:keep-all;
+  }
+  .tab.on{background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:800}
+  .tab:active{transform:scale(.99)}
+
+  /* ---------- sticky search + filters ---------- */
+  .searchbar{
+    position:sticky;top:0;z-index:20;
+    background:#111111;
+    padding:8px 14px 10px;
+    margin:0 -14px;
+    box-shadow:0 8px 14px -10px rgba(0,0,0,.9);
+  }
+  .filters{padding:2px 0 4px}
+  .search{position:relative}
+  .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.55}
+  #q{
+    width:100%;padding:15px 44px 15px 42px;
+    background:#1A1A1C;border:1px solid var(--line);border-radius:16px;
+    color:var(--text);font-size:15px;font-family:inherit;
+    outline:none;appearance:none;
+  }
+  #q::placeholder{color:#7C7C84}
+  #q:focus{border-color:#4A4A50;background:#1F1F22}
+  #clear{
+    position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    width:30px;height:30px;border:0;border-radius:50%;
+    background:#333338;color:#CFCFD6;font-size:16px;line-height:1;
+    display:none;cursor:pointer;
+  }
+  #clear.show{display:block}
+
+  .chips{
+    display:flex;gap:8px;overflow-x:auto;padding:10px 0 0;
+    scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;
+    padding:9px 15px;border-radius:999px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#D6D6DC;font-size:13.5px;font-family:inherit;white-space:nowrap;
+    cursor:pointer;transition:background .15s,border-color .15s,color .15s;
+  }
+  .chip[aria-pressed="true"]{
+    background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:700;
+  }
+  .chip:active{transform:scale(.98)}
+
+  .status{
+    display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+    padding:12px 0 2px;color:var(--sub);font-size:12.5px;
+  }
+  .status b{color:var(--text);font-weight:600}
+  .status .basis{text-align:right}
+
+  /* ---------- cards ---------- */
+  .list{display:grid;gap:12px;padding-top:8px}
+  .card{
+    display:grid;grid-template-columns:104px 1fr;gap:12px;
+    background:var(--card);border:1px solid #26262A;
+    border-radius:18px;padding:12px;
+  }
+  .thumb{
+    position:relative;border-radius:13px;overflow:hidden;
+    background:linear-gradient(160deg,#2A2A30,#17171A);
+    min-height:104px;display:flex;align-items:center;justify-content:center;
+  }
+  .thumb .emoji{font-size:34px;opacity:.92;filter:saturate(1.05)}
+  .thumb.ole{background:linear-gradient(160deg,#2B2A22,#16150F)}
+  .thumb.daira{background:linear-gradient(160deg,#23303B,#0F161C)}
+  .thumb.izumi{background:linear-gradient(160deg,#2C2620,#15120E)}
+  .thumb.tenbo{background:linear-gradient(160deg,#252D33,#11171A)}
+  .thumb.ishinoya{background:linear-gradient(160deg,#302730,#171218)}
+  .num{
+    position:absolute;top:6px;left:6px;
+    min-width:26px;height:26px;padding:0 6px;border-radius:8px;
+    background:var(--yellow);color:#141414;
+    font-weight:800;font-size:14px;line-height:26px;text-align:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.35);
+  }
+  .tier{
+    position:absolute;bottom:6px;left:6px;
+    padding:3px 8px;border-radius:7px;
+    font-size:10.5px;font-weight:700;color:#fff;letter-spacing:.01em;
+  }
+  .tier.low{background:var(--green)}
+  .tier.mid2{background:var(--amber)}
+  .tier.high{background:var(--purple)}
+
+  .body{min-width:0}
+  .name{margin:0;font-size:16px;line-height:1.32;letter-spacing:-.01em}
+  .name small{display:block;font-size:11.5px;color:var(--sub);font-weight:400;margin-top:2px}
+  .loc{margin:4px 0 0;font-size:12.5px;color:var(--yellow);font-weight:600}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 0}
+  .tag{
+    font-size:11px;color:#C9C9D0;background:#26262A;border:1px solid #303036;
+    padding:3px 7px;border-radius:7px;white-space:nowrap;
+  }
+  .tag.onsen{background:#3A1220;border-color:#5C1B33;color:#FFC9DC}
+  .tag.fam{background:#0F2E28;border-color:#1E5045;color:#9FE8D6}
+  .tag.good{background:#2B2A16;border-color:#4C4A22;color:#F3E39B}
+  .tag.warn{background:#2E2118;border-color:#4C3626;color:#FFD3AE}
+  .desc{margin:8px 0 0;font-size:12.5px;color:#B9B9C2;line-height:1.55}
+  .bathline{
+    margin:8px 0 0;font-size:12px;color:#D9D9E0;background:#191A1D;
+    border:1px solid #2A2B30;border-left:3px solid var(--onsen);
+    border-radius:9px;padding:7px 9px;line-height:1.5;
+  }
+  .bathline b{color:#FFC9DC;font-weight:700}
+  .hours{
+    margin:8px 0 0;font-size:12px;color:#DCDCE2;background:#16181A;
+    border:1px solid #282B2E;border-left:3px solid var(--yellow);
+    border-radius:9px;padding:7px 9px;line-height:1.5;
+  }
+  .hours b{color:var(--yellow);font-weight:700}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px;font-size:11.5px;color:#8F8F97}
+  .meta .price{color:var(--yellow);font-weight:800;font-size:13px}
+  .actions{display:grid;gap:8px;margin-top:12px;grid-column:1 / -1}
+  .btn{
+    display:block;text-align:center;text-decoration:none;
+    padding:12px 6px;border-radius:12px;
+    font-size:13.5px;font-weight:700;color:#fff;
+    border:0;cursor:pointer;
+  }
+  .btn.trip{background:var(--trip)}
+  .btn.coupang{background:var(--yellow);color:#141414}
+  .btn:active{filter:brightness(.92)}
+
+  /* ---------- ticket / info cards ---------- */
+  .tickethead{margin:30px 0 4px;padding-top:18px;border-top:1px solid #232326}
+  .tickethead h2{margin:0;font-size:19px;letter-spacing:-.01em}
+  .tickethead h2 span{color:var(--yellow)}
+  .tickethead p{margin:6px 0 0;font-size:12.5px;color:var(--sub);line-height:1.6}
+  .tickets{display:grid;gap:12px;margin-top:12px}
+  .tcard{
+    background:var(--card);border:1px solid #26262A;border-radius:16px;padding:13px 14px;
+  }
+  .tcard .thead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+  .tcard h3{margin:0;font-size:15px;line-height:1.35;letter-spacing:-.01em}
+  .tcard h3 .ticon{margin-right:5px}
+  .tcard .tprice{
+    flex:0 0 auto;color:var(--yellow);font-weight:800;font-size:14px;
+    white-space:nowrap;line-height:1.35;text-align:right;
+  }
+  .tcard .tprice small{display:block;color:#8F8F97;font-weight:500;font-size:10.5px}
+  .tcard .twhy{margin:7px 0 0;font-size:12.5px;color:#C4C4CC;line-height:1.6}
+  .tcard .tline{
+    margin:8px 0 0;font-size:11.5px;color:#D9D9E0;background:#191A1D;
+    border:1px solid #2A2B30;border-left:3px solid #3A3A40;border-radius:9px;
+    padding:7px 9px;line-height:1.55;
+  }
+  .tcard .tline b{color:var(--yellow);font-weight:700}
+  .tcard .tactions{display:grid;gap:8px;margin-top:11px}
+  .tcard .tactions .btn{padding:11px 6px;font-size:13px}
+
+  .empty{
+    display:none;text-align:center;padding:44px 16px;color:var(--sub);
+    border:1px dashed #303036;border-radius:18px;background:#171719;
+  }
+  .empty b{display:block;color:var(--text);font-size:15px;margin-bottom:6px}
+  .empty.show{display:block}
+
+  /* ---------- tip + footer ---------- */
+  .tip{
+    margin-top:18px;padding:14px 15px;border-radius:16px;
+    background:#181A1B;border:1px solid #2A2E30;
+  }
+  .tip h2{margin:0 0 6px;font-size:14px}
+  .tip p{margin:0 0 8px;font-size:12.5px;color:#AEAEB6;line-height:1.6}
+  .tip ul{margin:0;padding-left:18px}
+  .tip li{font-size:12.5px;color:#AEAEB6;line-height:1.65;margin-bottom:6px}
+  .tip li b{color:#E6E6EA}
+  .tip .facts{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+  .tip .facts span{font-size:11px;color:#C9C9D0;background:#232326;padding:3px 7px;border-radius:7px}
+  .tip a{color:#F0D683}
+
+  footer{margin-top:22px;padding-top:16px;border-top:1px solid #232326;color:#8F8F97;font-size:11.5px;line-height:1.7}
+  footer p{margin:0 0 8px}
+  footer .notice{color:#C9C9D0}
+  footer strong{color:#E6E6EA}
+
+  @media (min-width:480px){
+    .tab{font-size:11.5px;padding:11px 2px}
+  }
+  @media (min-width:620px){
+    .tabs{display:flex;gap:8px}
+    .tab{flex:0 0 calc((100% - 48px)/6);font-size:11px;padding:11px 4px;gap:4px}
+    h1{font-size:28px}
+    .list{grid-template-columns:1fr 1fr}
+    .card{grid-template-columns:96px 1fr}
+    .card .desc{font-size:12px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand"><b>PICK</b> SHIZUOKA · IZU ONSEN</div>
+    <h1>시즈오카 <span>온천 숙소 5곳</span></h1>
+    <p class="lead">시즈오카 시내 천연온천부터 후지산 뷰 객실, 이즈나가오카 노천탕까지 · 인천 직항 하루 2편 · 2026년 11월 28일 확인</p>
+  </header>
+
+  <nav class="tabs" aria-label="페이지 이동">
+    <a class="tab" href="index.html">🏨 일본 숙소</a>
+    <a class="tab" href="sapporo.html">♨️ 삿포로 대욕장</a>
+    <a class="tab" href="korea-onsen.html">🇰🇷 국내 온천</a>
+    <a class="tab" href="seoul-onsen.html">♨️ 서울근교 온천</a>
+    <a class="tab" href="gyeongnam-family.html">👨‍👩‍👧‍👦 부산·경남 가족</a>
+    <a class="tab" href="jeju-onsen.html">🍊 제주 온천</a>
+    <a class="tab" href="jeolla-onsen.html">♨️ 전라도 온천</a>
+    <a class="tab" href="chungcheong-onsen.html">♨️ 충청도 온천</a>
+    <a class="tab" href="gangwon-onsen.html">🏔️ 강원도 온천</a>
+    <a class="tab" href="gyeongbuk-onsen.html">♨️ 경북 온천</a>
+    <a class="tab" href="gyeongju-yeosu.html">🌊 경주·여수</a>
+    <a class="tab" href="shinan-jeungdo.html">🏝️ 신안 증도</a>
+    <a class="tab" href="fukuoka-yufuin.html">♨️ 후쿠오카·유후인</a>
+    <a class="tab" href="matsuyama-dogo.html">🏯 마쓰야마·도고</a>
+    <a class="tab on" href="shizuoka-onsen.html" aria-current="page">🗻 시즈오카·이즈</a>
+    <a class="tab" href="kagoshima-ibusuki.html">🌋 가고시마·이부스키</a>
+    <a class="tab" href="cruise.html">🚢 크루즈</a>
+    <a class="tab" href="essentials.html">🧳 필수템 8선</a>
+  </nav>
+
+  <div class="searchbar">
+    <div class="search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#BFBFC6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="text" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="번호 또는 숙소명 (예: 오레 인, 텐보)" aria-label="숙소 검색">
+      <button id="clear" type="button" aria-label="검색어 지우기">✕</button>
+    </div>
+  </div>
+
+  <div class="filters">
+
+    <div class="chips" id="areaChips" role="group" aria-label="가격 필터">
+      <button class="chip" data-area="all" aria-pressed="true">전체 가격</button>
+      <button class="chip" data-area="low" aria-pressed="false">25만원 이하</button>
+      <button class="chip" data-area="high" aria-pressed="false">25만원 넘음</button>
+    </div>
+
+    <div class="chips" id="featChips" role="group" aria-label="시설 필터">
+      <button class="chip" data-feat="all" aria-pressed="true">♨️ 전체</button>
+      <button class="chip" data-feat="open" aria-pressed="false">노천탕</button>
+      <button class="chip" data-feat="meal" aria-pressed="false">조식 포함 요금</button>
+      <button class="chip" data-feat="fuji" aria-pressed="false">후지산 뷰</button>
+      <button class="chip" data-feat="pickup" aria-pressed="false">무료 셔틀</button>
+      <button class="chip" data-feat="city" aria-pressed="false">시즈오카 시내</button>
+    </div>
+  </div>
+
+  <div class="status" aria-live="polite">
+    <span><b id="count">5</b>곳</span>
+    <span class="basis">12월 15일(화) 1박·성인 2인 최저가 · 2026-11-28 조회</span>
+  </div>
+
+  <main class="list" id="list">
+
+    <!-- 1 -->
+    <article class="card" data-num="1" data-area="low" data-feat="onsen meal city" data-tier="low"
+      data-search="호텔 오레 인 Hotel Ole Inn ホテルオーレイン 시즈오카시 아오이구 도키와초 2-1-1 시즈오카역 910미터 신시즈오카역 730미터 오뎅거리 도키와공원 230미터 천연온천 대욕장 사우나 172실 16 19 22 31제곱미터 조식 뷔페 06:00 09:30 무료 주차 120108원">
+      <div class="thumb ole"><span class="num">1</span><span class="emoji">♨️</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">호텔 오레 인<small>Hotel Ole Inn · 시내에서 천연온천, 조식까지 들어요</small></h2>
+        <p class="loc">시즈오카시 아오이구 도키와초 2-1-1 · 시즈오카역 910m · 오뎅거리 230m</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 천연온천 대욕장</span>
+          <span class="tag fam">🧖 사우나</span>
+          <span class="tag fam">🍳 조식 뷔페 2인 포함</span>
+          <span class="tag fam">🅿️ 주차 무료</span>
+          <span class="tag good">📍 오뎅거리 도보 3분</span>
+        </div>
+        <p class="bathline"><b>온천</b> 도심 호텔인데 <b>천연온천 대욕장</b>이 있고 <b>사우나</b>도 있어요. 하루 종일 걸어다닌 날 저녁에 몸을 담그기 딱 좋아요. 172실 큰 호텔이라 늦게 도착해도 프런트가 24시간 열려 있어요.</p>
+        <p class="hours"><b>🕘 체크인</b> 15:00~24:00 · <b>체크아웃</b> 11:00 이전 · <b>조식</b> 06:00~09:30 · <b>주차</b> 무료 · ☎ +81-54-271-0001</p>
+        <p class="desc">이 페이지에서 <b>제일 부담이 적은 곳</b>이에요. 위 요금이 <b>조식 2인까지 들어간 가격</b>이라 아침 따로 챙길 게 없어요. 리뷰 <b>492개에 9.4점</b>, 청결 9.6이고 <b>지난 한 달 동안 부정 리뷰가 한 건도 없었어요</b>. 시즈오카역에서 걸어서 10분쯤이고, <b>시즈오카 오뎅거리(도키와 공원)가 230m</b>라 저녁에 오뎅 먹으러 나가기 좋아요. 다만 가장 싼 방은 <b>더블룸 19㎡</b>로 좁은 편이니, 짐이 많으면 트윈룸(22㎡, 180,579원)을 보세요.</p>
+        <div class="meta"><span class="price">120,108원부터</span><span>9.4점 · 리뷰 492</span><span>172실</span><span>조식 2인 포함</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/shizuoka-hotel-detail-57324600/hotel-ole-inn/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1&amp;Allianceid=11254538&amp;SID=335287562" data-trip="https://kr.trip.com/hotels/shizuoka-hotel-detail-57324600/hotel-ole-inn/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 12월 15일 가격 보기</a>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="card" data-num="2" data-area="high" data-feat="fuji pickup" data-tier="high"
+      data-search="닛폰다이라 호텔 Nippondaira Hotel 日本平ホテル 시미즈구 마바세 1500-2 후지산 뷰 45제곱미터 트윈 무료 셔틀 시즈오카역 히가시시즈오카역 니혼다이라 전망대 미호노마쓰바라 온천 없음 대욕장 없음 조식 뷔페 3800엔 360188원">
+      <div class="thumb daira"><span class="num">2</span><span class="emoji">🗻</span><span class="tier high">높은 편</span></div>
+      <div class="body">
+        <h2 class="name">닛폰다이라 호텔<small>Nippondaira Hotel · 창을 가득 채운 후지산, 이 여행의 하이라이트</small></h2>
+        <p class="loc">시즈오카시 시미즈구 마바세 1500-2 · 니혼다이라 전망대·미호노마쓰바라 인접</p>
+        <div class="tags">
+          <span class="tag onsen">🗻 후지산 뷰 45㎡</span>
+          <span class="tag fam">🚐 시즈오카역 무료 셔틀</span>
+          <span class="tag fam">🌳 넓은 정원 산책</span>
+          <span class="tag warn">⚠️ 온천·대욕장 없음</span>
+        </div>
+        <p class="bathline"><b>온천</b> 여기는 <b>온천도 대욕장도 없어요</b>. 방 욕실만 있어요. 대신 <b>창을 가득 채운 후지산과 스루가만</b>이 이 호텔의 전부예요. 스파는 마사지를 따로 받는 곳이고요.</p>
+        <p class="hours"><b>🕘 체크인</b> 14:00~24:00 · <b>체크아웃</b> 12:00 이전 · <b>조식 뷔페</b> 07:00~09:30(1인 3,800엔, 요금 별도) · ☎ 054-335-1131</p>
+        <p class="desc">이 페이지에서 <b>평점이 가장 높은 곳(9.6점, 리뷰 138개)</b>이고 청결 9.8·위치 9.8이에요. 방 <b>45㎡ 트윈</b>은 발코니 폭이 6m라 <b>방에서 누워서 후지산을 봐요</b>. 시즈오카역에서 <b>무료 셔틀버스</b>가 다니니 차 없이도 갈 수 있어요. 조식은 요금에 안 들어 있어서 1인 3,800엔을 따로 내야 해요. 온천을 포기하고 <b>뷰 하나만 보고 고르는 곳</b>이에요.</p>
+        <div class="meta"><span class="price">360,188원부터</span><span>9.6점 · 리뷰 138</span><span>45㎡ 트윈</span><span>조식 별도</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/shizuoka-hotel-detail-1636257/nippondaira-hotel/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1&amp;Allianceid=11254538&amp;SID=335287562" data-trip="https://kr.trip.com/hotels/shizuoka-hotel-detail-1636257/nippondaira-hotel/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 12월 15일 가격 보기</a>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="card" data-num="3" data-area="low" data-feat="onsen" data-tier="low"
+      data-search="사네아츠노 야도 이즈미소 実篤の宿 泉荘 이즈노쿠니 이즈나가오카 온천 일본식 6다다미 온천 대욕장 108866원 9.1점 리뷰 20">
+      <div class="thumb izumi"><span class="num">3</span><span class="emoji">🌾</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">사네아츠노 야도 이즈미소<small>実篤の宿 泉荘 · 이즈나가오카 온천의 작은 숙소</small></h2>
+        <p class="loc">이즈노쿠니시 · 이즈나가오카 온천 마을</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 이즈나가오카 온천</span>
+          <span class="tag fam">🛏 일본식 6다다미</span>
+          <span class="tag good">💰 10만원대</span>
+        </div>
+        <p class="bathline"><b>온천</b> 이즈나가오카 온천 마을 안의 숙소라 <b>온천탕</b>이 있어요. 방은 <b>일본식 6다다미</b>로 작지만, 온천 마을에 이 가격으로 묵을 수 있다는 게 이 집의 장점이에요.</p>
+        <p class="desc">이 페이지에서 <b>제일 싼 곳(108,866원)</b>이에요. 평점 <b>9.1점</b>에 리뷰는 20개로 많지는 않아요. 이즈나가오카는 <b>노천탕에서 후지산이 보이는 마을</b>이라, 낮에는 마을 온천을 돌아다니고 밤에는 조용히 묵기 좋아요. 방이 작으니 <b>짐은 최소로</b> 가져가세요. 체크인 시간과 조식은 예약 화면에서 한 번 더 확인해 주세요.</p>
+        <div class="meta"><span class="price">108,866원부터</span><span>9.1점 · 리뷰 20</span><span>일본식 6다다미</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/izunokuni-hotel-detail-6516418/saneatsu-no-yado-izumiso/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1&amp;Allianceid=11254538&amp;SID=335287562" data-trip="https://kr.trip.com/hotels/izunokuni-hotel-detail-6516418/saneatsu-no-yado-izumiso/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 12월 15일 가격 보기</a>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="card" data-num="4" data-area="low" data-feat="onsen open meal fuji pickup" data-tier="mid2"
+      data-search="이즈 나가오카 호텔 텐보 伊豆長岡ホテル天坊 Izu-Nagaoka Hotel Tenbo 노천탕 대욕장 사우나 가족탕 후지산 뷰 유랏쿠스 공원 무료 셔틀 이즈나가오카역 다쿄역 조식 뷔페 2750엔 191506원 56실 2006년">
+      <div class="thumb tenbo"><span class="num">4</span><span class="emoji">🌅</span><span class="tier mid2">중간급</span></div>
+      <div class="body">
+        <h2 class="name">이즈-나가오카 호텔 텐보<small>伊豆長岡ホテル天坊 · 노천탕에서 후지산을 봐요</small></h2>
+        <p class="loc">이즈노쿠니시 나가오카 431-1 · 이즈나가오카역 3.3km(무료 셔틀) · 유랏쿠스 공원 380m</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 노천탕·대욕장·사우나</span>
+          <span class="tag onsen">🗻 후지산 쪽 객실 있음</span>
+          <span class="tag fam">🚐 역까지 무료 셔틀</span>
+          <span class="tag fam">🍳 조식 뷔페 2인 포함</span>
+          <span class="tag fam">🅿️ 주차 무료</span>
+        </div>
+        <p class="bathline"><b>온천</b> 실내탕과 <b>노천탕</b>, 사우나가 있고 <b>가족끼리 들어가는 프라이빗 탕</b>은 따로 돈을 내고 써요. 리뷰에 <b>"호텔에서 후지산이 보인다"</b>는 이야기가 여럿 있어요. 후지산 쪽 12.5다다미 방은 조식 포함 265,872원으로 따로 있어요.</p>
+        <p class="hours"><b>🕘 체크인</b> 15:00~18:00 · <b>체크아웃</b> 11:00 이전 · <b>조식</b> 뷔페 1인 2,750엔 상당(위 요금에 2인 포함) · ☎ +81-55-947-1919</p>
+        <p class="desc">이즈나가오카 온천의 <b>4성급 료칸(56실)</b>이에요. 평점 8.6점에 리뷰 28개, 청결 8.7·서비스 8.7이에요. <b>후지산 뷰 + 노천탕</b>을 같이 원하면 이 집이 답이에요. 이즈나가오카역까지 <b>무료 셔틀</b>이 다니고 주차도 무료라, 렌터카를 빌려도 편해요. 위 요금은 <b>조식 2인 포함</b>이고, 저녁 가이세키까지 넣으면 <b>275,168원</b>이에요. 리뷰에는 <b>"서양식 객실이 조금 오래됐다"</b>는 말도 있어요.</p>
+        <div class="meta"><span class="price">191,506원부터</span><span>8.6점 · 리뷰 28</span><span>56실</span><span>조식 2인 포함</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/izunokuni-hotel-detail-1497394/izu-nagaoka-hotel-tenbo/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1&amp;Allianceid=11254538&amp;SID=335287562" data-trip="https://kr.trip.com/hotels/izunokuni-hotel-detail-1497394/izu-nagaoka-hotel-tenbo/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 12월 15일 가격 보기</a>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="card" data-num="5" data-area="high" data-feat="onsen open" data-tier="high"
+      data-search="이시노야 이즈나가오카 TKP 호텔 리조트 石のや伊豆長岡 노천 온천 가이세키 세미스위트 트윈 342898원 9.1점 리뷰 62">
+      <div class="thumb ishinoya"><span class="num">5</span><span class="emoji">🍱</span><span class="tier high">높은 편</span></div>
+      <div class="body">
+        <h2 class="name">이시노야 이즈나가오카<small>石のや伊豆長岡 · 노천탕과 가이세키를 같이</small></h2>
+        <p class="loc">이즈노쿠니시 · 이즈나가오카 온천 마을</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 노천 온천</span>
+          <span class="tag fam">🍱 가이세키 요리</span>
+          <span class="tag fam">🛏 세미스위트 트윈(2룸)</span>
+          <span class="tag good">⭐ 9.1점</span>
+        </div>
+        <p class="bathline"><b>온천</b> <b>노천탕</b>이 있는 료칸이에요. 방은 <b>세미스위트 트윈(2룸)</b>으로 넓어서, 부모님 모시고 방에서 오래 쉬기 좋아요. 저녁은 <b>가이세키</b>로 나와요.</p>
+        <p class="desc">이 페이지에서 <b>제일 비싼 곳(342,898원)</b>이에요. 평점 <b>9.1점</b>, 리뷰 62개예요. 같은 이즈나가오카 안에서 <b>방 넓이와 저녁 식사</b>를 보고 고르는 곳이라, "이번엔 제대로 대접받는 느낌으로" 하고 싶은 날에 맞아요. 반대로 낮에만 온천하고 잠만 자려면 3번 이즈미소나 4번 텐보가 낫아요. 체크인 시간과 식사 시간은 예약 화면에서 확인해 주세요.</p>
+        <div class="meta"><span class="price">342,898원부터</span><span>9.1점 · 리뷰 62</span><span>세미스위트 트윈</span><span>온천 포함</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/izunokuni-hotel-detail-2361917/ishinoya-izunagaoka/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1&amp;Allianceid=11254538&amp;SID=335287562" data-trip="https://kr.trip.com/hotels/izunokuni-hotel-detail-2361917/ishinoya-izunagaoka/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 12월 15일 가격 보기</a>
+      </div>
+    </article>
+
+  </main>
+
+  <div class="empty" id="empty">
+    <b>조건에 맞는 숙소가 없어요</b>
+    다른 가격대나 시설을 골라보세요.
+  </div>
+
+  <section class="tickethead">
+    <h2>✈️ 인천에서 <span>2시간</span>, 공항에서 시내까지 한 번에</h2>
+    <p>시즈오카는 제주항공이 인천에서 매일 두 번 띄워요. 아침 편을 타면 점심 전에 시즈오카에 닿아서, 첫날부터 온천에 들어갈 수 있어요. 아래는 항공사·공항 공식 안내 기준이에요.</p>
+  </section>
+
+  <section class="tickets">
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">✈️</span>인천 → 시즈오카 직항 (매일 2편)</h3>
+        <div class="tprice">약 2시간<small>제주항공</small></div>
+      </div>
+      <p class="twhy">아침 편 <b>7C1601 07:10 출발 → 09:10 도착</b>, 오후 편 <b>7C1603 16:05 → 18:00</b>이 매일 떠요. 아침 편을 타면 <b>오전 10시에 공항에 도착</b>하니, 시내에 짐을 맡기고 점심에 오뎅을 먹고 오후에 온천에 들어가는 일정이 돼요. 부산(김해)에서는 에어부산이 주 3회(월·수·토) 다녀요.</p>
+      <p class="tline"><b>돌아올 때</b> 시즈오카발 인천행은 오전 편과 오후 편이 있어요. <b>주의</b> 계절·요일에 따라 시각이 바뀌니 예약 전에 제주항공에서 다시 확인하세요.</p>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🚌</span>공항 ↔ 시즈오카역 버스</h3>
+        <div class="tprice">1,200엔<small>약 50분</small></div>
+      </div>
+      <p class="twhy">공항 <b>3번 승강장</b>에서 시즈오카역·신시즈오카로 가는 버스가 나요. <b>예약은 필요 없고 앉은 순서</b>예요. 짐이 많으면 좌석이 차기 전에 나가 있는 게 좋아요. 시즈오카역 앞이 <b>오뎅거리와 숙소가 모인 동네</b>라 여기서 내리면 돼요.</p>
+      <p class="tline"><b>요금</b> 어른 1,200엔 · <b>결제</b> 교통카드와 신용카드 터치 결제가 돼요 · <b>주의</b> 만석이면 못 타니, 그때는 JR로 가케가와·시미즈 쪽으로 우회하거나 다음 차를 기다리세요.</p>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🗻</span>후지산 보는 두 자리</h3>
+        <div class="tprice">로프웨이 1,250엔<small>왕복</small></div>
+      </div>
+      <p class="twhy"><b>미호노마쓰바라</b>는 바닷가 소나무 숲길이에요. <b>길이 평탄해서</b> 부모님과 천천히 걷기 좋고, 소나무 사이로 후지산이 보여요. <b>니혼다이라 전망대</b>는 높은 자리에서 후지산과 스루가만을 내려다보는 곳이고, 옆에서 <b>로프웨이</b>를 타면 구능산 동조궁에 닿아요.</p>
+      <p class="tline"><b>로프웨이</b> 니혼다이라역 09:10~16:45, 구능산역 09:30~17:00 · 왕복 1,250엔 · 시즈오카역에서 버스 45분(710엔) · <b>⚠️ 동조궁 경내는 전부 돌계단 80계단</b>이라 무릎이 불편하시면 로프웨이 승강장과 전망대까지만 다녀오세요. <b>지도에는 '니혼다이라', 호텔 이름은 '닛폰다이라 호텔'로 나와요.</b></p>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🍢</span>시즈오카에서 꼭 먹어볼 것</h3>
+        <div class="tprice">오뎅·녹차<small>시즈오카 명물</small></div>
+      </div>
+      <p class="twhy"><b>시즈오카 오뎅</b>은 꼬치에 꽂지 않고 <b>국물에 담가 내오는</b> 방식이에요. 검은 어묵(구로한펜)과 무, 달걀이 기본이고 <b>국물이 진하지 않아</b> 시니어 입맛에 잘 맞아요. 시즈오카역 근처 <b>오뎅거리(아오이 요코초)</b>에 가게가 모여 있어요. 시즈오카는 <b>일본 녹차 생산 1위</b>라, 차밭 마을에 들러 녹차를 마셔보는 것도 좋아요.</p>
+      <p class="tline"><b>팁</b> 오뎅거리는 저녁에 붐비니 <b>5시쯤</b> 들어가면 자리가 있어요 · <b>겨울 시즈오카</b>는 공기가 맑아 <b>후지산이 가장 잘 보이는 계절</b>이에요.</p>
+    </article>
+
+  </section>
+
+  <section class="tickethead">
+    <h2>🧳 같이 챙기면 좋은 <span>일본 여행 준비물</span></h2>
+    <p>시즈오카는 바닷가라 바람이 차고, 료칸 안은 조용해요. 작은 것 몇 개가 여행을 편하게 만들어요. 아래는 쿠팡 파트너스 링크예요.</p>
+  </section>
+
+  <section class="tickets">
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">📶</span>일본 유심·eSIM (4일 무제한)</h3>
+        <div class="tprice">9,790원<small>상품평 3,121개</small></div>
+      </div>
+      <p class="twhy">공항에 내려 바로 버스 시간표와 지도를 봐야 해요. 유심 교체가 어려우면 같은 상품의 eSIM으로 받으면 돼요.</p>
+      <div class="tactions">
+        <a class="btn coupang" href="https://link.coupang.com/a/iF4qSyrEHs" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 (9,790원)</a>
+      </div>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🔌</span>돼지코(일본 변환 플러그) 3개입</h3>
+        <div class="tprice">4,000원<small>상품평 4,919개</small></div>
+      </div>
+      <p class="twhy">일본 콘센트는 2구 평형이라 한국 플러그가 그대로 안 들어가요. 3개입이라 부부 여행에 넉넉해요. (전압 변환기는 아니에요 — 100~240V 겸용 충전기에만 쓰세요.)</p>
+      <div class="tactions">
+        <a class="btn coupang" href="https://link.coupang.com/a/iF4sxpGDqC" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 (4,000원)</a>
+      </div>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">💤</span>기내용 목베개</h3>
+        <div class="tprice">14,800원<small>정가 24,800원</small></div>
+      </div>
+      <p class="twhy">2시간 비행이지만 새벽 출발이면 목을 받쳐 주는 것만으로 도착 후 컨디션이 달라요. 파우치가 있어 캐리어 손잡이에 달아둘 수 있어요.</p>
+      <div class="tactions">
+        <a class="btn coupang" href="https://link.coupang.com/a/iF4DjVFd9w" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 (14,800원)</a>
+      </div>
+    </article>
+
+  </section>
+
+  <section class="tip">
+    <h2>♨️ 시즈오카 온천 갈 때 알아두면 좋은 것</h2>
+    <ul>
+      <li><b>온천이 없는 숙소가 하나 있어요.</b> 닛폰다이라 호텔은 <b>온천도 대욕장도 없고</b> 방 욕실만 있어요. 후지산 뷰를 위해 고르는 곳이에요. 온천이 꼭 필요하면 1·3·4·5번으로 가세요.</li>
+      <li><b>이즈나가오카는 시즈오카역에서 한 번 더 가야 해요.</b> 시즈오카역에서 이즈나가오카역까지 열차로 40분 안팎이에요. 짐이 많으면 시내(1·2번)에서 하루 묵고 다음 날 이동하는 편이 편해요.</li>
+      <li><b>료칸 체크인 마감이 일러요.</b> 텐보는 <b>18:00</b>, 이즈미소·이시노야는 예약 화면에 나온 시간을 지켜야 해요. 늦으면 꼭 미리 연락하세요.</li>
+      <li><b>겨울 후지산은 아침이 제일 맑아요.</b> 오전 9~11시에 구름이 적어요. 니혼다이라 쪽에 묵는다면 <b>체크아웃을 12시</b>로 잡고 아침에 방에서 후지산을 보는 게 좋아요.</li>
+      <li><b>구능산 동조궁은 전부 돌계단이에요.</b> 로프웨이에서 내려 <b>80계단</b>을 올라야 해요. 무릎이 불편하면 무리하지 말고 전망대까지만 다녀오세요.</li>
+      <li><b>입탕세가 따로 붙어요.</b> 온천 숙소는 <b>1인 1박 100~150엔 안팎</b>의 입탕세를 받아요. 현장에서 현금으로 내는 곳이 많으니 <b>소액 엔화</b>를 준비하세요.</li>
+      <li><b>가격은 날짜에 따라 크게 달라져요.</b> 여기 적은 금액은 2026년 11월 28일에 확인한 <b>12월 15일(화)~16일(수) 1박·성인 2인 최저 객실 요금</b>이에요. 주말·연말에는 같은 방이 1.5~2배까지 올라요.</li>
+    </ul>
+    <div class="facts">
+      <span>📅 2026-11-28 확인</span>
+      <span>🛏 12월 15일 1박 최저가</span>
+      <span>♨️ 5곳 온천·체크인 확인</span>
+      <span>✈️ 제주항공 직항 매일 2편</span>
+    </div>
+  </section>
+
+  <footer>
+    <p class="notice"><strong>제휴 마케팅 활동의 일환으로 예약 시 일정액의 수수료를 제공받을 수 있습니다.</strong></p>
+    <p class="notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+    <p>가격은 2026년 11월 28일 트립닷컴에서 2026년 12월 15일(화)~12월 16일(수) 1박·성인 2인 기준으로 조회한 가장 낮은 객실 요금을 '~부터'로 적은 것입니다(세금·기타 요금 약 2,510원 별도). 객실 타입·식사 포함 여부·날짜·인원에 따라 실제 요금이 달라질 수 있어요. 호텔 오레 인과 이즈-나가오카 호텔 텐보는 조식 2인 포함 요금이고, 닛폰다이라 호텔은 조식이 빠진 객실 요금이에요.</p>
+    <p>주소·체크인·체크아웃 시간·조식 시간·주차 요금은 2026년 11월 28일 트립닷컴 각 숙소 상세 페이지에서 확인한 내용이고, 평점과 리뷰 수는 트립닷컴 기준이에요. 사네아츠노 야도 이즈미소와 이시노야 이즈나가오카는 검색 결과의 요금·평점·객실 타입을 기준으로 정리했고, 체크인 시간과 식사는 예약 화면에서 확인해 주세요. 닛폰다이라 호텔에 온천과 대욕장이 없다는 점은 숙소 공식 안내로 확인했어요.</p>
+    <p>항공편·공항버스·로프웨이 요금과 운행 시간은 제주항공, 후지산 시즈오카 공항, 시즈오카 철도 공식 안내를 기준으로 정리했어요. 계절과 요일에 따라 시각이 바뀌니 출발 전에 공식 페이지를 다시 확인하세요.</p>
+    <p>사진은 각 숙소의 실제 모습이 아니라 지역과 시설을 나타내는 이미지입니다.</p>
+    <p><a href="index.html" style="color:#F0D683">🏨 일본 숙소 10곳 보기</a> · <a href="matsuyama-dogo.html" style="color:#F0D683">🏯 마쓰야마·도고온천 료칸 5곳 보기</a> · <a href="kagoshima-ibusuki.html" style="color:#F0D683">🌋 가고시마·이부스키 온천 5곳 보기</a> · <a href="fukuoka-yufuin.html" style="color:#F0D683">♨️ 후쿠오카·유후인 료칸 5곳 보기</a> · <a href="essentials.html" style="color:#F0D683">🧳 일본 여행 필수템 8선 보기</a></p>
+  </footer>
+
+</div>
+
+<script>
+/* =========================================================
+   제휴 설정 — 다른 페이지와 동일한 값 (트립닷컴 AID / SID)
+   ========================================================= */
+var AFFILIATE_CONFIG = {
+  trip:  { aid: "11254538", sid: "335287562" }
+};
+
+function withTripAffiliate(url){
+  var aid = AFFILIATE_CONFIG.trip.aid;
+  if(!aid){ return url; }
+  var sep = url.indexOf("?") === -1 ? "?" : "&";
+  var out = url + sep + "Allianceid=" + encodeURIComponent(aid);
+  if(AFFILIATE_CONFIG.trip.sid){
+    out += "&SID=" + encodeURIComponent(AFFILIATE_CONFIG.trip.sid);
+  }
+  return out;
+}
+
+(function applyAffiliate(){
+  var tripLinks = document.querySelectorAll("a[data-trip]");
+  for(var j = 0; j < tripLinks.length; j++){
+    tripLinks[j].href = withTripAffiliate(tripLinks[j].getAttribute("data-trip"));
+  }
+})();
+
+/* =========================================================
+   검색 + 필터 (가격대 / 시설)
+   ========================================================= */
+(function(){
+  var q = document.getElementById("q");
+  var clearBtn = document.getElementById("clear");
+  var countEl = document.getElementById("count");
+  var emptyEl = document.getElementById("empty");
+  var cards = Array.prototype.slice.call(document.querySelectorAll("#list .card"));
+
+  var state = { area: "all", feat: "all", text: "" };
+
+  function bindGroup(containerId, key){
+    var group = document.getElementById(containerId);
+    if(!group){ return; }
+    group.addEventListener("click", function(e){
+      var btn = e.target.closest ? e.target.closest(".chip") : null;
+      if(!btn || !group.contains(btn)){ return; }
+      var chips = group.querySelectorAll(".chip");
+      for(var i = 0; i < chips.length; i++){
+        chips[i].setAttribute("aria-pressed", chips[i] === btn ? "true" : "false");
+      }
+      state[key] = btn.getAttribute("data-" + key);
+      apply();
+    });
+  }
+
+  function normalize(s){
+    return (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  function matches(card){
+    if(state.area !== "all" && card.getAttribute("data-area") !== state.area){ return false; }
+    if(state.feat !== "all"){
+      var feat = " " + card.getAttribute("data-feat") + " ";
+      if(feat.indexOf(" " + state.feat + " ") === -1){ return false; }
+    }
+    if(state.text){
+      if(/^[0-9]+$/.test(state.text)){
+        return card.getAttribute("data-num") === state.text;
+      }
+      var hay = normalize(card.getAttribute("data-search") + " " +
+        card.querySelector(".name").textContent + " " +
+        card.querySelector(".loc").textContent);
+      var words = state.text.split(" ").filter(Boolean);
+      for(var w = 0; w < words.length; w++){
+        if(hay.indexOf(words[w]) === -1){ return false; }
+      }
+    }
+    return true;
+  }
+
+  function apply(){
+    var shown = 0;
+    for(var i = 0; i < cards.length; i++){
+      var ok = matches(cards[i]);
+      cards[i].style.display = ok ? "" : "none";
+      if(ok){ shown++; }
+    }
+    countEl.textContent = shown;
+    emptyEl.classList.toggle("show", shown === 0);
+    clearBtn.classList.toggle("show", !!state.text);
+  }
+
+  function onText(){
+    state.text = normalize(q.value);
+    apply();
+  }
+
+  bindGroup("areaChips", "area");
+  bindGroup("featChips", "feat");
+  q.addEventListener("input", onText);
+  q.addEventListener("search", onText);
+  clearBtn.addEventListener("click", function(){ q.value = ""; state.text = ""; apply(); q.focus(); });
+  apply();
+})();
+</script>
+</body>
+</html>
