@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>마쓰야마·도고온천 온천 숙소 5곳 · 인천·부산 직항으로 부모님 모시고 가기 좋은 료칸</title>
+<meta name="description" content="마쓰야마 도고온천 료칸 5곳을 2026년 12월 15일 1박·성인 2인 요금으로 정리했어요. 도고 프린스 호텔, 차하루, 코와쿠엔 하루카, 도고칸, 후나야의 온천·체크인 시간·식사와 제주항공·에어부산 직항 승객 무료 셔틀버스·무료 입장권까지 한 번에.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="마쓰야마·도고온천 온천 숙소 5곳 + 직항 무료 혜택">
+<meta property="og:description" content="도고온천 본관 걸어서 5분 안쪽 료칸 5곳. 12월 15일 1박 최저가와 온천·체크인 시간, 제주항공·에어부산 직항 승객만 받는 무료 셔틀·무료 입장권까지.">
+<meta property="og:locale" content="ko_KR">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A8%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#111111;
+    --card:#1C1C1E;
+    --card2:#242426;
+    --line:#2E2E31;
+    --text:#F2F2F4;
+    --sub:#A1A1A8;
+    --yellow:#F5C518;
+    --trip:#1E88E5;
+    --green:#2E7D32;
+    --amber:#A15C00;
+    --purple:#5E35B1;
+    --onsen:#C2185B;
+    --orange:#D84315;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic","Noto Sans KR",Roboto,sans-serif;
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+    padding-bottom:calc(28px + env(safe-area-inset-bottom));
+  }
+  .wrap{max-width:760px;margin:0 auto;padding:0 14px}
+
+  /* ---------- header ---------- */
+  header.top{padding:18px 0 10px}
+  .brand{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--sub);letter-spacing:.08em;text-transform:uppercase}
+  .brand b{color:var(--yellow);letter-spacing:0}
+  h1{font-size:24px;line-height:1.3;margin:10px 0 6px;letter-spacing:-.02em}
+  h1 span{color:var(--yellow)}
+  .lead{margin:0;color:var(--sub);font-size:13.5px}
+
+  /* ---------- page switch tabs ---------- */
+  .tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:14px 0 4px}
+  .tab{
+    flex:0 0 calc((100% - 16px)/3);
+    display:flex;align-items:center;justify-content:center;gap:4px;
+    text-decoration:none;padding:11px 4px;border-radius:13px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#C9C9D0;font-size:12.5px;font-weight:600;text-align:center;line-height:1.25;
+    word-break:keep-all;
+  }
+  .tab.on{background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:800}
+  .tab:active{transform:scale(.99)}
+
+  /* ---------- sticky search + filters ---------- */
+  .searchbar{
+    position:sticky;top:0;z-index:20;
+    background:#111111;
+    padding:8px 14px 10px;
+    margin:0 -14px;
+    box-shadow:0 8px 14px -10px rgba(0,0,0,.9);
+  }
+  .filters{padding:2px 0 4px}
+  .search{position:relative}
+  .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.55}
+  #q{
+    width:100%;padding:15px 44px 15px 42px;
+    background:#1A1A1C;border:1px solid var(--line);border-radius:16px;
+    color:var(--text);font-size:15px;font-family:inherit;
+    outline:none;appearance:none;
+  }
+  #q::placeholder{color:#7C7C84}
+  #q:focus{border-color:#4A4A50;background:#1F1F22}
+  #clear{
+    position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    width:30px;height:30px;border:0;border-radius:50%;
+    background:#333338;color:#CFCFD6;font-size:16px;line-height:1;
+    display:none;cursor:pointer;
+  }
+  #clear.show{display:block}
+
+  .chips{
+    display:flex;gap:8px;overflow-x:auto;padding:10px 0 0;
+    scrollbar-width:none;-ms-overflow-style:none;
+  }
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;
+    padding:9px 15px;border-radius:999px;
+    background:#1A1A1C;border:1px solid var(--line);
+    color:#D6D6DC;font-size:13.5px;font-family:inherit;white-space:nowrap;
+    cursor:pointer;transition:background .15s,border-color .15s,color .15s;
+  }
+  .chip[aria-pressed="true"]{
+    background:var(--yellow);border-color:var(--yellow);color:#141414;font-weight:700;
+  }
+  .chip:active{transform:scale(.98)}
+
+  .status{
+    display:flex;justify-content:space-between;align-items:baseline;gap:10px;
+    padding:12px 0 2px;color:var(--sub);font-size:12.5px;
+  }
+  .status b{color:var(--text);font-weight:600}
+  .status .basis{text-align:right}
+
+  /* ---------- cards ---------- */
+  .list{display:grid;gap:12px;padding-top:8px}
+  .card{
+    display:grid;grid-template-columns:104px 1fr;gap:12px;
+    background:var(--card);border:1px solid #26262A;
+    border-radius:18px;padding:12px;
+  }
+  .thumb{
+    position:relative;border-radius:13px;overflow:hidden;
+    background:linear-gradient(160deg,#2A2A30,#17171A);
+    min-height:104px;display:flex;align-items:center;justify-content:center;
+  }
+  .thumb .emoji{font-size:34px;opacity:.92;filter:saturate(1.05)}
+  .thumb.prince{background:linear-gradient(160deg,#33262B,#191016)}
+  .thumb.chaharu{background:linear-gradient(160deg,#252233,#12111C)}
+  .thumb.kowakuen{background:linear-gradient(160deg,#23302B,#0F1714)}
+  .thumb.dogokan{background:linear-gradient(160deg,#2E2A22,#17140E)}
+  .thumb.funaya{background:linear-gradient(160deg,#2A2430,#141019)}
+  .num{
+    position:absolute;top:6px;left:6px;
+    min-width:26px;height:26px;padding:0 6px;border-radius:8px;
+    background:var(--yellow);color:#141414;
+    font-weight:800;font-size:14px;line-height:26px;text-align:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.35);
+  }
+  .tier{
+    position:absolute;bottom:6px;left:6px;
+    padding:3px 8px;border-radius:7px;
+    font-size:10.5px;font-weight:700;color:#fff;letter-spacing:.01em;
+  }
+  .tier.low{background:var(--green)}
+  .tier.mid2{background:var(--amber)}
+  .tier.high{background:var(--purple)}
+
+  .body{min-width:0}
+  .name{margin:0;font-size:16px;line-height:1.32;letter-spacing:-.01em}
+  .name small{display:block;font-size:11.5px;color:var(--sub);font-weight:400;margin-top:2px}
+  .loc{margin:4px 0 0;font-size:12.5px;color:var(--yellow);font-weight:600}
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0 0}
+  .tag{
+    font-size:11px;color:#C9C9D0;background:#26262A;border:1px solid #303036;
+    padding:3px 7px;border-radius:7px;white-space:nowrap;
+  }
+  .tag.onsen{background:#3A1220;border-color:#5C1B33;color:#FFC9DC}
+  .tag.fam{background:#0F2E28;border-color:#1E5045;color:#9FE8D6}
+  .tag.good{background:#2B2A16;border-color:#4C4A22;color:#F3E39B}
+  .desc{margin:8px 0 0;font-size:12.5px;color:#B9B9C2;line-height:1.55}
+  .bathline{
+    margin:8px 0 0;font-size:12px;color:#D9D9E0;background:#191A1D;
+    border:1px solid #2A2B30;border-left:3px solid var(--onsen);
+    border-radius:9px;padding:7px 9px;line-height:1.5;
+  }
+  .bathline b{color:#FFC9DC;font-weight:700}
+  .hours{
+    margin:8px 0 0;font-size:12px;color:#DCDCE2;background:#16181A;
+    border:1px solid #282B2E;border-left:3px solid var(--yellow);
+    border-radius:9px;padding:7px 9px;line-height:1.5;
+  }
+  .hours b{color:var(--yellow);font-weight:700}
+  .hours .off{color:#FF9E9E;font-weight:700}
+  .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:9px;font-size:11.5px;color:#8F8F97}
+  .meta .price{color:var(--yellow);font-weight:800;font-size:13px}
+  .actions{display:grid;gap:8px;margin-top:12px;grid-column:1 / -1}
+  .btn{
+    display:block;text-align:center;text-decoration:none;
+    padding:12px 6px;border-radius:12px;
+    font-size:13.5px;font-weight:700;color:#fff;
+    border:0;cursor:pointer;
+  }
+  .btn.trip{background:var(--trip)}
+  .btn.coupang{background:var(--yellow);color:#141414}
+  .btn:active{filter:brightness(.92)}
+
+  /* ---------- ticket / info cards ---------- */
+  .tickethead{margin:30px 0 4px;padding-top:18px;border-top:1px solid #232326}
+  .tickethead h2{margin:0;font-size:19px;letter-spacing:-.01em}
+  .tickethead h2 span{color:var(--yellow)}
+  .tickethead p{margin:6px 0 0;font-size:12.5px;color:var(--sub);line-height:1.6}
+  .tickets{display:grid;gap:12px;margin-top:12px}
+  .tcard{
+    background:var(--card);border:1px solid #26262A;border-radius:16px;padding:13px 14px;
+  }
+  .tcard .thead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+  .tcard h3{margin:0;font-size:15px;line-height:1.35;letter-spacing:-.01em}
+  .tcard h3 .ticon{margin-right:5px}
+  .tcard .tprice{
+    flex:0 0 auto;color:var(--yellow);font-weight:800;font-size:14px;
+    white-space:nowrap;line-height:1.35;text-align:right;
+  }
+  .tcard .tprice small{display:block;color:#8F8F97;font-weight:500;font-size:10.5px}
+  .tcard .twhy{margin:7px 0 0;font-size:12.5px;color:#C4C4CC;line-height:1.6}
+  .tcard .tline{
+    margin:8px 0 0;font-size:11.5px;color:#D9D9E0;background:#191A1D;
+    border:1px solid #2A2B30;border-left:3px solid #3A3A40;border-radius:9px;
+    padding:7px 9px;line-height:1.55;
+  }
+  .tcard .tline b{color:var(--yellow);font-weight:700}
+  .tcard .tactions{display:grid;gap:8px;margin-top:11px}
+  .tcard .tactions .btn{padding:11px 6px;font-size:13px}
+
+  .empty{
+    display:none;text-align:center;padding:44px 16px;color:var(--sub);
+    border:1px dashed #303036;border-radius:18px;background:#171719;
+  }
+  .empty b{display:block;color:var(--text);font-size:15px;margin-bottom:6px}
+  .empty.show{display:block}
+
+  /* ---------- tip + footer ---------- */
+  .tip{
+    margin-top:18px;padding:14px 15px;border-radius:16px;
+    background:#181A1B;border:1px solid #2A2E30;
+  }
+  .tip h2{margin:0 0 6px;font-size:14px}
+  .tip p{margin:0 0 8px;font-size:12.5px;color:#AEAEB6;line-height:1.6}
+  .tip ul{margin:0;padding-left:18px}
+  .tip li{font-size:12.5px;color:#AEAEB6;line-height:1.65;margin-bottom:6px}
+  .tip li b{color:#E6E6EA}
+  .tip .facts{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px}
+  .tip .facts span{font-size:11px;color:#C9C9D0;background:#232326;padding:3px 7px;border-radius:7px}
+  .tip a{color:#F0D683}
+
+  footer{margin-top:22px;padding-top:16px;border-top:1px solid #232326;color:#8F8F97;font-size:11.5px;line-height:1.7}
+  footer p{margin:0 0 8px}
+  footer .notice{color:#C9C9D0}
+  footer strong{color:#E6E6EA}
+
+  @media (min-width:480px){
+    .tab{font-size:11.5px;padding:11px 2px}
+  }
+  @media (min-width:620px){
+    .tabs{display:flex;gap:8px}
+    .tab{flex:0 0 calc((100% - 48px)/6);font-size:11px;padding:11px 4px;gap:4px}
+    h1{font-size:28px}
+    .list{grid-template-columns:1fr 1fr}
+    .card{grid-template-columns:96px 1fr}
+    .card .desc{font-size:12px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand"><b>PICK</b> MATSUYAMA · DOGO ONSEN</div>
+    <h1>마쓰야마 <span>도고온천 료칸</span> 5곳</h1>
+    <p class="lead">도고온천 본관에서 걸어서 5분 안쪽 료칸 5곳 · 인천·부산 직항 무료 셔틀과 무료 입장권까지 · 2026년 11월 28일 확인</p>
+  </header>
+
+  <nav class="tabs" aria-label="페이지 이동">
+    <a class="tab" href="index.html">🏨 일본 숙소</a>
+    <a class="tab" href="sapporo.html">♨️ 삿포로 대욕장</a>
+    <a class="tab" href="korea-onsen.html">🇰🇷 국내 온천</a>
+    <a class="tab" href="seoul-onsen.html">♨️ 서울근교 온천</a>
+    <a class="tab" href="gyeongnam-family.html">👨‍👩‍👧‍👦 부산·경남 가족</a>
+    <a class="tab" href="jeju-onsen.html">🍊 제주 온천</a>
+    <a class="tab" href="jeolla-onsen.html">♨️ 전라도 온천</a>
+    <a class="tab" href="chungcheong-onsen.html">♨️ 충청도 온천</a>
+    <a class="tab" href="gangwon-onsen.html">🏔️ 강원도 온천</a>
+    <a class="tab" href="gyeongbuk-onsen.html">♨️ 경북 온천</a>
+    <a class="tab" href="gyeongju-yeosu.html">🌊 경주·여수</a>
+    <a class="tab" href="shinan-jeungdo.html">🏝️ 신안 증도</a>
+    <a class="tab" href="fukuoka-yufuin.html">♨️ 후쿠오카·유후인</a>
+    <a class="tab on" href="matsuyama-dogo.html" aria-current="page">🏯 마쓰야마·도고</a>
+    <a class="tab" href="cruise.html">🚢 크루즈</a>
+    <a class="tab" href="essentials.html">🧳 필수템 8선</a>
+  </nav>
+
+  <div class="searchbar">
+    <div class="search">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#BFBFC6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="q" type="text" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="번호 또는 숙소명 (예: 후나야, 도고칸)" aria-label="숙소 검색">
+      <button id="clear" type="button" aria-label="검색어 지우기">✕</button>
+    </div>
+  </div>
+
+  <div class="filters">
+
+    <div class="chips" id="areaChips" role="group" aria-label="가격 필터">
+      <button class="chip" data-area="all" aria-pressed="true">전체 가격</button>
+      <button class="chip" data-area="low" aria-pressed="false">25만원 이하</button>
+      <button class="chip" data-area="high" aria-pressed="false">25만원 넘음</button>
+    </div>
+
+    <div class="chips" id="featChips" role="group" aria-label="시설 필터">
+      <button class="chip" data-feat="all" aria-pressed="true">♨️ 전체</button>
+      <button class="chip" data-feat="open" aria-pressed="false">노천탕</button>
+      <button class="chip" data-feat="meal" aria-pressed="false">식사 포함 요금</button>
+      <button class="chip" data-feat="near" aria-pressed="false">본관 400m 안</button>
+      <button class="chip" data-feat="pickup" aria-pressed="false">무료 픽업</button>
+    </div>
+  </div>
+
+  <div class="status" aria-live="polite">
+    <span><b id="count">5</b>곳</span>
+    <span class="basis">12월 15일(화) 1박·성인 2인 최저가 · 2026-11-28 조회</span>
+  </div>
+
+  <main class="list" id="list">
+
+    <!-- 1 -->
+    <article class="card" data-num="1" data-area="low" data-feat="onsen open pickup" data-tier="low"
+      data-search="도고 프린스 호텔 Dogo Prince Hotel 道後プリンスホテル 마쓰야마시 도고히메즈카 100 기안지 160미터 도고온천 650미터 무료 역 픽업 샌딩 공항 무료 셔틀 정류장 야외 온천 수영장 사우나 족욕 전세탕 124실 조식 뷔페 해산물 덮밥">
+      <div class="thumb prince"><span class="num">1</span><span class="emoji">♨️</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">도고 프린스 호텔<small>Dogo Prince Hotel · 공항 무료 셔틀이 호텔 앞에 서요</small></h2>
+        <p class="loc">마쓰야마시 도고히메즈카 100 · 도고온천 본관 650m · 기안지 160m</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 온천 대욕장·노천탕</span>
+          <span class="tag fam">🚐 역 픽업·샌딩 무료</span>
+          <span class="tag fam">🏊 야외 온천 수영장</span>
+          <span class="tag fam">🥚 족욕·온천 달걀</span>
+          <span class="tag good">🛁 전세탕(貸切) 있음</span>
+        </div>
+        <p class="bathline"><b>온천</b> 실내 대욕장과 <b>노천탕</b>, 사우나가 있고 <b>가족끼리 들어가는 전세탕</b>도 있어요. 정원 쪽 <b>족욕</b>에서는 온천 달걀을 삶아 먹을 수 있어서 아이·손주와 함께면 여기가 제일 재미있어요. <b>야외 온천 수영장</b>도 있어요.</p>
+        <p class="hours"><b>🕘 체크인</b> 15:00~18:00 · <b>체크아웃</b> 08:00~10:00 · <b>조식</b> 07:00~09:00(일식) · <b>주차</b> 1일 770엔 · ☎ +81-89-947-5111</p>
+        <p class="desc">이 페이지에서 <b>가장 저렴한 곳</b>이에요. 무엇보다 <b>공항 무료 셔틀버스 정류장 7곳에 '도고프린스 호텔'이 들어 있어서</b>, 공항에서 내려 짐 들고 한 번에 호텔 앞까지 와요. 도고온천 본관까지는 걸어서 8분쯤이라 조금 있지만, 호텔 앞에서 <b>도고온천역까지 무료로 태워다 줘요</b>. 124실 큰 호텔이라 24시간 프런트가 돌아가고, 밤 9시부터 야식 식당(우동)을 열어서 늦게 도착해도 끼니를 걱정하지 않아요. 조식 뷔페에 <b>해산물 덮밥</b>이 나온다는 후기가 많아요. 다만 오래된 건물이라 <b>객실이 조금 낡았다</b>는 이야기와 에어컨 냄새 후기가 한 건 있었어요.</p>
+        <div class="meta"><span class="price">218,407원부터</span><span>9.0점 · 리뷰 54</span><span>124실</span><span>조식 포함 245,107원</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/matsuyama-hotel-detail-704859/dogo-prince-hotel/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1&amp;Allianceid=11254538&amp;SID=335287562" data-trip="https://kr.trip.com/hotels/matsuyama-hotel-detail-704859/dogo-prince-hotel/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 12월 15일 가격 보기</a>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="card" data-num="2" data-area="low" data-feat="onsen open meal near" data-tier="low"
+      data-search="차하루 Chaharu 道後温泉 茶玻瑠 마쓰야마시 도고유즈키초 4-4 도고온천 본관 100미터 옥상 루프탑 노천탕 하프보드 뷔페 저녁 한국어 직원 66실 조식 석식 포함">
+      <div class="thumb chaharu"><span class="num">2</span><span class="emoji">🌃</span><span class="tier low">가성비</span></div>
+      <div class="body">
+        <h2 class="name">차하루<small>Chaharu · 옥상 노천탕에서 도고 야경을 봐요</small></h2>
+        <p class="loc">마쓰야마시 도고유즈키초 4-4 · 도고온천 본관 100m 안(걸어서 1~2분)</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 옥상 노천탕</span>
+          <span class="tag fam">🍽 조식·석식 뷔페 포함 요금</span>
+          <span class="tag fam">🚶 본관까지 걸어서 1~2분</span>
+          <span class="tag fam">🇰🇷 한국어 하는 직원</span>
+          <span class="tag good">🌙 야경 전망</span>
+        </div>
+        <p class="bathline"><b>온천</b> <b>옥상 노천탕</b>이 이 집의 자랑이에요. 도고온천 마을이 내려다보여서 <b>해 질 무렵이나 밤에 들어가면 제일 예뻐요</b>. 대욕장도 있고 마사지실도 있어요. 다만 <b>개인탕은 없어서</b> 가족끼리 따로 들어가고 싶으면 대욕장 시간을 맞춰야 해요.</p>
+        <p class="hours"><b>🕘 체크인</b> 15:00~ · <b>체크아웃</b> 10:00 · <b>조식 뷔페</b> 06:30~09:00(1인 2,000엔) · <b>주차</b> 1일 880엔 · ☎ +81-89-945-1321</p>
+        <p class="desc">이 페이지에서 <b>식사가 포함된 가격</b>으로는 가장 싸요. 위 요금이 <b>조식과 뷔페 저녁식사까지 들어간 하프보드</b>라, 저녁 먹으러 밖에 나가지 않아도 돼요. 뷔페 메뉴가 다양하고 현지 재료를 쓴다는 평이 많고, <b>한국인 직원이 있어 말이 통한다</b>는 후기도 자주 나와요. <b>도고온천 본관이 바로 뒤</b>라 밤에 본관 온천에 들렀다 오기에도 좋아요. 다만 1967년 지은 건물(2014년 리모델링)이라 <b>시설이 조금 낡고 화장실 냄새</b>가 났다는 후기가 있고, <b>주차장에서 호텔까지 언덕·계단</b>이 있어요. 차를 가져가시면 짐은 먼저 내려두세요.</p>
+        <div class="meta"><span class="price">243,323원부터</span><span>8.5점 · 리뷰 98</span><span>66실</span><span>조식·석식 포함</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/matsuyama-hotel-detail-705802/chaharu/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1&amp;Allianceid=11254538&amp;SID=335287562" data-trip="https://kr.trip.com/hotels/matsuyama-hotel-detail-705802/chaharu/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 12월 15일 가격 보기</a>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="card" data-num="3" data-area="high" data-feat="onsen open near" data-tier="mid2"
+      data-search="도고 호텔 코와쿠엔 하루카 Hotel Kowakuen Haruka 道後温泉 ホテル古湧園 遥 마쓰야마시 도고사기다니초 1-1 도고온천 본관 310미터 2019년 신축 엘리베이터 계단없는 출입구 휠체어 족욕 70실 조식 뷔페 도미회 한국어 직원">
+      <div class="thumb kowakuen"><span class="num">3</span><span class="emoji">🛗</span><span class="tier mid2">중간급</span></div>
+      <div class="body">
+        <h2 class="name">도고 호텔 코와쿠엔 하루카<small>Hotel Kowakuen Haruka · 계단 없이 프런트까지, 부모님께 제일 편해요</small></h2>
+        <p class="loc">마쓰야마시 도고사기다니초 1-1 · 도고온천 본관 310m(걸어서 4분)</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 온천 대욕장·족욕</span>
+          <span class="tag fam">🛗 엘리베이터로 프런트 바로</span>
+          <span class="tag fam">♿ 계단 없는 출입구·휠체어</span>
+          <span class="tag fam">✨ 2019년 신축 70실</span>
+          <span class="tag good">🇰🇷 한국어 하는 직원</span>
+        </div>
+        <p class="bathline"><b>온천</b> 대욕장이 넓고 깨끗하기로 소문났어요(청결 점수 <b>9.8</b>). <b>족욕</b>과 일광욕 공간도 있어서 온천에 오래 못 들어가시는 분도 발만 담그고 쉴 수 있어요. <b>무료 유카타</b>도 있어서 료칸 기분을 내기 좋아요.</p>
+        <p class="hours"><b>🕘 체크인</b> 15:00~19:30 · <b>체크아웃</b> 07:00~11:00 · <b>조식 뷔페</b> 07:00~09:30(1인 3,300엔) · <b>주차</b> 1일 1,100엔 · ☎ +81-89-945-5911</p>
+        <p class="desc">이 페이지에서 <b>평점이 가장 높은 곳</b>이에요. 리뷰 <b>445개에 9.6점</b>, 청결 9.8·시설 9.6·위치 9.6·서비스 9.6으로 <b>1년 동안 부정 리뷰가 한 건도 없었어요</b>. 부모님 모시기 좋은 이유는 <b>도고온천 본관 옆인데도 언덕을 올라가지 않아요</b>. 본관 왼쪽으로 돌아가면 <b>엘리베이터가 바로 프런트로 올려줘서</b> 짐을 들고 계단을 오를 일이 없어요. 계단 없는 주 출입구에 휠체어·장애인 지원 객실도 있어요. 조식 <b>도미회가 신선하다</b>는 평이 많고, 한국어 하는 직원이 있다는 후기도 여러 건이에요.</p>
+        <div class="meta"><span class="price">280,386원부터</span><span>9.6점 · 리뷰 445</span><span>70실</span><span>발코니 트윈 35㎡</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/matsuyama-hotel-detail-704863/hotel-kowakuen-haruka/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1&amp;Allianceid=11254538&amp;SID=335287562" data-trip="https://kr.trip.com/hotels/matsuyama-hotel-detail-704863/hotel-kowakuen-haruka/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 12월 15일 가격 보기</a>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="card" data-num="4" data-area="high" data-feat="onsen open near" data-tier="mid2"
+      data-search="도고칸 Dogo-Kan 道後舘 마쓰야마시 도고타코초 7-26 도고온천 330미터 가이세키 우와지마 도미 무료 라운지 귤주스 대욕장 사우나 90실 조식">
+      <div class="thumb dogokan"><span class="num">4</span><span class="emoji">🍊</span><span class="tier mid2">중간급</span></div>
+      <div class="body">
+        <h2 class="name">도고칸<small>Dogo-Kan · 우와지마 도미 가이세키와 무료 귤주스</small></h2>
+        <p class="loc">마쓰야마시 도고타코초 7-26 · 도고온천 본관 330m · 호텔 안 족욕 100m 안</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 대욕장·사우나</span>
+          <span class="tag fam">🍱 가이세키(우와지마 도미)</span>
+          <span class="tag fam">🍊 라운지 무료 음료·귤주스</span>
+          <span class="tag fam">🚶 본관까지 걸어서 4분</span>
+          <span class="tag good">💬 응대 만족도 높음</span>
+        </div>
+        <p class="bathline"><b>온천</b> 대욕장이 넓어서 남탕 씻는 자리만 <b>20~30개</b>쯤 된다는 후기가 있어요. <b>미지근한 탕과 뜨거운 탕 두 가지 온도</b>가 있어서 물이 뜨거워 못 들어가는 분도 편하게 들어갈 수 있어요. 사우나·마사지실도 있고 <b>족욕</b>도 있어요. <b>따로 예약하는 개인탕은 없어요</b>.</p>
+        <p class="hours"><b>🕘 체크인</b> 15:00~ · <b>체크아웃</b> 10:00 · <b>조식</b> 06:30~10:00(일식) · <b>주차</b> 유료 · ☎ +81-89-941-7777</p>
+        <p class="desc">식사로 유명한 곳이에요. <b>우와지마 도미 가이세키</b>가 나오는 날이 있고, 그릇과 담음새가 예쁘다는 이야기가 많아요. 로비 라운지에서 <b>도고온천 명물 귤주스 두 종류를 비교해 마실 수 있게</b> 해두고 커피·물도 무료예요. <b>서비스 점수 9.6</b>으로 응대가 특히 좋다는 후기가 많고, 2시에 일찍 체크인한 분도 있었어요. 다만 <b>호텔까지 살짝 언덕</b>이라 캐리어가 크면 택시를 권해요. 객실 먼지·연식 이야기와 <b>한국어 직원이 없다</b>는 점은 미리 알아두세요. 위 요금은 <b>23㎡ 서양식룸</b> 기준이고, 넓은 화실(38~43㎡)은 조식 포함 요금으로 따로 있어요.</p>
+        <div class="meta"><span class="price">301,971원부터</span><span>9.5점 · 리뷰 115</span><span>90실</span><span>23㎡ 서양식룸</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/matsuyama-hotel-detail-704857/dogo-kan/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1&amp;Allianceid=11254538&amp;SID=335287562" data-trip="https://kr.trip.com/hotels/matsuyama-hotel-detail-704857/dogo-kan/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 12월 15일 가격 보기</a>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="card" data-num="5" data-area="high" data-feat="onsen open near" data-tier="high"
+      data-search="후나야 Funaya ふなや 마쓰야마시 도고유노마치 1-33 도고온천 260미터 도고온천역 도보 5분 이사니와 신사 390년 역사 나쓰메 소세키 정원 1500평 가이세키 58실">
+      <div class="thumb funaya"><span class="num">5</span><span class="emoji">🌿</span><span class="tier high">높은 편</span></div>
+      <div class="body">
+        <h2 class="name">후나야<small>Funaya · 390년 역사, 나쓰메 소세키가 묵던 료칸</small></h2>
+        <p class="loc">마쓰야마시 도고유노마치 1-33 · 도고온천 260m · 도고온천역 걸어서 5분</p>
+        <div class="tags">
+          <span class="tag onsen">♨️ 노천탕·대욕장</span>
+          <span class="tag fam">🛁 객실 욕조에도 온천수</span>
+          <span class="tag fam">🌳 넓은 일본 정원</span>
+          <span class="tag fam">🍱 가이세키 조식·석식</span>
+          <span class="tag good">📖 소설 '봇짱'의 무대</span>
+        </div>
+        <p class="bathline"><b>온천</b> 대욕장과 <b>노천탕</b>이 있고, 물은 도고온천 원천을 그대로 써요. <b>객실 욕조에도 온천수가 나온다</b>는 후기가 있어서 대욕장이 부담스러운 분은 방에서 혼자 담글 수 있어요. <b>족욕</b>도 있어요. 후기 중에는 "노천탕이 도고온천 본관보다 좋았다"는 말도 있었어요.</p>
+        <p class="hours"><b>🕘 체크인</b> 15:00~ · <b>체크아웃</b> 07:00~10:00 · <b>조식</b> 07:00~09:00(일식·양식 세트, 11세 이하 1,898엔) · ☎ 문의는 예약 사이트로</p>
+        <p class="desc">도고온천에서 <b>390년 역사</b>를 가진 료칸이고, 나쓰메 소세키가 <b>'봇짱'을 쓰던 방</b>이 남아 있어요. 일본 왕실이 마쓰야마를 찾았을 때 묵은 곳으로도 알려져 있어요. <b>넓은 정원</b>을 거닐고 방에서 다도 공간을 쓰는 맛이 있어서, 부모님께 "여기는 좀 다르다" 싶은 곳을 보여드리고 싶을 때 맞아요. 가이세키는 <b>"입맛 까다로운 어머니가 오랜만에 만족하셨다"</b>는 후기가 있을 만큼 정갈하고 양이 많아요. 다만 <b>도고온천역에서 1분쯤 오르막</b>이 있고, <b>객실은 조금 낡은 편</b>이에요. 이 가격은 <b>객실만 예약하는 최저가</b>이고, 조식·가이세키를 넣으면 1박에 50~60만원대가 돼요.</p>
+        <div class="meta"><span class="price">470,440원부터</span><span>9.4점 · 리뷰 147</span><span>위치 9.6점</span><span>도고온천역 도보 5분</span></div>
+      </div>
+      <div class="actions">
+        <a class="btn trip" href="https://kr.trip.com/hotels/matsuyama-hotel-detail-2195121/funaya/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1&amp;Allianceid=11254538&amp;SID=335287562" data-trip="https://kr.trip.com/hotels/matsuyama-hotel-detail-2195121/funaya/?checkIn=2026-12-15&amp;checkOut=2026-12-16&amp;adult=2&amp;crn=1" target="_blank" rel="noopener sponsored nofollow">트립닷컴에서 12월 15일 가격 보기</a>
+      </div>
+    </article>
+
+  </main>
+
+  <div class="empty" id="empty">
+    <b>조건에 맞는 숙소가 없어요</b>
+    다른 가격대나 시설을 골라보세요.
+  </div>
+
+  <section class="tickethead">
+    <h2>✈️ 직항이면 <span>공짜로 받는 것 3가지</span></h2>
+    <p>인천은 제주항공, 부산은 에어부산이 마쓰야마에 매일 뜨고, 인천에서 1시간 35분·부산에서 1시간 5분이면 닿아요. 이 두 직항을 타면 에히메현이 주는 혜택이 붙어요. 아래는 에히메현 관광 공식 안내(Visit Ehime) 기준이에요.</p>
+  </section>
+
+  <section class="tickets">
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🚌</span>공항 ↔ 도고온천 무료 셔틀버스</h3>
+        <div class="tprice">0엔<small>리무진은 1,200엔</small></div>
+      </div>
+      <p class="twhy">제주항공(인천)·에어부산(부산) 직항으로 온 사람만 타는 버스예요. 국제선 도착장을 나와 <b>오른쪽 국내선 방향 끝 렌터카 카운터 옆 문</b>으로 나가면 관광버스 주차장에 서 있어요. <b>기사님께 여권만 보여주면</b> 되고 표는 필요 없어요. 리무진버스로 도고온천까지 가면 1,200엔이라, 왕복이면 2,400엔이 그냥 남는 셈이에요.</p>
+      <p class="tline"><b>정류장</b> 마쓰야마공항 → JR마쓰야마역 → 마쓰야마시역 → 이치반초(오카이도) → <b>도고온천역</b> → <b>도고 프린스 호텔</b> → 오쿠도고 이치유노모리 · <b>주의</b> 항공편 도착 시간에 맞춰 하루 두 번 안팎만 다니고, 만석이면 출발해요. 시간표는 출발 전 Visit Ehime 공식 안내에서 다시 확인하세요.</p>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🎟️</span>관광지 무료 입장권·할인권 세트</h3>
+        <div class="tprice">1인 1세트<small>2026.4.1~2027.3.31</small></div>
+      </div>
+      <p class="twhy">마쓰야마공항 <b>1층 인포메이션 센터</b>에서 <b>한국 여권</b>을 보이면 무료 교환권과 할인권을 1장씩 줘요. 시내에서 바로 쓸 수 있는 게 <b>마쓰야마성 로프웨이·리프트 왕복(520엔)과 천수각(520엔)</b>, 그리고 <b>도고온천 별관 아스카노유 1층 입욕권(610엔)</b>이에요. 이 세 장만 써도 1,650엔이 굳어요. 근교까지 가면 우치코·도베·오즈 몫도 더 있어요.</p>
+      <p class="tline"><b>받는 곳</b> 국제선 도착 출구에서 국내선 쪽으로 걸으면 있는 총합안내소 · <b>쓸 때도 여권</b>을 매표소에 같이 내야 해요 · <b>주의</b> 무료가 되는 탕은 <b>별관 아스카노유</b>이고, <b>도고온천 본관은 따로 700엔</b>이에요.</p>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">♨️</span>도고온천 탕 고르는 법 (본관·별관·츠바키노유)</h3>
+        <div class="tprice">500~700엔<small>본관 1층 700엔</small></div>
+      </div>
+      <p class="twhy">세 곳이 다 걸어서 갈 수 있는 거리에 있어요. <b>본관 가미노유 1층 700엔</b>은 1894년 목조 건물에 몸을 담그는 맛이라 처음이면 여기부터예요. 사람이 많으면 <b>별관 아스카노유 1층 610엔</b>(무료권 사용 가능), 발만 담그고 나오려면 <b>츠바키노유 500엔</b>이 가벼워요.</p>
+      <p class="tline"><b>본관 시간</b> 06:00~23:00(입장 22:30까지) · 2층 휴게실 1,300엔 · <b>별관</b> 06:00~23:00 · <b>츠바키노유</b> 06:30~23:00 · <b>입탕세</b> 마쓰야마시에서 1인 1일 150엔을 따로 받아요.</p>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🚋</span>노면전차·마쓰야마성·리무진 요금</h3>
+        <div class="tprice">전차 250엔<small>IC카드 230엔</small></div>
+      </div>
+      <p class="twhy">시내는 <b>이요테쓰 노면전차</b>로 다녀요. <b>3번 계통은 마쓰야마시역에서, 5번 계통은 JR마쓰야마역에서 도고온천까지</b> 한 번에 가고, 어디서 내려도 250엔이에요. 마쓰야마성은 오카이도에서 내려 로프웨이 승강장까지 걸어서 5분이에요.</p>
+      <p class="tline"><b>마쓰야마성</b> 천수 520엔·로프웨이 왕복 520엔(12~1월 천수 09:00~16:30, 로프웨이 08:30~17:00) · <b>⚠️ 12월 셋째 수요일 휴관 = 2026년 12월 16일</b> · <b>공항 리무진</b> JR마쓰야마역 1,000엔, 도고온천 1,200엔 · 전차·리무진 1일권 2,300엔(앱에서만 판매)</p>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🍚</span>마쓰야마에서 꼭 먹어볼 것</h3>
+        <div class="tprice">우와지마 도미밥<small>타이메시</small></div>
+      </div>
+      <p class="twhy"><b>우와지마 도미밥(타이메시)</b>은 갓 지은 솥밥 위에 도미 회를 얹고 특제 간장을 둘러 비벼 먹는 에히메 명물이에요. 자극적이지 않고 담백해서 <b>시니어 입맛에 잘 맞아요</b>. 도고온천 료칸 가이세키에도 도미 요리가 자주 나와요(도고칸 후기에 특히 많아요). 마쓰야마 시내에서는 <b>나베야키 우동</b>도 한 그릇 드셔보세요.</p>
+      <p class="tline"><b>팁</b> 도미밥은 회가 신선할 때 맛있어서 점심에 먹는 편이 좋아요 · 료칸 석식과 겹치지 않게 첫날 점심으로 넣어두면 딱이에요.</p>
+    </article>
+
+  </section>
+
+  <section class="tickethead">
+    <h2>🧳 같이 챙기면 좋은 <span>일본 여행 준비물</span></h2>
+    <p>도고온천은 골목이 좁고 료칸 안이 조용해서, 작은 것 몇 개가 여행을 편하게 만들어요. 아래는 쿠팡 파트너스 링크예요.</p>
+  </section>
+
+  <section class="tickets">
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">📶</span>일본 유심·eSIM (4일 무제한)</h3>
+        <div class="tprice">9,790원<small>상품평 3,121개</small></div>
+      </div>
+      <p class="twhy">비행기에서 내려 바로 지도와 셔틀 시간표를 봐야 해요. 유심 교체가 어려우면 같은 상품의 eSIM으로 받으면 돼요.</p>
+      <div class="tactions">
+        <a class="btn coupang" href="https://link.coupang.com/a/iF4qSyrEHs" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 (9,790원)</a>
+      </div>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🔌</span>돼지코(일본 변환 플러그) 3개입</h3>
+        <div class="tprice">4,000원<small>상품평 4,919개</small></div>
+      </div>
+      <p class="twhy">일본 콘센트는 2구 평형이라 한국 플러그가 그대로 안 들어가요. 3개입이라 부부 여행에 넉넉해요. (전압 변환기는 아니에요 — 100~240V 겸용 충전기에만 쓰세요.)</p>
+      <div class="tactions">
+        <a class="btn coupang" href="https://link.coupang.com/a/iF4sxpGDqC" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 (4,000원)</a>
+      </div>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">💤</span>기내용 목베개</h3>
+        <div class="tprice">14,800원<small>정가 24,800원</small></div>
+      </div>
+      <p class="twhy">1시간 35분 비행이지만 새벽 출발이면 목을 받쳐 주는 것만으로 도착 후 컨디션이 달라요. 파우치가 있어 캐리어 손잡이에 달아둘 수 있어요.</p>
+      <div class="tactions">
+        <a class="btn coupang" href="https://link.coupang.com/a/iF4DjVFd9w" target="_blank" rel="noopener sponsored nofollow">쿠팡에서 보기 (14,800원)</a>
+      </div>
+    </article>
+
+  </section>
+
+  <section class="tip">
+    <h2>♨️ 마쓰야마·도고온천 갈 때 알아두면 좋은 것</h2>
+    <ul>
+      <li><b>여권을 항상 들고 다니세요.</b> 공항 무료 셔틀도, 관광지 무료 교환권도 여권을 보여줘야 해요. 호텔 금고에 두고 나가면 그냥 돈을 내고 들어가야 해요.</li>
+      <li><b>무료 셔틀은 하루 두 번 안팎이에요.</b> 항공편 도착 시간에 맞춰 다니고, 만석이면 그냥 출발해요. 시간이 안 맞으면 리무진(도고온천 1,200엔)이나 택시를 타야 하니, 도착하면 인포메이션에서 그날 시간표를 먼저 확인하세요.</li>
+      <li><b>료칸 체크인 마감이 생각보다 일러요.</b> 도고 프린스 호텔은 18:00, 코와쿠엔 하루카는 19:30까지예요. 비행기가 늦으면 꼭 미리 연락하세요.</li>
+      <li><b>도고온천 본관과 별관을 헷갈리지 마세요.</b> 무료 교환권으로 들어가는 곳은 <b>별관 아스카노유</b>이고, 나무 건물 <b>본관은 따로 700엔</b>이에요. 본관 1층은 60분 제한이라 아침 8~9시가 한가해요.</li>
+      <li><b>12월 셋째 수요일은 마쓰야마성이 쉬어요.</b> 2026년은 <b>12월 16일</b>이에요. 이날 도착하신다면 성은 다음 날로 미루세요.</li>
+      <li><b>12월 도고온천은 우리나라보다 덜 줍지만 아침저녁 바람이 차요.</b> 비 온 날 온천 나오는 길이 미끄러우니 <b>미끄럼 방지 신발</b>과 얇은 패딩, 목도리를 챙기세요. 노천탕은 눈이 와도 들어갈 수 있어요.</li>
+      <li><b>입탕세와 주차비는 따로예요.</b> 마쓰야마시 입탕세 1인 1일 150엔이 붙고, 호텔 주차는 1일 770~1,100엔이에요. 료칸 중에는 현금만 받는 곳도 있으니 <b>소액 엔화</b>를 준비하세요.</li>
+      <li><b>가격은 날짜에 따라 크게 달라져요.</b> 여기 적은 금액은 2026년 11월 28일에 확인한 <b>12월 15일(화)~16일(수) 1박·성인 2인 최저 객실 요금</b>이고, 주말·연말에는 같은 방이 1.5~2배까지 올라요. 버튼을 누르면 날짜를 바꿔 볼 수 있어요.</li>
+    </ul>
+    <div class="facts">
+      <span>📅 2026-11-28 확인</span>
+      <span>🛏 12월 15일 1박 최저가</span>
+      <span>♨️ 5곳 온천·체크인 시간 확인</span>
+      <span>✈️ 직항 혜택 공식 안내 확인</span>
+    </div>
+  </section>
+
+  <footer>
+    <p class="notice"><strong>제휴 마케팅 활동의 일환으로 예약 시 일정액의 수수료를 제공받을 수 있습니다.</strong></p>
+    <p class="notice">이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+    <p>가격은 2026년 11월 28일 트립닷컴에서 2026년 12월 15일(화)~12월 16일(수) 1박·성인 2인 기준으로 조회한 가장 낮은 객실 요금을 '~부터'로 적은 것입니다(세금·기타 요금 약 2,510원 별도). 객실 타입·식사 포함 여부·날짜·인원에 따라 실제 요금이 달라질 수 있어요. 차하루는 조식·석식이 포함된 요금, 나머지는 객실만 예약하는 최저가 기준이고, 도고 프린스 호텔은 조식 포함 245,107원, 조식·석식 포함 342,999원이었어요.</p>
+    <p>주소·체크인·체크아웃 시간·조식 시간·주차 요금은 2026년 11월 28일 트립닷컴 각 숙소 상세 페이지에서 확인한 내용이고, 평점과 리뷰 수는 트립닷컴 기준이에요. 온천과 시설 이용 시간·요금은 예고 없이 바뀔 수 있으니 예약 전에 숙소 안내를 다시 확인하세요.</p>
+    <p>직항 무료 셔틀버스·무료 입장권 안내는 에히메현 관광 공식 안내(Visit Ehime, 제주항공·에어부산 이용객 혜택)와 마쓰야마시·마쓰야마성·도고온천 공식 안내를 기준으로 정리했어요. 셔틀 시간표와 혜택 내용은 바뀔 수 있어서 출발 전에 공식 페이지를 다시 확인하세요.</p>
+    <p>사진은 각 숙소의 실제 모습이 아니라 지역과 시설을 나타내는 이미지입니다.</p>
+    <p><a href="index.html" style="color:#F0D683">🏨 일본 숙소 10곳 보기</a> · <a href="fukuoka-yufuin.html" style="color:#F0D683">♨️ 후쿠오카·유후인 료칸 5곳 보기</a> · <a href="sapporo.html" style="color:#F0D683">♨️ 삿포로 대욕장 10곳 보기</a> · <a href="korea-onsen.html" style="color:#F0D683">🇰🇷 국내 온천 11곳 보기</a> · <a href="essentials.html" style="color:#F0D683">🧳 일본 여행 필수템 8선 보기</a></p>
+  </footer>
+
+</div>
+
+<script>
+/* =========================================================
+   제휴 설정 — 다른 페이지와 동일한 값 (트립닷컴 AID / SID)
+   ========================================================= */
+var AFFILIATE_CONFIG = {
+  trip:  { aid: "11254538", sid: "335287562" }
+};
+
+function withTripAffiliate(url){
+  var aid = AFFILIATE_CONFIG.trip.aid;
+  if(!aid){ return url; }
+  var sep = url.indexOf("?") === -1 ? "?" : "&";
+  var out = url + sep + "Allianceid=" + encodeURIComponent(aid);
+  if(AFFILIATE_CONFIG.trip.sid){
+    out += "&SID=" + encodeURIComponent(AFFILIATE_CONFIG.trip.sid);
+  }
+  return out;
+}
+
+(function applyAffiliate(){
+  var tripLinks = document.querySelectorAll("a[data-trip]");
+  for(var j = 0; j < tripLinks.length; j++){
+    tripLinks[j].href = withTripAffiliate(tripLinks[j].getAttribute("data-trip"));
+  }
+})();
+
+/* =========================================================
+   검색 + 필터 (가격대 / 시설)
+   ========================================================= */
+(function(){
+  var q = document.getElementById("q");
+  var clearBtn = document.getElementById("clear");
+  var countEl = document.getElementById("count");
+  var emptyEl = document.getElementById("empty");
+  var cards = Array.prototype.slice.call(document.querySelectorAll("#list .card"));
+
+  var state = { area: "all", feat: "all", text: "" };
+
+  function bindGroup(containerId, key){
+    var group = document.getElementById(containerId);
+    if(!group){ return; }
+    group.addEventListener("click", function(e){
+      var btn = e.target.closest ? e.target.closest(".chip") : null;
+      if(!btn || !group.contains(btn)){ return; }
+      var chips = group.querySelectorAll(".chip");
+      for(var i = 0; i < chips.length; i++){
+        chips[i].setAttribute("aria-pressed", chips[i] === btn ? "true" : "false");
+      }
+      state[key] = btn.getAttribute("data-" + key);
+      apply();
+    });
+  }
+
+  function normalize(s){
+    return (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  function matches(card){
+    if(state.area !== "all" && card.getAttribute("data-area") !== state.area){ return false; }
+    if(state.feat !== "all"){
+      var feat = " " + card.getAttribute("data-feat") + " ";
+      if(feat.indexOf(" " + state.feat + " ") === -1){ return false; }
+    }
+    if(state.text){
+      if(/^[0-9]+$/.test(state.text)){
+        return card.getAttribute("data-num") === state.text;
+      }
+      var hay = normalize(card.getAttribute("data-search") + " " +
+        card.querySelector(".name").textContent + " " +
+        card.querySelector(".loc").textContent);
+      var words = state.text.split(" ").filter(Boolean);
+      for(var w = 0; w < words.length; w++){
+        if(hay.indexOf(words[w]) === -1){ return false; }
+      }
+    }
+    return true;
+  }
+
+  function apply(){
+    var shown = 0;
+    for(var i = 0; i < cards.length; i++){
+      var ok = matches(cards[i]);
+      cards[i].style.display = ok ? "" : "none";
+      if(ok){ shown++; }
+    }
+    countEl.textContent = shown;
+    emptyEl.classList.toggle("show", shown === 0);
+    clearBtn.classList.toggle("show", !!state.text);
+  }
+
+  function onText(){
+    state.text = normalize(q.value);
+    apply();
+  }
+
+  bindGroup("areaChips", "area");
+  bindGroup("featChips", "feat");
+  q.addEventListener("input", onText);
+  q.addEventListener("search", onText);
+  clearBtn.addEventListener("click", function(){ q.value = ""; state.text = ""; apply(); q.focus(); });
+  apply();
+})();
+</script>
+</body>
+</html>
