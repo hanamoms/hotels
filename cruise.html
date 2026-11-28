@@ -205,6 +205,25 @@
   .empty b{display:block;color:var(--text);font-size:15px;margin-bottom:6px}
   .empty.show{display:block}
 
+  /* ---------- travel package cards (네이버 여행 커넥트) ---------- */
+  .tickethead{margin:30px 0 4px;padding-top:18px;border-top:1px solid #232326}
+  .tickethead h2{margin:0;font-size:19px;letter-spacing:-.01em}
+  .tickethead h2 span{color:var(--yellow)}
+  .tickethead p{margin:6px 0 0;font-size:12.5px;color:var(--sub);line-height:1.6}
+  .tickets{display:grid;gap:12px;margin-top:12px}
+  .tcard{background:#1C1C1E;border:1px solid #26262A;border-radius:16px;padding:13px 14px}
+  .tcard .thead{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+  .tcard h3{margin:0;font-size:15px;line-height:1.35;letter-spacing:-.01em}
+  .tcard h3 .ticon{margin-right:5px}
+  .tcard .tprice{flex:0 0 auto;color:var(--yellow);font-weight:800;font-size:14px;white-space:nowrap;line-height:1.35;text-align:right}
+  .tcard .tprice small{display:block;color:#8F8F97;font-weight:500;font-size:10.5px}
+  .tcard .twhy{margin:7px 0 0;font-size:12.5px;color:#C4C4CC;line-height:1.6}
+  .tcard .tline{margin:8px 0 0;font-size:11.5px;color:#D9D9E0;background:#191A1D;border:1px solid #2A2B30;border-left:3px solid #3A3A40;border-radius:9px;padding:7px 9px;line-height:1.55}
+  .tcard .tline b{color:var(--yellow);font-weight:700}
+  .tcard .tactions{display:grid;gap:8px;margin-top:11px}
+  .tcard .tactions .btn{padding:11px 6px;font-size:13px}
+  .btn.naver{background:#03C75A;color:#0F1A12}
+
   /* ---------- tip + footer ---------- */
   .tip{
     margin-top:16px;padding:14px 15px;border-radius:16px;
@@ -471,6 +490,51 @@
     지역이나 기간을 다시 골라보세요.
   </div>
 
+  <section class="tickethead">
+    <h2>⛴️ 배만 타고 가는 가까운 일본, <span>부산항 페리 패키지</span></h2>
+    <p>큰 크루즈가 아니어도 비행기 없이 부산항에서 배로 일본에 다녀올 수 있어요. 대마도는 배로 한 시간 반~두 시간 반이라 <b>1박 2일</b>로도 다녀오고, 선박 회사가 정한 일정과 호텔·식사가 한 번에 잡혀 있어요. 아래 세 상품은 네이버 여행 커넥트에서 고른 것이에요.</p>
+  </section>
+
+  <section class="tickets">
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🏝️</span>출발확정 [새해특가] 대마도 1박 2일 · 이즈하라 시내 호텔</h3>
+        <div class="tprice">145,403원~<small>1인 · 1박 2일</small></div>
+      </div>
+      <p class="twhy">가장 가벼운 구성이에요. 이즈하라 <b>시내 호텔</b>에 묵고, 티아라몰 쇼핑과 라벤더비누 특전이 붙어 있어요. 배만 타면 되니 비행기 표를 따로 찾을 필요가 없고, <b>출발이 확정된 날짜</b>라 마음이 급할 때 잡기 좋아요. 새해 특가 상품이라 자리가 빨리 빠지는 편이에요.</p>
+      <p class="tline"><b>일정</b> 1박 2일 · 부산항 출발 · <b>포함</b> 선박·숙소·일정상 식사·가이드</p>
+      <div class="tactions">
+        <a class="btn naver" href="https://naver.me/FoX3wJ2z" target="_blank" rel="noopener noreferrer sponsored">네이버에서 상품·출발일 보기</a>
+      </div>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🚢</span>팬스타호 대마도 1박 2일 · 소아루리조트·온천</h3>
+        <div class="tprice">165,870원~<small>1인 · 1박 2일</small></div>
+      </div>
+      <p class="twhy"><b>팬스타호</b>를 타고 부산항에서 대마도로 가는 상품이에요. 하치만구신사와 미우다해수욕장을 돌고 <b>해산물 BBQ와 온천</b>이 들어 있어요. 배 안에서 밤바다를 보고 싶은 분, 배 타는 것 자체를 즐기고 싶은 분께 맞아요.</p>
+      <p class="tline"><b>일정</b> 1박 2일 · 부산항 출발 · 숙소 소아루리조트 · <b>확인</b> 선박 출항 시간과 여권 조건은 상품 페이지에서</p>
+      <div class="tactions">
+        <a class="btn naver" href="https://naver.me/GvWI6yV8" target="_blank" rel="noopener noreferrer sponsored">네이버에서 상품·출발일 보기</a>
+      </div>
+    </article>
+
+    <article class="tcard">
+      <div class="thead">
+        <h3><span class="ticon">🛳️</span>부산출발 대마도 1박 2일 · 1명부터 출발확정</h3>
+        <div class="tprice">193,030원~<small>1인 · 1박 2일</small></div>
+      </div>
+      <p class="twhy"><b>1명부터 출발이 확정</b>되는 상품이라 부부나 혼자 가는 분도 인원 걱정이 없어요. 이즈하라 <b>도요코인</b>에 묵고 온천욕과 BBQ 특식이 들어 있어요. 세 상품 중 숙소가 가장 든든해서, 부모님을 모시고 짧게 다녀오실 때 무난해요.</p>
+      <p class="tline"><b>일정</b> 1박 2일 · 부산항 출발 · <b>확인</b> 여권 유효기간과 입국 조건은 상품 페이지에서</p>
+      <div class="tactions">
+        <a class="btn naver" href="https://naver.me/5HyoGRfQ" target="_blank" rel="noopener noreferrer sponsored">네이버에서 상품·출발일 보기</a>
+      </div>
+    </article>
+
+  </section>
+
   <section class="tip">
     <h2>🚢 크루즈가 처음이라면, 이것만은 알아두세요</h2>
     <ul>
@@ -500,8 +564,10 @@
 
   <footer>
     <p class="notice"><strong>제휴 마케팅 활동의 일환으로 예약 시 일정액의 수수료를 제공받을 수 있습니다.</strong></p>
+    <p class="notice">위 해상·페리 여행 패키지 링크는 <strong>네이버 여행 커넥트</strong> 활동의 일환으로, 예약 발생 시 일정액의 수수료를 제공받습니다. 상품 요금과 혜택은 예약하는 날짜·선박·좌석에 따라 달라질 수 있어요.</p>
     <p>가격은 2026년 11월 19일 트립닷컴 크루즈에 표시된 <b>1인 요금(항구 이용료 포함), 내측 객실</b> 기준입니다. 같은 상품이라도 출발일·객실 타입·잔여 좌석에 따라 금액이 달라지고, 선상 봉사료·음료·인터넷·기항지 투어·비자 비용은 포함되지 않아요.</p>
     <p>출항·입항 시각과 기항지 일정은 트립닷컴 상품 상세의 ‘여행 일정’에 안내된 값이며, 날씨와 선사 사정으로 바뀔 수 있어요. 여권 유효기간(귀항일부터 6개월 이상)·비자·입국 서류 조건은 예약 전에 상품 안내와 해당 국가 대사관 안내로 다시 확인하세요.</p>
+    <p>페리·대마도 패키지 요금은 2026년 11월 28일 네이버 여행 커넥트에서 검색한 1인 요금이고, 출발일·선박·좌석에 따라 달라져요. 포함·불포함 사항과 여권·입국 조건은 상품 페이지에서 꼭 다시 확인하세요.</p>
     <p>사진은 각 배의 실제 모습이 아니라 크루즈를 나타내는 이미지입니다.</p>
     <p><a href="index.html" style="color:#F0D683">🏨 일본 숙소 10곳 보기</a> · <a href="sapporo.html" style="color:#F0D683">♨️ 삿포로 대욕장 10곳 보기</a> · <a href="korea-onsen.html" style="color:#F0D683">🇰🇷 국내 온천 11곳 보기</a> · <a href="seoul-onsen.html" style="color:#F0D683">♨️ 서울근교 온천 5곳 보기</a> · <a href="gyeongnam-family.html" style="color:#F0D683">👨‍👩‍👧‍👦 부산·경남 가족 숙소 보기</a> · <a href="jeju-onsen.html" style="color:#F0D683">🍊 제주 온천 5곳 보기</a> · <a href="jeolla-onsen.html" style="color:#F0D683">♨️ 전라도 온천 5곳 보기</a> · <a href="chungcheong-onsen.html" style="color:#F0D683">♨️ 충청도 온천 5곳 보기</a> · <a href="gangwon-onsen.html" style="color:#F0D683">🏔️ 강원도 온천 5곳 보기</a> · <a href="essentials.html" style="color:#F0D683">🧳 필수템 8선 보기</a></p>
   </footer>
